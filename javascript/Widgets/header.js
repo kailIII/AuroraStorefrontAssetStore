@@ -29,7 +29,7 @@ require([
 	var toggleControlNode = null;
 	var active = {};
 	var ajaxRefresh = "";
-	var departmentMenuId = "departmentMen_";
+	var departmentMenuId = "departmentMenu_";
 	
 	var registerMouseDown = function() {
 		if (mouseDownConnectHandle == null) {
@@ -75,7 +75,8 @@ require([
 	
 	activate = function(target) {
 		var startsWith = (target.id.slice(0,departmentMenuId.length) == departmentMenuId);
-		if(this.ajaxRefresh == "true" && startsWith){
+		
+	/*	if(this.ajaxRefresh == "true" && startsWith){
 			setAjaxRefresh(""); // No more refresh till shopper leaves this page
 			// Update the Context, so that widget gets refreshed..
 			wc.render.updateContext("departmentSubMenuContext", {"targetId":target.id});
@@ -84,9 +85,8 @@ require([
 				setTimeout(function(){cX("");}, 1000);
 			}
 			return;
-		}
-
-		var parent = target.getAttribute("data-parent");
+		}*/
+					var parent = target.getAttribute("data-parent");
 		if (parent && active[parent]) {
 			deactivate(active[parent]);
 		}
@@ -328,15 +328,15 @@ require([
 		}
 		
 	};
-	//window.setTimeout(updateQuickLinksBar, 200);
-	//on(window, "resize", updateQuickLinksBar);
+	window.setTimeout(updateQuickLinksBar, 200);
+	on(window, "resize", updateQuickLinksBar);
 
 	updateDepartmentsMenu = function() {
-		var departmentsMenu = document.getElementById("departmentsMen");
-		var searchBar = document.getElementById("searchBa");
-		var departmentButtons = query(".departmentButto");
-		var departmentMenus = query(".departmentMen");
-		var departmentsMenuItems = query("#departmentsMenuu > li");
+		var departmentsMenu = document.getElementById("departmentsMenu");
+		var searchBar = document.getElementById("searchBar");
+		var departmentButtons = query(".departmentButton");
+		var departmentMenus = query(".departmentMenu");
+		var departmentsMenuItems = query("#departmentsMenu > li");
 		var allDepartmentsItem = departmentsMenuItems[departmentsMenuItems.length - 1];
 		var availableWidth = null;
 		//	if (searchBar) {

@@ -2570,25 +2570,53 @@ li.localizadorTienda :before {
 }
 	
 .asistenciaTienda {
-  position: absolute;
+  position: absolute!important;
   left: 50%;
-  margin-left: 185px;
-  top: 15px;
-  z-index:1;
+  margin-left: 200px!important;
+  top: 30px;
+  z-index: 1;
+  color: #767676;
+  font-size: 10px;
+    height: 18px;
+	cursor:pointer;
 }
 
-li.asistenciaTienda :before {
-	content: url("../images/asistencia.jpg");
-	width:15px;
-	height:20px;
-	position:absolute;
-	left: -3px;
-	top: -4px;
-	z-index:1;
+.asistenciaTienda  a:hover{text-decoration:underline;}
+
+.asistenciaTienda:before {
+  content: url("../images/asistencia.jpg");
+  width: 15px;
+  height: 20px;
+  position: absolute;
+  left: -17px;
+  top: -4px;
+  z-index: 1;
 }  
 
-.asistenciaTienda  ul :before, li.asistenciaTienda span > ul >li  :before { background:red; content:none!important;}
+.asistenciaLista{
+  position: absolute!important;
+  left: 50%;
+  margin-left: -54px;
+  top: 17px;
+  padding: 0px;
+  border: 1px solid;
+  z-index: 1;
+  list-style: none;
+  background-color: white;
+  border-top: none;
+  display:none;
+  cursor:pointer;  
+}
 
-li.asistenciaTienda span > ul >li{
- list-style:none;
+.asistenciaLista li{ 
+	border-top: 1px solid #b5b5b5;
+	width: 130px;
+}
+.asistenciaLista a {
+  height: 100%;
+  display: block;
+  padding: 8px 15px;
+}  
+.asistenciaLista a:hover {
+background-color:#F5F5F5;
 }
