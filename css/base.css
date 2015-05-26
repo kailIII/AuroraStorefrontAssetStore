@@ -2090,7 +2090,7 @@ dl, ol, ul {
 
 /* <!-- CSS PERSONALIZADO --> */
  #footerCustomerServiceSection{
-  width: 22%;
+  width: 19%;
   padding-right: 0px !important; 
   padding-left: 0px !important;
   float: left;
@@ -2104,7 +2104,7 @@ dl, ol, ul {
  }
  
 #footerExploreSection{
-  width: 42%;
+  width: 43%;
   padding-right: 0px !important; 
   padding-left: 0px !important;
   float: left;

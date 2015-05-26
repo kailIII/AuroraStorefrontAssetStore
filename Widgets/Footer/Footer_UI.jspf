@@ -15,91 +15,62 @@
 <%-- Note: for any e-Marketing Spots included on the footer page, then the parameter --%>
 <%--       cacheWithParent should be set to true if the footer is dynacached         --%>
 			
-<div id="footer" role="navigation" aria-label="<fmt:message bundle="${storeText}" key="FOOTER_REGION"/>">
-
-
-
+<div id="footer" aria-label="Content Information" role="navigation">
 	<div id="footerRow1">
-		<div id="footerCustomerServiceSection" class="section">
+		<div class="section" id="footerCustomerServiceSection">
 			<div class="textoSuscribete">
-			      <fmt:message bundle="${storeText}" key="FOOTER_CUSTOMER_SERVICE"/>
-			</div>
-			<div class="textoRecibePromos">
-				Recibe nuestras promociones en tu correo
+				¡Suscribete y obten un 10% de descuento!
 			</div>
 			<div class="textoRecibePromos">
 				Recibe nuestras promociones en tu correo
 			</div>
 			<div class="inputCorreo">
-				<input type="text" value="Ingresa tu correo electr&oacute;nico" size="30">
+				<input type="text" value="Ingresa tu correo electrónico" size="30">
 			</div>
-			
-	
-	</div>
-			
-			
-		
-		
-		
-		
-		<div id="footerCorporateInfoSection" class="section">
-			<div class="header">
-				<a class="toggle" href="#" data-toggle="footerCorporateInfoSection" role="button"><span id="footerCorporateInfoSection_div_ACCE_Label" class="spanacce"><fmt:message bundle="${storeText}" key="FOOTER_CORPORATE_INFO"/></span></a>
-				<h3><fmt:message bundle="${storeText}" key="FOOTER_CORPORATE_INFO"/></h3>
-			</div>
+		</div>
+		<div class="section" id="footerCorporateInfoSection">
 			<ul class="footer-list floatleft">
-			
-		
-				<li><a id="footerHelpLink" href="${fn:escapeXml(HelpPageViewURL)}"> Asistencia y Soporte <!-- "<fmt:message bundle="${storeText}" key="FOOTER_HELP"/>--></a></li>
-				<li><a id="seekOrderLink" href="#"> Rastrea tu pedido </a></li>
-				<li><a id="deliveryLink" href="#"> Envios y entregas </a></li>
-				<li><a id="footerReturnPolicyLink" href="${fn:escapeXml(ReturnPolicyPageViewURL)}">Cambios y Devoluciones<!--  <fmt:message bundle="${storeText}" key="FOOTER_RETURN_POLICY"/>--></a></li>
+				<li class="titulo-li"><b>CATEGORÍAS</b></li>
+				<a href="#"><li>Electrónica</li></a>
+				<a href="#"><li>Cómputo y Tablets</li></a>
+				<a href="#"><li>Lïnea Blanca</li></a>
+				<a href="#"><li>Entretenimiento</li></a>
+				<a href="#"><li>Telefonía</li></a>
+				<a href="#"><li>Motonetas</li></a>
+				<a href="#"><li>Wearable</li></a>
+				<a href="#"><li>GoPro</li></a>
+				<a href="#"><li>Apple</li></a>
 			</ul>
+			
 			<ul class="footer-list floatleft">
-			
-			
-			<li><a id="footerPrivacyPolicyLink" href="${fn:escapeXml(PrivacyPolicyPageViewURL)}">Aviso de privacidad<!-- <fmt:message bundle="${storeText}" key="FOOTER_PRIVACY_POLICY"/>--></a></li>
-			<li><a id="onlineStorePolicyLink" href="#">Pol&iacute;ticas de tienda en l&iacute;nea<!-- <fmt:message bundle="${storeText}" key="FOOTER_PRIVACY_POLICY"/>--></a></li>
-			<li><a id="warrantyLink" href="#">Garantias<!-- <fmt:message bundle="${storeText}" key="FOOTER_PRIVACY_POLICY"/>--></a></li>
-			<li><a id=safetyLink" href="#">Seguridad<!-- <fmt:message bundle="${storeText}" key="FOOTER_PRIVACY_POLICY"/>--></a></li>
-			
+				<li class="titulo-li"><b>TELMEX</b></li>
+				<a href="#"><li>Acerca de Telmex</li></a>
+				<a href="#"><li>Ventas corporativas</li></a>
+				<a href="#"><li>Canjea tu Monedero Telmex</li></a>
+				<a href="#"><li>Telmex Payback</li></a>
+				<a href="#"><li>Aviso de privacidad</li></a>
 			</ul>
 		</div>
-		
-		
-		
-		
-		
-		
-		
-		<div id="footerExploreSection" class="section">
-			<div class="header">
-				<a class="toggle" href="#" data-toggle="footerExploreSection" role="button"><span id="footerExploreSection_div_ACCE_Label" class="spanacce"><fmt:message bundle="${storeText}" key="FOOTER_EXPLORE"/></span></a>
-				<h3><fmt:message bundle="${storeText}" key="FOOTER_EXPLORE"/></h3>
-			</div>
-			<ul footer-list floatleft">
-				<li><a id="footerAboutUsLink" href="${fn:escapeXml(CorporateInfoPageViewURL)}">Acerca de Telmex<!-- <fmt:message bundle="${storeText}" key="FOOTER_ABOUT_US"/>--></a></li>
-				<li><a id="coorporativeSellingsLink" href="#">Ventas Corporativas<!-- <fmt:message bundle="${storeText}" key="FOOTER_ABOUT_US"/>--></a></li>
-				<li><a id="telmexWalletLink" href="#">Canjea tu monedero Telmex<!-- <fmt:message bundle="${storeText}" key="FOOTER_ABOUT_US"/>--></a></li>
-				<li><a id="paybackWalletLink" href="#">Telmex Payback<!-- <fmt:message bundle="${storeText}" key="FOOTER_ABOUT_US"/>--></a></li>
-				
-				
-				
-		   </ul>
-		   
-		   
-		   <ul class="footer-list floatleft">
-				<li><strong>Ll&aacute;manos: 01800 123 11 14</strong></li>
-				<li><a id="footerContactUsLink" href="${fn:escapeXml(ContactUsPageViewURL)}">Comentarios y sugerencias<!--<fmt:message bundle="${storeText}" key="FOOTER_CONTACT_US"/>--></a></li>
-				<li><a id="footerFacebookLink" href="${facebookURL}">Siguenos F T<!--<fmt:message bundle="${storeText}" key="FOOTER_FACEBOOK"/>--></a></li>
-				
+		<div class="section" id="footerExploreSection">
+			<ul class="footer-list floatleft">
+				<li class="titulo-li"><b>ASISTENCIA</b></li>
+				<a href="#"><li>Rastrea tu pedido</li></a>
+				<a href="#"><li>Envíos y Entregas</li></a>
+				<a href="#"><li>Cambios y devoluciones</li></a>
+				<a href="#"><li>Polítivas de Tienda en línea</li></a>
+				<a href="#"><li>Garantías</li></a>
+				<a href="#"><li>Seguridad</li></a>
+			</ul>
+			
+			<ul class="footer-list floatleft">
+				<li><strong>Llámanos: 01800 123 11 14</strong></li>
+				<li>Comentarios y sugerencias</li>
+				<li>Siguenos F T</li>
 			</ul>
 		</div>
-		
-	
 	</div>
 	
-	<div id="downFooter">
-	<strong>&#64; Derechos Reservados, Tel&eacute;fonos de M&eacute;xico S.A.B. de C.V.</strong>
 </div>
+<div id="downFooter">
+	&#64; Derechos Reservados, Teléfonos de México S.A.B. de C.V.
 </div>
