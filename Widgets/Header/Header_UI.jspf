@@ -439,6 +439,7 @@ dojo.addOnLoad(function() {
 	}
 });
 </script>
+<script>
 $( document ).ready(function() {
     alert( "ready!" );
 });
