@@ -1,0 +1,105 @@
+<%--
+ =================================================================
+  Licensed Materials - Property of IBM
+
+  WebSphere Commerce
+
+  (C) Copyright IBM Corp. 2013, 2014 All Rights Reserved.
+
+  US Government Users Restricted Rights - Use, duplication or
+  disclosure restricted by GSA ADP Schedule Contract with
+  IBM Corp.
+ =================================================================
+--%>
+
+<%-- Note: for any e-Marketing Spots included on the footer page, then the parameter --%>
+<%--       cacheWithParent should be set to true if the footer is dynacached         --%>
+			
+<div id="footer" role="navigation" aria-label="<fmt:message bundle="${storeText}" key="FOOTER_REGION"/>">
+
+
+
+	<div id="footerRow1">
+		<div id="footerCustomerServiceSection" class="section">
+			<div class="textoSuscribete">
+			      <fmt:message bundle="${storeText}" key="FOOTER_CUSTOMER_SERVICE"/>
+			</div>
+			<div class="textoRecibePromos">
+				Recibe nuestras promociones en tu correo
+			</div>
+			<div class="textoRecibePromos">
+				Recibe nuestras promociones en tu correo
+			</div>
+			<div class="inputCorreo">
+				<input type="text" value="Ingresa tu correo electr&oacute;nico" size="30">
+			</div>
+			
+	
+	</div>
+			
+			
+		
+		
+		
+		
+		<div id="footerCorporateInfoSection" class="section">
+			<div class="header">
+				<a class="toggle" href="#" data-toggle="footerCorporateInfoSection" role="button"><span id="footerCorporateInfoSection_div_ACCE_Label" class="spanacce"><fmt:message bundle="${storeText}" key="FOOTER_CORPORATE_INFO"/></span></a>
+				<h3><fmt:message bundle="${storeText}" key="FOOTER_CORPORATE_INFO"/></h3>
+			</div>
+			<ul class="footer-list floatleft">
+			
+		
+				<li><a id="footerHelpLink" href="${fn:escapeXml(HelpPageViewURL)}"> Asistencia y Soporte <!-- "<fmt:message bundle="${storeText}" key="FOOTER_HELP"/>--></a></li>
+				<li><a id="seekOrderLink" href="#"> Rastrea tu pedido </a></li>
+				<li><a id="deliveryLink" href="#"> Envios y entregas </a></li>
+				<li><a id="footerReturnPolicyLink" href="${fn:escapeXml(ReturnPolicyPageViewURL)}">Cambios y Devoluciones<!--  <fmt:message bundle="${storeText}" key="FOOTER_RETURN_POLICY"/>--></a></li>
+			</ul>
+			<ul class="footer-list floatleft">
+			
+			
+			<li><a id="footerPrivacyPolicyLink" href="${fn:escapeXml(PrivacyPolicyPageViewURL)}">Aviso de privacidad<!-- <fmt:message bundle="${storeText}" key="FOOTER_PRIVACY_POLICY"/>--></a></li>
+			<li><a id="onlineStorePolicyLink" href="#">Pol&iacute;ticas de tienda en l&iacute;nea<!-- <fmt:message bundle="${storeText}" key="FOOTER_PRIVACY_POLICY"/>--></a></li>
+			<li><a id="warrantyLink" href="#">Garantias<!-- <fmt:message bundle="${storeText}" key="FOOTER_PRIVACY_POLICY"/>--></a></li>
+			<li><a id=safetyLink" href="#">Seguridad<!-- <fmt:message bundle="${storeText}" key="FOOTER_PRIVACY_POLICY"/>--></a></li>
+			
+			</ul>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		<div id="footerExploreSection" class="section">
+			<div class="header">
+				<a class="toggle" href="#" data-toggle="footerExploreSection" role="button"><span id="footerExploreSection_div_ACCE_Label" class="spanacce"><fmt:message bundle="${storeText}" key="FOOTER_EXPLORE"/></span></a>
+				<h3><fmt:message bundle="${storeText}" key="FOOTER_EXPLORE"/></h3>
+			</div>
+			<ul footer-list floatleft">
+				<li><a id="footerAboutUsLink" href="${fn:escapeXml(CorporateInfoPageViewURL)}">Acerca de Telmex<!-- <fmt:message bundle="${storeText}" key="FOOTER_ABOUT_US"/>--></a></li>
+				<li><a id="coorporativeSellingsLink" href="#">Ventas Corporativas<!-- <fmt:message bundle="${storeText}" key="FOOTER_ABOUT_US"/>--></a></li>
+				<li><a id="telmexWalletLink" href="#">Canjea tu monedero Telmex<!-- <fmt:message bundle="${storeText}" key="FOOTER_ABOUT_US"/>--></a></li>
+				<li><a id="paybackWalletLink" href="#">Telmex Payback<!-- <fmt:message bundle="${storeText}" key="FOOTER_ABOUT_US"/>--></a></li>
+				
+				
+				
+		   </ul>
+		   
+		   
+		   <ul class="footer-list floatleft">
+				<li><strong>Ll&aacute;manos: 01800 123 11 14</strong></li>
+				<li><a id="footerContactUsLink" href="${fn:escapeXml(ContactUsPageViewURL)}">Comentarios y sugerencias<!--<fmt:message bundle="${storeText}" key="FOOTER_CONTACT_US"/>--></a></li>
+				<li><a id="footerFacebookLink" href="${facebookURL}">Siguenos F T<!--<fmt:message bundle="${storeText}" key="FOOTER_FACEBOOK"/>--></a></li>
+				
+			</ul>
+		</div>
+		
+	
+	</div>
+	
+	<div id="downFooter">
+	<strong>&#64; Derechos Reservados, Tel&eacute;fonos de M&eacute;xico S.A.B. de C.V.</strong>
+</div>
+</div>
