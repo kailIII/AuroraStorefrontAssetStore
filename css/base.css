@@ -1018,9 +1018,8 @@ dl, ol, ul {
 	left: -118px;
 	top: -18px;
 }
-#searchBox > .submitButton:hover:before {
-	left: -141px;
-}
+
+
 
 /* Autocomplete menu */
 
@@ -2619,4 +2618,8 @@ li.localizadorTienda :before {
 }  
 .asistenciaLista a:hover {
 background-color:#F5F5F5;
+}
+
+#Header_GlobalLogin_signInQuickLink {
+  position: absolute;
 }
