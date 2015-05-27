@@ -804,7 +804,7 @@ dl, ol, ul {
 	display:none;	
 }
 
-@media (max-width: 600px){
+@media (max-width: 952px){
 .departmentMenu > .header {
 	display:block;
 }
@@ -857,7 +857,7 @@ dl, ol, ul {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-	width: 50%;
+	width: 100%;
 	padding-right: 16px;
 	vertical-align: top;
 }
@@ -1722,9 +1722,9 @@ dl, ol, ul {
 	/* Departments menu */
 
 	#departmentsButton {
-		display: block;
-		max-width: 300px;
-		margin: 2px 90px 2px 15px;
+	  display: block;
+	  max-width: 10px;
+	  margin: 2px 20px 2px 5px;
 	}
 	#departmentsButton > span {
 		display: block;
@@ -1739,6 +1739,7 @@ dl, ol, ul {
 	#departmentsMenu.active {
 		display: block;
 		position: absolute;
+		  min-width: 300px;
 		left: 0;
 		right: 0;
 		top: 100%;
@@ -1999,6 +2000,18 @@ dl, ol, ul {
 	.contentCarouselWidget {
 		/*overflow: hidden;*/
 	}
+
+	#logo {
+	  left:40px;
+	}
+	#headerRow2{
+	  background: blue;
+	  width: auto;
+	  display: inline-block;
+	  position: absolute;
+	  top: 15px;
+	}
+	
 }
 
 @media (max-width: 830px){
