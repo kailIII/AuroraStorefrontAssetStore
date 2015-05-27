@@ -1951,6 +1951,34 @@ dl, ol, ul {
 	#footerExploreSection{
 		width: 100% !important;
 	}
+	
+	#footerRow1 > .section {
+	  text-align: center;
+	}
+	
+	#footerRow1 > #footerCorporateInfoSection{
+		text-align: center;
+		 float: none;
+	}
+	
+	#footerRow1 > #footerExploreSection{
+		text-align: center;
+		 float: none;
+	}
+	
+	#footerRow1 > .section > ul {
+	  display: block;
+	  float: none;
+	}
+	
+	.inputCorreo {
+	  padding-top: 10px;
+	  width: 100% !important;
+	}
+	
+	input[type=text], textarea {
+	  width: 35% !important;
+	}
 
 	input[type=text], textarea {
 		-webkit-transition: all 0.30s ease-in-out;
@@ -1963,7 +1991,7 @@ dl, ol, ul {
 		border: 1px solid #DDDDDD;
 		padding: 10px;
 		font-size: 12px !important;
-		width: 100% !important;
+		width: 35% !important;
 	}
 
 	/* Carousel */
@@ -1976,7 +2004,7 @@ dl, ol, ul {
 @media (max-width: 830px){
 				
 	input[type=text], textarea {
-		width: 100% !important;
+		width: 35% !important;
 	}			
 }
 
