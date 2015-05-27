@@ -2243,6 +2243,9 @@ dl, ol, ul {
   padding: 10px;
   font-size: 12px !important;
   width: 85%;
+   height: 10px;
+   border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;
  }
   
  input[type=text]:focus, textarea:focus {
@@ -2250,6 +2253,13 @@ dl, ol, ul {
   padding: 3px 0px 3px 3px;
   margin: 5px 1px 3px 0px;
   border: 1px solid rgba(81, 203, 238, 1);
+ }
+ 
+ #txtCorreo{
+	background-image: url("../images/btnEnvio.png");
+	background-repeat: no-repeat;
+	background-position: right center; 
+	cursor: pointer; 
  }
  
  #downFooter{
@@ -2264,8 +2274,11 @@ dl, ol, ul {
 	padding-bottom: 10px;
 	color: rgb(90, 100, 115);
  }
+
  
- .header > h3 {
+.header > h3 {
+    font-size: 10px;
+    font-weight: 100;
     text-transform: uppercase;
 }
  
