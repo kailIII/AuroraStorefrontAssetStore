@@ -1997,7 +1997,7 @@ dl, ol, ul {
 	/* Carousel */
 
 	.contentCarouselWidget {
-		overflow: hidden;
+		/*overflow: hidden;*/
 	}
 }
 
@@ -2557,7 +2557,7 @@ div.grid_icon, a.grid_icon:hover, div.list_icon, a.list_icon:hover {
   
  #MiniShoppingCart {
     position: absolute;
-    right: -100px;
+    right: 0px;
 }
 
 .product > .product_image img {
@@ -2649,5 +2649,16 @@ background-color:#F5F5F5;
 }
 
 #Header_GlobalLogin_signInQuickLink {
-  position: absolute;
+  position: absolute!important;
+  left: 50%;
+  margin-left: 280px!important;
+  top: 44px;
 }
+
+#quick_cart_container{
+  left: 50%!important;
+  margin-left: 130px!important;
+  top: 90px !important;
+  position: absolute!important;
+  
+  
