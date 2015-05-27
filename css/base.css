@@ -1142,7 +1142,7 @@ dl, ol, ul {
 		text-align: center;
 	}
 }
-@media (min-width: 961px) {
+@media (min-width: 952px) {
 	#footerRow1 {
 		/* width: 880px; */
 		max-width: 1000px;
@@ -1959,11 +1959,11 @@ dl, ol, ul {
 	}
 
 	#footerCorporateInfoSection{
-		width: 100% !important;
+		width: 65% !important;
 	}
 
 	#footerExploreSection{
-		width: 100% !important;
+		width: 35% !important;
 	}
 	
 	#footerRow1 > .section {
@@ -1972,17 +1972,14 @@ dl, ol, ul {
 	
 	#footerRow1 > #footerCorporateInfoSection{
 		text-align: center;
-		 float: none;
 	}
 	
 	#footerRow1 > #footerExploreSection{
 		text-align: center;
-		 float: none;
 	}
 	
 	#footerRow1 > .section > ul {
 	  display: block;
-	  float: none;
 	}
 	
 	.inputCorreo {
@@ -2007,6 +2004,30 @@ dl, ol, ul {
 		font-size: 12px !important;
 		width: 35% !important;
 	}
+	
+		input[type=text], textarea {
+			width: 35% !important;
+		}
+
+		#footer-right{
+			float: right;
+			width: 50%;
+		}
+		
+		#footer-left{
+			float: left;
+			width: 50%;
+		}
+
+		#footerRow1{
+			width: 100%;
+		}	
+		
+	.footer-subcategory{
+		display: none;
+	}
+		
+		
 
 	/* Carousel */
 
@@ -2027,31 +2048,6 @@ dl, ol, ul {
 	
 }
 
-@media (max-width: 830px){
-				
-	input[type=text], textarea {
-		width: 35% !important;
-	}
-
-	#footer-right{
-		float: right;
-		width: 50%;
-	}
-	
-	#footer-left{
-		float: left;
-		width: 50%;
-	}
-
-	#footerRow1{
-		width: 100%;
-	}	
-	
-	#footerRow1 > .section > ul {
-		display: none;
-		float: none;
-	}
-}
 
 /*** Mobile (portrait) - 0-400px ***/
 
@@ -2169,14 +2165,14 @@ dl, ol, ul {
  }
  
  #footerCorporateInfoSection{
-  width: 35%;
+  width: 50%;
   padding-right: 0px !important; 
   padding-left: 0px !important;
   float: left;
  }
  
 #footerExploreSection{
-  width: 40%;
+  width: 25%;
   padding-right: 0px !important; 
   padding-left: 0px !important;
   float: left;
