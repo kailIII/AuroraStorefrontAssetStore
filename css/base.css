@@ -1094,8 +1094,10 @@ dl, ol, ul {
 #btnFacebook{
 	background-image: url("../images/facebook.png");
 	background-repeat:no-repeat;
-	height: 10px;
-    width: 10px;
+	width: 25px; 
+	height: 25px; 
+	margin-top: 5px; 
+	margin-left: 10px;
 }
 
 
@@ -1109,8 +1111,10 @@ dl, ol, ul {
 #btnTwitter{
 	background-image: url("../images/twitter.png");
 	background-repeat:no-repeat;
-	height: 10px;
-    width: 10px;
+	width: 25px; 
+	height: 25px; 
+	margin-top: 5px; 
+	margin-left: 10px;
 }
 
 
