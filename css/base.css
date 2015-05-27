@@ -1102,7 +1102,6 @@ dl, ol, ul {
     display: inline-block !important;
     margin: 0 -10px;
     padding: 0;
-	margin-left: 15px !important;
     padding-top: 0 !important;
 }
 
@@ -1116,10 +1115,14 @@ dl, ol, ul {
 
 #footerRow1 > .section > ul > li > a , #btnTwitter{
     display: inline-block !important;
-    margin: 0 -10px;
+    margin: 0px;
     padding: 0;
-	margin-left: 15px !important;
     padding-top: 0 !important;
+}
+
+#llamanos {
+    font-size: 12px;
+    font-weight: bold;
 }
 
 @media (max-width: 480px) {
@@ -1177,7 +1180,6 @@ dl, ol, ul {
 }
 #footerRow1 > .section > ul > li > a {
 	display: block;
-	margin: 0 -10px;
 	padding: 3px;
 }
 
@@ -2018,7 +2020,26 @@ dl, ol, ul {
 				
 	input[type=text], textarea {
 		width: 35% !important;
-	}			
+	}
+
+	#footer-right{
+		float: right;
+		width: 50%;
+	}
+	
+	#footer-left{
+		float: left;
+		width: 50%;
+	}
+
+	#footerRow1{
+		width: 100%;
+	}	
+	
+	#footerRow1 > .section > ul {
+		display: none;
+		float: none;
+	}
 }
 
 /*** Mobile (portrait) - 0-400px ***/
@@ -2130,21 +2151,21 @@ dl, ol, ul {
 
 /* <!-- CSS PERSONALIZADO --> */
  #footerCustomerServiceSection{
-  width: 19%;
+  width: 25%;
   padding-right: 0px !important; 
   padding-left: 0px !important;
   float: left;
  }
  
  #footerCorporateInfoSection{
-  width: 38%;
+  width: 35%;
   padding-right: 0px !important; 
   padding-left: 0px !important;
   float: left;
  }
  
 #footerExploreSection{
-  width: 43%;
+  width: 40%;
   padding-right: 0px !important; 
   padding-left: 0px !important;
   float: left;
@@ -2214,6 +2235,7 @@ dl, ol, ul {
   border: 1px solid #DDDDDD;
   padding: 10px;
   font-size: 12px !important;
+  width: 85%;
  }
   
  input[type=text]:focus, textarea:focus {
@@ -2235,6 +2257,10 @@ dl, ol, ul {
 	padding-bottom: 10px;
 	color: rgb(90, 100, 115);
  }
+ 
+ .header > h3 {
+    text-transform: uppercase;
+}
  
  
  .contentRecommendationWidget {
