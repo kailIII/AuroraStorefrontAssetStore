@@ -2518,9 +2518,9 @@ div.widget_sidebar_container > .left_border > .right_border > .content div.produ
 }
 
 #quick_cart_container, #MiniShopCartProductAdded {
-	left: auto !important;
-	right: 15px !important;
-	top: 71px !important;
+	left: auto;
+	right: 15px;
+	top: 71px;
 }
 
 #quick_cart_container > .dijitDialogPaneContent, #MiniShopCartProductAdded > .dijitDialogPaneContent {
@@ -6131,7 +6131,7 @@ div[dijitpopupparent^='WC_UserMemberGroupManagement_'] > .dijitSelectMenu table 
 }
 
 /*@BP-A 0-600px*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 952px) {
 	#productsFacetsHorizontal > fieldset {
 		width: 98%;
 	}
