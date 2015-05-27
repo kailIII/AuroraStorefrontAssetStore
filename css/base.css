@@ -293,7 +293,8 @@ dl, ol, ul {
 	font-family: 'ubunturegular',arial;
     font-size: 11px;
 	text-rendering: optimizeLegibility;
-	color:#fff;
+	color:#374652;
+	font-weight:bold;
 }
 .departmentButton.selected > span {
 	/*border-color: #fdd466;*/
@@ -525,7 +526,7 @@ dl, ol, ul {
 
 #header {
 	position: relative;
-	background-color: #fff;
+	background-color: #f7f7f7;
 	font-size: 11px;
 	line-height: normal; /* Needed because of bad CSS reset */
 	z-index: 10;
@@ -538,7 +539,7 @@ dl, ol, ul {
 
 
 #header:before {
-	content: "";
+	/*content: "";*/
 	display: block;
 	height: 5px;
 	/*background-image: url("../images/responsive/masthead_top_bg.png");*/
@@ -561,7 +562,7 @@ dl, ol, ul {
 	/*border-bottom: 1px solid #c9cece;*/
 	/*position:absolute;*/
 	width:100%;
-	background:rgba(0, 0, 0, 0.7);
+	background:#f7f7f7;
 	height:35px;
 }
 #headerRow1:after, #headerRow2:after {
@@ -2628,7 +2629,7 @@ div.grid_icon, a.grid_icon:hover, div.list_icon, a.list_icon:hover {
 }  
 
 li.localizadorTienda :before {
-	content: url("../images/localiza.jpg");
+	content: url("../images/localiza.png");
 	width:15px;
 	height:20px;
 	position:absolute;
@@ -2651,7 +2652,7 @@ li.localizadorTienda :before {
 .asistenciaTienda  a:hover{text-decoration:underline;}
 
 .asistenciaTienda:before {
-  content: url("../images/asistencia.jpg");
+  content: url("../images/asistencia.png");
   width: 15px;
   height: 20px;
   position: absolute;
