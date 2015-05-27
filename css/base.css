@@ -267,18 +267,20 @@ dl, ol, ul {
 	/*background-image: linear-gradient(#f7f9f9, #ced2d3);
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#f7f9f9), to(#ced2d3));
 	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr='#f7f9f9', endColorStr='#ced2d3')";*/
-	background: #199bd5;
-	/*border: 1px solid #D4DCE7;
+	/*background: #199bd5;
+	border: 1px solid #D4DCE7;
 	border-bottom:none;*/
+	box-shadow: inset 0px -4px 0px 0px #1b83ff;
 }
 .departmentButton.selected {
-	color: #fff;
-	/*background-image: linear-gradient(#fbbb0b, #ee9505);
+	/*color: #fff;
+	background-image: linear-gradient(#fbbb0b, #ee9505);
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#fbbb0b), to(#ee9505));
 	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr='#fbbb0b', endColorStr='#ee9505')";*/
-	background:  #199bd5;
-	/*border: 1px solid #D4DCE7;
+	/*background:  #199bd5;
+	border: 1px solid #D4DCE7;
 	border-bottom:1px solid #fff;*/
+	box-shadow: inset 0px -4px 0px 0px #1b83ff;
 }
 .departmentButton > span {
 	display: table-cell;
