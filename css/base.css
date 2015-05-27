@@ -1097,7 +1097,7 @@ dl, ol, ul {
 	width: 25px; 
 	height: 25px; 
 	margin-top: 5px; 
-	margin-left: 10px;
+	margin-left: 20px !important;
 }
 
 
@@ -1128,6 +1128,10 @@ dl, ol, ul {
 #llamanos {
     font-size: 12px;
     font-weight: bold;
+}
+
+#footerFacebookLink {
+    vertical-align: text-bottom !important;
 }
 
 @media (max-width: 480px) {
