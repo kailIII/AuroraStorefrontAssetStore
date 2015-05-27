@@ -566,6 +566,8 @@ dl, ol, ul {
 	width:100%;
 	background:#f7f7f7;
 	height:35px;
+    border-bottom: 1px solid #c9cece;
+    padding-bottom: 5px;	
 }
 #headerRow1:after, #headerRow2:after {
 	content: "";
@@ -807,6 +809,42 @@ dl, ol, ul {
 	display:none;	
 }
 
+#departmentsMenu > li:first-child{
+
+}
+
+#departmentsMenu > li:first-child  .departmentButton {
+  box-shadow:none!important;
+ 	background-color:rgba(255, 255, 255, 0.8); 
+	border:1px solid #c9cece; border-radius:5px; 
+}
+
+#departmentsMenu > li:first-child .departmentButton.selected{
+ border-radius:5px 5px 0 0; 
+ border-bottom:none;
+}
+
+
+#departmentsMenu > li:first-child  .departmentButton:after, 
+#departmentsMenu > li:first-child  .departmentButton:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 12px;
+  height: 10px;
+  right: 12px;
+  bottom: 12px;
+  background-image: url("../images/responsive/rwdUI.png");
+  background-position: -259px -40px;
+} 
+ 
+
+li:first-child:hover  <  .departmentButton.selected{
+ border-radius:5px 5px 0 0; 
+ border-bottom:none;
+} 
+  
+ 
 @media (max-width: 952px){
 .departmentMenu > .header {
 	display:block;
@@ -856,7 +894,7 @@ dl, ol, ul {
 	display: block;
 }
 .categoryList > li {
-	display: inline-block;
+	/*display: inline-block;*/
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -868,13 +906,19 @@ dl, ol, ul {
 	display: block;
 }
 .categoryList > li > a {
-	display: block;
+	display: table-caption;
 	margin: 0 -8px;
 	padding: 8px;
-	font-weight: bold;
-	text-transform: uppercase;
-	color:#189ad6;
+	/*font-weight: bold;*/
+	/*text-transform: uppercase;*/
+	color:#384452;
 }
+
+.categoryList > li > a:after{
+content:">";
+right:5px;
+}
+
 .categoryList > li > a:last-child {
 	font-weight: normal;
 	text-transform: none;
@@ -890,6 +934,7 @@ dl, ol, ul {
 	margin: 0 0 8px 0;
 	padding: 0 0 8px 0;
 	list-style: none;
+	display:none;
 }
 .subcategoryList > li > a {
 	display: block;
@@ -899,9 +944,9 @@ dl, ol, ul {
 
 /* Department menu (1025px+) */
 
-@media (min-width: 1025px) {
+@media (min-width: 952px) {
 	.departmentMenu {
-		width: 540px;
+		width: 153px;
 	}
 	.categoryList > li {
 		width: 33.333333%;
@@ -2340,7 +2385,7 @@ border-bottom-right-radius: 5px;
  border: none !important;
 }
 
-#headerRow2 ul#departmentsMenu li:first-child .departmentButton :first-child{ padding-right:60px;}
+#headerRow2 ul#departmentsMenu li:first-child .departmentButton :first-child{ padding-right:50px;}
 
 /* styles.css*/
 
