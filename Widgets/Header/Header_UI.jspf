@@ -517,11 +517,12 @@ var claseMenu = "";
 $(".menuLink").hover(
 	function () {
 		claseMenu = $(this).attr('rel');
-   		$('div.'+claseMenu).slideDown();
+		$("."+claseMenu).html();
+   		$('div.'+claseMenu).slideDown('medium');
 	}, 
 	function () {
 		claseMenu = $(this).attr('rel');
-	   $('div.'+claseMenu).slideUp();
+	   $('div.'+claseMenu).slideUp('medium');
 	}
 );
 

@@ -790,6 +790,7 @@ dl, ol, ul {
 	/*border-radius: 0 0 4px 4px;*/
 	font-size: 12px;
 	list-style: none;
+	text-transform: uppercase;
 }
 .departmentMenu.active {
 	display: block;
@@ -948,13 +949,19 @@ background-color:#f7f7f7;
 
 .subMenuPage{
     display: none;
+	border-top: 1px solid #c9cece;
+	border-bottom: 1px solid #c9cece;
+    border-left: 1px solid #c9cece;
+    border-right: 1px solid #c9cece;
+	font-size: 12px;
     left: 170px;
     opacity: 0.95;
     position: relative;
     top: -45px;
     width: 500px;
 	height: auto;
-	background-color: gray;
+	background-color: #F7F7F7;
+	text-transform: uppercase;
 }
 
 /* Department menu (1025px+) */
@@ -964,7 +971,7 @@ background-color:#f7f7f7;
 		width: 153px;
 	}
 	.categoryList > li {
-		width: 33.333333%;
+		width: 112%;
 	}
 }
 
