@@ -894,6 +894,7 @@ li:first-child:hover  <  .departmentButton.selected{
 	width: 100%;
 	padding-right: 16px;
 	vertical-align: top;
+	height: 33px;
 }
 .categoryList > li.more {
 	display: block;
@@ -946,13 +947,13 @@ background-color:#f7f7f7;
 }
 
 .subMenuPage{
-    display: block;
+    display: none;
     left: 170px;
     opacity: 0.95;
     position: relative;
-    top: -75px;
+    top: -45px;
     width: 500px;
-	height: 500px;
+	height: auto;
 	background-color: gray;
 }
 

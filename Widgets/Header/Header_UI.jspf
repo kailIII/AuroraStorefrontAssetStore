@@ -261,6 +261,7 @@
 			aria-labelledby="departmentsButton">
 		
 		<li>
+			
 			<a id="departmentButton_90001" href="#" class="departmentButton" role="menuitem" aria-haspopup="true" data-toggle="departmentMenu_90001">
 				<span>Todas las categorías</span>
 				<div class="arrow_button_icon"></div>	
@@ -275,9 +276,13 @@
 					<a id="departmentToggle_90001" href="#" class="toggle" role="button" data-toggle="departmentMenu_90001" aria-labelledby="departmentLink_90001">
 					<span role="presentation"></span></a>
 				</div>
+				
+				
 				<ul class="categoryList">
 				
 				<c:set var="count" value="#{0}" />
+				
+				
 				
 			    <c:forEach var="department" items="${categoryHierarchy.catalogGroupView}">
 			    
@@ -286,12 +291,9 @@
 			    <li>
 				
 				<a rel="subMenu${count}" id="departmentLink_${department.uniqueID}_alt" href="${fn:escapeXml(categoryURLMap[department.uniqueID])}" class="menuLink"  role="menuitem" tabindex="-1"><c:out value="${department.name}"/></a>
-			           <div class="subMenu${count} subMenuPage">
-			           		SUBMENU
-			           </div>
 			           
-			           
-			           <ul class="subcategoryList subMenu${count}" style="display:none;">
+		           <div class="subMenuPage subMenu${count}">
+				         <ul class="subcategoryList" >
 			               
 			               <c:forEach var="category" items="${department.catalogGroupView}">    
 			                    <c:set var="key" value="${department.uniqueID}_${category.uniqueID}"/>
@@ -299,8 +301,12 @@
 			                    <c:out value="${category.name}"/></a>
 			               </li>
 			              </c:forEach></ul>
+				    </div>
+			           
+			           
 			    </li>
 			</c:forEach></ul>
+			
 			</div>
 		
 		
@@ -507,7 +513,10 @@ var claseMenu = "";
 $(".menuLink").hover(function(){
 	claseMenu = $(this).attr('rel');
 	
+	
 	$("."+claseMenu).toggle();
+	
+	$("."+claseMenu).html();
 });
 
 
