@@ -286,6 +286,11 @@
 			    <li>
 				
 				<a rel="subMenu${count}" id="departmentLink_${department.uniqueID}_alt" href="${fn:escapeXml(categoryURLMap[department.uniqueID])}" class="menuLink"  role="menuitem" tabindex="-1"><c:out value="${department.name}"/></a>
+			           <div class="subMenu${count} subMenuPage">
+			           		SUBMENU
+			           </div>
+			           
+			           
 			           <ul class="subcategoryList subMenu${count}" style="display:none;">
 			               
 			               <c:forEach var="category" items="${department.catalogGroupView}">    
@@ -500,10 +505,13 @@ $(".asistenciaTienda").hover(function(){
 var claseMenu = "";
 
 $(".menuLink").hover(function(){
-	claseMenu = $(this).val('rel');
+	claseMenu = $(this).attr('rel');
 	
-	console.log(claseMenu);
+	$("."+claseMenu).toggle();
 });
 
 
 </script>
+
+
+	

@@ -952,6 +952,17 @@ background-color:#f7f7f7;
 	padding: 8px;
 }
 
+.subMenuPage{
+    display: block;
+    left: 170px;
+    opacity: 0.95;
+    position: relative;
+    top: -75px;
+    width: 500px;
+	height: 500px;
+	background-color: gray;
+}
+
 /* Department menu (1025px+) */
 
 @media (min-width: 952px) {
