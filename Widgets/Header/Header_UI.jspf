@@ -510,14 +510,19 @@ $(".asistenciaTienda").hover(function(){
 
 var claseMenu = "";
 
-$(".menuLink").hover(function(){
-	claseMenu = $(this).attr('rel');
-	
-	
-	$("."+claseMenu).toggle();
-	
-	$("."+claseMenu).html();
-});
+$(".menuLink").hover(
+	function () {
+		claseMenu = $(this).attr('rel');
+       	$("."+claseMenu).show();
+		$("."+claseMenu).html();
+    }, 
+
+    function () {
+    	claseMenu = $(this).attr('rel');
+       	$("."+claseMenu).hide();
+    }
+
+);
 
 
 </script>
