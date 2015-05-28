@@ -2014,7 +2014,7 @@ background-color:#f7f7f7;
 	}
 
 	#footerCorporateInfoSection{
-		width: 65% !important;
+		width: 58% !important;
 	}
 
 	#footerExploreSection{
@@ -2047,10 +2047,6 @@ background-color:#f7f7f7;
 	}
 
 	input[type=text], textarea {
-		-webkit-transition: all 0.30s ease-in-out;
-		-moz-transition: all 0.30s ease-in-out;
-		-ms-transition: all 0.30s ease-in-out;
-		-o-transition: all 0.30s ease-in-out;
 		outline: none;
 		padding: 3px 0px 3px 3px;
 		margin: 5px 1px 3px 0px;
@@ -2079,6 +2075,7 @@ background-color:#f7f7f7;
 		
 		#txtCorreo{
 			padding-right: 20px !important;
+			width: 160px !important;
 		}
 		
 	.footer-subcategory{
@@ -2106,6 +2103,27 @@ background-color:#f7f7f7;
 	
 }
 
+@media (max-width: 895px){
+	#footerCorporateInfoSection{
+		width: 63% !important;
+	}
+}
+
+@media (max-width: 943px){
+	#footerCorporateInfoSection {
+		width: 63% !important;
+	}
+}
+
+@media (max-width: 612px){
+	#footerCorporateInfoSection {
+		width: 55% !important;
+	}
+	
+	#footerExploreSection {
+		width: 45% !important;
+	}
+}
 
 /*** Mobile (portrait) - 0-400px ***/
 
