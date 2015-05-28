@@ -197,20 +197,13 @@ dl, ol, ul {
 }
 
 .basicButton {
-	/*display: inline-block;
+	display: inline-block;
 	position: relative;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#fbbb0b), to(#ee9505));
-	background-image: linear-gradient(#fbbb0b, #ee9505);
-	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr='#fbbb0b', endColorStr='#ee9505')";
+	background:#FA8039;
 	border: 1px solid #bfbfbf;
 	border-radius: 4px;
 	border-spacing: 0;
-	vertical-align: middle;*/
-	display: inline-block;
-	position: relative;
-	border-spacing: 0;
-	vertical-align: middle;
-	
+	vertical-align: middle;	
 }
 .basicButton:hover {
 /*	background-image: -webkit-gradient(linear, left top, left bottom, from(#fed60c), to(#f8af06));
@@ -619,7 +612,7 @@ dl, ol, ul {
 	border-right: 0 none;
 }
 #quickLinksBar > li > a {
-	display: block;
+	display: table;
 	position: relative;
 	max-width: 200px;
 	margin: -10px 0;
@@ -1058,6 +1051,7 @@ background-color:#f7f7f7;
 	right: -1px;
 	width: 170px;
 }
+
 @media (min-width: 601px) and (max-width: 900px) {
 	#searchTermWrapper {
 		right: 35px;
@@ -1762,6 +1756,14 @@ background-color:#f7f7f7;
 	.basicMenu > .closeButton > span:before {
 		content: "[x]";
 	}
+	
+
+	#quickLinksBar li.signIn a{
+	  position: absolute!important;
+	  left: 50%;
+	  margin-left: 280px!important;
+	  top: 20px!important;
+	}	
 
 	/* Header */
 
@@ -1907,7 +1909,7 @@ background-color:#f7f7f7;
 	/* Search bar */
 
 	#searchButton {
-		display:block;
+		/*display:block;*/
 		position: absolute;
 		right: 0;
 		top: 0;
@@ -1932,9 +1934,30 @@ background-color:#f7f7f7;
 		clip: rect(21px, 155px, 35px, 141px);
 	}
 	#searchBar {
-		display: none;
-		padding:0px;
+		/*display: none;
+		padding:0px;*/
+		top: -8px;
+		width: 350px;
+		margin-left: -175px;
 	}
+	
+	#header #searchTermWrapper {
+		  width: 290px!important;
+		  text-align: left;
+	}  
+	
+	#searchTermWrapper > input {
+	  width: 290px!important;
+	  margin: -2px 0;
+  }
+	.asistenciaTienda{display:none;}
+	.asistenciaLista{display:none;}
+	.localizadorTienda {display:none!important;}
+
+	#MiniShoppingCart {
+	  right: 40px!important;
+	}	
+	
 	#searchBar.active {
   display: block;
   position: relative;
@@ -1946,7 +1969,7 @@ background-color:#f7f7f7;
 	#quickLinksBar > li {
   border-right: 0px;
   }
-	#searchBox > .submitButton {
+/*	#searchBox > .submitButton {
 		width: 10px;
 		height: 18px;
 		border-width: 6px 10px;
@@ -1957,7 +1980,7 @@ background-color:#f7f7f7;
 	#searchBox > .submitButton:hover:before {
 		left: -201px;
 	}
-
+*/
 	
 	#searchButton{	
   		background-color:none!important;
@@ -2801,10 +2824,10 @@ li.localizadorTienda :before {
 background-color:#F5F5F5;
 }
 
-#Header_GlobalLogin_signInQuickLink {
-  position: absolute!important;
+#quickLinksBar li.signIn a{
+  position: absolute;
   left: 50%;
-  margin-left: 280px!important;
+  margin-left: 280px;
   top: 44px;
 }
 
