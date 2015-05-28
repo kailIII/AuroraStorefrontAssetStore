@@ -349,7 +349,7 @@
 					<a id="departmentLink_002" href="#" class="link menuLink" role="menuitem" tabindex="-1"><c:out value="NOVEDADES"/></a>
 					<a id="departmentToggle_002" href="#" class="toggle" role="button" data-toggle="departmentMenu_002" aria-labelledby="departmentLink_002">
 					<span role="presentation"></span></a>
-				</div>
+				   </div>
 						<%out.flush();%>
 							<c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
 								<c:param name="emsName" value="telmexHeader_NovedadesESP" />
@@ -367,11 +367,12 @@
 					
 					<div id="departmentMenu_003" class="departmentMenu" role="menu"
 					data-parent="departmentsMenu" data-id="003"
-					aria-label="003>
+					aria-label="003">
 					<div class="header">
 					<a id="departmentLink_003" href="#" class="link menuLink" role="menuitem" tabindex="-1"><c:out value="EXCLUSIVOS"/></a>
 					<a id="departmentToggle_003" href="#" class="toggle" role="button" data-toggle="departmentMenu_003" aria-labelledby="departmentLink_003">
 					<span role="presentation"></span></a>
+					</div>
 						<%out.flush();%>
 							<c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
 								<c:param name="emsName" value="telmexHeader_ExlusivosESP" />
@@ -392,6 +393,7 @@
 					<a id="departmentLink_004" href="#" class="link menuLink" role="menuitem" tabindex="-1"><c:out value="GO PRO"/></a>
 					<a id="departmentToggle_004" href="#" class="toggle" role="button" data-toggle="departmentMenu_004" aria-labelledby="departmentLink_004">
 					<span role="presentation"></span></a>
+					</div>
 						<%out.flush();%>
 							<c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
 								<c:param name="emsName" value="telmexHeader_GoproESP" />
@@ -412,6 +414,7 @@
 					<a id="departmentLink_005" href="#" class="link menuLink" role="menuitem" tabindex="-1"><c:out value="APPLE"/></a>
 					<a id="departmentToggle_005" href="#" class="toggle" role="button" data-toggle="departmentMenu_005" aria-labelledby="departmentLink_005">
 					<span role="presentation"></span></a>
+					</div>
 						<%out.flush();%>
 							<c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
 								<c:param name="emsName" value="telmexHeader_AppleESP" />
@@ -432,6 +435,7 @@
 					<a id="departmentLink_006" href="#" class="link menuLink" role="menuitem" tabindex="-1"><c:out value="NEGOCIO"/></a>
 					<a id="departmentToggle_006" href="#" class="toggle" role="button" data-toggle="departmentMenu_006" aria-labelledby="departmentLink_006">
 					<span role="presentation"></span></a>
+					</div>
 						<%out.flush();%>
 							<c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
 								<c:param name="emsName" value="telmexHeader_NegocioESP" />
@@ -452,6 +456,7 @@
 					<a id="departmentLink_007" href="#" class="link menuLink" role="menuitem" tabindex="-1"><c:out value="OFERTAS WOW"/></a>
 					<a id="departmentToggle_007" href="#" class="toggle" role="button" data-toggle="departmentMenu_007" aria-labelledby="departmentLink_007">
 					<span role="presentation"></span></a>
+					</div>
 						<%out.flush();%>
 							<c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
 								<c:param name="emsName" value="telmexHeader_OfertasWOWESP" />
@@ -473,6 +478,7 @@
 					<a id="departmentLink_009" href="#" class="link menuLink" role="menuitem" tabindex="-1"><c:out value="PAYBACK"/></a>
 					<a id="departmentToggle_009" href="#" class="toggle" role="button" data-toggle="departmentMenu_009" aria-labelledby="departmentLink_009">
 					<span role="presentation"></span></a>
+					</div>
 						<%out.flush();%>
 							<c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
 								<c:param name="emsName" value="telmexHeader_PaybackESP" />
