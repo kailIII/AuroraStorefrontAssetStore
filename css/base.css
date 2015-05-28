@@ -906,17 +906,27 @@ li:first-child:hover  <  .departmentButton.selected{
 	display: block;
 }
 .categoryList > li > a {
-	display: table-caption;
+	display: block;
 	margin: 0 -8px;
 	padding: 8px;
 	/*font-weight: bold;*/
 	/*text-transform: uppercase;*/
 	color:#384452;
+	min-width: 150px;
 }
 
 .categoryList > li > a:after{
-content:">";
-right:5px;
+  content: " ";
+  right: 15px;
+  position: absolute;
+  width: 7px;
+  height: 12px;
+  background-image: url("../images/responsive/rwdUI.png");
+  background-position: -282px -40px;
+}
+
+.categoryList > li > a:hover{
+background-color:#f7f7f7;
 }
 
 .categoryList > li > a:last-child {
@@ -999,8 +1009,8 @@ right:5px;
 #searchTermWrapper > input {
 	position: relative;
 	width: 100%;
-	margin: 0px;
-	padding: 0px;
+	margin: 2px;
+	/*padding: 0px;*/
 	background-color: transparent;
 	border: 0 none;
 	font-size: inherit;
@@ -2277,26 +2287,27 @@ right:5px;
  }
  
  input[type=text], textarea {
-  -webkit-transition: all 0.30s ease-in-out;
+  /*-webkit-transition: all 0.30s ease-in-out;
   -moz-transition: all 0.30s ease-in-out;
   -ms-transition: all 0.30s ease-in-out;
   -o-transition: all 0.30s ease-in-out;
-  outline: none;
-  padding: 3px 0px 3px 3px;
+   padding: 3px 0px 3px 3px;
   margin: 5px 1px 3px 0px;
-  border: 1px solid #DDDDDD;
+  border: 1px solid #DDDDDD; 
   padding: 10px;
-  font-size: 12px !important;
   width: 85%;
-   height: 10px;
+   height: 10px; 
+*/
+  outline: none;
+  font-size: 12px !important;
    border-top-right-radius: 5px;
 border-bottom-right-radius: 5px;
  }
   
  input[type=text]:focus, textarea:focus {
   box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-  padding: 3px 0px 3px 3px;
-  margin: 5px 1px 3px 0px;
+  /*padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;*/
   border: 1px solid rgba(81, 203, 238, 1);
  }
  
