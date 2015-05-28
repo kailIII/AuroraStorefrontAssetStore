@@ -288,11 +288,11 @@
 			    
 			    <c:set var="count" value="#{count+1}" />
 			    
-			    <li>
+			    <li rel="subMenu${count}" class="menuLink">
 				
-				<a rel="subMenu${count}" id="departmentLink_${department.uniqueID}_alt" href="${fn:escapeXml(categoryURLMap[department.uniqueID])}" class="menuLink"  role="menuitem" tabindex="-1"><c:out value="${department.name}"/></a>
+				<a id="departmentLink_${department.uniqueID}_alt" href="${fn:escapeXml(categoryURLMap[department.uniqueID])}"  role="menuitem" tabindex="-1"><c:out value="${department.name}"/></a>
 			           
-		           <div class="subMenuPage subMenu${count}">
+		           <div class="subMenuPage subMenu${count} menuLink">
 				         <ul class="subcategoryList" >
 			               
 			               <c:forEach var="category" items="${department.catalogGroupView}">    
@@ -365,7 +365,9 @@
 						<span>Exclusivos</span>
 					</a>
 					
-					<div id="departmentMenu_003" class="departmentMenu" role="menu" data-parent="departmentsMenu" data-id="003" aria-label="003>
+					<div id="departmentMenu_003" class="departmentMenu" role="menu"
+					data-parent="departmentsMenu" data-id="003"
+					aria-label="003>
 					<div class="header">
 					<a id="departmentLink_003" href="#" class="link menuLink" role="menuitem" tabindex="-1"><c:out value="EXCLUSIVOS"/></a>
 					<a id="departmentToggle_003" href="#" class="toggle" role="button" data-toggle="departmentMenu_003" aria-labelledby="departmentLink_003">
@@ -510,20 +512,18 @@ $(".asistenciaTienda").hover(function(){
 
 var claseMenu = "";
 
+
+
 $(".menuLink").hover(
 	function () {
 		claseMenu = $(this).attr('rel');
-       	$("."+claseMenu).show();
-		$("."+claseMenu).html();
-    }, 
-
-    function () {
-    	claseMenu = $(this).attr('rel');
-       	$("."+claseMenu).hide();
-    }
-
+   		$('div.'+claseMenu).slideDown();
+	}, 
+	function () {
+		claseMenu = $(this).attr('rel');
+	   $('div.'+claseMenu).slideUp();
+	}
 );
-
 
 </script>
 
