@@ -510,21 +510,28 @@ $(".asistenciaTienda").hover(function(){
     $(".asistenciaLista").toggle();
 });
 
-var claseMenu = "";
 
+if ($(window).width() > 952) {
+	var claseMenu = "";
 
-
-$(".menuLink").hover(
-	function () {
-		claseMenu = $(this).attr('rel');
-		$("."+claseMenu).html();
-   		$('div.'+claseMenu).slideDown('medium');
-	}, 
-	function () {
-		claseMenu = $(this).attr('rel');
-	   $('div.'+claseMenu).slideUp('medium');
+	$(".menuLink").hover(
+		function () {
+			claseMenu = $(this).attr('rel');
+			$("."+claseMenu).html();
+	   		$('div.'+claseMenu).slideDown(1);
+		}, 
+		function () {
+			claseMenu = $(this).attr('rel');
+		   $('div.'+claseMenu).slideUp(1);
+		}
+	);
 	}
-);
+else {
+   alert('Less than 960');
+}
+
+
+
 
 </script>
 

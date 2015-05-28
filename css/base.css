@@ -958,9 +958,9 @@ background-color:#f7f7f7;
     opacity: 0.95;
     position: relative;
     top: -45px;
-    width: 500px;
+    width: auto;
 	height: auto;
-	background-color: #F7F7F7;
+	background-color: #FFFFFF;
 	text-transform: uppercase;
 }
 
