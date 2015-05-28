@@ -2784,5 +2784,12 @@ background-color:#F5F5F5;
   margin-left: 130px!important;
   top: 90px !important;
   position: absolute!important;
-  
-  
+}
+
+#searchFilterButton, #searchFilterMenu {
+	display:none!important;
+}
+
+#header #searchTermWrapper {
+  width: 435px;
+}
