@@ -944,7 +944,7 @@ background-color:#f7f7f7;
 	margin: 0 0 8px 0;
 	padding: 0 0 8px 0;
 	list-style: none;
-	display:none;
+	/* display:none; */
 }
 .subcategoryList > li > a {
 	display: block;
