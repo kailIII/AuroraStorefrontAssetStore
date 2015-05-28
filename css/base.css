@@ -2055,7 +2055,6 @@ background-color:#f7f7f7;
 		padding: 3px 0px 3px 3px;
 		margin: 5px 1px 3px 0px;
 		border: 1px solid #DDDDDD;
-		padding: 10px;
 		font-size: 12px !important;
 		width: 35% !important;
 	}
@@ -2077,6 +2076,10 @@ background-color:#f7f7f7;
 		#footerRow1{
 			width: 100%;
 		}	
+		
+		#txtCorreo{
+			padding-right: 20px !important;
+		}
 		
 	.footer-subcategory{
 		display: none;
@@ -2299,7 +2302,7 @@ background-color:#f7f7f7;
    height: 10px; 
 */
   outline: none;
-  font-size: 12px !important;
+  font-size: 11px !important;
    border-top-right-radius: 5px;
 border-bottom-right-radius: 5px;
  }
@@ -2315,6 +2318,8 @@ border-bottom-right-radius: 5px;
 	background-image: url("../images/btnEnvio.png");
 	background-repeat: no-repeat;
 	background-position: right center; 
+	border: 1px solid gray;
+	border-radius:5px;
 	cursor: pointer; 
 	height: 25px;
 	width: 100%;
