@@ -132,9 +132,9 @@ require([
 	};
 	setUpEventActions = function(){
 		on(document, "a[data-activate]:click", function(e) {
-			var target = this.getAttribute("data-activate");
-			activate(document.getElementById(target));
-			event.stop(e);
+//			var target = this.getAttribute("data-activate");
+//			activate(document.getElementById(target));
+//			event.stop(e);
 		});
 		on(document, "a[data-deactivate]:click", function(e) {
 			var target = this.getAttribute("data-deactivate");
