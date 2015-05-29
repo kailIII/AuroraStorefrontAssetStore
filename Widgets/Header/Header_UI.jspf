@@ -533,7 +533,7 @@ if ($(window).width() > 952) {
 	);
 	}
 else {
-   alert('Less than 960');
+   console.log('Less than 960');
 }
 
 
