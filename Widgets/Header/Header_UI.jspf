@@ -340,7 +340,8 @@
 				</li>
 				
 				<li class="active">
-					<a id="departmentButton_" href="#" class="departmentButton" role="menuitem" aria-haspopup="true" data-toggle="departmentMenu_002">
+				<!-- <a id="departmentButton_" href="http://www.telmex.com" class="departmentButton" role="menuitem" aria-haspopup="true" data-toggle="departmentMenu_002">  -->
+					<a id="departmentButton_" href="http://wc7dev.torolab.ibm.com/webapp/wcs/stores/servlet/en/auroraesite/electronics"   class="departmentButton" role="menuitem" aria-haspopup="true" >
 						<span>Novedades</span>
 					</a>
 					
@@ -349,19 +350,19 @@
 					<a id="departmentLink_002" href="#" class="link menuLink" role="menuitem" tabindex="-1"><c:out value="NOVEDADES"/></a>
 					<a id="departmentToggle_002" href="#" class="toggle" role="button" data-toggle="departmentMenu_002" aria-labelledby="departmentLink_002">
 					<span role="presentation"></span></a>
-				   </div>
+				   </div>	   
 						<%out.flush();%>
 							<c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
 								<c:param name="emsName" value="telmexHeader_NovedadesESP" />
 							    <c:param name="catalogId" value="${WCParam.catalogId}" />
 							</c:import>
-						<%out.flush();%>
+						<%out.flush();%>	
 					</div>
 					
 				</li/>
 				
 				<li class="active">
-					<a id="departmentButton_" href="#" class="departmentButton" role="menuitem" aria-haspopup="true" data-toggle="departmentMenu_003">
+					<a id="departmentButton_" href=""http://wc7dev.torolab.ibm.com/webapp/wcs/stores/servlet/en/auroraesite/electronics"" class="departmentButton" role="menuitem" aria-haspopup="true" >
 						<span>Exclusivos</span>
 					</a>
 					
