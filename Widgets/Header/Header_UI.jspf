@@ -340,8 +340,12 @@
 				</li>
 				
 				<li class="active">
-				<!-- <a id="departmentButton_" href="http://www.telmex.com" class="departmentButton" role="menuitem" aria-haspopup="true" data-toggle="departmentMenu_002">  -->
-					<a id="departmentButton_" href="http://wc7dev.torolab.ibm.com/webapp/wcs/stores/servlet/en/auroraesite/electronics"   class="departmentButton" role="menuitem" aria-haspopup="true" >
+				
+				<!--
+				link completo con data-toogle, que es la que muestra el spot 
+				<a id="departmentButton_" href="http://www.telmex.com" class="departmentButton" role="menuitem" aria-haspopup="true" data-toggle="departmentMenu_002">  
+				-->
+					<a id="departmentButton_" href="auroraesite/electronics"   class="departmentButton" role="menuitem" aria-haspopup="true" >
 						<span>Novedades</span>
 					</a>
 					
@@ -362,7 +366,7 @@
 				</li/>
 				
 				<li class="active">
-					<a id="departmentButton_" href=""http://wc7dev.torolab.ibm.com/webapp/wcs/stores/servlet/en/auroraesite/electronics"" class="departmentButton" role="menuitem" aria-haspopup="true" >
+					<a id="departmentButton_" href="auroraesite/electronics" class="departmentButton" role="menuitem" aria-haspopup="true" >
 						<span>Exclusivos</span>
 					</a>
 					
@@ -385,7 +389,7 @@
 				</li>
 				
 				<li class="active">
-					<a id="departmentButton_" href="#" class="departmentButton" role="menuitem" aria-haspopup="true" data-toggle="departmentMenu_004">
+					<a id="departmentButton_" href="auroraesite/electronics" class="departmentButton" role="menuitem" aria-haspopup="true" >
 						<span>Go Pro</span>
 					</a>
 					
@@ -406,7 +410,7 @@
 				</li>
 				
 				<li class="active">
-					<a id="departmentButton_" href="#" class="departmentButton" role="menuitem" aria-haspopup="true" data-toggle="departmentMenu_005">
+					<a id="departmentButton_" href="auroraesite/electronics" class="departmentButton" role="menuitem" aria-haspopup="true" >
 						<span>Apple</span>
 					</a>
 					
@@ -427,7 +431,7 @@
 				</li>
 				
 				<li class="active">
-					<a id="departmentButton_" href="#" class="departmentButton" role="menuitem" aria-haspopup="true" data-toggle="departmentMenu_006">
+					<a id="departmentButton_" href="auroraesite/electronics" class="departmentButton" role="menuitem" aria-haspopup="true" >
 						<span>Negocio</span>
 					</a>
 					
@@ -448,7 +452,7 @@
 				</li>
 				
 				<li class="active">
-					<a id="departmentButton_" href="#" class="departmentButton" role="menuitem" aria-haspopup="true" data-toggle="departmentMenu_007">
+					<a id="departmentButton_" href="auroraesite/electronics" class="departmentButton" role="menuitem" aria-haspopup="true" >
 						<span>Ofertas Wow</span>
 					</a>
 					
@@ -470,7 +474,7 @@
 				
 				
 					<li class="active">
-					<a id="departmentButton_" href="#" class="departmentButton" role="menuitem" aria-haspopup="true" data-toggle="departmentMenu_009">
+					<a id="departmentButton_" href="auroraesite/electronics" class="departmentButton" role="menuitem" aria-haspopup="true" >
 						<span>Payback</span>
 					</a>
 					
@@ -532,10 +536,18 @@ if ($(window).width() > 952) {
 		   $('div.'+claseMenu).slideUp(1);
 		}
 	);
-	}
-else {
-   console.log('Less than 960');
-}
+	
+	//$("#Header_GlobalLogin_signInQuickLink").empty();
+	//$("#Header_GlobalLogin_signInQuickLink").append('<div></div>');
+
+	//var elemento = document.getElementById("Header_GlobalLogin_signInQuickLink");
+	//console.log(elemento);
+ //var creado =createElement('div');
+	//elemento.appendChild(creado);
+//	}
+//else {
+ //  console.log('Less than 960');
+//}
 
 
 $(".toggle").click(function(){
