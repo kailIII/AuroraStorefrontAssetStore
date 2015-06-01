@@ -558,12 +558,8 @@ else {
    
 }
 
-
 $(".toggle").click(function(){
 	alert("");
 });
 
 </script>
-
-
-	
