@@ -272,7 +272,7 @@
 			<div id="departmentMenu_90001" class="departmentMenu" role="menu" data-parent="departmentsMenu" data-id="90001" aria-label="Todas las categorías">
 				
 				<div class="header">
-					<a id="departmentLink_90001" href="#" class="link menuLink" role="menuitem" tabindex="-1"><c:out value="Todas las categorías"/></a>
+					<a rel="subMenu${count}" id="departmentLink_90001" href="#" class="link menuLink" role="menuitem" tabindex="-1"><c:out value="Todas las categorías"/></a>
 					<a id="departmentToggle_90001" href="#" class="toggle" role="button" data-toggle="departmentMenu_90001" aria-labelledby="departmentLink_90001">
 					<span role="presentation"></span></a>
 				</div>
@@ -534,13 +534,21 @@ if ($(window).width() > 952) {
 	);
 	}
 else {
-   console.log('Less than 960');
+  	$(".menuLink").click(function(){
+		function () {
+			claseMenu = $(this).attr('rel');
+			$("."+claseMenu).html();
+	   		$('div.'+claseMenu).slideDown(1);
+		}, 
+		function () {
+			claseMenu = $(this).attr('rel');
+		   $('div.'+claseMenu).slideUp(1);
+		}
+	});
+  
 }
 
 
-$(".toggle").click(function(){
-	alert("");
-});
 
 </script>
 
