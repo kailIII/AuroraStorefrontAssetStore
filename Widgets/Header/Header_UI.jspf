@@ -537,17 +537,26 @@ if ($(window).width() > 952) {
 		}
 	);
 	
-	//$("#Header_GlobalLogin_signInQuickLink").empty();
-	//$("#Header_GlobalLogin_signInQuickLink").append('<div></div>');
+
+}
+else {
+   console.log('Less than 960');
+   
+
+	$("#Header_GlobalLogin_signInQuickLink").empty();
+	$("#Header_GlobalLogin_signInQuickLink").append('<div></div>');
+
+	$("#Header_GlobalLogin_signInQuickLink").css({"background" :"red",});
+
 
 	//var elemento = document.getElementById("Header_GlobalLogin_signInQuickLink");
 	//console.log(elemento);
+	
  //var creado =createElement('div');
 	//elemento.appendChild(creado);
-//	}
-//else {
- //  console.log('Less than 960');
-//}
+//
+   
+}
 
 
 $(".toggle").click(function(){
