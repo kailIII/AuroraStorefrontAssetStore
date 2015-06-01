@@ -1766,8 +1766,7 @@ background-color:#f7f7f7;
 	}
 	
 	#quickLinksBar li.signIn a{
-display:none!important;
-  
+/* display:none!important; */
 	}	
 
 	
@@ -1776,10 +1775,9 @@ display:none!important;
   background-image: url("../images/responsive/rwdUI.png");
   background-repeat:no-repeat;
   overflow: hidden;
-  background-position: -118px  -18px;
-  width:12px!important;
-  height:12px;
-  background-color:red;
+  background-position: -158px -62px;
+  width: 34px!important;
+  height: 34px;
   content:" ";
   display:block;
   
@@ -2867,10 +2865,4 @@ background-color:#F5F5F5;
 
 #header #searchTermWrapper {
   width: 435px;
-}
-#Header_GlobalLogin_signInQuickLink >div{
-width:15px;
-height:15px;
- 	background-image: url("../images/responsive/rwdUI.png");
-	background-position: -101px -1px;
 }
