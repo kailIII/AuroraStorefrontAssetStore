@@ -1765,12 +1765,24 @@ background-color:#f7f7f7;
 		content: "[x]";
 	}
 	
-
 	#quickLinksBar li.signIn a{
+display:none!important;
+  
+	}	
+
+	
+	#quickLinksBar li.signIn a:before{
 	  position: absolute!important;
-	  left: 50%;
-	  margin-left: 280px!important;
-	  top: 20px!important;
+  background-image: url("../images/responsive/rwdUI.png");
+  background-repeat:no-repeat;
+  overflow: hidden;
+  background-position: -118px  -18px;
+  width:12px!important;
+  height:12px;
+  background-color:red;
+  content:" ";
+  display:block;
+  
 	}	
 
 	/* Header */
@@ -2837,6 +2849,9 @@ background-color:#F5F5F5;
   left: 50%;
   margin-left: 280px;
   top: 44px;
+
+   width: 110px;
+   display: inline-block;
 }
 
 #quick_cart_container{
@@ -2852,4 +2867,10 @@ background-color:#F5F5F5;
 
 #header #searchTermWrapper {
   width: 435px;
+}
+#Header_GlobalLogin_signInQuickLink >div{
+width:15px;
+height:15px;
+ 	background-image: url("../images/responsive/rwdUI.png");
+	background-position: -101px -1px;
 }
