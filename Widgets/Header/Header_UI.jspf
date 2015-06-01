@@ -516,7 +516,7 @@ $( document ).ready(function() {
 $(".asistenciaTienda").hover(function(){
     $(".asistenciaLista").toggle();
 });
-
+  
 
 if ($(window).width() > 952) {
 	var claseMenu = "";
