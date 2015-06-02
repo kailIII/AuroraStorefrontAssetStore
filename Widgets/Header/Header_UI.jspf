@@ -102,7 +102,7 @@
 				</li>
 			</c:if>
 			
-			<li class="separator-false">
+			<li class="separator-false signIn">
 			
 			<!-- 
 			
@@ -536,7 +536,7 @@ $(".asistenciaTienda").hover(function(){
 
 if ($(window).width() > 952) {
 	var claseMenu = "";
-
+console.log('mayor a 952');
 	$(".menuLink").hover(
 		function () {
 			claseMenu = $(this).attr('rel');
@@ -553,16 +553,7 @@ if ($(window).width() > 952) {
 }
 else {
    console.log('Less than 960');
-   
-
-
-	//var elemento = document.getElementById("Header_GlobalLogin_signInQuickLink");
-	//console.log(elemento);
-	
- //var creado =createElement('div');
-	//elemento.appendChild(creado);
-//
-   
+    
 }
 
 $(".toggle").click(function(){
