@@ -483,10 +483,10 @@ dl, ol, ul {
 @media (min-width: 1281px) {
 	.ccol1 { width: 8.333333%; }
 	.ccol2 { width: 16.666666%; }
-	.ccol3 { width: 25%; }
+	.ccol3 { width: 50%; }
 	.ccol4 { width: 33.333333%; }
 	.ccol5 { width: 41.666666%; }
-	.ccol6 { width: 50%; }
+	.ccol6 { width: 100%; }
 	.ccol7 { width: 58.333333%; }
 	.ccol8 { width: 66.666666%; }
 	.ccol9 { width: 75%; }
