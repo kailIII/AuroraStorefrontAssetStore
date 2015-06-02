@@ -14,7 +14,7 @@
 
 <%@ include file= "../../Common/EnvironmentSetup.jspf" %>
 <%@ include file= "../../../jquery.min.js" %>
-<script src="${jsAssetsDir}javascript/jquery.min.js"></script>
+
 
 <c:set var="departmentId" value="${param.categoryId}"/>
 
@@ -324,7 +324,7 @@
 		
 		
 	
-<script>
+
 $( document ).ready(function() {
 alert('hola');
 });
@@ -360,4 +360,3 @@ $(".toggle").click(function(){
 	alert("");
 });
 
-</script>
