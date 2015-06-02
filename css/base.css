@@ -803,24 +803,24 @@ dl, ol, ul {
 	display:none;	
 }
 
-#departmentsMenu > li:first-child{
+#departmentsMenu > li.menuCategorias {
 
 }
 
-#departmentsMenu > li:first-child  .departmentButton {
+#departmentsMenu > li.menuCategorias   .departmentButton {
   box-shadow:none!important;
  	background-color:rgba(255, 255, 255, 0.8); 
 	border:1px solid #c9cece; border-radius:5px; 
 }
 
-#departmentsMenu > li:first-child .departmentButton.selected{
+#departmentsMenu > li.menuCategorias  .departmentButton.selected{
  border-radius:5px 5px 0 0; 
  border-bottom:none;
 }
 
 
-#departmentsMenu > li:first-child  .departmentButton:after, 
-#departmentsMenu > li:first-child  .departmentButton:after {
+#departmentsMenu > li.menuCategorias   .departmentButton:after, 
+#departmentsMenu > li.menuCategorias   .departmentButton:after {
   content: " ";
   display: block;
   position: absolute;
@@ -833,7 +833,7 @@ dl, ol, ul {
 } 
  
 
-li:first-child:hover  <  .departmentButton.selected{
+li.menuCategorias :hover  <  .departmentButton.selected{
  border-radius:5px 5px 0 0; 
  border-bottom:none;
 } 
@@ -1765,23 +1765,31 @@ background-color:#f7f7f7;
 		content: "[x]";
 	}
 	
-	#quickLinksBar li.signIn a{
-/* display:none!important; */
+	#Header_GlobalLogin_signInQuickLink .msgLoginUser{
+		display:none!important; 
 	}	
 
-	
+	.iconoUser{}
 	#quickLinksBar li.signIn a:before{
 	  position: absolute!important;
-  background-image: url("../images/responsive/rwdUI.png");
-  background-repeat:no-repeat;
-  overflow: hidden;
-  background-position: -158px -62px;
-  width: 34px!important;
-  height: 34px;
-  content:" ";
-  display:block;
-  
-	}	
+	  background-image: url("../images/responsive/rwdUI.png");
+	  background-repeat:no-repeat;
+	  overflow: hidden;
+	  background-position: -158px -62px;
+	  width: 34px!important;
+	  height: 34px;
+	  content:" ";
+	  display:block;
+	  top: 5px;
+	  left: 5px;
+}	
+
+	#quickLinksBar li.signIn a {
+	  margin-left: 245px!important;
+	  top: 4px!important;
+	  width: 12px!important;
+	  height: 18px;
+	}
 
 	/* Header */
 
@@ -2474,7 +2482,7 @@ border-bottom-right-radius: 5px;
  border: none !important;
 }
 
-#headerRow2 ul#departmentsMenu li:first-child .departmentButton :first-child{ padding-right:50px;}
+#headerRow2 ul#departmentsMenu li.menuCategorias .departmentButton { padding-right:50px;}
 
 /* styles.css*/
 
@@ -2845,9 +2853,8 @@ background-color:#F5F5F5;
 #quickLinksBar li.signIn a{
   position: absolute;
   left: 50%;
-  margin-left: 280px;
+  margin-left: 255px;
   top: 44px;
-
    width: 110px;
    display: inline-block;
 }
@@ -2866,3 +2873,8 @@ background-color:#F5F5F5;
 #header #searchTermWrapper {
   width: 435px;
 }
+	
+#Header_GlobalLogin_signInQuickLink .msgLoginUser{
+	display:block; 
+}
+.iconoUser{}
