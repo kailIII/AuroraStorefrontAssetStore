@@ -14,6 +14,7 @@
 
 <%@ include file= "../../Common/EnvironmentSetup.jspf" %>
 <script src="${jsAssetsDir}javascript/jquery.min.js"></script>
+
 <c:set var="departmentId" value="${param.categoryId}"/>
 
 <c:set var="subcategoryLimit" value="10"/>
@@ -81,7 +82,7 @@
 <ul id="departmentsMenu" role="menu" data-parent="header"
 			aria-labelledby="departmentsButton">
 		
-		<li>
+		<li class="menuCategorias">
 			
 			<a id="departmentButton_90001" href="#" class="departmentButton" role="menuitem" aria-haspopup="true" data-toggle="departmentMenu_90001">
 				<span>Todas las categorías</span>
@@ -321,11 +322,10 @@
 		</ul>
 		
 		
-		
-		
-		<script>
+	
+<script>
 $( document ).ready(function() {
-
+alert('hola');
 });
 
 $(".asistenciaTienda").hover(function(){
@@ -335,7 +335,7 @@ $(".asistenciaTienda").hover(function(){
 
 if ($(window).width() > 952) {
 	var claseMenu = "";
-
+console.log('mayor a 952');
 	$(".menuLink").hover(
 		function () {
 			claseMenu = $(this).attr('rel');
@@ -352,21 +352,7 @@ if ($(window).width() > 952) {
 }
 else {
    console.log('Less than 960');
-   
-
-	$("#Header_GlobalLogin_signInQuickLink").empty();
-	$("#Header_GlobalLogin_signInQuickLink").append('<div></div>');
-
-	$("#Header_GlobalLogin_signInQuickLink").css({"background" :"red",});
-
-
-	//var elemento = document.getElementById("Header_GlobalLogin_signInQuickLink");
-	//console.log(elemento);
-	
- //var creado =createElement('div');
-	//elemento.appendChild(creado);
-//
-   
+    
 }
 
 $(".toggle").click(function(){
