@@ -76,7 +76,7 @@ require([
 	activate = function(target) {
 		var startsWith = (target.id.slice(0,departmentMenuId.length) == departmentMenuId);
 		
-	/*	if(this.ajaxRefresh == "true" && startsWith){
+	if(this.ajaxRefresh == "true" && startsWith){
 			setAjaxRefresh(""); // No more refresh till shopper leaves this page
 			// Update the Context, so that widget gets refreshed..
 			wc.render.updateContext("departmentSubMenuContext", {"targetId":target.id});
@@ -85,7 +85,10 @@ require([
 				setTimeout(function(){cX("");}, 1000);
 			}
 			return;
-		}*/
+		
+		
+	}
+		
 					var parent = target.getAttribute("data-parent");
 		if (parent && active[parent]) {
 			deactivate(active[parent]);
@@ -430,7 +433,7 @@ require([
 			widget.refresh(this.renderContext.properties);
 		},
 		postRefreshHandler: function(widget) {
-			updateDepartmentsMenu(); // Browser may be re-sized. From server we return entire department list.. updateHeader to fit to the list within available size
+				updateDepartmentsMenu(); // Browser may be re-sized. From server we return entire department list.. updateHeader to fit to the list within available size
 			activate(document.getElementById(this.renderContext.properties.targetId)); // We have all the data.. Activate the menu...
 			cursor_clear();
 		}
