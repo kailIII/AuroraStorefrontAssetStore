@@ -2866,3 +2866,7 @@ background-color:#F5F5F5;
 #header #searchTermWrapper {
   width: 435px;
 }
+
+.color_swatch_selected{
+	box-shadow: 0 0 0 3px #64afff !important;
+}
