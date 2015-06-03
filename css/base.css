@@ -14,85 +14,69 @@
 
 /*** Reset + basic styles ***/
 @font-face {
-    font-family: 'ubunturegular';
-    src: url('../fonts/ubuntu-regular-webfont.eot');
-    src: url('../fonts/ubuntu-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/ubuntu-regular-webfont.woff2') format('woff2'),
-         url('../fonts/ubuntu-regular-webfont.woff') format('woff'),
-         url('../fonts/ubuntu-regular-webfont.ttf') format('truetype'),
-         url('../fonts/ubuntu-regular-webfont.svg#ubunturegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'ubunturegular';
+	src: url('../fonts/ubuntu-regular-webfont.eot');
+	src: url('../fonts/ubuntu-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/ubuntu-regular-webfont.woff2') format('woff2'),
+		 url('../fonts/ubuntu-regular-webfont.woff') format('woff'),
+		 url('../fonts/ubuntu-regular-webfont.ttf') format('truetype'),
+		 url('../fonts/ubuntu-regular-webfont.svg#ubunturegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
 
 }
 
 @font-face {
-    font-family: 'ubuntulight';
-    src: url('../fonts/ubuntu-light-webfont.eot');
-    src: url('../fonts/ubuntu-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/ubuntu-light-webfont.woff2') format('woff2'),
-         url('../fonts/ubuntu-light-webfont.woff') format('woff'),
-         url('../fonts/ubuntu-light-webfont.ttf') format('truetype'),
-         url('../fonts/ubuntu-light-webfont.svg#ubuntulight') format('svg');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'ubuntulight';
+	src: url('../fonts/ubuntu-light-webfont.eot');
+	src: url('../fonts/ubuntu-light-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/ubuntu-light-webfont.woff2') format('woff2'),
+		 url('../fonts/ubuntu-light-webfont.woff') format('woff'),
+		 url('../fonts/ubuntu-light-webfont.ttf') format('truetype'),
+		 url('../fonts/ubuntu-light-webfont.svg#ubuntulight') format('svg');
+	font-weight: normal;
+	font-style: normal;
 
 }
 
 @font-face {
-    font-family: 'ubuntumedium';
-    src: url('../fonts/ubuntu-medium-webfont.eot');
-    src: url('../fonts/ubuntu-medium-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/ubuntu-medium-webfont.woff2') format('woff2'),
-         url('../fonts/ubuntu-medium-webfont.woff') format('woff'),
-         url('../fonts/ubuntu-medium-webfont.ttf') format('truetype'),
-         url('../fonts/ubuntu-medium-webfont.svg#ubuntumedium') format('svg');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'ubuntumedium';
+	src: url('../fonts/ubuntu-medium-webfont.eot');
+	src: url('../fonts/ubuntu-medium-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/ubuntu-medium-webfont.woff2') format('woff2'),
+		 url('../fonts/ubuntu-medium-webfont.woff') format('woff'),
+		 url('../fonts/ubuntu-medium-webfont.ttf') format('truetype'),
+		 url('../fonts/ubuntu-medium-webfont.svg#ubuntumedium') format('svg');
+	font-weight: normal;
+	font-style: normal;
 
 }
 
 @font-face {
-    font-family: 'ubuntubold';
-    src: url('../fonts/ubuntu-bold-webfont.eot');
-    src: url('../fonts/ubuntu-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/ubuntu-bold-webfont.woff2') format('woff2'),
-         url('../fonts/ubuntu-bold-webfont.woff') format('woff'),
-         url('../fonts/ubuntu-bold-webfont.ttf') format('truetype'),
-         url('../fonts/ubuntu-bold-webfont.svg#ubuntubold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-@font-face {
-    font-family: 'ubuntuitalic';
-    src: url('../fonts/ubuntu-italic-webfont.eot');
-    src: url('../fonts/ubuntu-italic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/ubuntu-italic-webfont.woff2') format('woff2'),
-         url('../fonts/ubuntu-italic-webfont.woff') format('woff'),
-         url('../fonts/ubuntu-italic-webfont.ttf') format('truetype'),
-         url('../fonts/ubuntu-italic-webfont.svg#ubuntuitalic') format('svg');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'ubuntubold';
+	src: url('../fonts/ubuntu-bold-webfont.eot');
+	src: url('../fonts/ubuntu-bold-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/ubuntu-bold-webfont.woff2') format('woff2'),
+		 url('../fonts/ubuntu-bold-webfont.woff') format('woff'),
+		 url('../fonts/ubuntu-bold-webfont.ttf') format('truetype'),
+		 url('../fonts/ubuntu-bold-webfont.svg#ubuntubold') format('svg');
+	font-weight: normal;
+	font-style: normal;
 
 }
 
 
 
-
 @font-face {
-    font-family: 'ubuntulight_italic';
-    src: url('../fonts/ubuntu-lightitalic-webfont.eot');
-    src: url('../fonts/ubuntu-lightitalic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/ubuntu-lightitalic-webfont.woff2') format('woff2'),
-         url('../fonts/ubuntu-lightitalic-webfont.woff') format('woff'),
-         url('../fonts/ubuntu-lightitalic-webfont.ttf') format('truetype'),
-         url('../fonts/ubuntu-lightitalic-webfont.svg#ubuntulight_italic') format('svg');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'ubuntuitalic';
+	src: url('../fonts/ubuntu-italic-webfont.eot');
+	src: url('../fonts/ubuntu-italic-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/ubuntu-italic-webfont.woff2') format('woff2'),
+		 url('../fonts/ubuntu-italic-webfont.woff') format('woff'),
+		 url('../fonts/ubuntu-italic-webfont.ttf') format('truetype'),
+		 url('../fonts/ubuntu-italic-webfont.svg#ubuntuitalic') format('svg');
+	font-weight: normal;
+	font-style: normal;
 
 }
 
@@ -100,29 +84,45 @@
 
 
 @font-face {
-    font-family: 'ubuntumedium_italic';
-    src: url('../fonts/ubuntu-mediumitalic-webfont.eot');
-    src: url('../fonts/ubuntu-mediumitalic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/ubuntu-mediumitalic-webfont.woff2') format('woff2'),
-         url('../fonts/ubuntu-mediumitalic-webfont.woff') format('woff'),
-         url('../fonts/ubuntu-mediumitalic-webfont.ttf') format('truetype'),
-         url('../fonts/ubuntu-mediumitalic-webfont.svg#ubuntumedium_italic') format('svg');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'ubuntulight_italic';
+	src: url('../fonts/ubuntu-lightitalic-webfont.eot');
+	src: url('../fonts/ubuntu-lightitalic-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/ubuntu-lightitalic-webfont.woff2') format('woff2'),
+		 url('../fonts/ubuntu-lightitalic-webfont.woff') format('woff'),
+		 url('../fonts/ubuntu-lightitalic-webfont.ttf') format('truetype'),
+		 url('../fonts/ubuntu-lightitalic-webfont.svg#ubuntulight_italic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+
+
+
+@font-face {
+	font-family: 'ubuntumedium_italic';
+	src: url('../fonts/ubuntu-mediumitalic-webfont.eot');
+	src: url('../fonts/ubuntu-mediumitalic-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/ubuntu-mediumitalic-webfont.woff2') format('woff2'),
+		 url('../fonts/ubuntu-mediumitalic-webfont.woff') format('woff'),
+		 url('../fonts/ubuntu-mediumitalic-webfont.ttf') format('truetype'),
+		 url('../fonts/ubuntu-mediumitalic-webfont.svg#ubuntumedium_italic') format('svg');
+	font-weight: normal;
+	font-style: normal;
 
 }
 
 
 @font-face {
-    font-family: 'ubuntubold_italic';
-    src: url('../fonts/ubuntu-bolditalic-webfont.eot');
-    src: url('../fonts/ubuntu-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/ubuntu-bolditalic-webfont.woff2') format('woff2'),
-         url('../fonts/ubuntu-bolditalic-webfont.woff') format('woff'),
-         url('../fonts/ubuntu-bolditalic-webfont.ttf') format('truetype'),
-         url('../fonts/ubuntu-bolditalic-webfont.svg#ubuntubold_italic') format('svg');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'ubuntubold_italic';
+	src: url('../fonts/ubuntu-bolditalic-webfont.eot');
+	src: url('../fonts/ubuntu-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/ubuntu-bolditalic-webfont.woff2') format('woff2'),
+		 url('../fonts/ubuntu-bolditalic-webfont.woff') format('woff'),
+		 url('../fonts/ubuntu-bolditalic-webfont.ttf') format('truetype'),
+		 url('../fonts/ubuntu-bolditalic-webfont.svg#ubuntubold_italic') format('svg');
+	font-weight: normal;
+	font-style: normal;
 
 }
 
@@ -148,7 +148,7 @@ blockquote, h1, h2, h3, h4, h5, h6, p {
 
 
 h1 {
-    color: #1b83ff !important;
+	color: #1b83ff !important;
 }
 
 button, input, textarea, select {
@@ -174,26 +174,26 @@ dl, ol, ul {
 
 
 .textContainer .button {
-    background-color: #fa8039 !important;
-    border-radius: 5px !important;
-    color: #fff;
-    font-family: 'ubunturegular',Arial,Helvetica,sans-serif;
-    font-size: 20px;
-    margin-left: 1px;
-    margin-top: 15px;
-    padding: 9px 20px;
-    text-align: center;
-    width: 100px;
+	background-color: #fa8039 !important;
+	border-radius: 5px !important;
+	color: #fff;
+	font-family: 'ubunturegular',Arial,Helvetica,sans-serif;
+	font-size: 20px;
+	margin-left: 1px;
+	margin-top: 15px;
+	padding: 9px 20px;
+	text-align: center;
+	width: 100px;
 }
 
 .textContainer .title {
-    color: #1b83ff !important;
-    font-family:'ubunturegular',arial,helvetica;
-    font-size: 40px;
-    font-weight: bold;
-    line-height: 42px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
+	color: #1b83ff !important;
+	font-family:'ubunturegular',arial,helvetica;
+	font-size: 40px;
+	font-weight: bold;
+	line-height: 42px;
+	margin-bottom: 10px;
+	text-transform: uppercase;
 }
 
 .basicButton {
@@ -230,7 +230,7 @@ dl, ol, ul {
 	text-align: center;
 	vertical-align: middle;
 	font-family: 'ubunturegular',arial;
-    font-size: 11px;
+	font-size: 11px;
 	text-rendering: optimizeLegibility;
 	color:#fff;
 }
@@ -286,7 +286,7 @@ dl, ol, ul {
 	text-align: center;
 	vertical-align: middle;
 	font-family: 'ubunturegular',arial;
-    font-size: 11px;
+	font-size: 11px;
 	text-rendering: optimizeLegibility;
 	color:#374652;
 	font-weight:bold;
@@ -419,7 +419,7 @@ dl, ol, ul {
 .row.margin-true > div > .row { margin: 0 !important; }
 
 .rowContainer {
-    margin: 0 auto !important;
+	margin: 0 auto !important;
 }
 
 /* Row */
@@ -483,10 +483,10 @@ dl, ol, ul {
 @media (min-width: 1281px) {
 	.ccol1 { width: 8.333333%; }
 	.ccol2 { width: 16.666666%; }
-	.ccol3 { width: 50%; }
+	.ccol3 { width: 25%; }
 	.ccol4 { width: 33.333333%; }
 	.ccol5 { width: 41.666666%; }
-	.ccol6 { width: 100%; }
+	.ccol6 { width: 50%; }
 	.ccol7 { width: 58.333333%; }
 	.ccol8 { width: 66.666666%; }
 	.ccol9 { width: 75%; }
@@ -559,8 +559,8 @@ dl, ol, ul {
 	width:100%;
 	background:#f7f7f7;
 	height:35px;
-    border-bottom: 1px solid #c9cece;
-    padding-bottom: 5px;	
+	border-bottom: 1px solid #c9cece;
+	padding-bottom: 5px;	
 }
 #headerRow1:after, #headerRow2:after {
 	content: "";
@@ -587,15 +587,15 @@ dl, ol, ul {
 /*** Quick links bar ***/
 
 #quickLinksBar {
-    color: #767676;
-    font-size: 10px;
-    list-style: outside none none;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    /*right: 22%;*/
-    text-align: right;
-    top: 15px;
+	color: #767676;
+	font-size: 10px;
+	list-style: outside none none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	/*right: 22%;*/
+	text-align: right;
+	top: 15px;
 	width: 100%;
 }
 #quickLinksBar > li {
@@ -821,7 +821,7 @@ dl, ol, ul {
 
 #departmentsMenu > li.menuCategorias   .departmentButton {
   box-shadow:none!important;
- 	background-color:rgba(255, 255, 255, 0.8); 
+	background-color:rgba(255, 255, 255, 0.8); 
 	border:1px solid #c9cece; border-radius:5px; 
 }
 
@@ -960,17 +960,17 @@ background-color:#f7f7f7;
 }
 
 .subMenuPage{
-    display: none;
+	display: none;
 	border-top: 1px solid #c9cece;
 	border-bottom: 1px solid #c9cece;
-    border-left: 1px solid #c9cece;
-    border-right: 1px solid #c9cece;
+	border-left: 1px solid #c9cece;
+	border-right: 1px solid #c9cece;
 	font-size: 12px;
-    left: 170px;
-    opacity: 0.95;
-    position: relative;
-    top: -45px;
-    width: auto;
+	left: 170px;
+	opacity: 0.95;
+	position: relative;
+	top: -45px;
+	width: auto;
 	height: auto;
 	background-color: #FFFFFF;
 	text-transform: uppercase;
@@ -995,10 +995,10 @@ background-color:#f7f7f7;
 }
 
 #searchBar {
-    left: 28%;
-    padding: 2px;
-    position: absolute;
-    top: 30px;
+	left: 28%;
+	padding: 2px;
+	position: absolute;
+	top: 30px;
 	width: 500px;
 	left: 50%;
 	margin-left: -250px;
@@ -1012,8 +1012,8 @@ background-color:#f7f7f7;
 	text-align: right;
 	vertical-align: middle;
 	/*width: calc(150% - 60%);
-    min-width: 60px;
-    margin-right: 59px;*/
+	min-width: 60px;
+	margin-right: 59px;*/
 }
 #searchTermWrapper {
 	position: absolute;
@@ -1183,10 +1183,10 @@ background-color:#f7f7f7;
 
 
 #footerRow1 > .section > ul > li > a , #btnFacebook{
-    display: inline-block !important;
-    margin: 0 -10px;
-    padding: 0;
-    padding-top: 0 !important;
+	display: inline-block !important;
+	margin: 0 -10px;
+	padding: 0;
+	padding-top: 0 !important;
 }
 
 #btnTwitter{
@@ -1200,19 +1200,19 @@ background-color:#f7f7f7;
 
 
 #footerRow1 > .section > ul > li > a , #btnTwitter{
-    display: inline-block !important;
-    margin: 0px;
-    padding: 0;
-    padding-top: 0 !important;
+	display: inline-block !important;
+	margin: 0px;
+	padding: 0;
+	padding-top: 0 !important;
 }
 
 #llamanos {
-    font-size: 12px;
-    font-weight: bold;
+	font-size: 12px;
+	font-weight: bold;
 }
 
 #footerFacebookLink {
-    vertical-align: text-bottom !important;
+	vertical-align: text-bottom !important;
 }
 
 @media (max-width: 480px) {
@@ -1289,11 +1289,11 @@ background-color:#f7f7f7;
 }
 .carousel h2 .titleItems{
 	color: #189AD6;
-    font-size: 19px;
-    font-weight: normal;
+	font-size: 19px;
+	font-weight: normal;
 	margin: 20px auto 0 auto;
-    max-width: 1000px;
-    padding: 0;	
+	max-width: 1000px;
+	padding: 0;	
 	text-align: center;
 }
 .carousel > .content {
@@ -2019,14 +2019,14 @@ background-color:#f7f7f7;
 */
 	
 	#searchButton{	
-  		background-color:none!important;
+		background-color:none!important;
 		border: 0px!important;
 		height: 33px!important;
 		margin: 40px -69px!important;	
 		background:none;
 	}
 	#MiniShoppingCart {
-      top: -11px!important;
+	  top: -11px!important;
 	  right: 40px!important;
 }
 
@@ -2430,9 +2430,9 @@ border-bottom-right-radius: 5px;
 
  
 .header > h3 {
-    font-size: 10px;
-    font-weight: 100;
-    text-transform: uppercase;
+	font-size: 10px;
+	font-weight: 100;
+	text-transform: uppercase;
 }
  
  
@@ -2458,18 +2458,18 @@ border-bottom-right-radius: 5px;
 	background-repeat:no-repeat;
 	position:absolute!important;
 	margin:0px!important; 
-    left: 10%;
-    top: 12%;	
+	left: 10%;
+	top: 12%;	
 }
 .texto_carrusel_banner{
 	width:45%;
 	float:right;
 	font-family:'ubunturegular',arial; 
 	color:#384651; 
-    margin: 0 !important;
-    right: 10%;
+	margin: 0 !important;
+	right: 10%;
 	top: 5%;
-    text-align: center;
+	text-align: center;
 }
 .homeBannerTitulo{ font-size:30px;}
 .homeBannerTexto{font-size:22px;}
@@ -2478,14 +2478,14 @@ border-bottom-right-radius: 5px;
 .plecaHomeCarruselBanner{ height:5px; width:150px; margin:0 auto 35px auto; background-color:#E07F38;}
 
 .contentRecommendationWidget {
-    background: none repeat scroll 0 0;
-    margin: 0 auto !important;
-    max-width: 1000px;
+	background: none repeat scroll 0 0;
+	margin: 0 auto !important;
+	max-width: 1000px;
 }
 
 .categoryRecommendationWidget, .catalogEntryRecommendationWidget {
-    margin: 0 auto!important;
-    max-width: 1000px;
+	margin: 0 auto!important;
+	max-width: 1000px;
 }
 
 .catPos{
@@ -2506,18 +2506,18 @@ border-bottom-right-radius: 5px;
 }
 
 .product > .product_image img {
-    height: 100%;
-    max-height: 160px!important;
-    max-width: 243px!important;
-    width: 243px!important;
+	height: 100%;
+	max-height: 160px!important;
+	max-width: 243px!important;
+	width: 243px!important;
 }
 
 div.namePartPriceContainer > div > span.price {
-    color: #fa8846 !important;
-    display: block;
-    font-size: 30px !important;
-    font-weight: bold;
-    line-height: 20px !important;
+	color: #fa8846 !important;
+	display: block;
+	font-size: 30px !important;
+	font-weight: bold;
+	line-height: 20px !important;
 }
 
 
@@ -2539,9 +2539,9 @@ width: 80%;
 /* Inicia categorias izquierdo*/ 
 
 .color_swatch_list .color_swatch_selected, .color_swatch_list .color_swatch:hover, div.product_listing_container .list_mode .product > .product_info > .product_color_swatches > .color_swatch_list .color_swatch_selected, div.product_listing_container .list_mode .product > .product_info > .product_color_swatches > .color_swatch_list .color_swatch:hover {
-    border-radius: 0% !important;
-    box-shadow: 0 0 0 3px #fac549;
-    vertical-align: middle;
+	border-radius: 0% !important;
+	box-shadow: 0 0 0 3px #fac549;
+	vertical-align: middle;
 	width: 15px !important;
 }
 
@@ -2553,46 +2553,46 @@ width: 80%;
 }
 
 .product_text {
-    border-bottom: 0px solid #e5e5e5 !important;
-    line-height: 15px;
-    padding-bottom: 11px;
-    padding-top: 11px;
+	border-bottom: 0px solid #e5e5e5 !important;
+	line-height: 15px;
+	padding-bottom: 11px;
+	padding-top: 11px;
 }
 
 
 div.namePartPriceContainer {
-    border-bottom: 0px solid #e5e5e5 !important;
-    padding-bottom: 4px;
+	border-bottom: 0px solid #e5e5e5 !important;
+	padding-bottom: 4px;
 }
 
 .definingAttributes .attBorder {
-    border-top: 0px solid #e5e5e5 !important;
+	border-top: 0px solid #e5e5e5 !important;
 }
 
 .available {
-    border-bottom: 0px solid #e5e5e5 !important;
-    float: left;
-    padding: 11px 0;
-    width: 100%;
+	border-bottom: 0px solid #e5e5e5 !important;
+	float: left;
+	padding: 11px 0;
+	width: 100%;
 }
 
 .product_page_content .widget_product_image_viewer .image_container {
-    border-bottom: 0px dotted #777777 !important;
-    width: 95%;
+	border-bottom: 0px dotted #777777 !important;
+	width: 95%;
 }
 
 .button.primary {
-    background-image: linear-gradient(#fa8039, #fa8039) !important;
-    border: 1px solid #bfbfbf;
-    border-radius: 4px;
-    color: #FFFFFF !important;
-    display: inline-block;
-    font-size: 14px;
-    line-height: 29px;
-    max-width: 100%;
-    min-height: 29px;
-    text-align: center;
-    width: 200px;
+	background-image: linear-gradient(#fa8039, #fa8039) !important;
+	border: 1px solid #bfbfbf;
+	border-radius: 4px;
+	color: #FFFFFF !important;
+	display: inline-block;
+	font-size: 14px;
+	line-height: 29px;
+	max-width: 100%;
+	min-height: 29px;
+	text-align: center;
+	width: 200px;
 }
 
 #widget_breadcrumb{
@@ -2600,91 +2600,91 @@ div.namePartPriceContainer {
 }
 
 .tab_container {
-    border-left: 0px solid #e9e9e9 !important;
-    border-radius: 3px 3px 0 0;
-    border-right: 0px solid #e9e9e9 !important;
-    border-top: 0px solid #ca4200 !important;
-    color: #ca4000;
-    display: table-cell;
-    float: left;
-    font-size: 12px;
-    font-weight: bold;
-    outline: 1px solid white;
-    padding: 10px;
-    position: relative !important;
-    text-align: center;
-    text-transform: uppercase;
-    vertical-align: middle;
-    width: 40%;
+	border-left: 0px solid #e9e9e9 !important;
+	border-radius: 3px 3px 0 0;
+	border-right: 0px solid #e9e9e9 !important;
+	border-top: 0px solid #ca4200 !important;
+	color: #ca4000;
+	display: table-cell;
+	float: left;
+	font-size: 12px;
+	font-weight: bold;
+	outline: 1px solid white;
+	padding: 10px;
+	position: relative !important;
+	text-align: center;
+	text-transform: uppercase;
+	vertical-align: middle;
+	width: 40%;
 }
 
 .tab {
-    border: 0px solid #e9e9e9 !important;
-    border-radius: 5px;
-    margin-top: 0 !important;
-    width: 99%;
+	border: 0px solid #e9e9e9 !important;
+	border-radius: 5px;
+	margin-top: 0 !important;
+	width: 99%;
 }
 
 
 .product_info > .product_price {
-    color: #ca4200;
-    font-size: 17px !important;
-    font-weight: bold;
+	color: #ca4200;
+	font-size: 17px !important;
+	font-weight: bold;
 }
 
 .facetWidget {
-    background: white none repeat scroll 0 0 !important;
-    border-radius: 5px;
+	background: white none repeat scroll 0 0 !important;
+	border-radius: 5px;
 }
 
 #content .collapsible {
-    background-color: #FFFFFF !important;
-    border-radius: 5px;
-    padding: 10px 5%;
-    transition: background-color 0.2s ease 0s;
+	background-color: #FFFFFF !important;
+	border-radius: 5px;
+	padding: 10px 5%;
+	transition: background-color 0.2s ease 0s;
 }
 
 #content .collapsible:hover {
-    background-color: #FFFFFF !important;
+	background-color: #FFFFFF !important;
 }
 
 .collapsible > h3 {
-    background: #F7F7F7 none repeat scroll 0 0;
-    display: block;
-    font-size: 17px;
-    font-weight: inherit;
-    margin: -10px;
-    padding: 10px;
-    position: relative;
+	background: #F7F7F7 none repeat scroll 0 0;
+	display: block;
+	font-size: 17px;
+	font-weight: inherit;
+	margin: -10px;
+	padding: 10px;
+	position: relative;
 }
 
 .facetSelect li {
-    border-bottom: 0px solid #e3e1e1 !important;
-    color: #565656;
-    cursor: pointer;
-    font-size: 12px;
-    line-height: 16px;
-    list-style: outside none none;
-    padding: 10px 5%;
+	border-bottom: 0px solid #e3e1e1 !important;
+	color: #565656;
+	cursor: pointer;
+	font-size: 12px;
+	line-height: 16px;
+	list-style: outside none none;
+	padding: 10px 5%;
 }
 
 #price_range_input {
-    text-decoration: none !important;
+	text-decoration: none !important;
 }
 
 .optionContainer > .title {
-    background: #F2F2F2 !important;
-    border-bottom: 0px solid #e3e1e1 !important;
-    border-radius: 0px !important;
-    border-top: 0px solid #e3e1e1 !important;
-    color: #545454;
-    cursor: pointer;
+	background: #F2F2F2 !important;
+	border-bottom: 0px solid #e3e1e1 !important;
+	border-radius: 0px !important;
+	border-top: 0px solid #e3e1e1 !important;
+	color: #545454;
+	cursor: pointer;
 	font-weight: lighter !important;
-    font-weight: bold;
-    height: 40px;
-    line-height: 40px;
-    margin: 10px 1px 0;
-    padding: 0 5%;
+	font-weight: bold;
+	height: 40px;
+	line-height: 40px;
+	margin: 10px 1px 0;
+	padding: 0 5%;
 
 	text-transform: lowercase !important;
 }
@@ -2698,13 +2698,13 @@ div.namePartPriceContainer {
 }
 
 ul.facetSelect li div.facetCountContainer {
-    display: inline-block;
-    float: left !important;
+	display: inline-block;
+	float: left !important;
 }
 
 ul.facetSelect .outline > .facetCountContainer {
-    display: inline-block;
-    float: right !important;
+	display: inline-block;
+	float: right !important;
 }
 
 
@@ -2739,19 +2739,19 @@ div#widget_breadcrumb > ul span.divider, div#widget_breadcrumb > ul li.divider {
 /* inicia mosaico */
 
 .selectWrapper {
-    background-color: #FFFFFF !important;
-    border: 2px solid #1987C2 !important;
-    border-radius: 0px !important;
-    display: inline-block;
-    position: relative;
+	background-color: #FFFFFF !important;
+	border: 2px solid #1987C2 !important;
+	border-radius: 0px !important;
+	display: inline-block;
+	position: relative;
 }
 
 div.grid_icon, a.grid_icon:hover, div.list_icon, a.list_icon:hover {
-    background-color: #FFFFFF !important;
+	background-color: #FFFFFF !important;
 }
 
 .grid_icon, .list_icon {
-    border: 0px solid #a0a0a0 !important;
+	border: 0px solid #a0a0a0 !important;
 }
 
 .selectWrapper .dijitSelect {
@@ -2769,8 +2769,8 @@ div.grid_icon, a.grid_icon:hover, div.list_icon, a.list_icon:hover {
   }
   
  #MiniShoppingCart {
-    position: absolute;
-    right: 0px;
+	position: absolute;
+	right: 0px;
 }
 
 .product > .product_image img {
@@ -2817,7 +2817,7 @@ li.localizadorTienda :before {
   z-index: 1;
   color: #767676;
   font-size: 10px;
-    height: 18px;
+	height: 18px;
 	cursor:pointer;
 }
 
@@ -2890,16 +2890,16 @@ background-color:#F5F5F5;
 }
 
 .inactive_tab {
-    background-image: none !important;
-    border-bottom: 0px solid #e9e9e9 !important;
-    border-top: 0px solid #bbbbbb !important;
-    color: #686868 ;
+	background-image: none !important;
+	border-bottom: 0px solid #e9e9e9 !important;
+	border-top: 0px solid #bbbbbb !important;
+	color: #686868 ;
 }
 
 .quantity_section > .quantity_input{
   padding: 10px;
   border: solid 1px gainsboro;
-    -webkit-border-radius: none;
+	-webkit-border-radius: none;
   -moz-border-radius: none;
   -ms-border-radius: none;
   -o-border-radius: none;
@@ -2915,11 +2915,99 @@ background-color:#F5F5F5;
 }
 
 .color_swatch_list .color_swatch_selected, .color_swatch_list .color_swatch:hover, div.product_listing_container .list_mode .product > .product_info > .product_color_swatches > .color_swatch_list .color_swatch_selected, div.product_listing_container .list_mode .product > .product_info > .product_color_swatches > .color_swatch_list .color_swatch:hover {
-    border-radius: 100%;
-    box-shadow: 0 0 0 3px #64afff !important;
-    vertical-align: middle;
+	border-radius: 100%;
+	box-shadow: 0 0 0 3px #64afff !important;
+	vertical-align: middle;
 }
 
 #add2CartBtn{
 	width: 220px !important;
 }
+
+/*** 
+Autor: Daniel Torres
+Layout: CategoryPageTelmex_Layout
+***/
+
+div.compare_target {
+	width: 100% !important;
+	text-align: right !important;
+	box-sizing: border-box;
+}
+
+.carousel > .prevPageButton, .carousel > .nextPageButton {
+  top: 75px;
+  margin-top: 0px;
+  right: 0 !important;
+}
+
+.carousel > .prevPageButton{
+	margin-left: -10px;
+}
+
+.product_info > .product_name > a {
+	font-size: 15px !important;
+}
+
+.product_info > .product_price > .price{
+	font-family: ubunturegular !important;
+	font-size: 18px !important;
+	color: #fa8846 !important;
+}
+
+.product_info > .compare_target > label{
+	font-family: Arial, Helvetica, sans-serif !important;
+	font-size: 11px !important;
+}
+
+
+
+.facetWidget .optionContainer > .title {
+	font-size: 13px;
+	height: 30px;
+	line-height: 30px;
+}
+
+.productListingWidget > .header_bar > .title {
+	width: 100%;
+	text-align: center;
+	border-top: 1px solid #f2eff0;
+	padding-top: 15px !important;
+}
+
+.productListingWidget > .header_bar {
+	border-bottom: none !important;
+}
+
+.catEntryGrid_border{
+	border: none !important;
+}
+
+.productListingWidget .controls {
+  float: none;
+  width: 100% !important;
+}
+
+.productListingWidget .controls .sorting_view_controls_container{
+	float: none;
+	width: 100%;
+	margin-top: 30px;
+}
+
+.productListingWidget .controls .sorting_view_controls_container .sorting_controls{
+	width: 73%;
+	box-sizing: border-box;
+	display: inline;
+	float: none;
+}
+
+.productListingWidget .controls .sorting_view_controls_container .view_controls{
+	width: 25%;
+	box-sizing: border-box;
+	display: inline;
+	float: none;
+	text-align: right;
+}
+
+
+/** **/
