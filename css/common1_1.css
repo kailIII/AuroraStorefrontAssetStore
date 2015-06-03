@@ -6073,32 +6073,34 @@ div#widget_coordinate {
 
 .button_primary {
 	display: inline-block;
-	position: relative;
+	position: relative;   
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#fbbb0b), to(#ffb123));
 	background-image: linear-gradient(#fbbb0b, #ffb123);
-	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr='#fbbb0b', endColorStr='#ffb123')";	
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr='#fbbb0b', endColorStr='#ffb123')";   
 	border-radius: 4px;
 	border-spacing: 0;
 	vertical-align: middle;
 }
-.button_primary:hover {
+
+
+.button_primary:hover {   
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#fed60c), to(#f8af06));
 	background-image: linear-gradient(#fed60c, #f8af06);
-	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr='#fed60c', endColorStr='#f8af06')";
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr='#fed60c', endColorStr='#f8af06')";   
 }
+
 .button_primary > .button_text {
 	display: block;
-	margin: 0;
-	padding: 10px 20px;   
-    background-color: #3e7ec7;
+	margin: 0 auto;
+	padding: 10px 20px;
     color: #FFF;    
 	border-radius: 3px;
 	font-size: 11px;
 	line-height: normal;
 	text-align: center;
 	vertical-align: middle;
-    width: 100%;
 }
+
 
 .button_primary > .left_border, .button_primary > .right_border {
 	display: none;
@@ -7359,6 +7361,8 @@ div.widget_search_tab_wrapper .tab_header .tab_container {
 			.widget_product_compare > .middle > .left_border > .right_border > .content > .compare_main .row_border {
 				border-bottom: 1px solid #e5e5e5;
 			}
+
+/* Arturo aqui elimine el font size para poder tener diferentes tamaños */
 			.widget_product_compare > .middle > .left_border > .right_border > .content > .compare_main .row {
 				overflow: hidden;
 				min-height: 30px;
@@ -7378,10 +7382,11 @@ div.widget_search_tab_wrapper .tab_header .tab_container {
 			.widget_product_compare > .middle > .left_border > .right_border > .content .zebra {
 				background-color: rgb(245, 245, 245);
 			}
+
+/* aqui elimine el bold para que quede como en el diseño*/
 			.widget_product_compare > .middle > .left_border > .right_border > .content > .compare_main .row > .heading {
 				float: left;
 				color: #777777;
-				font-weight: bold;
 				padding: 6px 1%;
 				line-height: 16px;
 			}
@@ -8005,12 +8010,69 @@ div .error_icon {
 
 
 
-/* ================================================================================================ */
-.compara{
+/* ================================================================================================ Arturo */
+.widget_product_compare > .middle > .left_border > .right_border > .content > .compare_main .compara{
 text-align: left;
 line-height: normal;
 font-weight: normal;
 font-style: normal;
 font-family: Arial;
 font-size: 24px;
+}
+
+.widget_product_compare > .middle > .left_border > .right_border > .content > .compare_main .row .caracteristicas{
+    font-size: 16px;
+    margin-left: 15px;
+}
+
+.widget_product_compare > .middle > .left_border > .right_border > .content > .compare_main .row .tam16px{
+    font-size: 16px;
+}
+
+.widget_product_compare > .middle > .left_border > .right_border > .content > .compare_main .row .listado{
+    font-size: 12px;
+}
+
+.widget_product_compare > .middle > .left_border > .right_border > .content > .compare_main .row .centrado{
+    text-align: center;
+    align-content: center;
+    align-items: center;
+}
+
+.widget_product_compare > .middle > .left_border > .right_border > .content > .compare_main .margen_arriba{
+    margin-top: 30px;
+}
+
+
+.widget_product_compare > .middle > .left_border > .right_border > .content > .compare_main .row .button_text {
+    position: relative;
+    display: block;
+    padding: 10px 20px;   
+    background-color: #3e7ec7;
+    color: #FFF;    
+    border-radius: 3px;
+    font-size: 11px;
+    line-height: normal;
+    text-align: center;
+    vertical-align: middle;
+    width: 80%;
+}
+
+
+.widget_product_compare > .middle > .left_border > .right_border > .content > .compare_main .row .button_primary22 {
+    display: inline-block;
+    position: relative;
+    border-radius: 4px;
+    border-spacing: 0;
+    vertical-align: middle;
+    width: 100%;
+}
+
+
+.widget_product_compare > .middle > .left_border > .right_border > .content > .compare_main .row .button_primary22:hover {
+    /*
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fed60c), to(#f8af06));
+    background-image: linear-gradient(#fed60c, #f8af06);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr='#fed60c', endColorStr='#f8af06')";
+    */
 }
