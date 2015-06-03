@@ -2881,48 +2881,6 @@ background-color:#F5F5F5;
 	display:block; 
 }
 
-.active_tab{
-	border: 2px solid #3E7EC7;
-}
-
-.left_espot{
-	color: rgb(62, 126, 199);
-}
-
-.inactive_tab {
-	background-image: none !important;
-	border-bottom: 0px solid #e9e9e9 !important;
-	border-top: 0px solid #bbbbbb !important;
-	color: #686868 ;
-}
-
-.quantity_section > .quantity_input{
-  padding: 10px;
-  border: solid 1px gainsboro;
-	-webkit-border-radius: none;
-  -moz-border-radius: none;
-  -ms-border-radius: none;
-  -o-border-radius: none;
-  border-radius: none;
-  -webkit-transition: box-shadow 0.3s, border 0.3s;
-  -moz-transition: box-shadow 0.3s, border 0.3s;
-  -o-transition: box-shadow 0.3s, border 0.3s;
-  transition: box-shadow 0.3s, border 0.3s;
-}
-
-.quantity_input{
-	border-radius: 0px !important;
-}
-
-.color_swatch_list .color_swatch_selected, .color_swatch_list .color_swatch:hover, div.product_listing_container .list_mode .product > .product_info > .product_color_swatches > .color_swatch_list .color_swatch_selected, div.product_listing_container .list_mode .product > .product_info > .product_color_swatches > .color_swatch_list .color_swatch:hover {
-	border-radius: 100%;
-	box-shadow: 0 0 0 3px #64afff !important;
-	vertical-align: middle;
-}
-
-#add2CartBtn{
-	width: 220px !important;
-}
 
 /*** 
 Autor: Daniel Torres
@@ -3010,4 +2968,72 @@ div.compare_target {
 }
 
 
-/** **/
+/** 
+FICHA PRODUCTO
+Alejandro Paredes
+**/
+
+
+.active_tab{
+	border: 2px solid #3E7EC7;
+}
+
+.left_espot{
+	color: rgb(62, 126, 199);
+}
+
+.inactive_tab {
+    background-image: none !important;
+    border-bottom: 0px solid #e9e9e9 !important;
+    border-top: 0px solid #bbbbbb !important;
+    color: #686868 ;
+}
+
+.quantity_section > .quantity_input{
+  padding: 10px;
+  border: solid 1px gainsboro;
+    -webkit-border-radius: none;
+  -moz-border-radius: none;
+  -ms-border-radius: none;
+  -o-border-radius: none;
+  border-radius: none;
+  -webkit-transition: box-shadow 0.3s, border 0.3s;
+  -moz-transition: box-shadow 0.3s, border 0.3s;
+  -o-transition: box-shadow 0.3s, border 0.3s;
+  transition: box-shadow 0.3s, border 0.3s;
+}
+
+.quantity_input{
+	border-radius: 0px !important;
+}
+
+.color_swatch_list .color_swatch_selected, .color_swatch_list .color_swatch:hover, div.product_listing_container .list_mode .product > .product_info > .product_color_swatches > .color_swatch_list .color_swatch_selected, div.product_listing_container .list_mode .product > .product_info > .product_color_swatches > .color_swatch_list .color_swatch:hover {
+    border-radius: 100%;
+    box-shadow: 0 0 0 3px #64afff !important;
+    vertical-align: middle;
+}
+
+#add2CartBtn {
+	width: 58px !important;
+	height: 17px !important;
+    background-color: #fa8039 !important;
+    border: 0 none !important;
+    border-radius: 5px !important;
+    clear: both !important;
+    color: #fff !important;
+    cursor: pointer !important;
+    display: inline-block !important;
+    font-size: 0.95em !important;
+    margin: 10px auto 0 !important;
+    text-decoration: none !important;
+}
+#add2CartBtn:hover {
+    background-color: #fa6b19 !important;
+}
+
+.product_page_content .tab > .content {
+	color: #55667a !important;
+    font-size: 0.75em !important;
+    line-height: 1.4 !important;
+}
+
