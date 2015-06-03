@@ -224,7 +224,7 @@
                                     <%--
                                     cambie la clase del boton para esta seccion
                                     --%>
-                                    class="button_primary22" wairole="button" role="button" title="<fmt:message bundle="${storeText}" key="ADD_TO_CART" />">
+                                    class="button_primary22 btnAzul" wairole="button" role="button" title="<fmt:message bundle="${storeText}" key="ADD_TO_CART" />">
                                     <div class="left_border"></div>
                                     <div id="comparePageAdd2Cart_${status.count}" class="button_text">
                                     <fmt:message bundle="${storeText}" key="ADD_TO_CART" />
@@ -317,7 +317,7 @@
                                     <%--
                                     cambie la clase del boton para esta seccion
                                     --%>
-                                    class="button_primary22" wairole="button" role="button" title="<fmt:message bundle="${storeText}" key="ADD_TO_CART" />">
+                                    class="button_primary22 btnAzul" wairole="button" role="button" title="<fmt:message bundle="${storeText}" key="ADD_TO_CART" />">
                                     <div class="left_border"></div>
                                     <div id="comparePageAdd2Cart_${status.count}" class="button_text">
                                     <fmt:message bundle="${storeText}" key="ADD_TO_CART" />
@@ -500,7 +500,7 @@
                                     QuickInfoJS.showDetails('${catEntryType.key}', null, null, null, 'widget_quick_info_popup');"
                                     </c:otherwise>
                                     </c:choose>
-                                    class="button_primary22" wairole="button" role="button" title="<fmt:message bundle="${storeText}" key="ADD_TO_CART" />">
+                                    class="button_primary22 btnAzul" wairole="button" role="button" title="<fmt:message bundle="${storeText}" key="ADD_TO_CART" />">
                                     <div class="left_border"></div>
                                     <div class="button_text">
                                     <fmt:message bundle="${storeText}" key="ADD_TO_CART" />
@@ -609,7 +609,7 @@
                                     QuickInfoJS.showDetails('${catEntryType.key}', null, null, null, 'widget_quick_info_popup');"
                                     </c:otherwise>
                                     </c:choose>
-                                    class="button_primary22" wairole="button" role="button" title="<fmt:message bundle="${storeText}" key="ADD_TO_CART" />">
+                                    class="button_primary22 btnAzul" wairole="button" role="button" title="<fmt:message bundle="${storeText}" key="ADD_TO_CART" />">
                                     <div class="left_border"></div>
                                     <div class="button_text">
                                     <fmt:message bundle="${storeText}" key="ADD_TO_CART" />
