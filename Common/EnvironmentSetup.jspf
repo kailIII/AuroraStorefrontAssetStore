@@ -30,12 +30,14 @@
 <%@ page import="com.ibm.commerce.server.WebModuleConfig" %>
 <%@ page import="com.ibm.commerce.server.WcsApp" %>
 
+
 <%
 // check to see if wcparam is available; initialise it if it is not available
 if( null == request.getAttribute(com.ibm.commerce.server.ECConstants.EC_INPUT_PARAM)){
 	request.setAttribute(com.ibm.commerce.server.ECConstants.EC_INPUT_PARAM, new com.ibm.commerce.datatype.WcParam(request));
 }
 %>
+
 
 <%-- This flow tag is used to change styles --%>
 <flow:fileRef id="vfileColor" fileId="vfile.color"/>
@@ -78,6 +80,7 @@ if( null == request.getAttribute(com.ibm.commerce.server.ECConstants.EC_INPUT_PA
 <c:set var="env_useExternalCart" value="false"/>
 <c:set var="env_browseOnly" value="false"/>
 <flow:ifEnabled feature="on-behalf-of">
+
 	<%
 		if (request.getAttribute(ExternalCartContext.KEY_EXTERNAL_CART_ID) == null) {
 			CommandContext commandContext = (CommandContext) request.getAttribute("CommandContext");
@@ -681,9 +684,9 @@ If set to true, department list will be loaded on-demand, when shopper clicks on
       </c:if> 
     </c:if>
 </c:if>
-
 <%-- IT configurable flag for disabling global login view  --%>
 <c:set var="env_globalLoginViewDisabled" value="false"/>		
+
 <%
 response.setHeader("X-Frame-Options","SAMEORIGIN");
 %>

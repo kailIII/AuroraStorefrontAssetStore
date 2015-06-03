@@ -15,7 +15,6 @@
 <!doctype HTML>
 
 <!-- BEGIN CategoryNavigationDisplay.jsp -->
-
 <%@include file="../../../Common/EnvironmentSetup.jspf" %>
 <%@include file="../../../Common/JSTLEnvironmentSetupExtForRemoteWidgets.jspf" %>
 <%@include file="../../../Common/nocache.jspf" %>
@@ -154,7 +153,7 @@ xmlns:waistate="http://www.w3.org/2005/07/aaa" lang="${shortLocale}" xml:lang="$
 		<%@include file="../../../Common/CommonJSToInclude.jspf" %>
 		<script type="text/javascript" src="${jsAssetsDir}javascript/CommonContextsDeclarations.js"></script>
 		<script type="text/javascript" src="${jsAssetsDir}javascript/CommonControllersDeclaration.js"></script>
-		<script type="text/javascript" src="${jsAssetsDir}javascript/Widgets/collapsible.js"></script>
+		<script type="text/javascript" src="${jsAssetsDir}javascript/Widgets/collapsible.js"></script>		
 		<script type="text/javascript">
 			dojo.addOnLoad(function() { 
 				shoppingActionsServicesDeclarationJS.setCommonParameters('<c:out value="${langId}" />','<c:out value="${storeId}" />','<c:out value="${catalogId}" />');

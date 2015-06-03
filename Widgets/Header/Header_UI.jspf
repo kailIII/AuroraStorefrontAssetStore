@@ -42,7 +42,6 @@
 <script>var isGuest = ${userType == 'G'};</script>
 
 <script src="${jsAssetsDir}javascript/Widgets/header.js"></script>
-<script src="${jsAssetsDir}javascript/jquery.min.js"></script>
 
 <c:set var="signInOutAttributes"
 	value="href='${fn:escapeXml(Logon_LogoutURL)}'" />
@@ -267,7 +266,7 @@
 	<%-- Start Refresh Area --%>
 	<div dojoType="wc.widget.RefreshArea"
 		widgetId="drop_down_${department.uniqueID}"
-		controllerId="departmentSubMenu_Controller"
+		controllerId="departmentSubMenu_Controllers"
 		aria-labelledby="departmentsButton">
 		<ul id="departmentsMenu" role="menu" data-parent="header"
 			aria-labelledby="departmentsButton">
@@ -523,41 +522,5 @@ dojo.addOnLoad(function() {
 });
 </script>
 
-
-<script>
-$( document ).ready(function() {
-
-});
-
-$(".asistenciaTienda").hover(function(){
-    $(".asistenciaLista").toggle();
-});
-
-
-if ($(window).width() > 952) {
-	var claseMenu = "";
-console.log('mayor a 952');
-	$(".menuLink").hover(
-		function () {
-			claseMenu = $(this).attr('rel');
-			$("."+claseMenu).html();
-	   		$('div.'+claseMenu).slideDown(1);
-		}, 
-		function () {
-			claseMenu = $(this).attr('rel');
-		   $('div.'+claseMenu).slideUp(1);
-		}
-	);
-	
-
-}
-else {
-   console.log('Less than 960');
-    
-}
-
-$(".toggle").click(function(){
-	alert("");
-});
-
-</script>
+<script src="${jsAssetsDir}javascript/jquery.min.js"></script>
+<script src="${jsAssetsDir}javascript/funciones.js"></script>

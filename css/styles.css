@@ -6285,12 +6285,14 @@ div[dijitpopupparent^='WC_UserMemberGroupManagement_'] > .dijitSelectMenu table 
 		-moz-border-right-colors: none;
 		-moz-border-top-colors: none;
 		background: none repeat scroll 0 0 #FFFFFF;
-		border-color: #B8B8B8 #B8B8B8 #FFFFFF;
+		/*border-color: #B8B8B8 #B8B8B8 #FFFFFF;*/
 		border-image: none;
 		border-style: solid;
 		border-top-left-radius: 5px;
 		border-top-right-radius: 5px;
-		border-width: 1px;
+		/*border-width: 1px;*/
+		border-width: 0px;
+		background:transparent;		
 		left: 1px;
 		z-index: 101;
 	}
