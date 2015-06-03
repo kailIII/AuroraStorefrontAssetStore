@@ -53,15 +53,31 @@
 						</c:when>
 						<c:otherwise>
 							<div class="compare_main">
-								<div class="compare_${productCount}"> <!-- Can change this to compare_1 or compare_2 or compare_3 or compare_4 -->
+								
+                                
+                                
+                                
+                                <div class="compare_${productCount}"> <!-- Can change this to compare_1 or compare_2 or compare_3 or compare_4 -->
 									<div class="row height_spacing_top">
-										<div class="heading"><fmt:message bundle="${storeText}" key='CPG_PRODUCT_IMAGE'/></div>
+                                    
+                                    <div class="heading">
+                                    <p class="compara">Compara tus productos</p>
+                                    
+                                    <%--
+                                    aca comente esta parte para que solo quede lo nuevo
+                                    <fmt:message bundle="${storeText}" key='CPG_PRODUCT_IMAGE'/>
+                                    --%>                                    
+                                    
+                                    </div>                                        
+                                        
 										<c:forEach var="catEntryId" items="${catEntryIds}" varStatus="status">
 											<div class="item">
 												<div class="heading_mobile"><fmt:message bundle="${storeText}" key='CPG_PRODUCT_IMAGE'/></div>
-												<a href="${catEntryUrlMap[catEntryId]}" title="${catEntryShortDescMap[catEntryId]}">
+												                                                
+                                                <a href="${catEntryUrlMap[catEntryId]}" title="${catEntryShortDescMap[catEntryId]}">
 													<img src="${catEntryImagesMap[catEntryId]}" alt="${catEntryShortDescMap[catEntryId]}"/>
 												</a>
+                                                
 												<c:forEach var="catEntryType" items="${catEntryTypeMap}" varStatus="status2">
 													<c:if test="${status.count == status2.count}">
 														<input type="hidden" value="<c:out value='${catEntryImagesMap[catEntryId]}'/>"/>
@@ -71,42 +87,11 @@
 										</c:forEach>
 									</div>
 
-									<div class="row">
-										<div class="heading"></div>
-										<c:forEach var="catEntryType" items="${catEntryTypeMap}" varStatus="status">
-											<c:set var="buyableKey">${status.count}</c:set>
-											<div class="item">
-												<c:choose>
-													<c:when test="${catEntryBuyable[buyableKey]}">
-														<a id="add2CartBtn_${status.count}" href="javascript:setCurrentId('add2CartBtn_${status.count}');
-															<c:choose>
-																<c:when test="${(catEntryType.value eq 'ItemBean') or (catEntryType.value eq 'PackageBean')}">
-																	<c:forEach var="catEntryId" items="${catEntryIds}" varStatus="status2">
-																		<c:if test="${status.count == status2.count}">
-																			CompareProductJS.add2ShopCart('${catEntryType.key}',1,'${catEntryId}');"
-																		</c:if>
-																	</c:forEach>
-																</c:when>
-																<c:otherwise>
-																	QuickInfoJS.showDetails('${catEntryType.key}', null, null, null, 'widget_quick_info_popup');"
-																</c:otherwise>
-															</c:choose>
-															class="button_primary" wairole="button" role="button" title="<fmt:message bundle="${storeText}" key="ADD_TO_CART" />">
-															<div class="left_border"></div>
-															<div id="comparePageAdd2Cart_${status.count}" class="button_text">
-																<fmt:message bundle="${storeText}" key="ADD_TO_CART" />
-															</div>
-															<div class="right_border"></div>
-														</a>
-													</c:when>
-													<c:otherwise>
-														<p><fmt:message bundle="${storeText}" key="SKU_NOT_BUYABLE"/></p>
-													</c:otherwise>
-												</c:choose>
-											</div>
-										</c:forEach>
-									</div>
-									<div class="row row_border reduce_margins">
+                                    
+                                    
+                                    
+                                    
+                                    <div class="row row_border reduce_margins">
 										<div class="heading"></div>
 										<c:forEach var="catEntryId" items="${catEntryIds}" varStatus="status">
 											<div class="item">
@@ -117,7 +102,15 @@
 										</c:forEach>
 									</div>
 
-									<div class="row row_border zebra">
+									
+                                    
+                                    <div class="row height_spacing_top"> 
+                                        <div class="heading">Caracteristicas</div>
+                                    </div>
+                                    
+                                    
+                                    
+                                    <div class="row row_border zebra">
 										<div class="heading"><fmt:message bundle="${storeText}" key='CPG_PRODUCT'/></div>
 										<c:forEach var="catEntryName" items="${catEntryNames}" varStatus="status">
 											<div class="item"><div class="heading_mobile"><fmt:message bundle="${storeText}" key='CPG_PRODUCT'/></div>${catEntryName}</div>
@@ -128,6 +121,11 @@
 											</c:forEach>
 										</c:forEach>
 									</div>
+                                    
+                                    
+                                    
+                                    
+                                    
 
 									<div class="row <c:if test="${hasBrand}">row_border</c:if>">
 										<div class="heading"><fmt:message bundle="${storeText}" key='CPG_PRICE'/></div>
@@ -159,6 +157,63 @@
 											</c:if>
 										</c:forEach>
 									</div>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    <div class="row">
+                                    <div class="heading"></div>
+                                    <c:forEach var="catEntryType" items="${catEntryTypeMap}" varStatus="status">
+                                    <c:set var="buyableKey">${status.count}</c:set>
+                                    <div class="item">
+                                    <c:choose>
+                                    <c:when test="${catEntryBuyable[buyableKey]}">
+                                    <a id="add2CartBtn_${status.count}" href="javascript:setCurrentId('add2CartBtn_${status.count}');
+                                    <c:choose>
+                                    <c:when test="${(catEntryType.value eq 'ItemBean') or (catEntryType.value eq 'PackageBean')}">
+                                    <c:forEach var="catEntryId" items="${catEntryIds}" varStatus="status2">
+                                    <c:if test="${status.count == status2.count}">
+                                    CompareProductJS.add2ShopCart('${catEntryType.key}',1,'${catEntryId}');"
+                                    </c:if>
+                                    </c:forEach>
+                                    </c:when>
+                                    <c:otherwise>
+                                    QuickInfoJS.showDetails('${catEntryType.key}', null, null, null, 'widget_quick_info_popup');"
+                                    </c:otherwise>
+                                    </c:choose>
+                                    class="button_primary" wairole="button" role="button" title="<fmt:message bundle="${storeText}" key="ADD_TO_CART" />">
+                                    <div class="left_border"></div>
+                                    <div id="comparePageAdd2Cart_${status.count}" class="button_text">
+                                    <fmt:message bundle="${storeText}" key="ADD_TO_CART" />
+                                    </div>
+                                    <div class="right_border"></div>
+                                    </a>
+                                    </c:when>
+                                    <c:otherwise>
+                                    <p><fmt:message bundle="${storeText}" key="SKU_NOT_BUYABLE"/></p>
+                                    </c:otherwise>
+                                    </c:choose>
+                                    </div>
+                                    </c:forEach>
+                                    </div>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
 
 									<c:if test="${hasBrand}">
 										<div class="row <c:if test="${not empty catEntryAttributes}">row_border </c:if> zebra">
@@ -189,6 +244,60 @@
 											</c:forEach>
 										</div>
 									</c:forEach>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    <div class="row">
+                                    <div class="heading"></div>
+                                    <c:forEach var="catEntryType" items="${catEntryTypeMap}" varStatus="status">
+                                    <c:set var="buyableKey">${status.count}</c:set>
+                                    <div class="item">
+                                    <c:choose>
+                                    <c:when test="${catEntryBuyable[buyableKey]}">
+                                    <a id="add2CartBtn_${status.count}" href="javascript:setCurrentId('add2CartBtn_${status.count}');
+                                    <c:choose>
+                                    <c:when test="${(catEntryType.value eq 'ItemBean') or (catEntryType.value eq 'PackageBean')}">
+                                    <c:forEach var="catEntryId" items="${catEntryIds}" varStatus="status2">
+                                    <c:if test="${status.count == status2.count}">
+                                    CompareProductJS.add2ShopCart('${catEntryType.key}',1,'${catEntryId}');"
+                                    </c:if>
+                                    </c:forEach>
+                                    </c:when>
+                                    <c:otherwise>
+                                    QuickInfoJS.showDetails('${catEntryType.key}', null, null, null, 'widget_quick_info_popup');"
+                                    </c:otherwise>
+                                    </c:choose>
+                                    class="button_primary" wairole="button" role="button" title="<fmt:message bundle="${storeText}" key="ADD_TO_CART" />">
+                                    <div class="left_border"></div>
+                                    <div id="comparePageAdd2Cart_${status.count}" class="button_text">
+                                    <fmt:message bundle="${storeText}" key="ADD_TO_CART" />
+                                    </div>
+                                    <div class="right_border"></div>
+                                    </a>
+                                    </c:when>
+                                    <c:otherwise>
+                                    <p><fmt:message bundle="${storeText}" key="SKU_NOT_BUYABLE"/></p>
+                                    </c:otherwise>
+                                    </c:choose>
+                                    </div>
+                                    </c:forEach>
+                                    </div>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
 									
 									<c:forEach var="catalogEntryDetails" items="${catEntryDetails}" varStatus="status">
 										<c:set var="productCount">${status.count}</c:set>
@@ -207,7 +316,16 @@
 										</c:if>
 									</c:forEach>
 								</div>
+                                
 							</div>
+                            
+                                            
+                            
+                            
+                            
+                            
+                            
+                            
 
 							<c:if test="${productCount > 2}">
 							<div class="compare_main">
