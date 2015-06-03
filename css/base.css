@@ -3055,7 +3055,6 @@ div.compare_target {
 .sorting_controls .selectWrapper:hover {
 	height: 27px;
 
-<<<<<<< HEAD
 	border:1px solid #7A7A7A;
 	background-color: #EEEEEE; background-image: -webkit-gradient(linear, left top, left bottom, from(#EEEEEE), to(#C7C7C7));
 	background-image: -webkit-linear-gradient(top, #EEEEEE, #C7C7C7);
@@ -3094,7 +3093,7 @@ h1{
 	margin-top: 15px;
 }
 /** **/
-=======
+
 /** 
 FICHA PRODUCTO
 Alejandro Paredes
@@ -3164,4 +3163,3 @@ Alejandro Paredes
     line-height: 1.4 !important;
 }
 
->>>>>>> origin/master
