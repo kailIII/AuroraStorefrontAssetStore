@@ -197,12 +197,14 @@
 		<div id="content" role="main">
 			<%@ include file="../../../Snippets/Subscription/CancelPopup.jspf" %>
 			<div class="row margin-true">
-				<div class="col12">				
+				<div class="col12">
+					<%-- Daniel Torres				
 					<%out.flush();%>
 						<c:import url="${env_siteWidgetsDir}com.ibm.commerce.store.widgets.BreadcrumbTrail/BreadcrumbTrail.jsp">  														
 							<c:param name="pageGroup" value="Content"/>
 						</c:import>
-					<%out.flush();%>					
+					<%out.flush();%>	
+					--%> 				
 				</div>
 			</div>
 			<div class="rowContainer" id="container_MyAccountDisplayB2B">
@@ -212,7 +214,15 @@
 							<c:import url="${env_siteWidgetsDir}com.ibm.commerce.store.widgets.MyAccountNavigation/MyAccountNavigation.jsp"/>
 						<%out.flush();%>		
 					</div>
-					<div class="col8 acol12 ccol9 right">	
+					<div class="col8 acol12 ccol9 right">
+
+						<%-- Daniel Torres --%>
+						<%out.flush();%>
+							<c:import url="${env_siteWidgetsDir}com.ibm.commerce.store.widgets.BreadcrumbTrail/BreadcrumbTrail.jsp">  														
+								<c:param name="pageGroup" value="Content"/>
+							</c:import>
+						<%out.flush();%>	
+
 						<div id="box" class="myAccountMarginRight">
 									<div class="my_account" id="WC_OrderStatusDisplay_div_1">		
 

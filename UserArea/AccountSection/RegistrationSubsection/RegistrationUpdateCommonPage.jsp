@@ -199,7 +199,7 @@
 		</div>
 	</div>
 	<div id="WC_UserRegistrationUpdateForm_div_40">
-		<div class="button_footer_line" id="WC_UserRegistrationUpdateForm_div_42">
+		<div class="button_footer_line right" id="WC_UserRegistrationUpdateForm_div_42">
 			<a href="#" role="button" class="button_primary" id="WC_UserRegistrationUpdateForm_links_1" onclick="javascript:MyAccountDisplay.prepareSubmit(document.Register,'<c:out value='${logonPassword}'/>','<c:out value='${logonPasswordVerify}'/>');return false;">
 				<div class="left_border"></div>
 				<div class="button_text btnAzul"><fmt:message bundle="${storeText}" key="UPDATE" /></div>												

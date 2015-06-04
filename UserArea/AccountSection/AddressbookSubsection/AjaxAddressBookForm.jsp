@@ -194,7 +194,7 @@
 	</div>
 
 	<div id="content_footer">
-		<div class="button_footer_line" id="WC_AjaxAddressBookForm_div_16">
+		<div class="button_footer_line right" id="WC_AjaxAddressBookForm_div_16">
 			<a href="#" role="button" class="button_primary" id="WC_AjaxAddressBookForm_links_4" onclick="javascript:setCurrentId('WC_AjaxAddressBookForm_links_4'); AddressBookFormJS.updateAddress('AddressForm', '<c:out value="${addressBookFormURL}"/>'); return false;">
 				<div class="left_border"></div>
 				<div class="button_text btnAzul"><fmt:message bundle="${storeText}" key="UPDATE" /></div>												
@@ -203,7 +203,7 @@
 		</div>			
 	</div>		
 	<div id="addnew_content_footer" style="display:none">
-		<div class="button_footer_line" id="WC_AjaxAddressBookForm_div_16a">
+		<div class="button_footer_line right" id="WC_AjaxAddressBookForm_div_16a">
 			<div class="left" id="WC_AjaxAddressBookForm_div_16b">
 				<a href="#" role="button" class="button_primary" id="WC_AjaxAddressBookForm_links_4a" onclick="javascript:setCurrentId('WC_AjaxAddressBookForm_links_4a'); AddressBookFormJS.newUpdateAddressBook('AddressForm', '<c:out value="${addressBookFormURL}"/>'); return false;">
 					<div class="left_border"></div>
