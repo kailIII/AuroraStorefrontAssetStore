@@ -865,16 +865,6 @@ li.menuCategorias :hover  <  .departmentButton.selected{
     width: 380px;
 }
 
-/* .product_page_content .widget_product_image_viewer .image_container {
-    width: 375px !important;
-	float: right !important;
-}
-
-.widget_product_image_viewer > .content > .other_views > ul > li {
-	margin-bottom: 10px !important;
-} */
-
- 
 @media (max-width: 952px){
 	.departmentMenu > .header {
 		display:block;
@@ -888,6 +878,12 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 	.widget_product_image_viewer > .content > .other_views {
 		float: none !important;
 		width: 100% !important;
+	}
+	
+	.image_container{
+		float: none;
+		position: relative;
+		width: 380px;
 	}
 }
 
