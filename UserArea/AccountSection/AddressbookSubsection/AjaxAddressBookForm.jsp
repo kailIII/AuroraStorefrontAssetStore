@@ -154,7 +154,7 @@
 				</wcf:url>
 				<a href="#" aria-label="<fmt:message bundle="${storeText}" key="ACCE_ADDRESS_REMOVE" />" role="button" class="button_secondary button_left_padding" id="WC_AjaxAddressBookForm_links_2" onclick="javascript:setCurrentId('WC_AjaxAddressBookForm_links_2'); AddressBookFormJS.newDeleteAddress('addressId','<c:out value="${AddressDeleteURL}" />','<c:out value="${addressBookFormURL}"/>'); return false;" waistate:controls="addressId">
 					<div class="left_border"></div>
-					<div class="button_text"><fmt:message bundle="${storeText}" key="REMOVE" /></div>												
+					<div class="button_text btnGris"><fmt:message bundle="${storeText}" key="REMOVE" /></div>												
 					<div class="right_border"></div>
 				</a>
 				<c:if test="${_worklightHybridApp}">
@@ -188,20 +188,24 @@
 				<jsp:param name="phone" value="${final.phone1}"/>
 				<jsp:param name="email1" value="${final.email1}"/>
 				<jsp:param name="addressType" value="${final.addressType}"/>
-			</jsp:include>
+			</jsp:include>		
+
 		</div>
 		<script type="text/javascript">dojo.addOnLoad(function() { parseWidget("addressIdRefreshArea"); } );</script>
 	</div>
 
 	<div id="content_footer">
 		<div class="button_footer_line right" id="WC_AjaxAddressBookForm_div_16">
-			<a href="#" role="button" class="button_primary" id="WC_AjaxAddressBookForm_links_4" onclick="javascript:setCurrentId('WC_AjaxAddressBookForm_links_4'); AddressBookFormJS.updateAddress('AddressForm', '<c:out value="${addressBookFormURL}"/>'); return false;">
-				<div class="left_border"></div>
-				<div class="button_text btnAzul"><fmt:message bundle="${storeText}" key="UPDATE" /></div>												
-				<div class="right_border"></div>
-			</a>
-		</div>			
-	</div>		
+				<div class="containerWidth">
+					<a href="#" role="button" class="button_primary" id="WC_AjaxAddressBookForm_links_4" onclick="javascript:setCurrentId('WC_AjaxAddressBookForm_links_4'); AddressBookFormJS.updateAddress('AddressForm', '<c:out value="${addressBookFormURL}"/>'); return false;">
+						<div class="left_border"></div>
+						<div class="button_text btnAzul"><fmt:message bundle="${storeText}" key="UPDATE" /></div>												
+						<div class="right_border"></div>
+					</a>
+				</div>
+		</div>
+	</div>
+			
 	<div id="addnew_content_footer" style="display:none">
 		<div class="button_footer_line right" id="WC_AjaxAddressBookForm_div_16a">
 			<div class="left" id="WC_AjaxAddressBookForm_div_16b">
@@ -213,7 +217,7 @@
 			</div>
 			<a href="#" role="button" class="button_secondary button_left_padding" id="WC_AjaxAddressBookForm_links_2c" onclick="javascript:setCurrentId('WC_AjaxAddressBookForm_links_2c'); var addressId = document.getElementById('addressId');wc.render.updateContext('addressBookContext', {'addressId':addressId.options[addressId.selectedIndex].value,'type':'edit'}); AddressBookFormJS.showFooter(); return false;" waistate:controls="addressId">
 				<div class="left_border"></div>
-				<div class="button_text btnComun"><fmt:message bundle="${storeText}" key="CANCEL" /></div>												
+				<div class="button_text btnGris"><fmt:message bundle="${storeText}" key="CANCEL" /></div>												
 				<div class="right_border"></div>
 			</a>
 		</div>			

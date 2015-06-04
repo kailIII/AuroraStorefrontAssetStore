@@ -3090,9 +3090,9 @@ div.compare_target {
 .sorting_controls .selectWrapper {
 	height: 32px;
 	box-sizing: border-box;
-	border: 2px solid #d5dce7 !important; 
+	border: 1px solid #d5dce7 !important; 
 	-webkit-border-radius: 6px !important; -moz-border-radius: 6px !important ; border-radius: 6px !important;
-	padding: 0px 15px 8px 15px; 
+	padding: 0px 15px 8px 0;	
 	text-decoration:none; 
 	display:inline-block;
 	text-shadow: 1px 1px 0 rgba(255,255,255,0.3);
@@ -3124,9 +3124,14 @@ div.compare_target {
   background: none;
 }
 
+.view_controls .grid_icon:hover, 
+.view_controls .list_icon:hover {
+	cursor: pointer;
+}
+
 .view_controls .grid_icon, 
 .view_controls .list_icon {
-	border: 2px solid #d5dce7 !important; 
+	border: 1px solid #d5dce7 !important; 
 	-webkit-border-radius: 6px !important; -moz-border-radius: 6px !important ; border-radius: 6px !important;
 	text-decoration:none; 
 	display:inline-block;
@@ -3218,7 +3223,7 @@ Layout: MyAccount
 }
 
 #container_MyAccountDisplayB2B #widget_breadcrumb{
-	margin-top: 20px !important;
+	margin: 20px 0 25px 0 !important;
 	font-family: Arial, helvetica, sans-serif;
 }
 
@@ -3244,8 +3249,31 @@ Layout: MyAccount
 }
 
 div#WC_UserRegistrationUpdateForm_div_42{
-	margin: 0 auto !important;
   	text-align: center;
+  	width: 80%;
+}
+
+div#WC_MyAccountQuickCheckoutProfileForm_div_87{
+ 	width: 80%;
+}
+
+div#WC_AjaxAddressBookForm_div_16 > .containerWidth{
+	width: 80%;
+}
+div#WC_AjaxAddressBookForm_div_16{
+	width: 50%;
+	text-align: center;
+}
+
+#WC_AjaxAddressBookForm_div_16a{
+	width: 50%;
+}
+.facetSelectContainer{
+	padding-bottom: 0px !important;
+}
+
+#WC_AjaxAddressBookForm_div_16a > #WC_AjaxAddressBookForm_div_16b > .button_primary >.btnAzul{
+	margin-top: 0px !important;
 }
 
 div#WC_UserRegistrationUpdateForm_div_42.button_footer_line{
@@ -3266,17 +3294,78 @@ div#WC_UserRegistrationUpdateForm_div_42.button_footer_line{
 }
 
 .btnAzul {
-  background-color: #48baf6 !important;
-  border-radius: 5px !important;
-  color: #fff !important;
-  cursor: pointer !important;
-  display: inline-block !important;
-  font-size: 0.95em !important;
-  text-decoration: none !important;
+	background-color: #48baf6 !important;
+	border-radius: 5px !important;
+	color: #fff !important;
+	cursor: pointer !important;
+	display: inline-block !important;
+	font-size: 12px !important;
+	text-decoration: none !important;
+	background-image: none !important;
+
+	color: #FFF !important;
+	padding: 10px 55px !important;
+	border: 0 !important;
+	margin: 10px auto 0 auto !important;
+	cursor: pointer !important;
+}
+
+.btnAzul:hover {
+	background-color: #1badfa !important;
+}
+
+.btnGris {
+	color: #FFF;
+	padding: 10px 20px;
+	font-size: .95em;
+	clear: both;
+	border: 0;
+	background-color: #8c97a1;
+	border-radius: 5px;
+	margin: 10px auto 0 auto;
+	display: inline-block;
+	cursor: pointer;
+	text-decoration: none;
+	padding: 10px 55px !important;
+}
+
+.btnGris:hover {
+	background-color: #767f88;
 }
 
 div#widget_breadcrumb > ul li a {
   color: #1b83ff!important;
+}
+
+.myaccount_header.bottom_line {
+	background: none;
+	border-bottom: none;
+}
+
+.main_header{
+	background: none !important;
+}
+
+.facetWidget .optionContainer > .title {
+	display: none;
+}
+
+span.content_text{
+	color: #64afff;
+}
+
+.button_secondary > .button_text {
+	border: none !important;
+	display: table-cell !important;
+	height: auto !important;
+}
+
+.button_secondary  {
+	border: none !important;
+}
+
+.button_primary {
+	background-image: none !important;
 }
 /** **/
 
