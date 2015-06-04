@@ -909,7 +909,7 @@ div#store_selection div.number_info span.blue_text {
 
 #checkout_crumb .crumb a {
 	text-decoration:none;
-	color: #CA4200;
+    color: #1b83ff;
 	font-size: 12px;
 	font-weight: normal;
 }
@@ -2005,8 +2005,6 @@ tr.dijitCalendarMonthContainer {
 #box .contentline {
 	height:8px;
 	background-repeat:repeat-x;
-	border-left:solid 1px #e5e5e5;
-	border-right:solid 1px #e5e5e5;
 }
 
 .billing_border{
@@ -2816,9 +2814,7 @@ div#Scheduled {
 }
 
 .myaccount_subheader,.checkout_subheader {
-	background: none repeat scroll 0 0 #FBFBFB;
-	border: 1px solid #E5E5E5;
-	/* min-height: 33px; */
+    background: none repeat scroll 0 0 #d1edff;
 	margin: 0 auto;
 	padding: 0px 8px;
 }
