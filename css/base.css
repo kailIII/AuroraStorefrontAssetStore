@@ -280,14 +280,14 @@ dl, ol, ul {
 	display: table-cell;
 	max-width: 196px;
 	height: 35px;
-	padding: 0 15px;
+	padding: 0 13px;
 	/*border: 1px solid #f1f3f3;
 	border-radius: 3px;*/
 	line-height: normal;
 	text-align: center;
 	vertical-align: middle;
 	font-family: 'ubunturegular',arial;
-	font-size: 11px;
+	font-size: 12px;
 	text-rendering: optimizeLegibility;
 	color:#374652;
 	font-weight:bold;
@@ -589,7 +589,7 @@ dl, ol, ul {
 
 #quickLinksBar {
 	color: #767676;
-	font-size: 10px;
+	font-size: 11px;
 	list-style: outside none none;
 	margin: 0;
 	padding: 0;
@@ -2897,7 +2897,7 @@ li.localizadorTienda :before {
   top: 30px;
   z-index: 1;
   color: #767676;
-  font-size: 10px;
+  font-size: 11px;
 	height: 18px;
 	cursor:pointer;
 }
@@ -2917,7 +2917,7 @@ li.localizadorTienda :before {
 .asistenciaLista{
   position: absolute!important;
   left: 50%;
-  margin-left: -54px;
+  margin-left: -65px;
   top: 17px;
   padding: 0px;
   border: 1px solid;
@@ -2931,7 +2931,7 @@ li.localizadorTienda :before {
 
 .asistenciaLista li{ 
 	border-top: 1px solid #b5b5b5;
-	width: 130px;
+	width: 140px;
 }
 .asistenciaLista a {
   height: 100%;
@@ -3215,7 +3215,7 @@ Alejandro Paredes
 	font-family: Arial,Helvetica,sans-serif !important;
 }
 
-<<<<<<< HEAD
+
 /* Arturo estilos ==================================== */
 
 .nuevo_imput {       
@@ -3246,7 +3246,7 @@ Alejandro Paredes
     padding: 0 5px;
     height: 32px;
 }
-=======
+
 #Header_GlobalLogin_desktopExpandArrow{display:none;}
 
 
@@ -3263,4 +3263,16 @@ Alejandro Paredes
 .widget_product_image_viewer > .content > .other_views > ul > li {
 	margin-bottom: 10px !important;
 }
->>>>>>> origin/master
+
+.loginMenuDropdown .button_primary   .button_text {
+  font-size: 12px;
+  background-color: #fa8039!important;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 5px!important;
+  text-decoration: none;
+}
+
+.loginMenuDropdown .button_primary   .button_text:hover {
+  background-color: #fa6b19!important;
+}
