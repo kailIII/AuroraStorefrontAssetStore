@@ -3363,6 +3363,12 @@ span.content_text{
 .button_primary {
 	background-image: none !important;
 }
+
+#WC_UserRegistrationUpdateForm_div_42 > a#WC_UserRegistrationUpdateForm_links_1,
+a#WC_AjaxAddressBookForm_links_4,
+a#WC_MyAccountQuickCheckoutProfileForm_links_7{
+	background-color: transparent !important;
+}
 /** **/
 
 /** 
