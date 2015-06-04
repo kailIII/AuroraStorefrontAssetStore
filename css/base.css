@@ -3281,11 +3281,7 @@ Alejandro Paredes
 }
 
 
-<<<<<<< HEAD
-/* Arturo estilos ==================================== */
-=======
 /* estilos ==================================== */
->>>>>>> origin/master
 
 .nuevo_imput {       
     font-weight: normal;
@@ -3315,7 +3311,6 @@ Alejandro Paredes
     padding: 0 5px;
     height: 32px;
 }
-<<<<<<< HEAD
 
 #Header_GlobalLogin_desktopExpandArrow{display:none;}
 
@@ -3324,12 +3319,7 @@ Alejandro Paredes
 	float: left !important;
 	width: 100px !important;
 }
-=======
->>>>>>> origin/master
 
-#Header_GlobalLogin_desktopExpandArrow{display:none;}
-
-<<<<<<< HEAD
 .widget_product_image_viewer > .content > .other_views > ul > li {
 	margin-bottom: 10px !important;
 }
@@ -3346,5 +3336,3 @@ Alejandro Paredes
 .loginMenuDropdown .button_primary   .button_text:hover {
   background-color: #fa6b19!important;
 }
-=======
->>>>>>> origin/master
