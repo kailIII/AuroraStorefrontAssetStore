@@ -147,7 +147,7 @@ blockquote, h1, h2, h3, h4, h5, h6, p {
 }
 
 
-h1,h2 {
+h1 {
 	/* Arturo cambie el color */
 	font-family: ubunturegular,Arial, Helvetica;
 	color: #1b83ff;
@@ -3186,11 +3186,6 @@ Layout: MyAccount
 	border: none;
 }
 
-.myaccount_header{
-	font-family: ubunturegular,Arial, Helvetica;
-	color: #1b83ff;
-}
-
 /** **/
 
 /** 
@@ -3263,6 +3258,7 @@ Alejandro Paredes
 	font-family: Arial,Helvetica,sans-serif !important;
 }
 
+<<<<<<< HEAD
 /* Arturo estilos ==================================== */
 
 .nuevo_imput {       
@@ -3293,6 +3289,7 @@ Alejandro Paredes
     padding: 0 5px;
     height: 32px;
 }
+=======
 #Header_GlobalLogin_desktopExpandArrow{display:none;}
 
 
@@ -3309,3 +3306,4 @@ Alejandro Paredes
 .widget_product_image_viewer > .content > .other_views > ul > li {
 	margin-bottom: 10px !important;
 }
+>>>>>>> origin/master
