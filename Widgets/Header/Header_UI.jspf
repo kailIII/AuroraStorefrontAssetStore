@@ -95,13 +95,16 @@
 						<c:param name="langId" value="${langId}" />
 						<c:param name="cmdName" value="${lastCmdName}" />
 						<c:param name="widgetId" value="Header_GlobalLogin" />
-					</c:import> <%
+					</c:import> 
+
+					
+					<%
  	out.flush();
  %>
 				</li>
 			</c:if>
 			
-			<li class="separator-false signIn">
+			<li class="separator-false">
 			
 			<!-- 
 			
@@ -125,14 +128,14 @@
 					</a>
 					<ul>
 						<c:if test="${userType != 'G'}">
-							<li role="menuitem"><a id="myAccountQuickLink"
+							<li role="menuitem" class="separator-false"><a id="myAccountQuickLink"
 								href="${fn:escapeXml(MyAccountURL)}"><fmt:message
 										bundle="${storeText}" key="HEADER_MY_ACCOUNT" />
 							</a></li>
 						</c:if>
 						<c:choose>
 							<c:when test="${!env_globalLoginViewDisabled eq true}">
-								<li id="globalLoginWidget" role="menuitem">
+								<li id="globalLoginWidget" role="menuitem" class="separator-false">
 									<%
 										out.flush();
 									%> <c:import
@@ -141,7 +144,8 @@
 										<c:param name="cmdName" value="${lastCmdName}" />
 										<c:param name="widgetId" value="QuickLinks_GlobalLogin" />
 										<c:param name="userDisplayName" value="${userDisplayName}" />
-									</c:import> <%
+									</c:import> 
+									<%
  	out.flush();
  %>
 								

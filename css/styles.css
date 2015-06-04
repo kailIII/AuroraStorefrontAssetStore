@@ -4465,7 +4465,7 @@ div#widget_breadcrumb {
 }
 
 #Header_GlobalLogin_loggedInDropdown.menuDropdown {
-    right: 202px;
+    right: 122px;
 }
 
 .menuDropdown {
@@ -4480,7 +4480,7 @@ div#widget_breadcrumb {
     font-size: 13px;
     position: absolute;
     right: 299px;
-    top: 56px;
+    top: 70px;
     width: 328px;
     z-index: 100;    
 }
@@ -4518,8 +4518,8 @@ div#widget_breadcrumb {
     display: none;
     font-size: 13px;
     position: absolute;
-    right: 202px;
-    top: 56px;
+    right: 80px;
+    top: 70px;
     width: 290px;
     z-index: 100;
 }
@@ -4617,14 +4617,15 @@ div#widget_breadcrumb {
     -moz-border-left-colors: none;
     -moz-border-right-colors: none;
     -moz-border-top-colors: none;
-    background: none repeat scroll 0 0 #FFFFFF;
+    /*background: none repeat scroll 0 0 #FFFFFF;*/
      border-color: #B8B8B8 #B8B8B8 #FFFFFF;
     border-image: none;
     border-style: solid;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    border-width: 1px;
-    left: 1px;
+    /*border-width: 1px;
+    left: 1px;*/
+	border-width: 0px;
     z-index: 101;	
 }
 
@@ -6269,8 +6270,8 @@ div[dijitpopupparent^='WC_UserMemberGroupManagement_'] > .dijitSelectMenu table 
 		display: none;
 		font-size: 13px;
 		position: absolute;
-		right: 154px;
-		top: 49px;
+		right: 80px;
+		top: 40px;
 		width: 290px;
 		z-index: 100;
 	}
@@ -6308,13 +6309,14 @@ div[dijitpopupparent^='WC_UserMemberGroupManagement_'] > .dijitSelectMenu table 
 		-moz-border-left-colors: none;
 		-moz-border-right-colors: none;
 		-moz-border-top-colors: none;
-		background: none repeat scroll 0 0 #FFFFFF;
+		/*background: none repeat scroll 0 0 #FFFFFF;*/
+		background:transparent;
 		border-color: #B8B8B8 #B8B8B8 #FFFFFF;
 		border-image: none;
 		border-style: solid;
 		border-top-left-radius: 5px;
 		border-top-right-radius: 5px;
-		border-width: 1px;
+		border-width: 0px;
 		left: 1px;
 		z-index: 101;
 	}	
@@ -6339,8 +6341,8 @@ div[dijitpopupparent^='WC_UserMemberGroupManagement_'] > .dijitSelectMenu table 
 		display: none;
 		font-size: 13px;
 		position: absolute;
-		right: 154px;
-		top: 43px;
+		right: 125px;
+		top: 38px;
 		width: 290px;
 		z-index: 100;
 	}
@@ -8014,3 +8016,8 @@ div[dijitpopupparent^='OrganizationListWidget'] > .dijitSelectMenu table tr.diji
 		margin-bottom: 10px;
 	}
 }
+
+    *:focus  
+    {  
+        outline: none;  
+    }  
