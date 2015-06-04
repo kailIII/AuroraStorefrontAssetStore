@@ -95,13 +95,22 @@
 						<c:param name="langId" value="${langId}" />
 						<c:param name="cmdName" value="${lastCmdName}" />
 						<c:param name="widgetId" value="Header_GlobalLogin" />
-					</c:import> <%
+					</c:import> 
+
+						<c:if test="${userType != 'G'}">
+							<li role="menuitem"><a id="myAccountQuickLink"
+								href="${fn:escapeXml(MyAccountURL)}"><fmt:message
+										bundle="${storeText}" key="HEADER_MY_ACCOUNT" />
+							</a></li>
+						</c:if>
+											
+					<%
  	out.flush();
  %>
 				</li>
 			</c:if>
 			
-			<li class="separator-false signIn">
+			<li class="separator-false">
 			
 			<!-- 
 			
@@ -141,7 +150,8 @@
 										<c:param name="cmdName" value="${lastCmdName}" />
 										<c:param name="widgetId" value="QuickLinks_GlobalLogin" />
 										<c:param name="userDisplayName" value="${userDisplayName}" />
-									</c:import> <%
+									</c:import> 
+									<%
  	out.flush();
  %>
 								

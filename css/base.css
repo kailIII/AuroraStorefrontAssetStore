@@ -626,7 +626,7 @@ dl, ol, ul {
 }
 
 
-#quickLinksBar li.signIn a{
+#quickLinksBar li.signIn > a{
   position: absolute;
   /*left: 50%;
   margin-left: 255px;*/
@@ -1782,7 +1782,7 @@ background-color:#f7f7f7;
 
 
 
-	#quickLinksBar li.signIn a {
+	#quickLinksBar li.signIn > a {
 	  top: 4px!important;
 	  width: 12px!important;
 	  height: 18px;
@@ -2569,11 +2569,17 @@ border-bottom-right-radius: 5px;
 /* styles.css*/
 
 .homeHero > .textContainer > .button {
- background-color:#FA8039!important;
- font-size:15px!important;
- font-weight:bold;
- padding:5px 40px!important;
- margin-top:35px!important;
+	background-color:#fa8039!important;
+	font-weight:bold;
+	border-radius: 5px;
+    font-size: 0.95em!important;
+    margin: 10px auto 0!important;
+    padding: 10px 55px!important;
+    text-decoration: none!important;
+}
+
+.homeHero > .textContainer > .button:hover {
+    background-color: #fa6b19!important;
 }
 
 .product > .product_image img {
