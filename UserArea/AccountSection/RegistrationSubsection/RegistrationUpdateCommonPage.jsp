@@ -191,13 +191,25 @@
 						<jsp:param name="pageName" value="${pageName}"/>
 						<jsp:param name="flexFlowsFieldOrder" value="EmailOption,preferredLanguage,preferredCurrency,Age,Gender,DateOfBirth,MobilePhone,RememberMe"/>
 					</jsp:include>
-				
+
+					<%-- Daniel Torres --%>
+					<div id="WC_UserRegistrationUpdateForm_div_40" class="column">
+						<div class="button_footer_line" id="WC_UserRegistrationUpdateForm_div_42">
+							<a href="#" role="button" class="button_primary" id="WC_UserRegistrationUpdateForm_links_1" onclick="javascript:MyAccountDisplay.prepareSubmit(document.Register,'<c:out value='${logonPassword}'/>','<c:out value='${logonPasswordVerify}'/>');return false;">
+								<div class="left_border"></div>
+								<div class="button_text btnAzul"><fmt:message bundle="${storeText}" key="UPDATE" /></div>												
+								<div class="right_border"></div>
+							</a>	
+						</div>
+					</div>
+
 					<br clear="all" />
 					<br />
 				</form>
 			</div>
 		</div>
 	</div>
+	<%-- 
 	<div id="WC_UserRegistrationUpdateForm_div_40">
 		<div class="button_footer_line right" id="WC_UserRegistrationUpdateForm_div_42">
 			<a href="#" role="button" class="button_primary" id="WC_UserRegistrationUpdateForm_links_1" onclick="javascript:MyAccountDisplay.prepareSubmit(document.Register,'<c:out value='${logonPassword}'/>','<c:out value='${logonPasswordVerify}'/>');return false;">
@@ -207,5 +219,6 @@
 			</a>	
 		</div>
 	</div>
+	--%>
 </div>
 <!-- END RegistrationUpdateCommonPage.jsp -->
