@@ -148,8 +148,9 @@ blockquote, h1, h2, h3, h4, h5, h6, p {
 
 
 h1 {
-    /* Arturo cambie el color */
-    color: #006ECC !important;
+	/* Arturo cambie el color */
+	font-family: ubunturegular,Arial, Helvetica;
+	color: #1b83ff;
 }
 
 button, input, textarea, select {
@@ -2988,6 +2989,7 @@ div.compare_target {
 
 .product_info > .product_name > a {
 	font-size: 15px !important;
+	font-family: ubunturegular;
 }
 
 .product_info > .product_price > .price{
@@ -3056,11 +3058,11 @@ div.compare_target {
 }
 
 .sorting_controls .selectWrapper {
-	height: 27px;
-
+	height: 32px;
+	box-sizing: border-box;
 	border: 2px solid #d5dce7 !important; 
 	-webkit-border-radius: 6px !important; -moz-border-radius: 6px !important ; border-radius: 6px !important;
-	padding: 5px 15px 5px 15px; 
+	padding: 0px 15px 8px 15px; 
 	text-decoration:none; 
 	display:inline-block;
 	text-shadow: 1px 1px 0 rgba(255,255,255,0.3);
@@ -3074,8 +3076,6 @@ div.compare_target {
 }
 
 .sorting_controls .selectWrapper:hover {
-	height: 27px;
-
 	border:1px solid #7A7A7A;
 	background-color: #EEEEEE; background-image: -webkit-gradient(linear, left top, left bottom, from(#EEEEEE), to(#C7C7C7));
 	background-image: -webkit-linear-gradient(top, #EEEEEE, #C7C7C7);
