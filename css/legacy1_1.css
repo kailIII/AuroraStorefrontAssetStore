@@ -19,7 +19,6 @@
 */
 .sign_in_registration {
 	margin:0 auto;
-    /* Arturo cambier el ancho de la caja */
 	max-width:1000px;
 	color:#4d4d4d;
 	line-height:1.1em;
@@ -72,10 +71,7 @@
 }
 
 .sign_in_registration .align {
-	padding:15px 0px;
-    /* Arturo comente estos estilos por el diseno
-	border:solid 1px #e5e5e5;
-    */
+	padding:15px 0px;    
 	min-height:220px;
 }
 
@@ -146,11 +142,7 @@
 
 /* UserRegistrationAddForm.jsp */
 .sign_in_registration .form .content .align {
-	/* Arturo comente estos estilos por el diseno
-    padding:5px 15px;
-	border-left:solid 1px #e5e5e5;
-	border-right:solid 1px #e5e5e5;
-    */
+	
 	height:auto;
 }
 .sign_in_registration .header_registration {
@@ -163,11 +155,7 @@
 	padding:17px 5px 0px 59px;
 }
 .registration_header {
-    /* Arturo comentamos unos estilos
-	color:#777777;
-	font-size:16px;
-	font-weight:normal;
-    */
+   
 }
 .checkbox_label {
 /* remove this so that the string is wrapped when it is really long.
@@ -207,9 +195,6 @@
 /* box_1 used in address entry form in OrderShippingDetails page */
 #box .body, #box_1 .body {
 	float:none;
-	border-left:solid 1px #e5e5e5;
-	border-right:solid 1px #e5e5e5;
-	border-bottom:solid 1px #e5e5e5;
 	margin:0px 0px 0px 0px;
 	padding:0px 8px 0px 8px;
 }
@@ -2766,14 +2751,8 @@ div#Scheduled {
 }
 
 /* Newly added from MDS for My Account pages */
-.myaccount_header {
-	/* Arturo comentamos estos estilos
-    border-color: #F8AD05 #E5E5E5 #E5E5E5;
-	border-style: solid;
-	border-width: 2px 1px 0;
-    */	
+.myaccount_header {	
 	padding: 8px;
-    /* Arturo agregue unos estilos */
     text-align: left; 
     font-size: .95em;
     color: #64afff;
