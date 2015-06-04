@@ -153,11 +153,14 @@ xmlns:waistate="http://www.w3.org/2005/07/aaa" lang="${shortLocale}" xml:lang="$
 		<div id="content" role="main">		
 			<div class="row margin-true">
 				<div class="col12">				
+					<%--
+					Daniel Torres
 					<%out.flush();%>
 						<c:import url="${env_siteWidgetsDir}com.ibm.commerce.store.widgets.BreadcrumbTrail/BreadcrumbTrail.jsp">  														
 							<c:param name="pageGroup" value="Content"/>
 						</c:import>
-					<%out.flush();%>					
+					<%out.flush();%> 
+					--%>					
 				</div>
 			</div>
 			<div class="rowContainer" id="container_MyAccountDisplayB2B">
@@ -167,7 +170,14 @@ xmlns:waistate="http://www.w3.org/2005/07/aaa" lang="${shortLocale}" xml:lang="$
 							<c:import url="${env_siteWidgetsDir}com.ibm.commerce.store.widgets.MyAccountNavigation/MyAccountNavigation.jsp"/>
 						<%out.flush();%>		
 					</div>
-					<div class="col8 acol12 ccol9 right">	
+					<div class="col8 acol12 ccol9 right">
+						
+						<%out.flush();%>
+							<c:import url="${env_siteWidgetsDir}com.ibm.commerce.store.widgets.BreadcrumbTrail/BreadcrumbTrail.jsp">  														
+								<c:param name="pageGroup" value="Content"/>
+							</c:import>
+						<%out.flush();%> 	
+						
 						<!-- Main Content Start -->
 								<div id="WC_MyAccountDisplay_div_3_9">
 									<div id="WC_MyAccountDisplay_div_4">
