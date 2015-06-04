@@ -2963,10 +2963,12 @@ background-color:#F5F5F5;
 }
 
 
-/*** 
+/******************************** 
+
 Autor: Daniel Torres
 Layout: CategoryPageTelmex_Layout
-***/
+
+*********************************/
 
 div.compare_target {
 	width: 100% !important;
@@ -3111,10 +3113,33 @@ div.compare_target {
 h1{
 	margin-top: 15px;
 }
-/** Tu cuenta Page**/
-.form_2column .inputField{
+
+/******************************** 
+
+Autor: Daniel Torres
+Layout: MyAccount
+
+*********************************/
+
+.form_2column .inputField,
+.shipping_billing_content .inputField{
 	padding: 5px;
 	border-radius: 0;
+	font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.shipping_billing_content{
+	font-family: Arial, sans-serif;
+}
+
+.shipping_billing_content h1,
+.shipping_billing_content h2,
+.shipping_billing_content h3,
+.shipping_billing_content h4,
+.shipping_billing_content h5,
+.shipping_billing_content h6
+{
+	font-family: 'ubunturegular', sans-serif !important;
 }
 
 .btnComun{
@@ -3143,6 +3168,24 @@ h1{
 .facetSelect li a:hover{
 	text-decoration: none !important;
 }
+
+#container_MyAccountDisplayB2B #widget_breadcrumb{
+	margin-top: 20px !important;
+	font-family: Arial, helvetica, sans-serif;
+}
+
+#container_MyAccountDisplayB2B{
+	padding-top: 30px;
+}
+
+#box .my_account .body {
+	border: none;
+}
+
+#my_account_shipping{
+	border: none;
+}
+
 /** **/
 
 /** 
