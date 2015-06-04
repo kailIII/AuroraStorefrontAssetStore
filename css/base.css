@@ -854,18 +854,26 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 } 
   
 .widget_product_image_viewer > .content > .other_views {
-	float: left !important;
 	width: 100px !important;
+	position: relative;
+	float: right;
 }
 
-.product_page_content .widget_product_image_viewer .image_container {
+.image_container{
+	float: right;
+    position: relative;
+    width: 380px;
+}
+
+/* .product_page_content .widget_product_image_viewer .image_container {
     width: 375px !important;
 	float: right !important;
 }
 
 .widget_product_image_viewer > .content > .other_views > ul > li {
 	margin-bottom: 10px !important;
-}
+} */
+
  
 @media (max-width: 952px){
 	.departmentMenu > .header {
@@ -884,7 +892,7 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 }
 
 @media (max-width: 990px){
-	
+ 	
 	.product_page_content .widget_product_image_viewer .image_container {
 		float: none !important;
 		width: 100% !important;
@@ -3375,16 +3383,6 @@ Alejandro Paredes
 }
 
 #Header_GlobalLogin_desktopExpandArrow{display:none;}
-
-
-.widget_product_image_viewer > .content > .other_views {
-	float: left !important;
-	width: 100px !important;
-}
-
-.widget_product_image_viewer > .content > .other_views > ul > li {
-	margin-bottom: 10px !important;
-}
 
 .loginMenuDropdown .button_primary   .button_text {
   font-size: 12px;
