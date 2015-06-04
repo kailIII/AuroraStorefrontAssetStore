@@ -260,6 +260,8 @@
 		   <th class="align_center" id="shoppingCart_tableCell_quantity" abbr="<fmt:message bundle="${storeText}" key="QUANTITY1" />"><fmt:message bundle="${storeText}" key="SHOPCART_QTY" /></th>
 		   <th class="align_right" id="shoppingCart_tableCell_each" abbr="<fmt:message bundle="${storeText}" key="UNIT_PRICE" />"><fmt:message bundle="${storeText}" key="SHOPCART_EACH" /></th>
 		   <th class="align_right" id="shoppingCart_tableCell_total" abbr="<fmt:message bundle="${storeText}" key="TOTAL_PRICE" />"><fmt:message bundle="${storeText}" key="SHOPCART_TOTAL" /></th>
+          <!-- agregamos un th para que caiga el eliminar-->
+          <th class="align_center"></th>
 	  </tr>
 
 <flow:ifDisabled feature="AjaxCheckout">
@@ -607,12 +609,18 @@
 								<c:remove var="AddToRequisitionListJSIncluded"/>
 							</flow:ifEnabled>
 							
-						<flow:ifEnabled feature="AjaxCheckout">
+						
+                        <!--
+                        <flow:ifEnabled feature="AjaxCheckout">
 							<a class="remove_address_link hover_underline tlignore" id="WC_OrderItemDetailsf_links_2_<c:out value='${status.count}'/>" href="JavaScript:setCurrentId('WC_OrderItemDetailsf_links_2_<c:out value='${status.count}'/>'); CheckoutHelperJS.deleteFromCart('<c:out value='${orderItem.orderItemId}'/>');">
 								<img src="<c:out value='${jspStoreImgDir}${vfileColor}'/>table_x_delete.png" alt=""/>
 								<fmt:message bundle="${storeText}" key="SHOPCART_REMOVE" />
 							</a>
 						</flow:ifEnabled>
+                         -->        
+                                    
+                                    
+                                    
 						<flow:ifDisabled feature="AjaxCheckout">
 							<wcf:url var="OrderItemDelete" value="OrderChangeServiceItemDelete">
 								<wcf:param name="orderItemId" value="${orderItem.orderItemId}"/>
@@ -680,7 +688,16 @@
 				</span>
 
 			</td>
-			<td id="WC_OrderItemDetailsf_td_4_<c:out value='${status.count}'/>" class="<c:out value="${nobottom}"/> total" headers="shoppingCart_tableCell_total shoppingCart_rowHeader_product<c:out value='${status.count}'/>">
+			
+                    
+                    
+        
+                    
+                    
+                    
+                    
+                    
+            <td id="WC_OrderItemDetailsf_td_4_<c:out value='${status.count}'/>" class="<c:out value="${nobottom}"/> total" headers="shoppingCart_tableCell_total shoppingCart_rowHeader_product<c:out value='${status.count}'/>">
 				<c:choose>
 					<c:when test="${orderItem.freeGift}">
 						<%-- the OrderItem is a freebie --%>
@@ -697,6 +714,20 @@
 					</c:otherwise>
 				</c:choose>
 			</td>
+                        
+            
+                
+             <!-- aca colocamos el boton de eliminar producto, pero solo la x -->       
+                    <td class="align_center">
+                <flow:ifEnabled feature="AjaxCheckout">
+                    <a class="remove_address_link hover_underline tlignore" id="WC_OrderItemDetailsf_links_2_<c:out value='${status.count}'/>" href="JavaScript:setCurrentId('WC_OrderItemDetailsf_links_2_<c:out value='${status.count}'/>'); CheckoutHelperJS.deleteFromCart('<c:out value='${orderItem.orderItemId}'/>');">
+                        <img class="tache" src="<c:out value='${jspStoreImgDir}${vfileColor}'/>table_x_delete.png" alt=""/>
+                    </a>
+                </flow:ifEnabled>
+                    </td>       
+                        
+                        
+                        
 		</tr>
 		<c:remove var="nobottom"/>
 		<%-- row to display product level discount --%>

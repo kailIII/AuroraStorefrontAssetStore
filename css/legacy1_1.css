@@ -369,6 +369,7 @@
 
 #order_details .align_center {
 	text-align:center;
+    align-content: center;   
 }
 
 
@@ -4327,3 +4328,6 @@ td.item .listPrice {
     background-color: #767f88 !important;
 }
 
+.tache{
+    margin: 0 25px;
+}
