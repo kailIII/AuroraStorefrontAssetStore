@@ -147,8 +147,7 @@ blockquote, h1, h2, h3, h4, h5, h6, p {
 }
 
 
-h1 {
-	/* Arturo cambie el color */
+h1 {	
 	font-family: ubunturegular,Arial, Helvetica;
 	color: #1b83ff;
 }
@@ -2461,21 +2460,7 @@ width: 80%;
  }
  
  input[type=text], textarea {
-  /*-webkit-transition: all 0.30s ease-in-out;
-  -moz-transition: all 0.30s ease-in-out;
-  -ms-transition: all 0.30s ease-in-out;
-  -o-transition: all 0.30s ease-in-out;
-   padding: 3px 0px 3px 3px;
-  margin: 5px 1px 3px 0px;
-  border: 1px solid #DDDDDD; 
-  padding: 10px;
-  width: 85%;
-   height: 10px;
-     
-Arturo Solo comente las dos ultimas lineas, las anteriores ya estaban     
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-*/
+ 
   outline: none;
   font-size: 11px !important;  
  }
@@ -3258,8 +3243,8 @@ Alejandro Paredes
 	font-family: Arial,Helvetica,sans-serif !important;
 }
 
-<<<<<<< HEAD
-/* Arturo estilos ==================================== */
+
+/* estilos ==================================== */
 
 .nuevo_imput {       
     font-weight: normal;
@@ -3289,7 +3274,7 @@ Alejandro Paredes
     padding: 0 5px;
     height: 32px;
 }
-=======
+
 #Header_GlobalLogin_desktopExpandArrow{display:none;}
 
 
@@ -3306,4 +3291,4 @@ Alejandro Paredes
 .widget_product_image_viewer > .content > .other_views > ul > li {
 	margin-bottom: 10px !important;
 }
->>>>>>> origin/master
+

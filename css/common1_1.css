@@ -161,7 +161,6 @@
 }
 /* DevEnd*/
 .static_page_content > .page_header{
-    /* Arturo cambie esta seccion por el diseno */
     color: #006ECC !important;
     height: 46px;
     line-height: 46px;
@@ -172,14 +171,7 @@
 }
 
 /* DevStart: Bottom padding is reduced */
-.static_page_content > .content_box{
-	/* Arturo comento los estilos para que queden comoe el diseno 
-    border-top: 2px solid #f8ad05;
-	border-left: 1px solid #e5e5e5;
-	border-right: 1px solid #e5e5e5;
-	border-bottom: 1px solid #e5e5e5;
-	background-color: #fbfbfb;
-    */
+.static_page_content > .content_box{	
     font-size: .75em;
     color: #55667a;
     line-height: 1.4;
@@ -194,7 +186,6 @@
 /* DevStart: Strict Hierarchy removed to accomodate a div */
 .static_page_content > .content_box  .header_top{
 	height: 30px;
-    /* Arturo aca modifique la seccion para que quede como el diseno */
     padding: 8px 8px 8px 0px;
     text-align: left;
     font-size: 1.2em;
@@ -215,7 +206,6 @@
 	color: #4d4d4d;
 	font-size: 12px;
 	line-height: 16px;
-    /* Arturo cambie los padding */
     padding: 4px 9px 15px 0px;
 }
 
@@ -3163,7 +3153,6 @@ div.content_wrapper {
 	}
 
 	div.content_wrapper > div.content_left_shadow > div.content_right_shadow > div.main_content {
-		/* Arturo cambie el tamano de l ancho */
         max-width: 1000px;
 		margin: 0 auto;
 		background-color: #ffffff;
@@ -7336,16 +7325,10 @@ div.widget_search_tab_wrapper .tab_header .tab_container {
 
 	.widget_product_compare > .middle > .left_border {
 		padding-left: 1px;
-		/* Arturo comentamos estge borde 
-        background-color: #e5e5e5;
-        */
 	}
 
 		.widget_product_compare > .middle > .left_border > .right_border {
 			padding-right: 1px;
-            /* Arturo comentamos este borde
-			background-color: #e5e5e5;
-            */
 		}
 
 		.widget_product_compare > .middle > .left_border > .right_border > .content {
@@ -7374,7 +7357,6 @@ div.widget_search_tab_wrapper .tab_header .tab_container {
 				border-bottom: 1px solid #e5e5e5;
 			}
 
-/* Arturo aqui elimine el font size para poder tener diferentes tamaños */
 			.widget_product_compare > .middle > .left_border > .right_border > .content > .compare_main .row {
 				overflow: hidden;
 				min-height: 30px;
