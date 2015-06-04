@@ -646,6 +646,7 @@ dl, ol, ul {
 	right: 15px;
 	width: 298px;
 }
+#MyAccountQuickLink_alt{display:none;}
 
 /* Facebook link */
 
@@ -671,8 +672,9 @@ dl, ol, ul {
 	position: relative;
 	width: 58px;
 	height: 43px;
-	margin: 16px 20px 16px 16px;
+	margin: 0px 20px;
 	padding: 0 !important;
+	top: 0px;
 	/*background-image: -webkit-gradient(linear, left top, left bottom, from(#f7f9f9), to(#e5e8e9));
 	background-image: linear-gradient(#f7f9f9, #e5e8e9);
 	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr='#f7f9f9', endColorStr='#e5e8e9')";
@@ -1787,7 +1789,7 @@ background-color:#f7f7f7;
 	  width: 12px!important;
 	  height: 18px;
 	  left: inherit !important;
-	  right: 105px;
+	  right: 120px;
 	}
     *:focus  
     {  
@@ -1806,6 +1808,7 @@ background-color:#f7f7f7;
 	  top: 4px;
 	  left: 5px;
 }	
+
 
 
 	/* Header */
@@ -1830,6 +1833,11 @@ background-color:#f7f7f7;
 		right: 0;
 		width: auto;
 	}
+
+#Header_GlobalLogin_signOutQuickLinkUser, 
+#Header_GlobalLogin_signOutQuickLink > .userProfileIcon{
+	display:none;
+}
 
 	/* Mini cart button */
 
@@ -1996,7 +2004,7 @@ background-color:#f7f7f7;
 	}
 	
 	#header #searchTermWrapper {
-		  width: 290px!important;
+		  width: 190px!important;
 		  text-align: left;
 	}  
 	
@@ -2042,7 +2050,7 @@ background-color:#f7f7f7;
 	}
 	#MiniShoppingCart {
 	  top: -11px!important;
-	  right: 40px!important;
+	  right: 72px!important;
 }
 
 	/* Autocomplete menu */
@@ -2218,11 +2226,11 @@ width: 80%;
   margin-left:-150px;
 }
 
-#quickLinksBar li.signIn a {
+#quickLinksBar li.signIn > a {
   left: 50%!important;
  }
 
-#quickLinksBar li.signIn a:before {
+#quickLinksBar li.signIn > a:before {
   left: 50%;
   margin-left: 40px;
 }
@@ -2839,6 +2847,7 @@ div.grid_icon, a.grid_icon:hover, div.list_icon, a.list_icon:hover {
  #MiniShoppingCart {
 	position: absolute;
 	right: 0px;
+	top: 30px;
 }
 
 .product > .product_image img {
@@ -3200,4 +3209,4 @@ Alejandro Paredes
     font-size: 0.75em !important;
     line-height: 1.4 !important;
 }
-
+#Header_GlobalLogin_desktopExpandArrow{display:none;}
