@@ -607,12 +607,23 @@
 														</c:if>
 													</c:forEach>
 												</fieldset>
+												<div class="button_footer_line right" id="WC_MyAccountQuickCheckoutProfileForm_div_87">
+												<div class="containerWidth">
+													<a href="#" role="button" class="button_primary" id="WC_MyAccountQuickCheckoutProfileForm_links_7" onclick="javascript:QuickCheckoutProfile.UpdateProfile(document.QuickCheckout);return false;">
+														<div class="left_border"></div>
+														<div class="button_text btnAzul"><fmt:message bundle="${storeText}" key="UPDATE"/></div>												
+														<div class="right_border"></div>
+													</a>
+													</div>
+												</div>
+
 											</div>
 										</div>
 									</form>
 									<br clear="all" />
 								</div>
 							</div>
+							<%--
 							<div class="button_footer_line right" id="WC_MyAccountQuickCheckoutProfileForm_div_87">
 								<a href="#" role="button" class="button_primary" id="WC_MyAccountQuickCheckoutProfileForm_links_7" onclick="javascript:QuickCheckoutProfile.UpdateProfile(document.QuickCheckout);return false;">
 									<div class="left_border"></div>
@@ -620,6 +631,7 @@
 									<div class="right_border"></div>
 								</a>
 							</div>
+							--%>
 						</div>
 					</div>
 				</div>
