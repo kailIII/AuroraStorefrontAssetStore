@@ -2431,6 +2431,7 @@ width: 80%;
   color: a7a7a7 !important;
   font-size: 11px !important;
   font-weight: 900;
+  font-family: Arial,Helvetica,sans-serif !important;
  }
  
  .inputCorreo{
@@ -3123,7 +3124,7 @@ h1{
 	text-align: center;
 	vertical-align: middle;
 
-	//background-color: #48baf6;
+	/* background-color: #48baf6; */
 	border-radius: 5px;
 	cursor: pointer;
 	display: inline-block;
@@ -3208,6 +3209,7 @@ Alejandro Paredes
 	color: #55667a !important;
     font-size: 0.75em !important;
     line-height: 1.4 !important;
+	font-family: Arial,Helvetica,sans-serif !important;
 }
 <<<<<<< HEAD
 #Header_GlobalLogin_desktopExpandArrow{display:none;}
