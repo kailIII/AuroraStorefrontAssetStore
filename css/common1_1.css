@@ -6070,20 +6070,18 @@ div#widget_coordinate {
 
 .button_primary {
 	display: inline-block;
-	position: relative;   
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#fbbb0b), to(#ffb123));
-	background-image: linear-gradient(#fbbb0b, #ffb123);
-	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr='#fbbb0b', endColorStr='#ffb123')";   
+	position: relative;
+    background-color: #48baf6;  
 	border-radius: 4px;
 	border-spacing: 0;
 	vertical-align: middle;
+    color: #fff;
 }
 
 
 .button_primary:hover {   
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#fed60c), to(#f8af06));
-	background-image: linear-gradient(#fed60c, #f8af06);
-	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr='#fed60c', endColorStr='#f8af06')";   
+    background-color: #1badfa;
+    text-decoration: none;
 }
 
 .button_primary > .button_text {

@@ -51,6 +51,16 @@
 		width:100%;
 		max-width:none;
 	}
+    
+    #WC_EmptyShopCartDisplayf_div_1 {
+        min-height:150px;
+        color: #8c97a1;
+        font-weight: bold;
+        font-size: 14px;
+        float: left;
+        width: 40%;
+        text-align: center;
+    }
 }
 
 .sign_in_registration .heading {
@@ -342,7 +352,7 @@
 }
 
 #order_details tr th div p {
-	 color:#006ECC;
+    color:#55667a;
 }
 
 .wallet_item_details_link, .remove_address_link {
@@ -444,11 +454,12 @@
 }
 
 #order_details td {
-	border-bottom: 2px dotted #e5e5e5;
 	font-weight: normal;
 	padding: 8px 0px;
 	text-align: left;
 	vertical-align: top;
+    font-size: .8em;
+    color: #96040a;
 }
 #order_details .img {
 	float:left;
@@ -505,7 +516,6 @@
 
 #order_details .th_align_left_normal {
 	min-width: 120px;
-	border-bottom: 2px dotted #E5E5E5;
 	font-weight: normal;
 	padding: 6px 0px;
 	text-align: left;
@@ -550,6 +560,12 @@
 	font-size:12px;
 	color: #4d4d4d;
 	font-family: Arial;
+    /*
+    background-image: url(../images/bolsita.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: auto;
+    */
 }
 
 #box.shopping_cart_box .espot_checkout_bottom_right {
@@ -936,8 +952,7 @@ div#store_selection div.number_info span.blue_text {
 -------------------------------------------------------------------
 */
 
-#box .main_header {
-	background: url('../images/colors/color1/box_header_tile1.png');
+#box .main_header {	
 	background-repeat: repeat-x;
 }
 #box .main_header:after {
@@ -948,14 +963,12 @@ div#store_selection div.number_info span.blue_text {
 
 #box .main_header .left_corner {
 	float: left;
-	background: transparent url('../images/colors/color1/box_header_left1.png') no-repeat;
 	width: 11px;
 	height: 33px;
 }
 
 #box .main_header .right_corner {
 	float: right;
-	background: transparent url('../images/colors/color1/box_header_right1.png') no-repeat;
 	width: 11px;
 	height: 33px;
 }
@@ -1026,14 +1039,12 @@ div.free_gifts_block {
 
 #box .main_header .left_corner_straight {
 	float: left;
-	background: transparent url('../images/colors/color1/box_header_left_straight.png') no-repeat;
 	width: 11px;
 	height: 33px;
 }
 
 #box .main_header .right_corner_straight {
 	float: right;
-	background: transparent url('../images/colors/color1/box_header_right_straight.png') no-repeat;
 	width: 11px;
 	height: 33px;
 }
@@ -2044,7 +2055,10 @@ tr.dijitCalendarMonthContainer {
 }
 
 .price {
-	font-family:arial,helvetica,sans-serif !important;
+	font-family:arial,helvetica,sans-serif !important;    
+    font-size: 13px !important;
+    color: #fa8846 !important;
+    font-weight: bold;
 }
 
 .offerprice {
@@ -2096,7 +2110,7 @@ iframe{
 }
 
 #breadcrumb .on{
-	color: #CA4200;
+    color: #1b83ff;
 	font-size: 22px;
 }
 
@@ -2536,7 +2550,7 @@ div.info_table div.row div.info_content select {
 		width:100%;
 		padding: 0;
 		border:0 none;
-	}
+	}    
 }
 
 .myaccount_link_legend{
@@ -2766,8 +2780,7 @@ div#Scheduled {
 }
 
 .myaccount_header.bottom_line {
-	background-color: #F5F5F5;
-	border-bottom: 1px solid #E5E5E5;
+	
 }
 .myaccount_header.no_side_lines {
 	border-right: none;
@@ -3930,6 +3943,12 @@ td.item .listPrice {
 
 #WC_EmptyShopCartDisplayf_div_1 {
 	min-height:150px;
+    color: #8c97a1;
+    font-weight: bold;
+    font-size: 14px;
+    float: left;
+    width: 60%;
+    text-align: center;
 }
 
 /* Recurring Orders Table */
@@ -4287,3 +4306,28 @@ td.item .listPrice {
 	padding: 6px 0px;
 	text-align: left;
 }
+
+
+/* Arturo agregue nuevos estilos ============================================================================================================================== */
+
+.nested{
+    background-color: rgb(245, 245, 245);
+    font-size: .82em;
+    color: #55667a;
+    line-height: 1.4;
+    text-align: center;
+}
+
+#WC_PromotionCodeDisplay_div_3{
+    background-color: #8c97a1 !important;
+    border: 0 none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 0.95em;
+    text-decoration: none;
+}
+
+#WC_PromotionCodeDisplay_div_3:hover{
+    background-color: #767f88 !important;
+}
+
