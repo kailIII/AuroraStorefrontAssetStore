@@ -3209,4 +3209,21 @@ Alejandro Paredes
     font-size: 0.75em !important;
     line-height: 1.4 !important;
 }
+<<<<<<< HEAD
 #Header_GlobalLogin_desktopExpandArrow{display:none;}
+=======
+
+.widget_product_image_viewer > .content > .other_views {
+	float: left !important;
+	width: 100px !important;
+}
+
+.product_page_content .widget_product_image_viewer .image_container {
+    width: 375px !important;
+	float: right !important;
+}
+
+.widget_product_image_viewer > .content > .other_views > ul > li {
+	margin-bottom: 10px !important;
+}
+>>>>>>> origin/master
