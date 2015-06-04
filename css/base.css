@@ -853,12 +853,49 @@ li.menuCategorias :hover  <  .departmentButton.selected{
  border-bottom:none;
 } 
   
+.widget_product_image_viewer > .content > .other_views {
+	float: left !important;
+	width: 100px !important;
+}
+
+.product_page_content .widget_product_image_viewer .image_container {
+    width: 375px !important;
+	float: right !important;
+}
+
+.widget_product_image_viewer > .content > .other_views > ul > li {
+	margin-bottom: 10px !important;
+}
  
 @media (max-width: 952px){
-.departmentMenu > .header {
-	display:block;
+	.departmentMenu > .header {
+		display:block;
+	}
+	
+	.product_page_content .widget_product_image_viewer .image_container {
+		float: none !important;
+		width: 100% !important;
+	}
+	
+	.widget_product_image_viewer > .content > .other_views {
+		float: none !important;
+		width: 100% !important;
+	}
 }
+
+@media (max-width: 990px){
+	
+	.product_page_content .widget_product_image_viewer .image_container {
+		float: none !important;
+		width: 100% !important;
+	}
+	
+	.widget_product_image_viewer > .content > .other_views {
+		float: none !important;
+		width: 100% !important;
+	}
 }
+
 .departmentMenu > .header > .link {
 	display: block;
 	margin: 0 -8px;
@@ -3276,19 +3313,4 @@ Alejandro Paredes
 }
 
 #Header_GlobalLogin_desktopExpandArrow{display:none;}
-
-
-.widget_product_image_viewer > .content > .other_views {
-	float: left !important;
-	width: 100px !important;
-}
-
-.product_page_content .widget_product_image_viewer .image_container {
-    width: 375px !important;
-	float: right !important;
-}
-
-.widget_product_image_viewer > .content > .other_views > ul > li {
-	margin-bottom: 10px !important;
-}
 
