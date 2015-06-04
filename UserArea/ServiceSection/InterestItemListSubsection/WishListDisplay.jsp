@@ -129,12 +129,14 @@ xmlns:waistate="http://www.w3.org/2005/07/aaa" lang="${shortLocale}" xml:lang="$
 	<div id="contentWrapper">
 		<div id="content" role="main">		
 			<div class="row margin-true">
-				<div class="col12">				
+				<div class="col12">	
+					<%-- Daniel Torres			
 					<%out.flush();%>
 						<c:import url="${env_siteWidgetsDir}com.ibm.commerce.store.widgets.BreadcrumbTrail/BreadcrumbTrail.jsp">  														
 							<c:param name="pageGroup" value="Content"/>
 						</c:import>
-					<%out.flush();%>					
+					<%out.flush();%>
+					--%>					
 				</div>
 			</div>
 			<div class="rowContainer" id="container_MyAccountDisplayB2B">
@@ -145,6 +147,15 @@ xmlns:waistate="http://www.w3.org/2005/07/aaa" lang="${shortLocale}" xml:lang="$
 						<%out.flush();%>		
 					</div>
 					<div class="col8 acol12 ccol9 right">	
+
+						<%-- Daniel Torres --%>
+						<%out.flush();%>
+							<c:import url="${env_siteWidgetsDir}com.ibm.commerce.store.widgets.BreadcrumbTrail/BreadcrumbTrail.jsp">  														
+								<c:param name="pageGroup" value="Content"/>
+							</c:import>
+						<%out.flush();%>
+						
+
 						<div id="box" class="myAccountMarginRight">
 							<%@ include file="../../../Snippets/MultipleWishList/GetDefaultWishList.jspf" %>
 							<div dojoType="wc.widget.RefreshArea" id="WishlistSelect_Widget" controllerId="WishlistSelect_Controller">

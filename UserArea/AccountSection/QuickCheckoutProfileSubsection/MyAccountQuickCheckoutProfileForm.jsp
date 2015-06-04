@@ -260,12 +260,14 @@
 	<div id="contentWrapper">
 		<div id="content" role="main">		
 			<div class="row margin-true">
-				<div class="col12">				
+				<div class="col12">	
+					<%-- Daniel Torres 			
 					<%out.flush();%>
 						<c:import url="${env_siteWidgetsDir}com.ibm.commerce.store.widgets.BreadcrumbTrail/BreadcrumbTrail.jsp">  														
 							<c:param name="pageGroup" value="Content"/>
 						</c:import>
-					<%out.flush();%>					
+					<%out.flush();%>	
+					--%>				
 				</div>
 			</div>
 			<div class="rowContainer" id="container_MyAccountDisplayB2B">
@@ -275,7 +277,15 @@
 							<c:import url="${env_siteWidgetsDir}com.ibm.commerce.store.widgets.MyAccountNavigation/MyAccountNavigation.jsp"/>
 						<%out.flush();%>		
 					</div>
-					<div class="col8 acol12 ccol9 right">							
+					<div class="col8 acol12 ccol9 right">
+
+						<%-- Daniel Torres --%>
+						<%out.flush();%>
+							<c:import url="${env_siteWidgetsDir}com.ibm.commerce.store.widgets.BreadcrumbTrail/BreadcrumbTrail.jsp">  														
+								<c:param name="pageGroup" value="Content"/>
+							</c:import>
+						<%out.flush();%>
+
 						<!-- Content Start -->
 						<div id="box" class="myAccountMarginRight">
 							<div class="my_account" id="WC_MyAccountQuickCheckoutProfileForm_div_2">
@@ -603,10 +613,10 @@
 									<br clear="all" />
 								</div>
 							</div>
-							<div class="button_footer_line" id="WC_MyAccountQuickCheckoutProfileForm_div_87">
+							<div class="button_footer_line right" id="WC_MyAccountQuickCheckoutProfileForm_div_87">
 								<a href="#" role="button" class="button_primary" id="WC_MyAccountQuickCheckoutProfileForm_links_7" onclick="javascript:QuickCheckoutProfile.UpdateProfile(document.QuickCheckout);return false;">
 									<div class="left_border"></div>
-									<div class="button_text"><fmt:message bundle="${storeText}" key="UPDATE"/></div>												
+									<div class="button_text btnAzul"><fmt:message bundle="${storeText}" key="UPDATE"/></div>												
 									<div class="right_border"></div>
 								</a>
 							</div>
