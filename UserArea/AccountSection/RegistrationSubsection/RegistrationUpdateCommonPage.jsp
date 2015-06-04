@@ -135,7 +135,7 @@
 					<br clear="all" />
 					<div class="column" id="WC_UserRegistrationUpdateForm_div_13">
 						<div id="WC_UserRegistrationUpdateForm_div_14" class="column_label">
-							<label for="WC_UserRegistrationUpdateForm_FormInput_logonPassword_In_Register_1" class="nodisplay">
+							<label for="WC_UserRegistrationUpdateForm_FormInput_logonPassword_In_Register_1" class="nodisplay clasenueva">
 								<fmt:message bundle="${storeText}" key="AB_ADDRESS_LABEL_TEXT" >
 								<fmt:param><fmt:message bundle="${storeText}" key="PASSWORD3" /></fmt:param>
 								<fmt:param> </fmt:param></fmt:message>
@@ -202,7 +202,7 @@
 		<div class="button_footer_line" id="WC_UserRegistrationUpdateForm_div_42">
 			<a href="#" role="button" class="button_primary" id="WC_UserRegistrationUpdateForm_links_1" onclick="javascript:MyAccountDisplay.prepareSubmit(document.Register,'<c:out value='${logonPassword}'/>','<c:out value='${logonPasswordVerify}'/>');return false;">
 				<div class="left_border"></div>
-				<div class="button_text"><fmt:message bundle="${storeText}" key="UPDATE" /></div>												
+				<div class="button_text btnAzul"><fmt:message bundle="${storeText}" key="UPDATE" /></div>												
 				<div class="right_border"></div>
 			</a>	
 		</div>
