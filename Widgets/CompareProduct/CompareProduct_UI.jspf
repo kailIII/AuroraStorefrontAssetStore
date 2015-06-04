@@ -23,12 +23,12 @@
 </script>
 <div class="widget_product_compare">
 	<div class="compare_heading">
-		<fmt:message bundle="${storeText}" key='CPG_COMPARE_PRODUCTS'/>
+     <h1><fmt:message bundle="${storeText}" key='CPG_COMPARE_PRODUCTS'/></h1>
 	</div>
 
 	<c:if test="${!empty param.compareReturnName}">
 	<div class="compare_back">
-		<a id="compareBackLink" href="<c:out value="${param.returnUrl}"/>">
+    <a id="compareBackLink" class="link_compara" href="<c:out value="${param.returnUrl}"/>">
 			<fmt:message bundle="${storeText}" key="CPG_BACK_TO_{0}" >
 				<fmt:param><c:out value="${param.compareReturnName}"/></fmt:param>
 			</fmt:message>
@@ -36,15 +36,19 @@
 	</div>
 	</c:if>
 
-	<div class="top">
+	
+    
+    <div class="top">    
 		<div class="left_border"></div>
 		<div class="middle"></div>
-		<div class="right_border"></div>
+		<div class="right_border"></div>        
 	</div>
+    
 
 	<div class="middle">
-		<div class="left_border">
-			<div class="right_border">
+		
+       <div class="left_border">
+		<div class="right_border">
 				<div class="content">
 					<div class="heading zebra"><fmt:message bundle="${storeText}" key='CPG_COMPARE_LIMIT_MSG'/></div>
 					<c:choose>
@@ -61,8 +65,6 @@
 									<div class="row height_spacing_top">
                                     
                                     <div class="heading">
-                                    <p class="compara">Compara tus productos</p>
-                                    
                                     <%--
                                     aca comente esta parte para que solo quede lo nuevo
                                     <fmt:message bundle="${storeText}" key='CPG_PRODUCT_IMAGE'/>
@@ -642,13 +644,17 @@
 						</c:otherwise>
 					</c:choose>
 				</div>
-			</div>
-		</div>
-	</div>
+                </div> <!-- right_border -->
+               </div> <!-- left_border -->
+	</div><!-- middle -->
 
-	<div class="bottom">
+	
+    
+    <div class="bottom">
 		<div class="left_border"></div>
 		<div class="middle"></div>
 		<div class="right_border"></div>
 	</div>
+    
+    
 </div>

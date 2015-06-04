@@ -148,7 +148,8 @@ blockquote, h1, h2, h3, h4, h5, h6, p {
 
 
 h1 {
-	color: #1b83ff !important;
+    /* Arturo cambie el color */
+    color: #006ECC !important;
 }
 
 button, input, textarea, select {
@@ -2459,12 +2460,14 @@ width: 80%;
   border: 1px solid #DDDDDD; 
   padding: 10px;
   width: 85%;
-   height: 10px; 
+   height: 10px;
+     
+Arturo Solo comente las dos ultimas lineas, las anteriores ya estaban     
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 */
   outline: none;
-  font-size: 11px !important;
-   border-top-right-radius: 5px;
-border-bottom-right-radius: 5px;
+  font-size: 11px !important;  
  }
   
  input[type=text]:focus, textarea:focus {
@@ -3163,3 +3166,33 @@ Alejandro Paredes
     line-height: 1.4 !important;
 }
 
+/* Arturo estilos ==================================== */
+
+.nuevo_imput {       
+    font-weight: normal;
+    font-style: normal;
+    font-size: 12px;
+    font-family: Arial;
+    text-align: none;
+    color: #666;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-color: #c8c8c8;
+    border-style: solid;
+    background-color: #fff;
+    background-size: auto;
+    background-repeat: repeat;
+    background-position: center center;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 1px inset;
+    -o-box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 1px inset;
+    -moz-box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 1px inset;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 1px inset;
+    padding: 0 5px;
+    height: 32px;
+}

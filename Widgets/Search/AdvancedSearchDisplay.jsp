@@ -81,7 +81,7 @@ xmlns:waistate="http://www.w3.org/2005/07/aaa" lang="${shortLocale}" xml:lang="$
 												<input type="hidden" name="catalogId" value= "${catalogId}"/>
 												<div class="form" id="WC_AdvancedSearchForm_div_3">
 													<div class="myaccount_header" id="WC_AdvancedSearchForm_div_4">
-														<h2 class="registration_header"><fmt:message bundle="${storeText}" key="ADVANCED_SEARCH_MESSAGE"/></h2>
+														<p class="registration_header"><fmt:message bundle="${storeText}" key="ADVANCED_SEARCH_MESSAGE"/></p>
 													</div>
 													<div class="content" id="WC_AdvancedSearchForm_div_5">
 														<div class="align" id="WC_AdvancedSearchForm_div_6">
@@ -95,9 +95,15 @@ xmlns:waistate="http://www.w3.org/2005/07/aaa" lang="${shortLocale}" xml:lang="$
 																		</span>
 																		<fmt:message bundle="${storeText}" key="SEARCH_FOR"/>
 																	</div>
-																	<input type="text" size="26" maxlength="254" aria-required="true" name="searchTerm" id="WC_AdvancedSearchForm_FormInput_searchTerm"  value="<c:out value="${WCParam.searchTerm}"/>"/>
+																	
+                                                                    
+                                                                    <!-- aca agregamos un estilo para la caja de busqueda --> 
+                                                                    <input class="nuevo_imput" type="text" size="26" maxlength="254" aria-required="true" name="searchTerm" id="WC_AdvancedSearchForm_FormInput_searchTerm"  value="<c:out value="${WCParam.searchTerm}"/>"/>
+                                                                    
+                                                                    
+                                                                    
 																	<label for="WC_AdvancedSearchForm_FormInput_searchType" class="nodisplay"><fmt:message bundle="${storeText}" key="SEARCH_FOR_OPTIONS" /></label>
-																	<select name="searchType" id="WC_AdvancedSearchForm_FormInput_searchType">
+                                                                    <select class="nuevo_imput" name="searchType" id="WC_AdvancedSearchForm_FormInput_searchType">
 																		<option value="${searchTypeAny}" <c:if test="${!empty WCParam.searchType && WCParam.searchType==searchTypeAny}">selected="selected"</c:if>>
 																			<fmt:message bundle="${storeText}" key="ANY_WORDS" />
 																		</option>																		
@@ -120,8 +126,11 @@ xmlns:waistate="http://www.w3.org/2005/07/aaa" lang="${shortLocale}" xml:lang="$
 																		</span>
 																		<fmt:message bundle="${storeText}" key="EXCLUDE_WORDS"/>
 																	</div>
-																	<input size="46" maxlength="50" aria-required="false" name="filterTerm" id="WC_AdvancedSearchForm_FormInput_filterTerm" value="<c:out value="${WCParam.filterTerm}"/>" />
-																	<input type="hidden" name="filterType" id="WC_AdvancedSearchForm_FormInput_filterType" value="${searchTypeAny}" />
+                                                                    
+                                                                    <!-- aca agregamos un estilo para la caja de busqueda -->
+                                                                    <input class="nuevo_imput" type="text" size="26" maxlength="50" aria-required="false" name="filterTerm" id="WC_AdvancedSearchForm_FormInput_filterTerm" value="<c:out value="${WCParam.filterTerm}"/>" />
+																	
+                                                                    <input type="hidden" name="filterType" id="WC_AdvancedSearchForm_FormInput_filterType" value="${searchTypeAny}" />
 																</div>
 																<div class="column" id="WC_AdvancedSearchForm_div_12">
 																	<div class="column_label" id="WC_AdvancedSearchForm_div_13">
@@ -132,7 +141,7 @@ xmlns:waistate="http://www.w3.org/2005/07/aaa" lang="${shortLocale}" xml:lang="$
 																		</span>
 																		<fmt:message bundle="${storeText}" key="SEARCH_IN1"/>
 																	</div>
-																	<select name="categoryId" id="WC_AdvancedSearchForm_FormInput_categoryId">
+                                                                    <select class="nuevo_imput" name="categoryId" id="WC_AdvancedSearchForm_FormInput_categoryId">
 																		<option value=""><fmt:message bundle="${storeText}" key="SEARCH_ALL_DEPARTMENTS" /></option>
 																		<c:forEach var="topCategory" items="${searchDropdownCategoryList}" varStatus="status">
 																			<option value=${topCategory[1]} <c:if test="${WCParam.categoryId == topCategory[1]}">selected="selected"</c:if>><c:out value="${topCategory[0]}"/></option>
@@ -149,7 +158,9 @@ xmlns:waistate="http://www.w3.org/2005/07/aaa" lang="${shortLocale}" xml:lang="$
 																		</span>
 																		<fmt:message bundle="${storeText}" key="SEARCH_BRANDS"/>
 						                                             </div>
-						                                             <input type="text" size="46" maxlength="50" aria-required="false" name="manufacturer" id="WC_AdvancedSearchForm_FormInput_manufacturer" value="<c:out value="${WCParam.manufacturer}"/>" />
+                                                                    
+                                                                    <!-- aca agregamos un estilo para la caja de busqueda -->
+                                                                    <input class="nuevo_imput" type="text" size="46" maxlength="50" aria-required="false" name="manufacturer" id="WC_AdvancedSearchForm_FormInput_manufacturer" value="<c:out value="${WCParam.manufacturer}"/>" />
 						                                        </div>
 																<div class="column" id="WC_AdvancedSearchForm_div_21">
 																	<div class="column_label" id="WC_AdvancedSearchForm_div_22">
@@ -160,7 +171,7 @@ xmlns:waistate="http://www.w3.org/2005/07/aaa" lang="${shortLocale}" xml:lang="$
 																		</span>
 																		<fmt:message bundle="${storeText}" key="SEARCH_FOR_WORD_IN"/>
 																	</div>
-																	<select size="1" name="searchTermScope" id="WC_AdvancedSearchForm_FormInput_searchTermScope">
+                                                                    <select class="nuevo_imput" size="1" name="searchTermScope" id="WC_AdvancedSearchForm_FormInput_searchTermScope">
 																		<option value="0"></option>
 																		<option value="1" <c:if test="${!empty WCParam.searchTermScope && WCParam.searchTermScope=='1'}">selected="selected"</c:if>>
 																			<fmt:message bundle="${storeText}" key="PRODUCT_NAME_DESC" />
@@ -208,19 +219,23 @@ xmlns:waistate="http://www.w3.org/2005/07/aaa" lang="${shortLocale}" xml:lang="$
 																			</div>
 																			<div class="priceRangeContainer">
 																				<div class="range">
-																					<span class="<c:choose><c:when test="${locale == 'pl_PL' || isBiDiLocale}">right</c:when><c:otherwise>label</c:otherwise></c:choose>"><c:out value="${env_CurrencySymbolToFormat}" escapeXml="false"/></span><span class="inputbox"><input type="text" size="18" maxlength="50" aria-required="false" title='<fmt:message bundle="${storeText}" key="SEARCH_PRICE_RANGE"/> <fmt:message bundle="${storeText}" key="LN_SEARCH_FACET_LOWER_BOUND"/>' name="minPrice" id="WC_AdvancedSearchForm_FormInput_minPrice" value="<c:out value="${WCParam.minPrice}"/>"/></span>
+																					<span class="<c:choose><c:when test="${locale == 'pl_PL' || isBiDiLocale}">right</c:when><c:otherwise>label</c:otherwise></c:choose>"><c:out value="${env_CurrencySymbolToFormat}" escapeXml="false"/></span><span class="inputbox">
+                                                                                    <!-- aca agregamos un estilo para la caja de busqueda -->
+                                                                                    <input class="nuevo_imput" type="text" size="18" maxlength="50" aria-required="false" title='<fmt:message bundle="${storeText}" key="SEARCH_PRICE_RANGE"/> <fmt:message bundle="${storeText}" key="LN_SEARCH_FACET_LOWER_BOUND"/>' name="minPrice" id="WC_AdvancedSearchForm_FormInput_minPrice" value="<c:out value="${WCParam.minPrice}"/>"/></span>
 																				</div>
 																				<div>-</div>
 																				<div class="range">
-																					<span class="<c:choose><c:when test="${locale == 'pl_PL' || isBiDiLocale}">right</c:when><c:otherwise>label</c:otherwise></c:choose>"><c:out value="${env_CurrencySymbolToFormat}" escapeXml="false"/></span><span class="inputbox"><input type="text" size="19" maxlength="50" aria-required="false" title='<fmt:message bundle="${storeText}" key="SEARCH_PRICE_RANGE"/> <fmt:message bundle="${storeText}" key="LN_SEARCH_FACET_UPPER_BOUND"/>' name="maxPrice" id="WC_AdvancedSearchForm_FormInput_maxPrice" value="<c:out value="${WCParam.maxPrice}"/>"/></span>
+																					<span class="<c:choose><c:when test="${locale == 'pl_PL' || isBiDiLocale}">right</c:when><c:otherwise>label</c:otherwise></c:choose>"><c:out value="${env_CurrencySymbolToFormat}" escapeXml="false"/></span><span class="inputbox">
+                                                                                    <!-- aca agregamos un estilo para la caja de busqueda -->
+                                                                                    <input class="nuevo_imput" type="text" size="19" maxlength="50" aria-required="false" title='<fmt:message bundle="${storeText}" key="SEARCH_PRICE_RANGE"/> <fmt:message bundle="${storeText}" key="LN_SEARCH_FACET_UPPER_BOUND"/>' name="maxPrice" id="WC_AdvancedSearchForm_FormInput_maxPrice" value="<c:out value="${WCParam.maxPrice}"/>"/></span>
 																				</div>
 																			</div>
 																		</div>
 																		<div class="clear_float"></div>
 																	</c:when>
-																	<c:otherwise>
-																		<input type="hidden" name="minPrice" id="WC_AdvancedSearchForm_FormInput_minPrice" value=""/>
-																		<input type="hidden" name="maxPrice" id="WC_AdvancedSearchForm_FormInput_maxPrice" value=""/>
+																	<c:otherwise>             
+                                                                        <input type="hidden" name="minPrice" id="WC_AdvancedSearchForm_FormInput_minPrice" value=""/>
+                                                                        <input type="hidden" name="maxPrice" id="WC_AdvancedSearchForm_FormInput_maxPrice" value=""/>
 																	</c:otherwise>
 																</c:choose>
 
@@ -233,7 +248,7 @@ xmlns:waistate="http://www.w3.org/2005/07/aaa" lang="${shortLocale}" xml:lang="$
 																		</span>
 																		<fmt:message bundle="${storeText}" key="RESULTS_PER_PAGE"/>
 																	</div>
-																	<select name="pageSize" id="WC_AdvancedSearchForm_FormInput_pageSize">
+                                                                    <select class="nuevo_imput" name="pageSize" id="WC_AdvancedSearchForm_FormInput_pageSize">
 																		<option value="12" <c:if test="${!empty WCParam.pageSize && WCParam.pageSize=='12'}">selected="selected"</c:if>>12</option>
 																		<option value="20" <c:if test="${!empty WCParam.pageSize && WCParam.pageSize=='20'}">selected="selected"</c:if>>20</option>
 																		<option value="40" <c:if test="${!empty WCParam.pageSize && WCParam.pageSize=='40'}">selected="selected"</c:if>>40</option>
@@ -243,7 +258,8 @@ xmlns:waistate="http://www.w3.org/2005/07/aaa" lang="${shortLocale}" xml:lang="$
 															<div class="clear_float"></div>
 														</div>
 													<div class="button_footer_line no_float" id="WC_AdvancedSearchForm_div_40">
-														<a href="#" role="button" class="button_primary" id="WC_AdvancedSearchForm_links_1" tabindex="0" onclick="SearchJS.validateForm(byId('AdvancedSearchForm'));">
+                                                        <!-- quitamos la clase  button_primary -->
+                                                        <a href="#" role="button" class="btnNaranja" id="WC_AdvancedSearchForm_links_1" tabindex="0" onclick="SearchJS.validateForm(byId('AdvancedSearchForm'));">
 															<div class="left_border"></div>
 															<div class="button_text"><fmt:message bundle="${storeText}" key="SEARCH_CATALOG"/></div>												
 															<div class="right_border"></div>
