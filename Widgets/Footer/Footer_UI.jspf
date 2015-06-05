@@ -27,7 +27,7 @@
 			</div>
 			<div id="footer-right">
 				<div class="inputCorreo">
-					<input type="text" value="Ingresa tu correo electr&oacute;nico" id="txtCorreo">
+					<input type="text" placeholder="Ingresa tu correo electr&oacute;nico" id="txtCorreo">
 					
 				</div>
 			</div>
