@@ -284,7 +284,7 @@
 								</c:import>
 								<%out.flush();%>
 								<div class="container_content_rightsidebar shop_cart">
-									<div class="left_column">
+									<div >
 										<flow:ifDisabled feature="AjaxCheckout">
 											<form name="ReplaceItemForm" method="post" action="OrderChangeServiceItemDelete" id="ReplaceItemForm">
 												<!-- Define all the hidden fields required for submitting this form in case of Non-Ajax Checkout -->
@@ -332,7 +332,7 @@
 										<%-- End - Added for Coremetrics Intelligent Offer --%>
 									</flow:ifEnabled>
 									</div>
-									<div class="right_column">
+									<%-- <div class="right_column">
 										<!-- Vertical Recommendations Widget -->
 										<div class="widget_recommended_position">
 											<% out.flush(); %>
@@ -343,7 +343,7 @@
 												</c:import>
 											<% out.flush(); %>
 										</div>
-									</div>
+									</div> --%>
 								</div>
 							</div>
 						</div>

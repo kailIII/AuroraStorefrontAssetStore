@@ -3487,3 +3487,13 @@ Alejandro Paredes
 .loginMenuDropdown .button_primary   .button_text:hover {
   background-color: #fa6b19!important;
 }
+
+#WC_EmptyShopCartDisplayf_div_1 {
+    color: #8c97a1;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    min-height: 150px;
+    text-align: center;
+    width: 100%;
+}
