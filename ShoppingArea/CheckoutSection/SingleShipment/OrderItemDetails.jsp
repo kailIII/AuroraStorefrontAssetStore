@@ -215,12 +215,18 @@
 	<tr class="orderDetailsHeader"><td colspan="5"><fmt:message bundle="${storeText}" key="ORDER_SUMMARY"  /></td></tr>
 	</c:if>
 	  <tr class="nested">
-		   <th class="align_left" id="SingleShipment_tableCell_productName"><fmt:message bundle="${storeText}" key="PRODUCT"  /></th>
+		   
+          
+          <th class="align_center" id="SingleShipment_tableCell_productName"><fmt:message bundle="${storeText}" key="PRODUCT"  /></th>
 		   <flow:ifEnabled feature="ExpeditedOrders"><th class="expedite" id="SingleShipment_tableCell_expedite"><fmt:message bundle="${storeText}" key="SHIP_EXPEDITE_SHIPPING" /></th></flow:ifEnabled>
 		   <th class="avail" id="SingleShipment_tableCell_availability"><fmt:message bundle="${storeText}" key="AVAILABILITY"  /></th>
 		   <th class="QTY" id="SingleShipment_tableCell_quantity" abbr="<fmt:message bundle="${storeText}" key="QUANTITY1"  />"><fmt:message bundle="${storeText}" key="QTY"  /></th>
 		   <th class="each short" id="SingleShipment_tableCell_unitPrice" abbr="<fmt:message bundle="${storeText}" key="UNIT_PRICE"  />"><fmt:message bundle="${storeText}" key="EACH"  /></th>
-		   <th class="total short" id="SingleShipment_tableCell_totalPrice" abbr="<fmt:message bundle="${storeText}" key="TOTAL_PRICE"  />"><fmt:message bundle="${storeText}" key="TOTAL"  /></th>
+          <th class="align_center short" id="SingleShipment_tableCell_totalPrice" abbr="<fmt:message bundle="${storeText}" key="TOTAL_PRICE"  />"><fmt:message bundle="${storeText}" key="TOTAL"  /></th>
+          <!-- agregamos un th para que caiga el eliminar-->
+          <th class="align_center"></th>
+          
+          
 	  </tr>
 
 	<c:if test="${!empty pgorder.orderItem}">
@@ -514,12 +520,26 @@
 					</p>
 					<p class="hover_underline">
 					<c:if test="${!isFreeGift}">
-						<flow:ifEnabled feature="AjaxCheckout">
+						
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <!-- aca comentamos el boton eliminar del listado
+                        <flow:ifEnabled feature="AjaxCheckout">
 							<a class="remove_address_link tlignore" href="JavaScript:setCurrentId('WC_OrderItemDetails_links_2_<c:out value='${status.count}'/>'); CheckoutHelperJS.deleteFromCart('<c:out value='${itemUniqueId}'/>');" id="WC_OrderItemDetails_links_2_<c:out value='${status.count}'/>">
 								<img src="<c:out value='${jspStoreImgDir}${vfileColor}'/>table_x_delete.png" alt=""/>
 								<fmt:message bundle="${storeText}" key="REMOVE"  />
 							</a>
 						</flow:ifEnabled>
+                        -->
+                        
+                        
 						<flow:ifDisabled feature="AjaxCheckout">
 							<wcf:url var="OrderItemDelete" value="OrderChangeServiceItemDelete">
 								<wcf:param name="orderItemId" value="${itemUniqueId}"/>
@@ -543,6 +563,12 @@
 								<fmt:message bundle="${storeText}" key="REMOVE"  />
 							</a>
 						</flow:ifDisabled>
+                        
+                        
+                        
+                        
+                        
+                        
 					</c:if>
 					</p>
 				</div>
@@ -583,7 +609,10 @@
 					</c:choose>
 				</p>
 			</td>
-			<td class="each short <c:out value="${nobottom}"/>" id="WC_OrderItemDetails_td_3_<c:out value='${status.count}'/>" headers="SingleShipment_tableCell_unitPrice SingleShipment_rowHeader_product<c:out value='${status.count}'/>">
+			
+                        
+                        
+            <td class="each short <c:out value="${nobottom}"/>" id="WC_OrderItemDetails_td_3_<c:out value='${status.count}'/>" headers="SingleShipment_tableCell_unitPrice SingleShipment_rowHeader_product<c:out value='${status.count}'/>">
 				<%-- unit price column of order item details table --%>
 				<%-- shows unit price of the order item --%>
 				<span class="price">
@@ -591,6 +620,11 @@
 					<c:out value="${CurrencySymbol}"/>
 				</span>
 			</td>
+                   
+                    
+                    
+                    
+                    
 			<td class="total short <c:out value="${nobottom}"/>" id="WC_OrderItemDetails_td_4_<c:out value='${status.count}'/>" headers="SingleShipment_tableCell_totalPrice SingleShipment_rowHeader_product<c:out value='${status.count}'/>">
 				<c:choose>
 					<c:when test="${orderItem.freeGift}">
@@ -608,6 +642,25 @@
 					</c:otherwise>
 				</c:choose>
 			</td>
+                
+                
+                
+                
+          <!-- aca cambiamos el eliminar pero solo el tache png -->
+           <td>
+               <flow:ifEnabled feature="AjaxCheckout">
+                   <a class="remove_address_link tlignore" href="JavaScript:setCurrentId('WC_OrderItemDetails_links_2_<c:out value='${status.count}'/>'); CheckoutHelperJS.deleteFromCart('<c:out value='${itemUniqueId}'/>');" id="WC_OrderItemDetails_links_2_<c:out value='${status.count}'/>">
+                       <img class="tache" src="<c:out value='${jspStoreImgDir}${vfileColor}'/>table_x_delete.png" alt=""/>
+                       <!-- <fmt:message bundle="${storeText}" key="REMOVE"  /> -->
+                   </a>
+               </flow:ifEnabled>
+           </td>     
+                      
+                
+                
+                
+                
+                
 		</tr>
 		<c:remove var="nobottom"/>
 

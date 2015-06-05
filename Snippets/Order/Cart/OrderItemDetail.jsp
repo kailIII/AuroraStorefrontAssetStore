@@ -255,11 +255,12 @@
 <c:set var="allContractsValid" value="true" scope="request"/>
 <table id="order_details" cellpadding="0" cellspacing="0" border="0" width="100%" summary="<fmt:message bundle="${storeText}" key="SHOPCART_TABLE_SUMMARY" />">
 	  <tr class="nested">
-		   <th class="align_left" id="shoppingCart_tableCell_productName"><fmt:message bundle="${storeText}" key="SHOPCART_PRODUCT" /></th>
-		   <th class="align_left" id="shoppingCart_tableCell_availability"><fmt:message bundle="${storeText}" key="SHOPCART_AVAILABILITY" /></th>
+          <th class="align_center" id="shoppingCart_tableCell_productName"><fmt:message bundle="${storeText}" key="SHOPCART_PRODUCT" /></th>
+          <th class="align_center" id="shoppingCart_tableCell_availability"><fmt:message bundle="${storeText}" key="SHOPCART_AVAILABILITY" /></th>
+          
 		   <th class="align_center" id="shoppingCart_tableCell_quantity" abbr="<fmt:message bundle="${storeText}" key="QUANTITY1" />"><fmt:message bundle="${storeText}" key="SHOPCART_QTY" /></th>
-		   <th class="align_right" id="shoppingCart_tableCell_each" abbr="<fmt:message bundle="${storeText}" key="UNIT_PRICE" />"><fmt:message bundle="${storeText}" key="SHOPCART_EACH" /></th>
-		   <th class="align_right" id="shoppingCart_tableCell_total" abbr="<fmt:message bundle="${storeText}" key="TOTAL_PRICE" />"><fmt:message bundle="${storeText}" key="SHOPCART_TOTAL" /></th>
+          <th class="align_center" id="shoppingCart_tableCell_each" abbr="<fmt:message bundle="${storeText}" key="UNIT_PRICE" />"><fmt:message bundle="${storeText}" key="SHOPCART_EACH" /></th>
+          <th class="align_center" id="shoppingCart_tableCell_total" abbr="<fmt:message bundle="${storeText}" key="TOTAL_PRICE" />"><fmt:message bundle="${storeText}" key="SHOPCART_TOTAL" /></th>
           <!-- agregamos un th para que caiga el eliminar-->
           <th class="align_center"></th>
 	  </tr>
@@ -654,7 +655,11 @@
 			<td id="WC_OrderItemDetailsf_td_1_<c:out value='${status.count}'/>" class="<c:out value="${nobottom}"/> avail" headers="shoppingCart_tableCell_availability shoppingCart_rowHeader_product<c:out value='${status.count}'/>">
 				<%@ include file="../../ReusableObjects/CatalogEntryAvailabilityDisplay.jspf" %>
 			</td>
-			<td id="WC_OrderItemDetailsf_td_2_<c:out value='${status.count}'/>" class="<c:out value="${nobottom}"/> QTY" headers="shoppingCart_tableCell_quantity shoppingCart_rowHeader_product<c:out value='${status.count}'/>">
+			
+                                    
+                                    
+                                    
+                                    <td id="WC_OrderItemDetailsf_td_2_<c:out value='${status.count}'/>" class="<c:out value="${nobottom}"/> QTY" headers="shoppingCart_tableCell_quantity shoppingCart_rowHeader_product<c:out value='${status.count}'/>">
 				<p class="item-quantity">
 					<c:choose>
 						<c:when test="${orderItem.freeGift}">
@@ -665,18 +670,37 @@
 							<span class="spanacce" id="Quantity_ACCE_Message"><fmt:message bundle="${storeText}" key='ACCE_Quantity_Update_Message' /></span>
 							<flow:ifEnabled feature="AjaxCheckout">
 								<label for='qty_<c:out value="${status.count}"/>' style='display:none'><fmt:message bundle="${storeText}" key="QUANTITY1" /></label>
-								<input id='qty_<c:out value="${status.count}"/>' name='qty_<c:out value="${status.count}"/>' type="tel" aria-labelledby="Quantity_ACCE_Message" size="1" style="width:25px;" value='<c:out value="${quickCartOrderItemQuantity}"/>' onkeydown="JavaScript:setCurrentId('qty_<c:out value='${status.count}'/>'); CheckoutHelperJS.updateCartWait(this, '<c:out value='${orderItem.orderItemId}'/>',event)" />
-							</flow:ifEnabled>
+								
+                                
+                                
+                                <!-- aca agregamos los botones para aumentar y disminuir cantidades -->
+                                <a href="#" labelledby="Quantity_ACCE_Message" onclick="document.getElementById('qty_<c:out value="${status.count}"/>').value = parseInt(document.getElementById('qty_<c:out value="${status.count}"/>').value) - 1; CheckoutHelperJS.updateCartWait('<c:out value='${orderItem.orderItemId}'/>',event)" title="" >-</a>
+                                
+                                <input id='qty_<c:out value="${status.count}"/>' name='qty_<c:out value="${status.count}"/>' type="tel" aria-labelledby="Quantity_ACCE_Message" size="1" style="width:25px;" value='<c:out value="${quickCartOrderItemQuantity}"/>' onkeydown="JavaScript:setCurrentId('qty_<c:out value='${status.count}'/>'); CheckoutHelperJS.updateCartWait(this, '<c:out value='${orderItem.orderItemId}'/>',event)" />
+                                
+                                <a href="#" labelledby="Quantity_ACCE_Message" onclick="document.getElementById('qty_<c:out value="${status.count}"/>').value = parseInt(document.getElementById('qty_<c:out value="${status.count}"/>').value) + 1; CheckoutHelperJS.updateCartWait('<c:out value='${orderItem.orderItemId}'/>',event)" title="" >+</a>
+                                
+							
+                            
+                            
+                            
+                            
+                            </flow:ifEnabled>
 							<flow:ifDisabled feature="AjaxCheckout">
-								<label for='quantity_<c:out value="${status.count}"/>' style='display:none'><fmt:message bundle="${storeText}" key="QUANTITY1" /></label>
-								<input type="hidden" value='<c:out value="${orderItem.orderItemId}"/>' name='orderItemId_<c:out value="${status.count}"/>' id='orderItemId_<c:out value="${status.count}"/>'/>
+								<label for='quantity_<c:out value="${status.count}"/>' style='display:none'><fmt:message bundle="${storeText}" key="QUANTITY1" /></label>                                
+                                <input type="hidden" value='<c:out value="${orderItem.orderItemId}"/>' name='orderItemId_<c:out value="${status.count}"/>' id='orderItemId_<c:out value="${status.count}"/>'/>                                
 								<fmt:formatNumber	var="quickCartOrderItemQuantity" value="${orderItem.quantity}" type="number" maxFractionDigits="0"/>
-								<input type="tel" aria-labelledby="Quantity_ACCE_Message" size="2" class="input" value='<c:out value="${quickCartOrderItemQuantity}"/>' id='quantity_<c:out value="${status.count}"/>' name='quantity_<c:out value="${status.count}"/>'/>
+								<input type="tel" aria-labelledby="Quantity_ACCE_Message" size="2" class="input" value='<c:out value="${quickCartOrderItemQuantity}"/>' id='quantity_<c:out value="${status.count}"/>' name='quantity_<c:out value="${status.count}"/>'/>                               
+                                
 							</flow:ifDisabled>
 						</c:otherwise>
 					</c:choose>
 				</p>
 			</td>
+                                    
+                                    
+                                    
+                                    
 			<td id="WC_OrderItemDetailsf_td_3_<c:out value='${status.count}'/>" class="<c:out value="${nobottom}"/> each" headers="shoppingCart_tableCell_each shoppingCart_rowHeader_product<c:out value='${status.count}'/>">
 
 				<%-- unit price column of order item details table --%>
@@ -724,9 +748,41 @@
                         <img class="tache" src="<c:out value='${jspStoreImgDir}${vfileColor}'/>table_x_delete.png" alt=""/>
                     </a>
                 </flow:ifEnabled>
+                        
+                        
+                        
+                        <flow:ifDisabled feature="AjaxCheckout">
+                            <wcf:url var="OrderItemDelete" value="OrderChangeServiceItemDelete">
+                                <wcf:param name="orderItemId" value="${orderItem.orderItemId}"/>
+                                <wcf:param name="orderId" value="${pagorder.orderId}"/>
+                                <wcf:param name="langId" value="${WCParam.langId}" />
+                                <wcf:param name="storeId" value="${WCParam.storeId}" />
+                                <wcf:param name="catalogId" value="${WCParam.catalogId}" />
+                                <wcf:param name="calculationUsage" value="-1,-2,-3,-4,-5,-6,-7" />
+                                <c:choose>
+                                    <c:when test="${param.fromPage != null && param.fromPage == 'pendingOrderDisplay'}">
+                                        <wcf:param name="URL" value="PendingOrderDisplayView" />
+                                        <wcf:param name="errorViewName" value="PendingOrderDisplayView" />
+                                    </c:when>
+                                    <c:otherwise>
+                                        <wcf:param name="URL" value="AjaxOrderItemDisplayView" />
+                                        <wcf:param name="errorViewName" value="AjaxOrderItemDisplayView" />
+                                    </c:otherwise>
+                                </c:choose>
+
+                                <wcf:param name="beginIndex" value="${beginIndex}" />
+                            </wcf:url>
+                            <a class="hover_underline" href="#" onclick="Javascript:setPageLocation('<c:out value='${OrderItemDelete}'/>');return false;" id="WC_OrderItemDetailsf_links_3_<c:out value='${status.count}'/>">
+                                <img src="<c:out value='${jspStoreImgDir}${vfileColor}'/>table_x_delete.png" alt=""/>
+                                <fmt:message bundle="${storeText}" key="SHOPCART_REMOVE"  />
+                            </a>
+                        </flow:ifDisabled>
+                        
+                        
                     </td>       
                         
                         
+                                        
                         
 		</tr>
 		<c:remove var="nobottom"/>
@@ -753,6 +809,7 @@
 				<c:if test="${discounts.displayLevel == 'OrderItem'}">
 					<tr>
 						<th colspan="4" class="th_align_left_dotted_top_solid_bottom" abbr="<fmt:message bundle="${storeText}" key="Checkout_ACCE_prod_discount" /> <c:out value="${fn:replace(cartItemName, search, replaceStr)}" escapeXml="false"/>" id="shopcart_rowHeader_discount<c:out value='${status.count}'/>_<c:out value='${status2.count}'/>">
+                          
 							<div class="itemspecs" id="WC_OrderItemDetailsf_div_3_<c:out value='${status.count}'/>_<c:out value='${status2.count}'/>">
 								<c:url var="DiscountDetailsDisplayViewURL" value="DiscountDetailsDisplayView">
 									<c:param name="code" value="${discounts.code}" />
@@ -844,6 +901,10 @@
 	<input type="hidden" name="nonRecurringOrderItems" value="<c:out value="${nonRecurringOrderItems}"/>" id="nonRecurringOrderItems"/>
 	<input type="hidden" name="nonRecurringOrderItemsCount" value="<c:out value="${nonRecurringOrderItemsCount}"/>" id="nonRecurringOrderItemsCount"/>
  </table>
+ 
+        
+<!-- aca agregamos la pleca azul -->
+ <div class="checkout_subheader crecido"></div>
 
 <c:if test="${numEntries > pageSize}">
 	<div id="ShopcartPaginationText2">
@@ -909,6 +970,10 @@
 		</div>
 	</div>
 </c:if>
+        
+        
+        
+        
 
 <flow:ifEnabled feature="Analytics">
 	<flow:ifEnabled feature="AjaxCheckout">

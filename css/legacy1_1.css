@@ -400,7 +400,7 @@
 	width: 90px;
 }
 #order_details .avail {
-	text-align: left;
+	text-align: center;
 	width:90px;
 	padding-right:4px;
 }
@@ -413,7 +413,7 @@
 }
 #order_details .each {
 	font-family: Arial, Helvetica, sans-serif; /*Fix Japanese Yen */
-	text-align: right;
+	text-align: center;
 	width: 70px;
 }
 #order_details .each .short {
@@ -4330,4 +4330,10 @@ td.item .listPrice {
 
 .tache{
     margin: 0 25px;
+}
+
+.crecido{
+    min-height: 30px;
+    width: 100%;
+    margin-bottom: 20px;
 }
