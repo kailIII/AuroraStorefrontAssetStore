@@ -3055,8 +3055,8 @@ div.compare_target {
 }
 
 .productListingWidget .controls {
-  float: none;
-  width: 100% !important;
+	float: none;
+	width: 100% !important;
 }
 
 .productListingWidget .controls .sorting_view_controls_container{
@@ -3365,7 +3365,7 @@ div#widget_breadcrumb > ul li a {
 }
 
 .facetWidget .optionContainer > .title {
-	display: none;
+	//display: none;
 }
 
 span.content_text{
