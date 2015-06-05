@@ -3369,6 +3369,39 @@ a#WC_AjaxAddressBookForm_links_4,
 a#WC_MyAccountQuickCheckoutProfileForm_links_7{
 	background-color: transparent !important;
 }
+
+div#WC_AjaxAddressBookForm_div_6 {
+	background: none;
+}
+
+#WC_EmptyShopCartDisplayf_div_1{
+	width: 100%;
+	height: 225px;
+}
+
+#WC_EmptyShopCartDisplayf_div_1:before{
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+#WC_EmptyShopCartDisplayf_div_1 > .carro-vacio{
+	width: 66%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#WC_EmptyShopCartDisplayf_div_1 > .carro-vacio > div > a.btnGris{
+	margin: 25px 0;
+}
+
+#WC_EmptyShopCartDisplayf_div_1 > .carro-vacio-imagen{
+	width: 33%;
+	display: inline-block;
+	vertical-align: middle;
+
+}
 /** **/
 
 /** 
