@@ -2552,25 +2552,23 @@ width: 80%;
 	margin: 0 auto!important;
 }
 .homeHero.backCelular{
-	background: url(https://wc7dev.torolab.ibm.com:8006/webapp/wcs/preview/AuroraESite/Attachment/home_carrusel_banner1.jpg);
 	background-repeat:no-repeat;
 	width:100%;
-	min-height:365px;
-	height:365px;
+	min-height:320px;
+	height:320px;
 	background-position:top center;
 	background-size:cover;
 	overflow:hidden;
 }
 
 .home_carrusel_banner1{
-	background: url(https://wc7dev.torolab.ibm.com:8006/webapp/wcs/preview/AuroraESite/Attachment/home_banner1_celular.png);
-	width:626px;
-	height:290px;
+	width:620px;
+	height:320px;
 	background-repeat:no-repeat;
 	position:absolute!important;
 	margin:0px!important; 
 	left: 10%;
-	top: 12%;	
+	top: 0;	
 }
 .texto_carrusel_banner{
 	width:45%;
