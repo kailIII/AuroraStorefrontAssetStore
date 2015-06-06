@@ -2552,6 +2552,7 @@ width: 80%;
 	margin: 0 auto!important;
 }
 .homeHero.backCelular{
+	background: url(../images/home_carrusel_banner1.jpg);
 	background-repeat:no-repeat;
 	width:100%;
 	min-height:320px;
@@ -2562,6 +2563,7 @@ width: 80%;
 }
 
 .home_carrusel_banner1{
+	background: url(../images/home_banner1_celular.png);
 	width:620px;
 	height:320px;
 	background-repeat:no-repeat;
