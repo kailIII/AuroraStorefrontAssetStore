@@ -256,10 +256,15 @@ dojo.addOnLoad(
 					<c:param name="fromPage" value="shoppingCartDisplay"/>
 				</c:import>
 				<%out.flush();%>
+				
 				<br clear="all" />
+				<%-- Daniel Torres --%>
+				<%--
 				<%out.flush();%>
 				<c:import url="/${sdb.jspStoreDir}/Snippets/Order/Cart/CheckoutLogon.jsp"/>
 				<%out.flush();%>
+				--%>
+
 				<%@ include file="../../Snippets/ReusableObjects/CheckoutBottomESpotDisplay.jspf"%>
 			</div>
 		</c:when>
