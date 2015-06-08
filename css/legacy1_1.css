@@ -2508,9 +2508,29 @@ div.info_table div.row div.info_content select {
 	font-size:12px;
 	font-family: Arial;
 	margin:2px 0 7px;
-	padding:2px;
-	height:15px;
-	color: #4D4D4D
+   
+    color: #666;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-color: #c8c8c8;
+    border-style: solid;
+    background-color: #fff;
+    background-size: auto;
+    background-repeat: repeat;
+    background-position: center center;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 1px inset;
+    -o-box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 1px inset;
+    -moz-box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 1px inset;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 1px inset;
+    padding: 0 5px;
+    height: 32px;    
+        
 }
 #addr_title h2 {
 	font-size: 12px;
@@ -4336,4 +4356,25 @@ td.item .listPrice {
     min-height: 30px;
     width: 100%;
     margin-bottom: 20px;
+}
+
+.gris{
+    background-color: rgb(245, 245, 245);
+    font-size: .82em;
+    color: #55667a;
+    text-align: left;
+    width: 100%;
+}
+
+.gris .palomita{
+    float: left;
+}
+
+.separador_blanco{
+    height: 35px;
+    display: block;
+    background-color: #ffffff;
+    width: 5px;
+    float: left;
+    margin-right: 10px;
 }

@@ -205,13 +205,26 @@
 									<!-- Breadcrumb End -->
 
 									<!-- Content Start -->
-									<div id="box">
-										<div class="main_header" id="WC_SingleShipmentSummary_div_5">
+									<div id="box">                                        
+                                        
+                                        <div class="main_header" id="WC_SingleShipmentSummary_div_5">
 											<div class="left_corner" id="WC_SingleShipmentSummary_div_6"></div>
-											<div class="headingtext" id="WC_SingleShipmentSummary_div_7"><span aria-level="1" class="main_header_text" role="heading"><fmt:message bundle="${storeText}" key="BCT_SHIPPING_INFO"/></span></div>
+											
+                                            <!--aca agragamos la pleca gris con la palomita -->
+                                            <div class="headingtext gris" id="WC_SingleShipmentSummary_div_7">
+                                                <img class="palomita" src="<c:out value='${jspStoreImgDir}images/'/>ok_az.gif">
+                                                <div class="separador_blanco"></div>
+                                                <span aria-level="1" class="main_header_text" role="heading">
+                                                    <fmt:message bundle="${storeText}" key="BCT_SHIPPING_INFO"/>
+                                                </span>
+                                            </div>
+
+                                            
 											<div class="right_corner" id="WC_SingleShipmentSummary_div_8"></div>
 											<%@ include file="../../../Snippets/ReusableObjects/CheckoutTopESpotDisplay.jspf"%>
 										</div>
+                                                                                        
+                                            
 										<div class="contentline" id="WC_SingleShipmentSummary_div_9"></div>
 										<div class="body shipping_billing_height" id="WC_SingleShipmentSummary_div_13">
 											<div id="shipping">

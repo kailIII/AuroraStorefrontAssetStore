@@ -270,7 +270,7 @@
 	<%-- Start Refresh Area --%>
 	<div dojoType="wc.widget.RefreshArea"
 		widgetId="drop_down_${department.uniqueID}"
-		controllerId="departmentSubMenu_Controllers"
+		controllerId="departmentSubMenu_Controller"
 		aria-labelledby="departmentsButton">
 		<ul id="departmentsMenu" role="menu" data-parent="header"
 			aria-labelledby="departmentsButton">

@@ -204,7 +204,7 @@ dojo.addOnLoad(function(){CommonControllersDeclarationJS.setControllerURL('Order
  <table id="order_details" cellpadding="0" cellspacing="0" border="0" width="100%" summary="<fmt:message bundle="${storeText}" key="SHOPCART_TABLE_CONFIRM_SUMMARY"/>">
 
 	<tr class="nested">
-		<th class="align_left" id="SingleShipment_tableCell_productName"><fmt:message bundle="${storeText}" key="PRODUCT"/></th>
+		<th class="align_center" id="SingleShipment_tableCell_productName"><fmt:message bundle="${storeText}" key="PRODUCT"/></th>
 		<c:set var="th_count" value="1"/>
 		<c:if test="${isFromOrderDetailsPage && !(orderStatus eq 'I')}">
 			<flow:ifEnabled feature="FutureOrders">
@@ -242,7 +242,7 @@ dojo.addOnLoad(function(){CommonControllersDeclarationJS.setControllerURL('Order
 		<c:set var="th_count" value="${th_count + 1}"/>
 		<th class="each short" id="SingleShipment_tableCell_unitPrice" abbr="<fmt:message bundle="${storeText}" key="UNIT_PRICE"/>"><fmt:message bundle="${storeText}" key="EACH"/></th>
 		<c:set var="th_count" value="${th_count + 1}"/>
-		<th class="total short" id="SingleShipment_tableCell_totalPrice" abbr="<fmt:message bundle="${storeText}" key="TOTAL_PRICE"/>"><fmt:message bundle="${storeText}" key="TOTAL"/></th>
+            <th class="short align_center" id="SingleShipment_tableCell_totalPrice" abbr="<fmt:message bundle="${storeText}" key="TOTAL_PRICE"/>"><fmt:message bundle="${storeText}" key="TOTAL"/></th>
 	</tr>
 
 	<c:if test="${!empty pagorder.orderItem}">
@@ -325,7 +325,26 @@ dojo.addOnLoad(function(){CommonControllersDeclarationJS.setControllerURL('Order
 				</c:choose>
 			</c:if>
 
-		<!-- get the formatted qty for this item -->
+		
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!-- get the formatted qty for this item -->
 		<fmt:formatNumber	var="quickCartOrderItemQuantity" value="${orderItem.quantity}" type="number" maxFractionDigits="0"/>
 		<c:forEach var="discounts" items="${orderItem.adjustment}">
 			<c:if test="${discounts.displayLevel == 'OrderItem'}">
@@ -346,7 +365,24 @@ dojo.addOnLoad(function(){CommonControllersDeclarationJS.setControllerURL('Order
 					</c:choose>
 					<c:remove var="thumbNail"/>
 				</div>
-				<div class="itemspecs" id="WC_OrderItemDetailsSummaryf_div_2_${fn:escapeXml(status.count)}">
+				
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="itemspecs" id="WC_OrderItemDetailsSummaryf_div_2_${fn:escapeXml(status.count)}">
 					<p class="strong_content"><c:out value="${catEntry.name}"/></p>
 					<span><fmt:message bundle="${storeText}" key="CurrentOrder_SKU" /> <c:out value="${catEntry.partNumber}"/></span><br />
 					<c:if test="${empty subscriptionOrderItemId}">
@@ -419,7 +455,15 @@ dojo.addOnLoad(function(){CommonControllersDeclarationJS.setControllerURL('Order
 					<%@ include file="../../../Snippets/ReusableObjects/OrderGiftItemDisplayExt.jspf" %>
 					<%@ include file="../../../Snippets/ReusableObjects/GiftRegistryOrderGiftItemDisplayExt.jspf" %>
 				</div>
+                        
+                       
+                        
+                        
 			</th>
+                        
+                        
+                        
+                        
 			<c:if test="${isFromOrderDetailsPage && !(orderStatus eq 'I')}">
 				<flow:ifEnabled feature="FutureOrders">
 					<c:set var="currentItemRequestedShipDate" value="${shippingInfo.orderItem[status.count-1].requestedShipDate}"/>
@@ -603,6 +647,13 @@ dojo.addOnLoad(function(){CommonControllersDeclarationJS.setControllerURL('Order
 	<%-- dont change the name of this hidden input element. This variable is used in CheckoutHelper.js --%>
 	<input type="hidden" id = "totalNumberOfItems" name="totalNumberOfItems" value='<c:out value="${totalNumberOfItems}"/>'/>
  </table>
+                
+                
+                
+<!-- aca agregamos la pleca azul -->
+<div class="checkout_subheader crecido"></div>
+                
+                
 
 <flow:ifEnabled feature="Analytics">
 	<c:if test="${not empty parentCatalogEntryIDs }" >

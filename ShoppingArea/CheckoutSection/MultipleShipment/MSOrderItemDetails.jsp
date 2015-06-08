@@ -231,6 +231,9 @@
 		<th class="align_center" id="MultipleShipments_tableCell_quantity" abbr="<fmt:message bundle="${storeText}" key="QUANTITY1"  />"><fmt:message bundle="${storeText}" key="QTY"  /></th>
 		<th class="align_right" id="MultipleShipments_tableCell_unitPrice" abbr="<fmt:message bundle="${storeText}" key="UNIT_PRICE"  />"><fmt:message bundle="${storeText}" key="EACH"  /></th>
 		<th class="align_right" id="MultipleShipments_tableCell_totalPrie" abbr="<fmt:message bundle="${storeText}" key="TOTAL_PRICE"  />"><fmt:message bundle="${storeText}" key="TOTAL"  /></th>
+        <!-- agregamos un th para que caiga el eliminar-->
+        <th class="align_center"></th>
+        
 	</tr>
 
 	<c:if test="${!empty pgorder.orderItem}">
@@ -519,6 +522,8 @@
 					</c:if>
 					</p>
 					<p>
+                        
+                    <!--
 					<c:if test="${!isFreeGift}">
 						<flow:ifEnabled feature="AjaxCheckout">
 							<a class="remove_address_link tlignore" href="JavaScript:setCurrentId('WC_MSOrderItemDetails_link_2_${status.count}'); CheckoutHelperJS.deleteFromCart('<c:out value='${itemUniqueId}'/>');" onfocus="javascript:CheckoutHelperJS.setLastFocus(this.id);" id="WC_MSOrderItemDetails_link_2_<c:out value='${status.count}'/>">
@@ -552,6 +557,8 @@
 							</a>
 						</flow:ifDisabled>
 					</c:if>
+                        -->
+                        
 					</p>
 					<br/>
 				</div>
@@ -635,6 +642,69 @@
 					</c:otherwise>
 				</c:choose>
 			</td>
+                
+             
+                
+                
+                
+                
+                
+                
+                
+                
+              <!-- aca colocamos el boton de eliminar, pero solo el tache -->
+              <td>
+                <c:if test="${!isFreeGift}">
+                    <flow:ifEnabled feature="AjaxCheckout">
+                        <a class="remove_address_link tlignore" href="JavaScript:setCurrentId('WC_MSOrderItemDetails_link_2_${status.count}'); CheckoutHelperJS.deleteFromCart('<c:out value='${itemUniqueId}'/>');" onfocus="javascript:CheckoutHelperJS.setLastFocus(this.id);" id="WC_MSOrderItemDetails_link_2_<c:out value='${status.count}'/>">
+                            <img class="tache" src="<c:out value='${jspStoreImgDir}${vfileColor}'/>table_x_delete.png" alt=""/>
+                            <!--<fmt:message bundle="${storeText}" key="REMOVE"  />-->
+                        </a>
+                    </flow:ifEnabled>
+                    <flow:ifDisabled feature="AjaxCheckout">
+                        <wcf:url var="OrderItemDelete" value="OrderChangeServiceItemDelete">
+                            <wcf:param name="orderItemId" value="${itemUniqueId}"/>
+                            <wcf:param name="orderId" value="${orderUniqueId}"/>
+                            <wcf:param name="langId" value="${WCParam.langId}" />
+                            <wcf:param name="storeId" value="${WCParam.storeId}" />
+                            <wcf:param name="catalogId" value="${WCParam.catalogId}" />
+                            <wcf:param name="forceShipmentType" value="2" />
+                            <wcf:param name="calculationUsage" value="-1,-2,-3,-4,-5,-6,-7" />
+                            <wcf:param name="URL" value="OrderShippingBillingView" />
+                            <c:if test="${callOrderPrepareOnItemRemove}">
+                                <wcf:param name="allocate" value="***" />
+                                <wcf:param name="backorder" value="***" />
+                                <wcf:param name="remerge" value="***" />
+                                <wcf:param name="check" value="*n" />
+                            </c:if>
+
+                            <wcf:param name="errorViewName" value="OrderShippingBillingView" />
+                            <wcf:param name="beginIndex" value="${beginIndex}" />
+                        </wcf:url>
+                        <a href="#" onclick="Javascript:setPageLocation('<c:out value='${OrderItemDelete}'/>');return false;" id="WC_MSOrderItemDetails_link_3_<c:out value='${status.count}'/>">
+                            <img src="<c:out value='${jspStoreImgDir}${vfileColor}'/>table_x_delete.png" alt=""/>
+                            <fmt:message bundle="${storeText}" key="REMOVE"  />
+                        </a>
+                    </flow:ifDisabled>
+                </c:if>  
+                    </td> 
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
 		</tr>
 		<c:remove var="nobottom"/>
 

@@ -537,7 +537,7 @@
 								<fmt:message bundle="${storeText}" key="REMOVE"  />
 							</a>
 						</flow:ifEnabled>
-                        -->
+                       
                         
                         
 						<flow:ifDisabled feature="AjaxCheckout">
@@ -563,7 +563,7 @@
 								<fmt:message bundle="${storeText}" key="REMOVE"  />
 							</a>
 						</flow:ifDisabled>
-                        
+                        -->
                         
                         
                         
@@ -654,6 +654,30 @@
                        <!-- <fmt:message bundle="${storeText}" key="REMOVE"  /> -->
                    </a>
                </flow:ifEnabled>
+               
+               <flow:ifDisabled feature="AjaxCheckout">
+                   <wcf:url var="OrderItemDelete" value="OrderChangeServiceItemDelete">
+                       <wcf:param name="orderItemId" value="${itemUniqueId}"/>
+                       <wcf:param name="orderId" value="${orderUniqueId}"/>
+                       <wcf:param name="langId" value="${WCParam.langId}" />
+                       <wcf:param name="storeId" value="${WCParam.storeId}" />
+                       <wcf:param name="catalogId" value="${WCParam.catalogId}" />
+                       <wcf:param name="calculationUsage" value="-1,-2,-3,-4,-5,-6,-7" />
+                       <wcf:param name="URL" value="${currentView}" />
+                       <c:if test="${callOrderPrepareOnItemRemove}">
+                           <wcf:param name="allocate" value="***" />
+                           <wcf:param name="backorder" value="***" />
+                           <wcf:param name="remerge" value="***" />
+                           <wcf:param name="check" value="*n" />
+                       </c:if>
+                       <wcf:param name="errorViewName" value="${currentView}" />
+                       <wcf:param name="beginIndex" value="${beginIndex}" />
+                   </wcf:url>
+                   <a class="remove_address_link" href="#" onclick="Javascript:setPageLocation('${OrderItemDelete}');return false;" id="WC_OrderItemDetails_links_3_<c:out value='${status.count}'/>">
+                       <img src="<c:out value='${jspStoreImgDir}${vfileColor}'/>table_x_delete.png" alt=""/>
+                       <fmt:message bundle="${storeText}" key="REMOVE"  />
+                   </a>
+               </flow:ifDisabled>
            </td>     
                       
                 
@@ -772,6 +796,15 @@
 	</form>
 </flow:ifDisabled>
  </table>
+                
+                
+                
+                
+                <!-- aca agregamos la pleca azul -->
+                <div class="checkout_subheader crecido"></div>                
+                
+                
+                
 <c:if test="${numEntries > pageSize}">
 	<div class="shopcart_pagination" id="OrderItemDetailsPaginationText2">
 		<span class="text">
