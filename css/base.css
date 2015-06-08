@@ -2501,8 +2501,7 @@ width: 80%;
   float: right;
  }
  
- input[type=text], textarea {
- 
+ input[type=text], textarea, input[type=password] {
   outline: none;
   font-size: 11px !important;  
  }
@@ -3424,6 +3423,105 @@ div#WC_AjaxAddressBookForm_div_6 {
 	vertical-align: middle;
 
 }
+
+/***
+Empty Shopping Cart
+***/
+
+#total_breakdown {
+	float: none;
+	width: 100%;
+	text-align: left;
+}
+
+#total_breakdown #promotions{
+	width: 50%;
+	display: inline-block;
+	padding-right: 0;
+	float: left;
+}
+
+#total_breakdown #order_total{
+	width: 50%;
+	display: inline-block;
+	padding-right: 0;
+	float: left;
+}
+
+
+div#WC_PromotionCodeDisplay_div_1{
+	display: block !important;
+}
+
+div#WC_PromotionCodeDisplay_div_2{
+	width: 60%;
+}
+
+div#WC_PromotionCodeDisplay_div_2 > input#promoCode{
+	width: 100%;
+}
+
+#total_breakdown #promotions .promotion_input,
+#total_breakdown #promotions .promotion_code,
+#total_breakdown #promotions .promotion_button{
+	position: relative;
+	float: none;
+}
+
+.button_text.tiny{
+	font-size: 11px !important;
+	padding: 5px 15px !important;
+	margin-top: -1px !important;
+}
+
+.logon-inside{
+	padding: 0 15px;
+}
+
+.logon-inside .top_border{
+	border-top: none;
+}
+
+.logon-inside .top_border #WC_CheckoutLogonf_div_1{
+	float: none;
+}
+
+.logon-inside .top_border #customers_new_or_returning .returning{
+	padding-left: 0;
+	padding-top: 30px;
+	border: none;
+}
+
+div#WC_CheckoutLogonf_div_3{
+	text-align: center;
+}
+
+div#WC_CheckoutLogonf_div_6{
+	text-align: center;
+}
+
+.logon-inside .top_border #customers_new_or_returning input[type="text"],
+.logon-inside .top_border #customers_new_or_returning input[type="password"]{
+	padding-left: 5px !important;
+	height: 25px !important;
+	box-sizing: border-box;
+
+}
+
+#customers_new_or_returning #WC_CheckoutLogonf_div_4.returning{
+	text-align: center !important;
+	background: #e5e5e5;
+	margin-bottom: 30px;
+	padding: 30px 0 30px 0;
+
+}
+
+#customers_new_or_returning .new_returning_button{
+	position: static;
+}
+
+
+
 /** **/
 
 /** 

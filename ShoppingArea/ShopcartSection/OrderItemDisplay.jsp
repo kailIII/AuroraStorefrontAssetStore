@@ -283,84 +283,81 @@
 									<c:param name="searchPage" value="${requestScope.searchPage}"/>
 								</c:import>
 								<%out.flush();%>
-								<div class="container_content_rightsidebar shop_cart">
-									<div >
-										<flow:ifDisabled feature="AjaxCheckout">
-											<form name="ReplaceItemForm" method="post" action="OrderChangeServiceItemDelete" id="ReplaceItemForm">
-												<!-- Define all the hidden fields required for submitting this form in case of Non-Ajax Checkout -->
-												<input type="hidden" name="storeId" value='<c:out value="${storeId}"/>' id="WC_OrderItemDisplay_inputs_2"/>
-												<input type="hidden" name="langId" value='<c:out value="${langId}" />' id="WC_OrderItemDisplay_inputs_3"/>
-												<input type="hidden" name="orderId" value='<c:out value="${order.orderId}"/>' id="WC_OrderItemDisplay_inputs_4"/>
-												<input type="hidden" name="catalogId" value='<c:out value="${catalogId}"/>' id="WC_OrderItemDisplay_inputs_5"/>
-												<input type="hidden" name="errorViewName" value="InvalidInputErrorView" id="WC_OrderItemDisplay_inputs_6"/>
-												<input type="hidden" name="orderItemId" value="" id="WC_OrderItemDisplay_inputs_7"/>
-												<input type="hidden" name="URL" value="AjaxOrderItemDisplayView" id="WC_OrderItemDisplay_inputs_1"/>
-												<input type="hidden" name="calculationUsage" value="-1,-2,-3,-4,-5,-6,-7" id="WC_OrderItemDisplay_inputs_8"/>
-											</form>
-										</flow:ifDisabled>
+								<div class="row margin-true">
+									<div class="col8">
+										<div class="container_content_rightsidebar shop_cart">
+											<div>
+												<flow:ifDisabled feature="AjaxCheckout">
+													<form name="ReplaceItemForm" method="post" action="OrderChangeServiceItemDelete" id="ReplaceItemForm">
+														<!-- Define all the hidden fields required for submitting this form in case of Non-Ajax Checkout -->
+														<input type="hidden" name="storeId" value='<c:out value="${storeId}"/>' id="WC_OrderItemDisplay_inputs_2"/>
+														<input type="hidden" name="langId" value='<c:out value="${langId}" />' id="WC_OrderItemDisplay_inputs_3"/>
+														<input type="hidden" name="orderId" value='<c:out value="${order.orderId}"/>' id="WC_OrderItemDisplay_inputs_4"/>
+														<input type="hidden" name="catalogId" value='<c:out value="${catalogId}"/>' id="WC_OrderItemDisplay_inputs_5"/>
+														<input type="hidden" name="errorViewName" value="InvalidInputErrorView" id="WC_OrderItemDisplay_inputs_6"/>
+														<input type="hidden" name="orderItemId" value="" id="WC_OrderItemDisplay_inputs_7"/>
+														<input type="hidden" name="URL" value="AjaxOrderItemDisplayView" id="WC_OrderItemDisplay_inputs_1"/>
+														<input type="hidden" name="calculationUsage" value="-1,-2,-3,-4,-5,-6,-7" id="WC_OrderItemDisplay_inputs_8"/>
+													</form>
+												</flow:ifDisabled>
 
-										<span id="ShopCartDisplay_ACCE_Label" class="spanacce"><fmt:message bundle="${storeText}" key="ACCE_Region_Shopping_Cart_Content"/></span>
-										<div dojoType="wc.widget.RefreshArea" widgetId="ShopCartDisplay" id="ShopCartDisplay" controllerId="ShopCartDisplayController" ariaMessage="<fmt:message bundle="${storeText}" key="ACCE_Status_Shopping_Cart_Content_Updated"/>" ariaLiveId="${ariaMessageNode}" role="region" aria-labelledby="ShopCartDisplay_ACCE_Label">
-											<%out.flush();%>
-											<c:import url="/${sdb.jspStoreDir}/ShoppingArea/ShopcartSection/ShopCartDisplay.jsp"/>
-											<%out.flush();%>
+												<span id="ShopCartDisplay_ACCE_Label" class="spanacce"><fmt:message bundle="${storeText}" key="ACCE_Region_Shopping_Cart_Content"/></span>
+												<div dojoType="wc.widget.RefreshArea" widgetId="ShopCartDisplay" id="ShopCartDisplay" controllerId="ShopCartDisplayController" ariaMessage="<fmt:message bundle="${storeText}" key="ACCE_Status_Shopping_Cart_Content_Updated"/>" ariaLiveId="${ariaMessageNode}" role="region" aria-labelledby="ShopCartDisplay_ACCE_Label">
+													<%out.flush();%>
+													<c:import url="/${sdb.jspStoreDir}/ShoppingArea/ShopcartSection/ShopCartDisplay.jsp"/>
+													<%out.flush();%>
+												</div>
+												<%-- Include after ShopCartDisplay.jsp. ShopCartDisplay.jsp fetches the order details which can be reused in the GiftsPopup dialog --%>
+											<%@ include file="../../Snippets/Marketing/Promotions/PromotionChoiceOfFreeGiftsPopup.jspf" %>
+											<script type="text/javascript">
+												dojo.addOnLoad(function() {
+													parseWidget("ShopCartDisplay");
+												});
+											</script>
+											<br/>
+											<flow:ifEnabled feature="Analytics">
+												<%-- Begin - Added for Coremetrics Intelligent Offer to Display dynamic recommendations for the most recently viewed product --%>
+												<%-- Coremetrics Aanlytics is a prerequisite to Coremetrics Intelligent Offer --%>
+
+												<div class="item_spacer_5px"></div>
+
+												<div class="widget_product_listing_position">
+													<%out.flush();%>
+													<c:import url="${env_siteWidgetsDir}com.ibm.commerce.store.widgets.IBMProductRecommendations/IBMProductRecommendations.jsp">
+														<c:param name="emsName" value="ShoppingCart_ProductRec" />
+														<c:param name="widgetOrientation" value="horizontal"/>
+														<c:param name="catalogId" value="${WCParam.catalogId}" />
+													</c:import>
+													<%out.flush();%>
+												</div>
+
+											<%-- End - Added for Coremetrics Intelligent Offer --%>
+										</flow:ifEnabled>
 										</div>
-										<%-- Include after ShopCartDisplay.jsp. ShopCartDisplay.jsp fetches the order details which can be reused in the GiftsPopup dialog --%>
-										<%@ include file="../../Snippets/Marketing/Promotions/PromotionChoiceOfFreeGiftsPopup.jspf" %>
-										<script type="text/javascript">
-											dojo.addOnLoad(function() {
-												parseWidget("ShopCartDisplay");
-											});
-										</script>
-										<br/>
-										<flow:ifEnabled feature="Analytics">
-											<%-- Begin - Added for Coremetrics Intelligent Offer to Display dynamic recommendations for the most recently viewed product --%>
-											<%-- Coremetrics Aanlytics is a prerequisite to Coremetrics Intelligent Offer --%>
-
-											<div class="item_spacer_5px"></div>
-
-											<div class="widget_product_listing_position">
-												<%out.flush();%>
-												<c:import url="${env_siteWidgetsDir}com.ibm.commerce.store.widgets.IBMProductRecommendations/IBMProductRecommendations.jsp">
-													<c:param name="emsName" value="ShoppingCart_ProductRec" />
-													<c:param name="widgetOrientation" value="horizontal"/>
-													<c:param name="catalogId" value="${WCParam.catalogId}" />
-												</c:import>
-												<%out.flush();%>
+											<div class="">
+												<!-- Vertical Recommendations Widget -->
+												<div class="widget_recommended_position">
+													<% out.flush(); %>
+														<c:import url="${env_siteWidgetsDir}com.ibm.commerce.store.widgets.CatalogEntryRecommendation/CatalogEntryRecommendation.jsp">
+															<c:param name="emsName" value="ShoppingCartRight_CatEntries"/>
+															<c:param name="widgetOrientation" value="vertical"/>
+															<c:param name="pageSize" value="2"/>
+														</c:import>
+													<% out.flush(); %>
+												</div>
 											</div>
+										</div>
+									</div>
+									
 
-										<%-- End - Added for Coremetrics Intelligent Offer --%>
-									</flow:ifEnabled>
-									</div>
-									<%-- <div class="right_column">
-										<!-- Vertical Recommendations Widget -->
-										<div class="widget_recommended_position">
-											<% out.flush(); %>
-												<c:import url="${env_siteWidgetsDir}com.ibm.commerce.store.widgets.CatalogEntryRecommendation/CatalogEntryRecommendation.jsp">
-													<c:param name="emsName" value="ShoppingCartRight_CatEntries"/>
-													<c:param name="widgetOrientation" value="vertical"/>
-													<c:param name="pageSize" value="2"/>
-												</c:import>
-											<% out.flush(); %>
+									<div class="col4">
+										<div class="logon-inside">
+											<%out.flush();%>
+												<c:import url="/${sdb.jspStoreDir}/Snippets/Order/Cart/CheckoutLogon.jsp"/>
+											<%out.flush();%>
 										</div>
-									</div> --%>
+									</div>
 								</div>
-								
-								
-								<div class="right_column">
-										<!-- Vertical Recommendations Widget -->
-										<div class="widget_recommended_position">
-											<% out.flush(); %>
-												<c:import url="${env_siteWidgetsDir}com.ibm.commerce.store.widgets.CatalogEntryRecommendation/CatalogEntryRecommendation.jsp">
-													<c:param name="emsName" value="ShoppingCartRight_CatEntries"/>
-													<c:param name="widgetOrientation" value="vertical"/>
-													<c:param name="pageSize" value="2"/>
-												</c:import>
-											<% out.flush(); %>
-										</div>
-									</div>
-								
-								
 								
 								
 							</div>
