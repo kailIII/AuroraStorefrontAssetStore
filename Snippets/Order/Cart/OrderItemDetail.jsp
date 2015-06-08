@@ -259,6 +259,8 @@
           <th class="align_center" id="shoppingCart_tableCell_availability"><fmt:message bundle="${storeText}" key="SHOPCART_AVAILABILITY" /></th>
           
 		   <th class="align_center" id="shoppingCart_tableCell_quantity" abbr="<fmt:message bundle="${storeText}" key="QUANTITY1" />"><fmt:message bundle="${storeText}" key="SHOPCART_QTY" /></th>
+          
+          
           <th class="align_center" id="shoppingCart_tableCell_each" abbr="<fmt:message bundle="${storeText}" key="UNIT_PRICE" />"><fmt:message bundle="${storeText}" key="SHOPCART_EACH" /></th>
           <th class="align_center" id="shoppingCart_tableCell_total" abbr="<fmt:message bundle="${storeText}" key="TOTAL_PRICE" />"><fmt:message bundle="${storeText}" key="SHOPCART_TOTAL" /></th>
           <!-- agregamos un th para que caiga el eliminar-->
@@ -671,15 +673,48 @@
 								
                                 
                                 
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
                                 <!-- aca agregamos los botones para aumentar y disminuir cantidades -->
-                                <a href="#" onclick="document.getElementById('qty_<c:out value="${status.count}"/>').value = parseInt(document.getElementById('qty_<c:out value="${status.count}"/>').value) - 1; CheckoutHelperJS.updateCartWait('<c:out value='${orderItem.orderItemId}'/>',event)" title="" >-</a>
+                                <a class="boton_cantidad" href="#" name='qty_<c:out value="${status.count}"/>' type="tel" aria-labelledby="Quantity_ACCE_Message" onclick="document.getElementById('qty_<c:out value="${status.count}"/>').value = parseInt(document.getElementById('qty_<c:out value="${status.count}"/>').value) - 1;" onkeydown="JavaScript:setCurrentId('qty_<c:out value='${status.count}'/>'); CheckoutHelperJS.updateCartWait(this, '<c:out value='${orderItem.orderItemId}'/>',event)" >
+                                </a>
                                 
-                                <input id='qty_<c:out value="${status.count}"/>' name='qty_<c:out value="${status.count}"/>' type="tel" aria-labelledby="Quantity_ACCE_Message" size="1" style="width:25px;" value='<c:out value="${quickCartOrderItemQuantity}"/>' onkeydown="JavaScript:setCurrentId('qty_<c:out value='${status.count}'/>'); CheckoutHelperJS.updateCartWait(this, '<c:out value='${orderItem.orderItemId}'/>',event)" />
                                 
-                                <a href="#" onclick="document.getElementById('qty_<c:out value="${status.count}"/>').value = parseInt(document.getElementById('qty_<c:out value="${status.count}"/>').value) + 1; CheckoutHelperJS.updateCartWait('<c:out value='${orderItem.orderItemId}'/>',event)" title="" >+</a>
+                                
+                                <input id='qty_<c:out value="${status.count}"/>' name='qty_<c:out value="${status.count}"/>' type="tel" aria-labelledby="Quantity_ACCE_Message" size="1" style="width:20px; float: left;" value='<c:out value="${quickCartOrderItemQuantity}"/>' onkeydown="JavaScript:setCurrentId('qty_<c:out value='${status.count}'/>'); CheckoutHelperJS.updateCartWait(this, '<c:out value='${orderItem.orderItemId}'/>',event)" />
+                                
+                                
+                                
+                                <a class="boton_cantidad" href="#" name='qty_<c:out value="${status.count}"/>' type="tel" aria-labelledby="Quantity_ACCE_Message" onclick="document.getElementById('qty_<c:out value="${status.count}"/>').value = parseInt(document.getElementById('qty_<c:out value="${status.count}"/>').value) + 1;" onkeydown="JavaScript:setCurrentId('qty_<c:out value='${status.count}'/>'); CheckoutHelperJS.updateCartWait(this, '<c:out value='${orderItem.orderItemId}'/>',event)" >
+                                </a>
                                 
 							
                             
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
                             
                             
                             
@@ -710,6 +745,10 @@
 				</span>
 
 			</td>
+                    
+                    
+                    
+                    
 			
                     
                     
