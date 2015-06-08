@@ -150,19 +150,19 @@
 				</div>			
 
 				<div class="returning" id="WC_CheckoutLogonf_div_4">
-					<h2><fmt:message bundle="${storeText}" key="SHOPCART_TEXT3"/></h2>
-					<p><fmt:message bundle="${storeText}" key="SHOPCART_TEXT4"/></p>
+					<div class="message-returning"><h2 class="usuarioRegistrado"><fmt:message bundle="${storeText}" key="SHOPCART_TEXT3"/></h2></div>
+					<div class="message-returning"><p class="subheader"><fmt:message bundle="${storeText}" key="SHOPCART_TEXT4"/></p></div>
 					<br />
-					<p><label for="WC_CheckoutLogon_FormInput_logonId"><fmt:message bundle="${storeText}" key="SHOPCART_USERNAME"/></label></p>
+					<%-- Daniel Torres <p><label for="WC_CheckoutLogon_FormInput_logonId"><fmt:message bundle="${storeText}" key="SHOPCART_USERNAME"/></label></p> --%>
 					<p>
-						<input id="WC_CheckoutLogon_FormInput_logonId" name="logonId" type="text" size="25" onchange="javaScript:TealeafWCJS.processDOMEvent(event);" onkeypress="if(event.keyCode==13){javascript:if(CheckoutHelperJS.canCheckoutContinue() && CheckoutHelperJS.updateShoppingCart(document.ShopCartForm,true)){ShipmodeSelectionExtJS.guestShopperLogon('javascript:LogonForm.SubmitAjaxLogin(document.AjaxLogon)', '<c:out value='${orderMove}'/>', '<c:out value='${OrderCalculateURL}'/>', '<c:out value='${PhysicalStoreSelectionURL}'/>');}}" />
+						<input id="WC_CheckoutLogon_FormInput_logonId" placeholder="ej. 5566778899" name="logonId" type="text" size="25" onchange="javaScript:TealeafWCJS.processDOMEvent(event);" onkeypress="if(event.keyCode==13){javascript:if(CheckoutHelperJS.canCheckoutContinue() && CheckoutHelperJS.updateShoppingCart(document.ShopCartForm,true)){ShipmodeSelectionExtJS.guestShopperLogon('javascript:LogonForm.SubmitAjaxLogin(document.AjaxLogon)', '<c:out value='${orderMove}'/>', '<c:out value='${OrderCalculateURL}'/>', '<c:out value='${PhysicalStoreSelectionURL}'/>');}}" />
 					</p>
 					<br />
-					<p><label for="WC_CheckoutLogon_FormInput_logonPassword"><fmt:message bundle="${storeText}" key="SHOPCART_PASSWORD"/></label></p>
+					<%-- Daniel Torres <p><label for="WC_CheckoutLogon_FormInput_logonPassword"><fmt:message bundle="${storeText}" key="SHOPCART_PASSWORD"/></label></p> --%>
 					<p>
-						<input id="WC_CheckoutLogon_FormInput_logonPassword" name="logonPassword" type="password" autocomplete="off" size="25" onchange="javaScript:TealeafWCJS.processDOMEvent(event);" onkeypress="if(event.keyCode==13){javascript:if(CheckoutHelperJS.canCheckoutContinue() && CheckoutHelperJS.updateShoppingCart(document.ShopCartForm,true)){ShipmodeSelectionExtJS.guestShopperLogon('javascript:LogonForm.SubmitAjaxLogin(document.AjaxLogon)', '<c:out value='${orderMove}'/>', '<c:out value='${OrderCalculateURL}'/>', '<c:out value='${PhysicalStoreSelectionURL}'/>');}}" />
+						<input id="WC_CheckoutLogon_FormInput_logonPassword" placeholder="Contrase&ntilde;a" name="logonPassword" type="password" autocomplete="off" size="25" onchange="javaScript:TealeafWCJS.processDOMEvent(event);" onkeypress="if(event.keyCode==13){javascript:if(CheckoutHelperJS.canCheckoutContinue() && CheckoutHelperJS.updateShoppingCart(document.ShopCartForm,true)){ShipmodeSelectionExtJS.guestShopperLogon('javascript:LogonForm.SubmitAjaxLogin(document.AjaxLogon)', '<c:out value='${orderMove}'/>', '<c:out value='${OrderCalculateURL}'/>', '<c:out value='${PhysicalStoreSelectionURL}'/>');}}" />
 					</p>
-					<p><a href="<c:out value="${ForgetPasswordURL}"/>" class="myaccount_link hover_underline" id="WC_CheckoutLogonf_links_1"><fmt:message bundle="${storeText}" key="SHOPCART_FORGOT"/></a></p>
+					<br>
 					<div class="new_returning_button" id="WC_CheckoutLogonf_div_5">
 						<div class="button_align" id="WC_CheckoutLogonf_div_6">
 							<a href="#" role="button" class="button_primary" id="guestShopperLogon" onclick="javascript:TealeafWCJS.processDOMEvent(event);if(CheckoutHelperJS.canCheckoutContinue() && CheckoutHelperJS.updateShoppingCart(document.ShopCartForm,true)){ShipmodeSelectionExtJS.guestShopperLogon('javascript:LogonForm.SubmitAjaxLogin(document.AjaxLogon)', '<c:out value='${orderMove}'/>', '<c:out value='${OrderCalculateURL}'/>', '<c:out value='${PhysicalStoreSelectionURL}'/>');}return false;">
@@ -172,6 +172,8 @@
 							</a>
 						</div>
 					</div>
+					<br>
+					<p><a href="<c:out value="${ForgetPasswordURL}"/>" class="myaccount_link hover_underline" id="WC_CheckoutLogonf_links_1"><fmt:message bundle="${storeText}" key="SHOPCART_FORGOT"/></a></p>
 				</div>
 			</div>
 		</div>
