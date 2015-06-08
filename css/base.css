@@ -3584,7 +3584,17 @@ a#WC_CheckoutLogonf_links_1 {
 	padding: 0 15px;
 }
 
+/**********************/
+/**********************/
+.static_page_content > div.page_header{
+	font-size: 1.5em !important;
+	font-family: Ubuntu,Arial, Helvetica !important;
+	color: #1b83ff !important;
+}
 
+.static_page_content > div.content_box .info_section{
+	color: #55667a;
+}
 
 /** **/
 
