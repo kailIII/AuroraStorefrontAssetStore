@@ -868,16 +868,16 @@ need to first assign a valid address id to these order items before proceeding w
 											<div class="button_footer_line" id="WC_ShipmentDisplay_div_32_1"> 
 												<a role="button" class="button_secondary tlignore" id="WC_ShipmentDisplay_links_5" tabindex="0" href="javascript:setPageLocation('<c:out value='${ShoppingCartURL}'/>')">
 													<div class="left_border"></div>
-													<div class="button_text"><fmt:message bundle="${storeText}" key="BACK"/><span class="spanacce"><fmt:message bundle="${storeText}" key="Checkout_ACCE_back_shopping_cart"/></span></div>
+													<div class="button_text btnGris"><fmt:message bundle="${storeText}" key="BACK"/><span class="spanacce"><fmt:message bundle="${storeText}" key="Checkout_ACCE_back_shopping_cart"/></span></div>
 													<div class="right_border"></div>
 												</a>
 												<a role="button" class="button_primary button_left_padding tlignore" id="shippingBillingPageNext" tabindex="0" href="JavaScript:setCurrentId('shippingBillingPageNext'); CheckoutPayments.processCheckout('PaymentForm');">
 													<div class="left_border"></div>
 													<flow:ifEnabled feature="SharedShippingBillingPage">
-														<div class="button_text"><fmt:message bundle="${storeText}" key="NEXT"/><span class="spanacce"><fmt:message bundle="${storeText}" key="Checkout_ACCE_next_summary"/></span></div>
+														<div class="button_text btnAzul"><fmt:message bundle="${storeText}" key="NEXT"/><span class="spanacce"><fmt:message bundle="${storeText}" key="Checkout_ACCE_next_summary"/></span></div>
 													</flow:ifEnabled>
 													<flow:ifDisabled feature="SharedShippingBillingPage">
-														<div class="button_text"><fmt:message bundle="${storeText}" key="NEXT"/><fmt:message bundle="${storeText}" key="Checkout_ACCE_next_bill"/></span></div>
+														<div class="button_text btnAzul"><fmt:message bundle="${storeText}" key="NEXT"/><fmt:message bundle="${storeText}" key="Checkout_ACCE_next_bill"/></span></div>
 													</flow:ifDisabled>
 													<div class="right_border"></div>
 												</a>

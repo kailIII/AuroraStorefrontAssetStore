@@ -449,14 +449,14 @@
 												<flow:ifEnabled feature="SharedShippingBillingPage">
 													<a role="button" class="button_secondary tlignore" id="WC_SingleShipmentSummary_links_4" tabindex="0" href="javascript:setPageLocation('<c:out value="${ShippingAndBillingURL}"/>')">
 														<div class="left_border"></div>
-														<div class="button_text"><fmt:message bundle="${storeText}" key="BACK"/><span class="spanacce"><fmt:message bundle="${storeText}" key="Checkout_ACCE_back_ship_bill"/></span></div>
+														<div class="button_text btnGris"><fmt:message bundle="${storeText}" key="BACK"/><span class="spanacce"><fmt:message bundle="${storeText}" key="Checkout_ACCE_back_ship_bill"/></span></div>
 														<div class="right_border"></div>
 													</a>
 												</flow:ifEnabled>
 												<flow:ifDisabled feature="SharedShippingBillingPage">
 													<a role="button" class="button_secondary tlignore" id="WC_SingleShipmentSummary_links_4a" tabindex="0" href="javascript:setPageLocation('<c:out value="${TraditionalBillingURL}"/>')">
 														<div class="left_border"></div>
-														<div class="button_text"><fmt:message bundle="${storeText}" key="BACK"/><span class="spanacce"><fmt:message bundle="${storeText}" key="Checkout_ACCE_back_ship_bill"/></span></div>
+														<div class="button_text btnGris"><fmt:message bundle="${storeText}" key="BACK"/><span class="spanacce"><fmt:message bundle="${storeText}" key="Checkout_ACCE_back_ship_bill"/></span></div>
 														<div class="right_border"></div>
 													</a>
 												</flow:ifDisabled>
@@ -470,7 +470,7 @@
 																	<div class="button_text"><fmt:message bundle="${storeText}" key="SCHEDULE_ORDER_HEADER"/></div>
 																</c:when>
 																<c:otherwise>
-																	<div class="button_text"><fmt:message bundle="${storeText}" key="ORDER"/></div>
+																	<div class="button_text btnAzul"><fmt:message bundle="${storeText}" key="ORDER"/></div>
 																</c:otherwise>
 															</c:choose>
 															<div class="right_border"></div>
@@ -479,7 +479,7 @@
 													<c:otherwise>
 														<a role="button" class="button_primary button_left_padding tlignore" id="singleOrderSummary" tabindex="0" href="javascript:setCurrentId('singleOrderSummary'); CheckoutHelperJS.checkoutOrder(<c:out value="${order.orderId}"/>,'<c:out value='${userType}'/>','<c:out value='${addressListForMailNotification}'/>')">
 															<div class="left_border"></div>
-															<div class="button_text"><fmt:message bundle="${storeText}" key="ORDER"/></div>
+															<div class="button_text btnAzul"><fmt:message bundle="${storeText}" key="ORDER"/></div>
 															<div class="right_border"></div>
 														</a>
 
@@ -487,7 +487,7 @@
 															<div id="WC_SingleShipmentSummary_div_31_4">
 															<a role="button" class="button_primary button_left_padding" id="singleQuoteSummary" tabindex="0" href="javascript:setCurrentId('singleQuoteSummary'); CheckoutHelperJS.checkoutOrder(<c:out value="${order.orderId}"/>,'<c:out value='${userType}'/>','<c:out value='${addressListForMailNotification}'/>', true)">
 																	<div class="left_border"></div>
-																	<div class="button_text"><fmt:message bundle="${storeText}" key="CREATE_QUOTE"/></div>
+																	<div class="button_text btnAzul"><fmt:message bundle="${storeText}" key="CREATE_QUOTE"/></div>
 																	<div class="right_border"></div>
 																</a>
 															</div>

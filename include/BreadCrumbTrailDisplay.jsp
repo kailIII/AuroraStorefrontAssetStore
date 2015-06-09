@@ -97,7 +97,7 @@
 								<div id="continueShoppingButton" class="breadcrumb_item">
 									<a href="#" class="button_secondary" id="WC_BreadCrumbTrailDisplay_links_2a" tabindex="0" onclick="JavaScript:setPageLocation('<c:out value='${env_TopCategoriesDisplayURL}'/>');return false;">
 										<div class="left_border"></div>
-										<div class="button_text"><fmt:message bundle="${storeText}" key="CONTINUE_SHOPPING"/></div>								
+										<div class="button_text btnGris"><fmt:message bundle="${storeText}" key="CONTINUE_SHOPPING"/></div>								
 										<div class="right_border"></div>
 									</a>
 								</div>
