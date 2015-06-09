@@ -173,6 +173,47 @@ dl, ol, ul {
 
 /* Button */
 
+.btnAzul {
+    background-color: #48baf6 !important;
+    border-radius: 5px !important;
+    color: #fff !important;
+    cursor: pointer !important;
+    display: inline-block !important;
+    font-size: 12px !important;
+    text-decoration: none !important;
+    background-image: none !important;
+
+    color: #FFF !important;
+    padding: 10px 55px !important;
+    border: 0 !important;
+    margin: 10px auto 0 auto !important;
+    cursor: pointer !important;
+}
+
+.btnAzul:hover {
+    background-color: #1badfa !important;
+}
+
+.btnGris {
+    color: #FFF;
+    padding: 10px 20px;
+    font-size: .95em;
+    clear: both;
+    border: 0;
+    background-color: #8c97a1;
+    border-radius: 5px;
+    margin: 10px auto 0 auto;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 10px 55px !important;
+}
+
+.btnGris:hover {
+    background-color: #767f88;
+}
+
+
 
 .textContainer .button {
 	background-color: #fa8039 !important;
@@ -2271,6 +2312,10 @@ background-color:#f7f7f7;
 
 @media (max-width: 600px){
 
+.btnAzul {        
+   padding: 10px 20px !important;
+}    
+    
 .texto_carrusel_banner {
 top:20px;
 width: 80%;
@@ -3340,45 +3385,7 @@ div#WC_UserRegistrationUpdateForm_div_42.button_footer_line{
 
 
 
-.btnAzul {
-	background-color: #48baf6 !important;
-	border-radius: 5px !important;
-	color: #fff !important;
-	cursor: pointer !important;
-	display: inline-block !important;
-	font-size: 12px !important;
-	text-decoration: none !important;
-	background-image: none !important;
 
-	color: #FFF !important;
-	padding: 10px 55px !important;
-	border: 0 !important;
-	margin: 10px auto 0 auto !important;
-	cursor: pointer !important;
-}
-
-.btnAzul:hover {
-	background-color: #1badfa !important;
-}
-
-.btnGris {
-	color: #FFF;
-	padding: 10px 20px;
-	font-size: .95em;
-	clear: both;
-	border: 0;
-	background-color: #8c97a1;
-	border-radius: 5px;
-	margin: 10px auto 0 auto;
-	display: inline-block;
-	cursor: pointer;
-	text-decoration: none;
-	padding: 10px 55px !important;
-}
-
-.btnGris:hover {
-	background-color: #767f88;
-}
 
 div#widget_breadcrumb > ul li a {
   color: #1b83ff!important;
