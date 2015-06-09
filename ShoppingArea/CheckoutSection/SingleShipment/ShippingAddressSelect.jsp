@@ -237,7 +237,7 @@
 				<div>
 					<div>
 						<a class="tlignore" href="JavaScript:setCurrentId('singleShipmentAddress'); CheckoutHelperJS.addNewShippingAddress('Shipping');JavaScript:setCurrentId('singleShipmentAddress'); CheckoutHelperJS.updateAddressForAllItems('singleShipmentAddress');CheckoutHelperJS.setLastAddressLinkIdToFocus('WC_ShippingAddressSelectSingle_link_2');" id="WC_ShippingAddressSelectSingle_link_2">
-							<img src="<c:out value='${jspStoreImgDir}${vfileColor}'/>table_plus_add.png" alt="" />
+							<img src="<c:out value="${jspStoreImgDir}images/ic_mas.png"/>"/>
 						</a>
 					</div>
 					<a class="tlignore" href="JavaScript:setCurrentId('singleShipmentAddress'); CheckoutHelperJS.addNewShippingAddress('Shipping');JavaScript:setCurrentId('singleShipmentAddress'); CheckoutHelperJS.updateAddressForAllItems('singleShipmentAddress');CheckoutHelperJS.setLastAddressLinkIdToFocus('WC_ShippingAddressSelectSingle_link_2');" id="WC_ShippingAddressSelectSingle_link_2">
