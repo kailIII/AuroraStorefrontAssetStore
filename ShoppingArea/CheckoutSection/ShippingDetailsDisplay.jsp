@@ -122,12 +122,20 @@
 
 <%@ include file="../../Snippets/Marketing/Promotions/PromotionChoiceOfFreeGiftsPopup.jspf" %>
 
-<div class="main_header" id="WC_ShipmentDisplay_div_5">
+
+<!-- aca agregamos la otra pleca gris -->    
+<div class="main_header gris" id="WC_ShipmentDisplay_div_5">
+    <p class="numero_head">1</p>
+    <div class="separador_blanco"></div>
 	<div class="left_corner" id="WC_ShipmentDisplay_div_6"></div>
 	<div class="headingtext" id="WC_ShipmentDisplay_div_7"><span aria-level="1" class="main_header_text" role="heading"><fmt:message bundle="${storeText}" key="BCT_SHIPPING_INFO"/></span></div>
 	<div class="right_corner" id="WC_ShipmentDisplay_div_8"></div>
 	<%@ include file="../../Snippets/ReusableObjects/CheckoutTopESpotDisplay.jspf"%>
 </div>
+        
+        
+        
+        
 <c:choose>
 	<c:when test = "${shipmentTypeId == 1}">
 		<flow:ifEnabled  feature="MultipleShipments">	
