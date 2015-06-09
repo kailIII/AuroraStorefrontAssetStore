@@ -213,6 +213,21 @@ dl, ol, ul {
     background-color: #767f88;
 }
 
+.btnNaranja{ color:#FFF;
+	padding:10px 55px;
+	font-size:.95em;
+	clear:both;
+	border:0;
+	background-color:#fa8039;
+	border-radius:5px;
+	margin:10px auto 0 auto;
+	display:inline-block;
+	cursor:pointer;
+	text-decoration:none;
+}
+.btnNaranja:hover{
+	background-color:#fa6b19;
+}
 
 
 .textContainer .button {
@@ -762,10 +777,15 @@ dl, ol, ul {
   top: 0px;
 }
 
-#MiniShopCartProductAdded{
-top:135px!important;
-right:5%;
+#MiniShopCartProductAdded {
+  top: 135px!important;
+  left: 50%!important;
+  margin-left: 135px;
+  width: 333px;
+  position: absolute;
+
 }
+
 
 #cartDropdown {
 	width: 330px;
@@ -779,7 +799,7 @@ right:5%;
 }
 #cartDropdown > h3 {
 	margin: 0;
-	padding: 15px;
+	padding: 15px 80px 15px 15px;
 	background-color: #f5f6f7;
 	border-bottom: 1px solid #edeff0;
 	font-size: inherit;
@@ -1956,7 +1976,8 @@ background-color:#f7f7f7;
 
 	#MiniShopCartProductAdded {
 	  top: 68px!important;
-	    left: auto!important;
+	  left: 50%!important;
+	  margin-left: -165px;
 	}
 
 
