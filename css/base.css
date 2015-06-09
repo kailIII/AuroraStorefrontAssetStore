@@ -3645,20 +3645,23 @@ a#WC_CheckoutLogonf_links_1 {
 	box-sizing: border-box;
 }
 
-.shippingAddress:hover{
+#WC_ShippingAddressSelectSingle_div_1 .shippingAddress:hover{
 	border: 1px solid #64afff;
 }
-.newShippingAddressButton{
+
+#WC_ShippingAddressSelectSingle_div_1 .newShippingAddressButton{
 	height: 232px;
 }
 
-.newShippingAddressButton > div{
+
+#WC_ShippingAddressSelectSingle_div_1 .newShippingAddressButton > div{
 	width: 100%;
 	height: 100%;
 	display: table;
 }
 
-.newShippingAddressButton > div > div{
+
+#WC_ShippingAddressSelectSingle_div_1 .newShippingAddressButton > div > div{
 	text-align: center;
 	width: 100%;
 	height: 100%;
@@ -3666,7 +3669,7 @@ a#WC_CheckoutLogonf_links_1 {
     vertical-align: middle;
 }
 
-.shippingAddress select{
+#WC_ShippingAddressSelectSingle_div_1 .shippingAddress select{
 	margin-bottom: 15px;
 	font-weight: bold;
 }
@@ -3707,7 +3710,36 @@ a#WC_CheckoutLogonf_links_1 {
 	margin: 0 15px;
 }
 
+#total_breakdown #order_total #WC_SingleShipmentOrderTotalsSummary_td_10.total_figures{
+	color: #1b83ff;
+	font-size: 22px;
+}
 
+#WC_ShopcartAddressFormDisplay_div_5 input,
+#WC_ShopcartAddressFormDisplay_div_5 select{
+	padding-left: 5px !important;
+	height: 27px !important;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+}
+
+#WC_ShopcartAddressFormDisplay_links_1.button_primary,
+a#shippingBillingPageNext.button_primary,
+div#WC_SingleShipmentSummary_div_31_1 a#singleOrderSummary.button_primary,
+#WC_UnregisteredCheckout_div_16 a.button_primary{
+	background-color: none !important;
+}
+
+#WC_ShopcartAddressFormDisplay_links_1 div.btnAzul,
+a#shippingBillingPageNext div.btnAzul,
+div#WC_SingleShipmentSummary_div_31_1 a#singleOrderSummary.button_primary .btnAzul,
+#WC_UnregisteredCheckout_div_16 a.button_primary .btnAzul{
+	margin-top: 0px !important;
+}
+
+#WC_UnregisteredCheckout_div_16{
+	text-align: right;
+}
 
 /** **/
 /** **/

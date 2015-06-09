@@ -397,15 +397,17 @@
 							<div id="WC_UnregisteredCheckout_div_16">
 								<a href="#" role="button" class="button_secondary" id="WC_UnregisteredCheckout_links_3" onclick="javascript:setPageLocation('<c:out value="${ShoppingCartURL}"/>')">
 									<div class="left_border"></div>
-									<div class="button_text"><fmt:message bundle="${storeText}" key="UC_BACK" /></div>
+									<div class="button_text btnGris"><fmt:message bundle="${storeText}" key="UC_BACK" /></div>
 									<div class="right_border"></div>
 								</a>
 								<a href="#" role="button" class="button_primary button_left_padding" id="WC_UnregisteredCheckout_links_4" onclick="JavaScript:setCurrentId('WC_UnregisteredCheckout_links_4'); AddressHelper.saveUnregisteredCheckoutAddress('billingAddressCreateEditFormDiv_1', 'shippingAddressCreateEditFormDiv_1', '<c:out value='${stateDivName1}'/>', '<c:out value='${stateDivName2}'/>');">
 									<div class="left_border"></div>
-									<div class="button_text"><fmt:message bundle="${storeText}" key="UC_NEXT" /></div>
+									<div class="button_text btnAzul"><fmt:message bundle="${storeText}" key="UC_NEXT" /></div>
 									<div class="right_border"></div>
 								</a>
-								<span class="button_right_side_message"><fmt:message bundle="${storeText}" key="UC_NEXTSTEP"/></span>
+								<div>
+									<span class="button_right_side_message"><fmt:message bundle="${storeText}" key="UC_NEXTSTEP"/></span>
+								</div>
 							</div>
 							<div class="espot_checkout_bottom" id="WC_UnregisteredCheckout_div_25">
 								<%@ include file="../../Snippets/ReusableObjects/CheckoutBottomESpotDisplay.jspf"%>

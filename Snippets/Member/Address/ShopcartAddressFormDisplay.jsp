@@ -191,16 +191,16 @@
 			</div>
 			<br clear="all" />
 		</div>
-		<div id="centered_single_column_form_footer">
-			<a role="button" class="button_primary tlignore" id="WC_ShopcartAddressFormDisplay_links_1" tabindex="0" href="JavaScript:AddressHelper.saveShopCartAddress('<c:out value='${serviceId}'/>', '<c:out value='${formName}'/>', '<c:out value='${addressType}'/>');">
+		<div id="centered_single_column_form_footer">			
+			<a href="#" role="button" class="button_secondary button_left_padding" id="WC_ShopcartAddressFormDisplay_links_2" tabindex="0" onclick="JavaScript:CheckoutHelperJS.cancelEditAddress()">
 				<div class="left_border"></div>
-				<div class="button_text"><fmt:message bundle="${storeText}" key="SUBMIT"/></div>
+				<div class="button_text btnGris"><fmt:message bundle="${storeText}" key="CANCEL"/></div>
 				<div class="right_border"></div>
 			</a>
 			<div class="sixpixels"></div>
-			<a href="#" role="button" class="button_secondary button_left_padding" id="WC_ShopcartAddressFormDisplay_links_2" tabindex="0" onclick="JavaScript:CheckoutHelperJS.cancelEditAddress()">
+			<a role="button" class="button_primary tlignore" id="WC_ShopcartAddressFormDisplay_links_1" tabindex="0" href="JavaScript:AddressHelper.saveShopCartAddress('<c:out value='${serviceId}'/>', '<c:out value='${formName}'/>', '<c:out value='${addressType}'/>');">
 				<div class="left_border"></div>
-				<div class="button_text"><fmt:message bundle="${storeText}" key="CANCEL"/></div>
+				<div class="button_text btnAzul"><fmt:message bundle="${storeText}" key="SUBMIT"/></div>
 				<div class="right_border"></div>
 			</a>
 		</div>
