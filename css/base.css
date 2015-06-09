@@ -213,7 +213,8 @@ dl, ol, ul {
     background-color: #767f88;
 }
 
-.btnNaranja{ color:#FFF;
+.btnNaranja{ 
+	color:#FFF;
 	padding:10px 55px;
 	font-size:.95em;
 	clear:both;
@@ -3816,7 +3817,7 @@ Alejandro Paredes
 #add2CartBtn {
 	width: 58px !important;
 	height: 17px !important;
-    background-color: #fa8039 !important;
+    background-color: #fa8039;
     border: 0 none !important;
     border-radius: 5px !important;
     clear: both !important;
@@ -3828,7 +3829,7 @@ Alejandro Paredes
     text-decoration: none !important;
 }
 #add2CartBtn:hover {
-    background-color: #fa6b19 !important;
+    background-color: #fa6b19;
 }
 
 .product_page_content .tab > .content {
@@ -3924,8 +3925,7 @@ Alejandro Paredes
 /*#shopping_cart_product_table_tall {display: none;} */
 
 
-
-
 #kids1 {
     width: 95%;
 }
+
