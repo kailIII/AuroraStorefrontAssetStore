@@ -1929,7 +1929,7 @@ background-color:#f7f7f7;
 	  display:block;
 	  top: 4px;
 	  left: 5px;
-}	
+	}	
 
 
 
@@ -1956,10 +1956,10 @@ background-color:#f7f7f7;
 		width: auto;
 	}
 
-#Header_GlobalLogin_signOutQuickLinkUser, 
-#Header_GlobalLogin_signOutQuickLink > .userProfileIcon{
-	display:none;
-}
+	#Header_GlobalLogin_signOutQuickLinkUser, 
+	#Header_GlobalLogin_signOutQuickLink > .userProfileIcon{
+		display:none;
+	}
 
 	/* Mini cart button */
 
@@ -1993,11 +1993,11 @@ background-color:#f7f7f7;
 	  background-repeat: no-repeat;
 	  background-position: -194px -58px;
 	  top: 3px;	  
-	 }
+	}
 	 
 	#departmentsButton.selected {
 	  background-position: -217px -57px!important
-	 }
+	}
 	 
 	#departmentsButton > span {
 		display: none;
@@ -2129,8 +2129,8 @@ background-color:#f7f7f7;
 		/*display: none;
 		padding:0px;*/
 		top: -8px;
-		  width: 250px;
-		  margin-left: -125px;
+		width: 250px;
+		margin-left: -125px;
 	}
 	
 	#header #searchTermWrapper {
@@ -2141,23 +2141,25 @@ background-color:#f7f7f7;
 	#searchTermWrapper > input {
 	  width: 190px!important;
 	  margin: -2px 0;
-  }
+  	}
+	
 	.asistenciaTienda{display:none;}
 	.asistenciaLista{display:none;}
 	.localizadorTienda {display:none!important;}
 
 
 	#searchBar.active {
-  display: block;
-  position: relative;
-  width: 265px;
-  padding: 0px;
-  border-top: 0px solid #c9cece;
-  top: 43px;
+	  display: block;
+	  position: relative;
+	  width: 265px;
+	  padding: 0px;
+	  border-top: 0px solid #c9cece;
+	  top: 43px;
 	}
+	
 	#quickLinksBar > li {
-  border-right: 0px;
-  }
+  		border-right: 0px;
+  	}
 /*	#searchBox > .submitButton {
 		width: 10px;
 		height: 18px;
@@ -2178,10 +2180,11 @@ background-color:#f7f7f7;
 		margin: 40px -69px!important;	
 		background:none;
 	}
+	
 	#MiniShoppingCart {
 	  top: -11px!important;
 	  right: 72px!important;
-}
+	}
 
 	/* Autocomplete menu */
 
@@ -2279,28 +2282,28 @@ background-color:#f7f7f7;
 		width: 35% !important;
 	}
 	
-		input[type=text], textarea {
-			width: 35% !important;
-		}
+	input[type=text], textarea {
+		width: 35% !important;
+	}
 
-		#footer-right{
-			float: right;
-			width: 50%;
-		}
-		
-		#footer-left{
-			float: left;
-			width: 50%;
-		}
+	#footer-right{
+		float: right;
+		width: 50%;
+	}
+	
+	#footer-left{
+		float: left;
+		width: 50%;
+	}
 
-		#footerRow1{
-			width: 100%;
-		}	
-		
-		#txtCorreo{
-			padding-right: 20px !important;
-			width: 160px !important;
-		}
+	#footerRow1{
+		width: 100%;
+	}	
+	
+	#txtCorreo{
+		padding-right: 20px !important;
+		width: 160px !important;
+	}
 		
 	.footer-subcategory{
 		display: none;
@@ -2333,63 +2336,63 @@ background-color:#f7f7f7;
 
 @media (max-width: 600px){
 
-.btnAzul {        
-   padding: 10px 20px !important;
-}    
-    
-.texto_carrusel_banner {
-top:20px;
-width: 80%;
-}  
-#headerRow1 {
-  height: 100px;
-}
-#headerRow2 {
-  left: 50%;
-  margin-left: -148px;
- }
-#logo {
-  height: 60%;
-  left: 50%;
-  margin-left: -85px;
-  
-}
-#searchBar {
-  top: 38px;
-  width:300px;
-  margin-left:-150px;
-}
-
-#quickLinksBar li.signIn > a {
-  left: 50%!important;
- }
-
-#quickLinksBar li.signIn > a:before {
-  left: 50%;
-  margin-left: 40px;
-}
-
-#MiniShoppingCart {
-	left:50%;
-	margin-left:100px;
-}
-
-
-#departmentsButton > span {
-	display:none;
-}
-
-#searchTermWrapper > input {
-  width: 240px!important;
-}  
-
-#MiniShopCartProductAdded {
-  top: 115px!important;
-
-}
-
-
+	.btnAzul {        
+	   padding: 10px 20px !important;
+	}    
+	    
+	.texto_carrusel_banner {
+		top:20px;
+		width: 80%;
+	}  
 	
+	#headerRow1 {
+	  height: 100px;
+	}
+
+	#headerRow2 {
+	  left: 50%;
+	  margin-left: -148px;
+	}
+	
+	#logo {
+	  height: 60%;
+	  left: 50%;
+	  margin-left: -85px;
+	  
+	}
+
+	#searchBar {
+	  top: 38px;
+	  width:300px;
+	  margin-left:-150px;
+	}
+
+	#quickLinksBar li.signIn > a {
+	  left: 50%!important;
+	}
+
+	#quickLinksBar li.signIn > a:before {
+	  left: 50%;
+	  margin-left: 40px;
+	}
+
+	#MiniShoppingCart {
+		left:50%;
+		margin-left:100px;
+	}
+
+	#departmentsButton > span {
+		display:none;
+	}
+
+	#searchTermWrapper > input {
+	  width: 240px!important;
+	}  
+
+	#MiniShopCartProductAdded {
+	  top: 115px!important;
+
+	}
 }
 
 
@@ -3404,10 +3407,6 @@ div#WC_UserRegistrationUpdateForm_div_42.button_footer_line{
   /* padding-bottom: 8px; */
 }
 
-
-
-
-
 div#widget_breadcrumb > ul li a {
   color: #1b83ff!important;
 }
@@ -3542,7 +3541,7 @@ div#WC_PromotionCodeDisplay_div_2 > input#promoCode{
 
 .logon-inside .top_border #WC_CheckoutLogonf_div_1{
 	float: none;
-	margin: 0px 30px 0 30px;
+	//margin: 0px 30px 0 30px;
 	padding-bottom: 30px;
 	border-bottom: 1px solid #d9d7d7 !important;
 }
@@ -3595,7 +3594,6 @@ table#order_total tbody tr:last-child{
 	border-top: 1px solid #f2eff0;
 }
 
-
 .logon-inside .top_border #customers_new_or_returning input[type="text"],
 .logon-inside .top_border #customers_new_or_returning input[type="password"],
 #promoCode{
@@ -3608,7 +3606,7 @@ table#order_total tbody tr:last-child{
 #customers_new_or_returning #WC_CheckoutLogonf_div_4.returning{
 	text-align: center !important;
 	margin-bottom: 0;
-	padding: 30px;
+	//padding: 30px;
 	padding-bottom: 0;
 
 }
@@ -3762,8 +3760,58 @@ div#WC_SingleShipmentSummary_div_31_1 a#singleOrderSummary.button_primary .btnAz
 	text-align: right;
 }
 
+.crecido{
+	box-sizing: border-box;
+}
+
+input#WC_CheckoutLogon_FormInput_logonId{
+	width: 100% !important;
+}
+
+div#WC_CheckoutLogonf_div_0{
+	float:	none;
+}
+
 /** **/
 /** **/
+
+@media (min-width: 601px) and (max-width: 952px){
+
+	#promoCode{
+		width: 100% !important;
+	}
+
+	a#WC_PromotionCodeDisplay_links_1.button_primary{
+		background: none !important;
+	}
+
+	.button_text.tiny{
+		margin-top: 10px !important;
+	}
+
+}
+
+@media (min-width: 1px) and (max-width: 600px){
+	#promoCode{
+		width: 100% !important;
+	}
+
+	a#WC_PromotionCodeDisplay_links_1.button_primary{
+		background: none !important;
+	}
+
+	.button_text.tiny{
+		margin-top: 10px !important;
+	}
+}
+
+.carousel > .header {
+	box-sizing: border-box;
+}
+
+#order_details input{
+	margin-top: 4px;
+}
 /** **/
 /** **/
 /** **/
