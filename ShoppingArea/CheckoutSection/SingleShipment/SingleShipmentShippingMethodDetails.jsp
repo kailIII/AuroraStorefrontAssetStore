@@ -136,174 +136,180 @@
 		<label for="singleShipmentShippingMode"><fmt:message bundle="${storeText}" key="MO_SHIPPINGMETHOD" /></label>
 	</p>
 	<div class="shipping_method_content">
-	<p>
-		<select class="drop_down_shipping" name="singleShipmentShippingMode" id="singleShipmentShippingMode" onchange="JavaScript:setCurrentId(this.id); CheckoutHelperJS.updateShipModeForAllItems(this)">
-			<c:forEach var="shippingMode" items="${shipDetails.orderItem[0].usableShippingMode}">
-				<c:set var="shippingModeIdentifier" value="${shippingMode.shipModeId}"/>
-				<fmt:parseNumber var="recordSetTotal" value="${param.recordSetTotal}" integerOnly="true" />
-				<c:if test="${shippingMode.shipModeCode != 'PickupInStore' && (!env_contractSelection || (env_contractSelection && shipModeMap[shippingModeIdentifier] == recordSetTotal))}">
-					
-					<%-- Show all the shipping options available except for pickUp in Store --%>
-					<%-- This block is to select the shipMode Id in the drop down box.. if this shipMode is selected then set selected = true --%>
-					<option shipModeCode="${shippingMode.shipModeCode}" <c:if test="${(shippingModeIdentifier eq blockShipModeId)}"><c:set var="selectedShippingMode" value="${shippingMode.shipModeCode}"/>selected="selected"</c:if> value="<c:out value='${shippingModeIdentifier}'/>">
-						<c:choose>
-							<c:when test="${!empty shippingMode.description}">
-								<c:out value="${shippingMode.description}"/>
-							</c:when>
-							<c:otherwise>
-								<c:out value="${shippingMode.shipModeCode}"/>
-							</c:otherwise>
-						</c:choose>
-					</option>
-				</c:if>				
-			</c:forEach>
-		</select>
-	</p>
-	<flow:ifEnabled feature="ShippingChargeType">
-		<%out.flush();%>
-		<div id="WC_SingleShipmentDisplay_ShipCharge_Area" dojoType="wc.widget.RefreshArea" widgetId="singleShipmentShipCharge" controllerId="singleShipmentShipChargeController">
-				<c:import url="${env_jspStoreDir}ShoppingArea/CheckoutSection/SingleShipment/SingleShipmentShipChargeExt.jsp">
-					<c:param name="orderId" value="${param.orderId}"/>
-				</c:import>	
+		<div class="shipping-icon">
+			<img src="<c:out value="${jspStoreImgDir}images/ic_bus.png"/>"/>
 		</div>
-		<script type="text/javascript">dojo.addOnLoad(function() { 
-			parseWidget("WC_SingleShipmentDisplay_ShipCharge_Area"); 
-		});</script>
-		<%out.flush();%>
-	</flow:ifEnabled>
-
-	<flow:ifEnabled feature="ShipAsComplete">
-		<span class="checkbox ship_as_complete">		
-			<input type="checkbox" class="checkbox" id="shipAsComplete" name = "shipAsComplete" onclick="setCurrentId(this.id); CheckoutHelperJS.shipAsComplete(this)"
-			<c:if test="${shipAsCompleteCheckBoxStatus}">
-				checked="checked"
-			</c:if> />
-			<span class="text">
-				<label for="shipAsComplete"><fmt:message bundle="${storeText}" key="SHIP_SHIP_AS_COMPLETE" /></label>
-			</span>
-		</span>
-		<br />
-	</flow:ifEnabled>
-
-	<flow:ifEnabled feature="ShippingInstructions">
-		<c:choose>
-			<c:when test="${empty shipInstructions}">
-				<c:set var="shippingInstructionsDivDisplay" value="none"/>
-				<c:set var="shippingInstructionsChecked" value="false"/>
-			</c:when>
-			<c:otherwise>
-				<c:set var="shippingInstructionsDivDisplay" value="block"/>
-				<c:set var="shippingInstructionsChecked" value="true"/>
-			</c:otherwise>
-		</c:choose>
-		<div id="shippingInstructionsCheckboxDiv">
-		<p>
-			<span class="checkbox">
-				
-				<input type="checkbox" class="checkbox" id="shippingInstructionsCheckbox" name="shippingInstructionsCheckbox" onclick="JavaScript:setCurrentId(this.id); CheckoutHelperJS.checkShippingInstructionsBox('shippingInstructionsCheckbox','shippingInstructionsDiv')"
-					<c:if test="${shippingInstructionsChecked}">
-						checked="checked"
-					</c:if>
-				/>
-				<span class="text">
-					<label for='shippingInstructionsCheckbox'><fmt:message bundle="${storeText}" key="SHIP_SHIPPING_INSTRUCTIONS_ADD" /></label>
-				</span>
-			</span>
-		</p>
-		</div>
-		<div name = "shippingInstructionsDiv" id = "shippingInstructionsDiv" style="display:<c:out value='${shippingInstructionsDivDisplay}'/>">
+		<div>
 			<p>
-			<span>
-					<label for="shipInstructions">
-						<span class="spanacce"><fmt:message bundle="${storeText}" key="SHIP_SHIPPING_INSTRUCTIONS_LABEL" /></span>
-					</label>
-				
-					
-					<textarea id="shipInstructions" name="shipInstructions" rows="2" cols="35" onchange="JavaScript:setCurrentId(this.id); CheckoutHelperJS.updateShippingInstructionsForAllItems()"><c:out value = "${shipInstructions}" /></textarea>
-				
-			</span>
+				<select class="drop_down_shipping" name="singleShipmentShippingMode" id="singleShipmentShippingMode" onchange="JavaScript:setCurrentId(this.id); CheckoutHelperJS.updateShipModeForAllItems(this)">
+					<c:forEach var="shippingMode" items="${shipDetails.orderItem[0].usableShippingMode}">
+						<c:set var="shippingModeIdentifier" value="${shippingMode.shipModeId}"/>
+						<fmt:parseNumber var="recordSetTotal" value="${param.recordSetTotal}" integerOnly="true" />
+						<c:if test="${shippingMode.shipModeCode != 'PickupInStore' && (!env_contractSelection || (env_contractSelection && shipModeMap[shippingModeIdentifier] == recordSetTotal))}">
+							
+							<%-- Show all the shipping options available except for pickUp in Store --%>
+							<%-- This block is to select the shipMode Id in the drop down box.. if this shipMode is selected then set selected = true --%>
+							<option shipModeCode="${shippingMode.shipModeCode}" <c:if test="${(shippingModeIdentifier eq blockShipModeId)}"><c:set var="selectedShippingMode" value="${shippingMode.shipModeCode}"/>selected="selected"</c:if> value="<c:out value='${shippingModeIdentifier}'/>">
+								<c:choose>
+									<c:when test="${!empty shippingMode.description}">
+										<c:out value="${shippingMode.description}"/>
+									</c:when>
+									<c:otherwise>
+										<c:out value="${shippingMode.shipModeCode}"/>
+									</c:otherwise>
+								</c:choose>
+							</option>
+						</c:if>				
+					</c:forEach>
+				</select>
 			</p>
-		</div>
-	</flow:ifEnabled>
-	
-		<c:set var="showFutureOrders" value="false"/>
-		<flow:ifEnabled feature="FutureOrders">
-			<c:set var="futureOrdersEnabled" value="true"/>
-		</flow:ifEnabled>
-		<flow:ifEnabled feature="RecurringOrders">
-			<c:set var="recurringOrderIsEnabled" value="true"/>
-				<c:set var="cookieKey1" value="WC_recurringOrder_${param.orderId}"/>
-				<c:set var="currentOrderIsRecurringOrder" value="${cookie[cookieKey1].value}"/>
-		</flow:ifEnabled>
-		<c:choose>
-			<c:when test="${futureOrdersEnabled == 'true' && recurringOrderIsEnabled == 'true' && currentOrderIsRecurringOrder == 'true'}">
-				<c:set var="showFutureOrders" value="false"/>
-			</c:when>
-			<c:when test="${futureOrdersEnabled == 'true'}">
-				<c:set var="showFutureOrders" value="true"/>
-			</c:when>
-			<c:otherwise>
-				<c:set var="showFutureOrders" value="false"/>
-			</c:otherwise>
-		</c:choose>
-	<c:if test="${showFutureOrders}">
-		<c:choose>
-			<c:when test="${empty requestedShipDate}">
-				<c:set var="requestShippingDateDivDisplay" value="none"/>
-				<c:set var="requestShippingDateChecked" value="false"/>
-			</c:when>
-			<c:otherwise>
-				<c:set var="requestShippingDateDivDisplay" value="block"/>
-				<c:set var="requestShippingDateChecked" value="true"/>
-			</c:otherwise>
-		</c:choose>
-		<p>
-			<span class="checkbox">
-				
-				<input type="checkbox" class="checkbox" id="requestShippingDateCheckbox" name="requestShippingDateCheckbox" onclick="JavaScript:setCurrentId(this.id); CheckoutHelperJS.checkRequestShippingDateBox('requestShippingDateCheckbox','requestShippingDateDiv')"
-					<c:if test="${requestShippingDateChecked}">
+		
+			<flow:ifEnabled feature="ShippingChargeType">
+				<%out.flush();%>
+				<div id="WC_SingleShipmentDisplay_ShipCharge_Area" dojoType="wc.widget.RefreshArea" widgetId="singleShipmentShipCharge" controllerId="singleShipmentShipChargeController">
+						<c:import url="${env_jspStoreDir}ShoppingArea/CheckoutSection/SingleShipment/SingleShipmentShipChargeExt.jsp">
+							<c:param name="orderId" value="${param.orderId}"/>
+						</c:import>	
+				</div>
+				<script type="text/javascript">dojo.addOnLoad(function() { 
+					parseWidget("WC_SingleShipmentDisplay_ShipCharge_Area"); 
+				});</script>
+				<%out.flush();%>
+			</flow:ifEnabled>
+
+			<flow:ifEnabled feature="ShipAsComplete">
+				<span class="checkbox ship_as_complete">		
+					<input type="checkbox" class="checkbox" id="shipAsComplete" name = "shipAsComplete" onclick="setCurrentId(this.id); CheckoutHelperJS.shipAsComplete(this)"
+					<c:if test="${shipAsCompleteCheckBoxStatus}">
 						checked="checked"
-					</c:if>
-				/>
-				<span class="text">
-					<label for='requestShippingDateCheckbox'><fmt:message bundle="${storeText}" key="SHIP_REQUESTED_DATE_ADD" /></label>
+					</c:if> />
+					<span class="text">
+						<label for="shipAsComplete"><fmt:message bundle="${storeText}" key="SHIP_SHIP_AS_COMPLETE" /></label>
+					</span>
 				</span>
-			</span>
-		</p>
-		<div name = "requestShippingDateDiv" id = "requestShippingDateDiv" style="display:<c:out value='${requestShippingDateDivDisplay}'/>">
-			<div id="requestedShippingDate_label">
-				<label for="requestedShippingDate">
-					<span class="spanacce"><fmt:message bundle="${storeText}" key="SHIP_REQUESTED_DATE_LABEL"  /></span>
-				</label>
-			</div>
-			<div id="requestedShippingDate_inputField" class="dijitCalendarWidth">
-				<input 
-					id="requestedShippingDate" 
-					name="requestedShippingDate" 
-					size="6" 
-					dojoType="dijit.form.DateTextBox" 
-					data-dojo-props='onChange:function(val) { 
-						setCurrentId(this.id); 
-						CheckoutHelperJS.updateRequestedShipDate(this);
-						if ("fireEvent" in document.getElementById(this.id) && dojo.isIE < 9) {
-							document.getElementById(this.id).fireEvent("onchange");
-						} else {
-							var evt=document.createEvent("HTMLEvents");
-							evt.initEvent("change", true, false);
-							document.getElementById(this.id).dispatchEvent(evt);
-						}
-						<c:if test="${!isAjaxCheckOut}">setDirtyFlag();</c:if>
-					}'
-					invalidMessage="<fmt:message bundle="${storeText}" key="SHIP_REQUESTED_ERROR" />"  
-					value="<c:out value="${formattedReqShipDate}"/>" 
-				/>
-				<script type="text/javascript">
-					dojo.addOnLoad(function() { parseWidget("requestedShippingDate"); });
-				</script>
-			</div>
+				<br />
+			</flow:ifEnabled>
+
+			<flow:ifEnabled feature="ShippingInstructions">
+				<c:choose>
+					<c:when test="${empty shipInstructions}">
+						<c:set var="shippingInstructionsDivDisplay" value="none"/>
+						<c:set var="shippingInstructionsChecked" value="false"/>
+					</c:when>
+					<c:otherwise>
+						<c:set var="shippingInstructionsDivDisplay" value="block"/>
+						<c:set var="shippingInstructionsChecked" value="true"/>
+					</c:otherwise>
+				</c:choose>
+				<div id="shippingInstructionsCheckboxDiv">
+				<p>
+					<span class="checkbox">
+						
+						<input type="checkbox" class="checkbox" id="shippingInstructionsCheckbox" name="shippingInstructionsCheckbox" onclick="JavaScript:setCurrentId(this.id); CheckoutHelperJS.checkShippingInstructionsBox('shippingInstructionsCheckbox','shippingInstructionsDiv')"
+							<c:if test="${shippingInstructionsChecked}">
+								checked="checked"
+							</c:if>
+						/>
+						<span class="text">
+							<label for='shippingInstructionsCheckbox'><fmt:message bundle="${storeText}" key="SHIP_SHIPPING_INSTRUCTIONS_ADD" /></label>
+						</span>
+					</span>
+				</p>
+				</div>
+				<div name = "shippingInstructionsDiv" id = "shippingInstructionsDiv" style="display:<c:out value='${shippingInstructionsDivDisplay}'/>">
+					<p>
+					<span>
+							<label for="shipInstructions">
+								<span class="spanacce"><fmt:message bundle="${storeText}" key="SHIP_SHIPPING_INSTRUCTIONS_LABEL" /></span>
+							</label>
+						
+							
+							<textarea id="shipInstructions" name="shipInstructions" rows="2" cols="35" onchange="JavaScript:setCurrentId(this.id); CheckoutHelperJS.updateShippingInstructionsForAllItems()"><c:out value = "${shipInstructions}" /></textarea>
+						
+					</span>
+					</p>
+				</div>
+			</flow:ifEnabled>
+		
+				<c:set var="showFutureOrders" value="false"/>
+				<flow:ifEnabled feature="FutureOrders">
+					<c:set var="futureOrdersEnabled" value="true"/>
+				</flow:ifEnabled>
+				<flow:ifEnabled feature="RecurringOrders">
+					<c:set var="recurringOrderIsEnabled" value="true"/>
+						<c:set var="cookieKey1" value="WC_recurringOrder_${param.orderId}"/>
+						<c:set var="currentOrderIsRecurringOrder" value="${cookie[cookieKey1].value}"/>
+				</flow:ifEnabled>
+				<c:choose>
+					<c:when test="${futureOrdersEnabled == 'true' && recurringOrderIsEnabled == 'true' && currentOrderIsRecurringOrder == 'true'}">
+						<c:set var="showFutureOrders" value="false"/>
+					</c:when>
+					<c:when test="${futureOrdersEnabled == 'true'}">
+						<c:set var="showFutureOrders" value="true"/>
+					</c:when>
+					<c:otherwise>
+						<c:set var="showFutureOrders" value="false"/>
+					</c:otherwise>
+				</c:choose>
+			<c:if test="${showFutureOrders}">
+				<c:choose>
+					<c:when test="${empty requestedShipDate}">
+						<c:set var="requestShippingDateDivDisplay" value="none"/>
+						<c:set var="requestShippingDateChecked" value="false"/>
+					</c:when>
+					<c:otherwise>
+						<c:set var="requestShippingDateDivDisplay" value="block"/>
+						<c:set var="requestShippingDateChecked" value="true"/>
+					</c:otherwise>
+				</c:choose>
+				<p>
+					<span class="checkbox">
+						
+						<input type="checkbox" class="checkbox" id="requestShippingDateCheckbox" name="requestShippingDateCheckbox" onclick="JavaScript:setCurrentId(this.id); CheckoutHelperJS.checkRequestShippingDateBox('requestShippingDateCheckbox','requestShippingDateDiv')"
+							<c:if test="${requestShippingDateChecked}">
+								checked="checked"
+							</c:if>
+						/>
+						<span class="text">
+							<label for='requestShippingDateCheckbox'><fmt:message bundle="${storeText}" key="SHIP_REQUESTED_DATE_ADD" /></label>
+						</span>
+					</span>
+				</p>
+				<div name = "requestShippingDateDiv" id = "requestShippingDateDiv" style="display:<c:out value='${requestShippingDateDivDisplay}'/>">
+					<div id="requestedShippingDate_label">
+						<label for="requestedShippingDate">
+							<span class="spanacce"><fmt:message bundle="${storeText}" key="SHIP_REQUESTED_DATE_LABEL"  /></span>
+						</label>
+					</div>
+					<div id="requestedShippingDate_inputField" class="dijitCalendarWidth">
+						<input 
+							id="requestedShippingDate" 
+							name="requestedShippingDate" 
+							size="6" 
+							dojoType="dijit.form.DateTextBox" 
+							data-dojo-props='onChange:function(val) { 
+								setCurrentId(this.id); 
+								CheckoutHelperJS.updateRequestedShipDate(this);
+								if ("fireEvent" in document.getElementById(this.id) && dojo.isIE < 9) {
+									document.getElementById(this.id).fireEvent("onchange");
+								} else {
+									var evt=document.createEvent("HTMLEvents");
+									evt.initEvent("change", true, false);
+									document.getElementById(this.id).dispatchEvent(evt);
+								}
+								<c:if test="${!isAjaxCheckOut}">setDirtyFlag();</c:if>
+							}'
+							invalidMessage="<fmt:message bundle="${storeText}" key="SHIP_REQUESTED_ERROR" />"  
+							value="<c:out value="${formattedReqShipDate}"/>" 
+						/>
+						<script type="text/javascript">
+							dojo.addOnLoad(function() { parseWidget("requestedShippingDate"); });
+						</script>
+					</div>
+				</div>
+			</c:if>
+		<%@ include file="SingleShipmentShippingMethodDetailsExt.jspf"%>
 		</div>
-	</c:if>
-	<%@ include file="SingleShipmentShippingMethodDetailsExt.jspf"%>
 	</div>
 </div>	
 <!-- END SingleShipmentShippingMethodDetails.jsp -->

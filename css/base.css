@@ -3627,6 +3627,90 @@ a#WC_CheckoutLogonf_links_1 {
 	color: #55667a;
 }
 
+.shippingAddress{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.shippingAddress{
+	border: 1px solid rgb(235, 235, 235);
+	border-radius: 5px;
+	font-size: 11px;
+	color: rgb(90, 100, 115);
+	padding: 15px 15px;
+	margin-bottom: 15px;
+	margin-right: 15px;
+	width: 159px;
+	min-height: 190px;
+	height: 190px;
+	box-sizing: border-box;
+}
+
+.shippingAddress:hover{
+	border: 1px solid #64afff;
+}
+
+.newShippingAddressButton > div{
+	width: 100%;
+	height: 100%;
+	display: table;
+}
+
+.newShippingAddressButton > div > div{
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	display: table-cell;
+    vertical-align: middle;
+}
+
+.shippingAddress select{
+	margin-bottom: 15px;
+	font-weight: bold;
+}
+
+.editAddressLink{
+	text-align: right;
+}
+#shipping .shipping_address {
+	float: none;
+}
+
+#shipping .shipping_address .title,
+#shipping .shipping_method .title{
+	font-size: 16px;
+	color:  #1b83ff;
+	margin-bottom: 15px;
+}
+
+.shipping_method_content{
+	border: 1px solid #ebebeb;
+	border-radius: 5px;
+	color: #000000;
+	font-size: 14px;
+	font-family: Arial;
+	width: 332px;	
+	padding: 12px;
+	box-sizing: border-box;
+	margin-bottom: 30px;
+}
+
+.shipping_method_content:hover{
+	border: 1px solid #64afff;
+}
+
+.shipping_method_content > div{
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 15px;
+}
+
+
+
+/** **/
+/** **/
+/** **/
+/** **/
 /** **/
 
 /** 
