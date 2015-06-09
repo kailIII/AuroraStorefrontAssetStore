@@ -727,19 +727,14 @@ right:5%;
 }
 
 #cartDropdown {
-	position: relative;
 	width: 330px;
 	background-color: #ffffff;
 	border: 1px solid #c9cece;
 	border-top: 3px solid #189ad6;
 	border-radius: 0 0 4px 4px;
 	font-size: 12px;
-<<<<<<< HEAD
 	position:absolute;
 	right:0px;
-	/*top: 66px;*/
-=======
->>>>>>> 271e17f03a17cdd1ade3dc42b834d4c7c54c657c
 }
 #cartDropdown > h3 {
 	margin: 0;
