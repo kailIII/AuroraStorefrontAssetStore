@@ -3338,15 +3338,7 @@ div#WC_UserRegistrationUpdateForm_div_42.button_footer_line{
   /* padding-bottom: 8px; */
 }
 
-.btnAzul {
-  background-color: #48baf6;
-  border-radius: 5px;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 0.95em;
-  text-decoration: none;
-}
+
 
 .btnAzul {
 	background-color: #48baf6 !important;
@@ -3781,3 +3773,6 @@ Alejandro Paredes
 }
 
 .zoom img::selection { background-color: transparent; }
+
+#ShopCartDisplay #purchase_options{display: none;}
+/*#shopping_cart_product_table_tall {display: none;} */

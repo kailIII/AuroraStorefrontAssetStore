@@ -226,9 +226,9 @@
                                     <%--
                                     cambie la clase del boton para esta seccion
                                     --%>
-                                    class="button_primary22 btnAzul" wairole="button" role="button" title="<fmt:message bundle="${storeText}" key="ADD_TO_CART" />">
+                                    wairole="button" role="button" title="<fmt:message bundle="${storeText}" key="ADD_TO_CART" />">
                                     <div class="left_border"></div>
-                                    <div id="comparePageAdd2Cart_${status.count}" class="button_text">
+                                    <div id="comparePageAdd2Cart_${status.count}" class="button_text btnAzul">
                                     <fmt:message bundle="${storeText}" key="ADD_TO_CART" />
                                     </div>
                                     <div class="right_border"></div>
@@ -319,9 +319,9 @@
                                     <%--
                                     cambie la clase del boton para esta seccion
                                     --%>
-                                    class="button_primary22 btnAzul" wairole="button" role="button" title="<fmt:message bundle="${storeText}" key="ADD_TO_CART" />">
+                                    wairole="button" role="button" title="<fmt:message bundle="${storeText}" key="ADD_TO_CART" />">
                                     <div class="left_border"></div>
-                                    <div id="comparePageAdd2Cart_${status.count}" class="button_text">
+                                    <div id="comparePageAdd2Cart_${status.count}" class="button_text btnAzul">
                                     <fmt:message bundle="${storeText}" key="ADD_TO_CART" />
                                     </div>
                                     <div class="right_border"></div>

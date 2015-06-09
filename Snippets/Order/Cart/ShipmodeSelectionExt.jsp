@@ -93,7 +93,8 @@
 		<c:remove var="missingCatentryIdsMap"/>
 		
 		<%-- need to disable pick up in store option if there are products in the shopping cart that do not support 'PickupInStore' --%>
-		<c:set var="pickUpInStoreDisabled" value="false"/>
+		<!-- la opcion para apagar la entrega en tienda esta en el value="false"-->
+            <c:set var="pickUpInStoreDisabled" value="true"/>
 		<c:forEach items="${order.orderItem}" var="curOrderItem">
 			<c:set var="catalogEntry1" value="${itemDetailsInThisOrder[curOrderItem.productId]}"/>
 			<c:forEach var="attribute" items="${catalogEntry1.attributes}">
@@ -109,7 +110,16 @@
 		</c:if>
 		
 		<%-- section to display 2 radio buttons for shipping option selection (shop online and pick up at store) --%>
-		<div id="purchase_options">
+		
+           
+            
+            
+            
+            
+            
+            
+            <!-- dejamos comentado el select de pedido en tienda  -->
+        <div id="purchase_options">
 			<form name="BOPIS_FORM" id="BOPIS_FORM">
 			<fieldset>
 				<legend><span class="spanacce"><fmt:message bundle="${storeText}" key="NO_OF_SHIP_OPTIONS" /></span></legend>
@@ -138,6 +148,14 @@
 			</fieldset>
 			</form>
 		</div>
+  
+            
+             
+            
+         
+            
+            
+            
 	
 		
 	</c:if>

@@ -8070,55 +8070,6 @@ font-size: 24px;
 
 /* estilos oficiales de los botones ========================================================================================= */
 
-.btnNaranja {
-    background-color: #fa8039;
-    border: 0 none;
-    border-radius: 5px;
-    clear: both;
-    color: #fff;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 0.95em;
-    margin: 10px auto 0;
-    padding: 10px 20px;
-    text-decoration: none;
-}
-.btnNaranja:hover {
-    background-color: #fa6b19;
-}
-.btnAzul {
-    background-color: #48baf6;   
-    border-radius: 5px;    
-    color: #fff; 
-    cursor: pointer;
-    display: inline-block;
-    font-size: 0.95em;
-    text-decoration: none;
-}
-.btnAzul:hover {
-    background-color: #1badfa;
-    text-decoration: none;
-}
-
-
-
-.btnGris {
-    background-color: #8c97a1;
-    border: 0 none;
-    border-radius: 5px;
-    clear: both;
-    color: #fff;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 0.95em;
-    margin: 10px auto 0;
-    padding: 10px 20px;
-    text-decoration: none;
-}
-.btnGris:hover {
-    background-color: #767f88;
-}
-
 
 .boton_cantidad{
     color: rgb(235, 235, 235);
