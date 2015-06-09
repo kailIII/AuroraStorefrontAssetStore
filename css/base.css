@@ -1159,7 +1159,7 @@ background-color:#f7f7f7;
 	list-style: none;
 }
 #AutoSuggestDiv .list_section li {
-	border-bottom: 1px solid #c9cece;
+	/*border-bottom: 1px solid #c9cece;*/
 	list-style: none;
 }
 #AutoSuggestDiv .list_section li > a,
@@ -1167,19 +1167,25 @@ background-color:#f7f7f7;
 	padding: 15px;
 	display: block;
 	height: 100%;
+	text-align: left;
 }
+.autoSuggestDivNestedList{-webkit-padding-start: 0;}
+
 #AutoSuggestDiv .heading {
 	background-color: #f5f6f7;
 	text-transform: uppercase;
 	padding: 15px;
-	border-bottom: 1px solid #c9cece;
+	/*border-bottom: 1px solid #c9cece;*/
 	list-style: none;
+	text-align: left;
+	font-weight: bold;
 }
 #AutoSuggestDiv #autoSuggestAdvancedSearch {
 	border-bottom: 0 none;
 	background-color: #fff;
 	color: #b54200;
 	padding: 0;
+	display: none;
 }
 #AutoSuggestDiv #autoSuggestAdvancedSearch:hover {
 	background-color: #d9e9f7;
