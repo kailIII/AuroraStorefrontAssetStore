@@ -259,6 +259,8 @@
           <th class="align_center" id="shoppingCart_tableCell_availability"><fmt:message bundle="${storeText}" key="SHOPCART_AVAILABILITY" /></th>
           
 		   <th class="align_center" id="shoppingCart_tableCell_quantity" abbr="<fmt:message bundle="${storeText}" key="QUANTITY1" />"><fmt:message bundle="${storeText}" key="SHOPCART_QTY" /></th>
+          
+          
           <th class="align_center" id="shoppingCart_tableCell_each" abbr="<fmt:message bundle="${storeText}" key="UNIT_PRICE" />"><fmt:message bundle="${storeText}" key="SHOPCART_EACH" /></th>
           <th class="align_center" id="shoppingCart_tableCell_total" abbr="<fmt:message bundle="${storeText}" key="TOTAL_PRICE" />"><fmt:message bundle="${storeText}" key="SHOPCART_TOTAL" /></th>
           <!-- agregamos un th para que caiga el eliminar-->
@@ -671,15 +673,50 @@
 								
                                 
                                 
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
                                 <!-- aca agregamos los botones para aumentar y disminuir cantidades -->
-                                <a href="#" onclick="document.getElementById('qty_<c:out value="${status.count}"/>').value = parseInt(document.getElementById('qty_<c:out value="${status.count}"/>').value) - 1; CheckoutHelperJS.updateCartWait('<c:out value='${orderItem.orderItemId}'/>',event)" title="" >-</a>
+                                <a class="boton_cantidad" href="#" name='qty_<c:out value="${status.count}"/>' type="tel" aria-labelledby="Quantity_ACCE_Message" onclick="document.getElementById('qty_<c:out value="${status.count}"/>').value = parseInt(document.getElementById('qty_<c:out value="${status.count}"/>').value) - 1;" onkeydown="JavaScript:setCurrentId('qty_<c:out value='${status.count}'/>'); CheckoutHelperJS.updateCartWait(this, '<c:out value='${orderItem.orderItemId}'/>',event)" >
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="100%" height="100%" xml:space="preserve"><g class="shape" style="-webkit-transform: scale(0.41666666666667, 0.41666666666667);-moz-transform: scale(0.41666666666667, 0.41666666666667);transform: scale(0.41666666666667, 0.41666666666667);"><defs></defs><rect fill="#808080" display="none" width="20" height="20"></rect><rect fill="#808080" id="_x3C_Slice_x3E__126_" display="none" width="24" height="24"></rect><rect fill="#808080" y="10" fill-rule="evenodd" clip-rule="evenodd" width="20" height="4"></rect></g></svg>
+                                </a>
                                 
-                                <input id='qty_<c:out value="${status.count}"/>' name='qty_<c:out value="${status.count}"/>' type="tel" aria-labelledby="Quantity_ACCE_Message" size="1" style="width:25px;" value='<c:out value="${quickCartOrderItemQuantity}"/>' onkeydown="JavaScript:setCurrentId('qty_<c:out value='${status.count}'/>'); CheckoutHelperJS.updateCartWait(this, '<c:out value='${orderItem.orderItemId}'/>',event)" />
                                 
-                                <a href="#" onclick="document.getElementById('qty_<c:out value="${status.count}"/>').value = parseInt(document.getElementById('qty_<c:out value="${status.count}"/>').value) + 1; CheckoutHelperJS.updateCartWait('<c:out value='${orderItem.orderItemId}'/>',event)" title="" >+</a>
+                                
+                                <input id='qty_<c:out value="${status.count}"/>' name='qty_<c:out value="${status.count}"/>' type="tel" aria-labelledby="Quantity_ACCE_Message" size="1" style="width:20px; float: left;" value='<c:out value="${quickCartOrderItemQuantity}"/>' onkeydown="JavaScript:setCurrentId('qty_<c:out value='${status.count}'/>'); CheckoutHelperJS.updateCartWait(this, '<c:out value='${orderItem.orderItemId}'/>',event)" />
+                                
+                                
+                                
+                                <a class="boton_cantidad" href="#" name='qty_<c:out value="${status.count}"/>' type="tel" aria-labelledby="Quantity_ACCE_Message" onclick="document.getElementById('qty_<c:out value="${status.count}"/>').value = parseInt(document.getElementById('qty_<c:out value="${status.count}"/>').value) + 1;" onkeydown="JavaScript:setCurrentId('qty_<c:out value='${status.count}'/>'); CheckoutHelperJS.updateCartWait(this, '<c:out value='${orderItem.orderItemId}'/>',event)" >
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="100%" height="100%" xml:space="preserve"><g class="shape" style="-webkit-transform: scale(0.41666666666667, 0.41666666666667);-moz-transform: scale(0.41666666666667, 0.41666666666667);transform: scale(0.41666666666667, 0.41666666666667);"><defs></defs><rect fill="#808080" display="none" width="20" height="20"></rect><rect fill="#808080" id="_x3C_Slice_x3E__126_" display="none" width="20" height="20"></rect><polygon fill="#808080" fill-rule="evenodd" clip-rule="evenodd" points="14,10 14,0 10,0 10,10 0,10 0,14 10,14 10,24 14,24 14,14 24,14 24,10 "></polygon></g></svg>                                    
+                                </a>
                                 
 							
                             
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
                             
                             
                             
@@ -710,6 +747,10 @@
 				</span>
 
 			</td>
+                    
+                    
+                    
+                    
 			
                     
                     

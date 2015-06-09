@@ -334,18 +334,7 @@
 											<%-- End - Added for Coremetrics Intelligent Offer --%>
 										</flow:ifEnabled>
 										</div>
-											<div class="">
-												<!-- Vertical Recommendations Widget -->
-												<div class="widget_recommended_position">
-													<% out.flush(); %>
-														<c:import url="${env_siteWidgetsDir}com.ibm.commerce.store.widgets.CatalogEntryRecommendation/CatalogEntryRecommendation.jsp">
-															<c:param name="emsName" value="ShoppingCartRight_CatEntries"/>
-															<c:param name="widgetOrientation" value="vertical"/>
-															<c:param name="pageSize" value="2"/>
-														</c:import>
-													<% out.flush(); %>
-												</div>
-											</div>
+											
 										</div>
 									</div>
 									
@@ -357,6 +346,29 @@
 											<%out.flush();%>
 										</div>
 									</div>
+
+									<div class="col8">
+										<div class="">
+												<!-- Vertical Recommendations Widget -->
+												<div class="widget_recommended_position">
+													<% out.flush(); %>
+														<c:import url="${env_siteWidgetsDir}com.ibm.commerce.store.widgets.CatalogEntryRecommendation/CatalogEntryRecommendation.jsp">
+															<c:param name="emsName" value="ShoppingCartRight_CatEntries"/>
+															<c:param name="widgetOrientation" value="vertical"/>
+															<c:param name="pageSize" value="2"/>
+														</c:import>
+													<% out.flush(); %>
+												</div>
+											</div>
+									</div>
+									<div class="col4">
+										<div class="necesitas-ayuda">
+											<c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
+												<c:param name="emsName" value="telmex__necesitas_ayuda" />
+											</c:import>
+										</div>
+									</div>
+
 								</div>
 								
 								

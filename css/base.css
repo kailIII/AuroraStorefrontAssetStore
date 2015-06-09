@@ -734,9 +734,12 @@ right:5%;
 	border-top: 3px solid #189ad6;
 	border-radius: 0 0 4px 4px;
 	font-size: 12px;
+<<<<<<< HEAD
 	position:absolute;
 	right:0px;
 	/*top: 66px;*/
+=======
+>>>>>>> 271e17f03a17cdd1ade3dc42b834d4c7c54c657c
 }
 #cartDropdown > h3 {
 	margin: 0;
@@ -2579,25 +2582,25 @@ width: 80%;
 	margin: 0 auto!important;
 }
 .homeHero.backCelular{
-	background: url(../images/home_carrusel_banner1.jpg);
+	background: url(https://wc7dev.torolab.ibm.com:8006/webapp/wcs/preview/AuroraESite/Attachment/home_carrusel_banner1.jpg);
 	background-repeat:no-repeat;
 	width:100%;
-	min-height:320px;
-	height:320px;
+	min-height:365px;
+	height:365px;
 	background-position:top center;
 	background-size:cover;
 	overflow:hidden;
 }
 
 .home_carrusel_banner1{
-	background: url(../images/home_banner1_celular.png);
-	width:620px;
-	height:320px;
+	background: url(https://wc7dev.torolab.ibm.com:8006/webapp/wcs/preview/AuroraESite/Attachment/home_banner1_celular.png);
+	width:626px;
+	height:290px;
 	background-repeat:no-repeat;
 	position:absolute!important;
 	margin:0px!important; 
 	left: 10%;
-	top: 0;	
+	top: 12%;	
 }
 .texto_carrusel_banner{
 	width:45%;
@@ -2999,11 +3002,10 @@ background-color:#F5F5F5;
 
 
 #quick_cart_container{
-  position: absolute!important;
   left: 50%!important;
   margin-left: 130px!important;
   top: 90px !important;
-
+  position: absolute!important;
 }
 
 #searchFilterButton, #searchFilterMenu {
@@ -3149,8 +3151,8 @@ div.compare_target {
   background: none;
 }
 
-.view_controls .grid_icon:hover, 
-.view_controls .list_icon:hover {
+.view_controls a.grid_icon:hover, 
+.view_controls a.list_icon:hover {
 	cursor: pointer;
 }
 
@@ -3187,6 +3189,12 @@ a.list_icon:before {
 
 div.grid_icon:before, a.grid_icon:hover:before {
 	left: -53px !important;
+	clip: rect(21px,78px,38px,61px) !important;
+}
+
+a.grid_icon:before {
+	left: -53px !important;
+	clip: rect(21px,78px,38px,61px) !important;
 }
 
 h1{
@@ -3499,7 +3507,7 @@ div#WC_PromotionCodeDisplay_div_2 > input#promoCode{
 
 .button_text.tiny{
 	font-size: 11px !important;
-	padding: 5px 15px !important;
+	padding: 7px 15px !important;
 	margin-top: -1px !important;
 }
 
@@ -3513,6 +3521,9 @@ div#WC_PromotionCodeDisplay_div_2 > input#promoCode{
 
 .logon-inside .top_border #WC_CheckoutLogonf_div_1{
 	float: none;
+	margin: 0px 30px 0 30px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid #d9d7d7 !important;
 }
 
 .logon-inside .top_border #customers_new_or_returning .returning{
@@ -3529,19 +3540,55 @@ div#WC_CheckoutLogonf_div_6{
 	text-align: center;
 }
 
-.logon-inside .top_border #customers_new_or_returning input[type="text"],
-.logon-inside .top_border #customers_new_or_returning input[type="password"]{
-	padding-left: 5px !important;
-	height: 25px !important;
-	box-sizing: border-box;
+div#WC_PromotionCodeDisplay_div_3.promotion_button{
+	padding-top: 4px;
+	background: none !important;
+}
 
+div#WC_PromotionCodeDisplay_div_3.promotion_button:hover{
+	background: none !important;
+}
+
+table#order_total {
+	padding-top: 30px;
+	border-collapse: collapse;
+	line-height: 1.8 !important;
+}
+
+table#order_total tbody{
+	float: right;
+}
+
+table#order_total #WC_SingleShipmentOrderTotalsSummary_td_13{
+	font-size: 20px !important;
+	color: rgb(90, 100, 115);
+}
+
+table#order_total #WC_SingleShipmentOrderTotalsSummary_td_9{
+	font-size: 18px !important;
+	color: rgb(90, 100, 115);
+}
+
+table#order_total tbody tr:last-child{
+	line-height: 2.4;
+	border-top: 1px solid #f2eff0;
+}
+
+
+.logon-inside .top_border #customers_new_or_returning input[type="text"],
+.logon-inside .top_border #customers_new_or_returning input[type="password"],
+#promoCode{
+	padding-left: 5px !important;
+	height: 27px !important;	
+	box-sizing: border-box;
+	width: 100%;
 }
 
 #customers_new_or_returning #WC_CheckoutLogonf_div_4.returning{
 	text-align: center !important;
-	background: #e5e5e5;
-	margin-bottom: 30px;
-	padding: 30px 0 30px 0;
+	margin-bottom: 0;
+	padding: 30px;
+	padding-bottom: 0;
 
 }
 
@@ -3549,7 +3596,36 @@ div#WC_CheckoutLogonf_div_6{
 	position: static;
 }
 
+a#WC_CheckoutLogonf_links_1 {
+	font-size: 12px;
+	color: #1b83ff;
+	text-decoration: underline;
+}
 
+.subheader{
+	color: #1b83ff;
+	font-size: 22px;
+}
+
+.message-returning{
+	text-align: left;
+}
+
+.necesitas-ayuda{
+	padding: 0 15px;
+}
+
+/**********************/
+/**********************/
+.static_page_content > div.page_header{
+	font-size: 1.5em !important;
+	font-family: Ubuntu,Arial, Helvetica !important;
+	color: #1b83ff !important;
+}
+
+.static_page_content > div.content_box .info_section{
+	color: #55667a;
+}
 
 /** **/
 

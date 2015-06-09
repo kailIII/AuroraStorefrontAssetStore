@@ -715,11 +715,11 @@ h1 {
 	cursor: pointer;
 }
 .collapsible > .content {
-	overflow: hidden;
+	overflow: visible;
 }
 .collapsible[aria-expanded="false"] > .content {
 	max-height: 0;
-	visibility: hidden;
+	visibility: visible;
 }
 #content .collapsible,
 .categoryNavWidget.collapsible,
@@ -2517,7 +2517,7 @@ div.widget_sidebar_container > .left_border > .right_border > .content div.produ
 	border-radius: 4px;
 }
 
-#quick_cart_container, #MiniShopCartProductAdded {
+#quick_cart_container /*, #MiniShopCartProductAdded */{
 	left: auto;
 	right: 15px;
 	top: 71px;
@@ -6197,7 +6197,7 @@ div[dijitpopupparent^='WC_UserMemberGroupManagement_'] > .dijitSelectMenu table 
 		right: 15px !important;
 	}
 
-	#quick_cart_container, #MiniShopCartProductAdded {
+	#quick_cart_container  /*, #MiniShopCartProductAdded */{
 		left: 0 !important;
 		right: 0 !important;
 		top: 55px !important;
