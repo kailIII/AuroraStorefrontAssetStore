@@ -290,6 +290,15 @@ dojo.addOnLoad(function(){CommonControllersDeclarationJS.setControllerURL('Order
 			</c:if>
 		</c:if>
 	</c:if>
+            
+            
+            
+            <!-- aca agregamos la otra pleca gris --> 
+            <div class="main_header headingtext gris" style="margin: 20px 0;">
+                <img class="palomita" src="<c:out value='${jspStoreImgDir}images/'/>ok_az.gif">
+                <div class="separador_blanco"></div>
+                <div class="left_corner" id="WC_OrderShippingBillingConfirmationPage_div_6"></div>
+            </div>         
 
 	<c:forEach var="orderItem" items="${pagorder.orderItem}" varStatus="status">
 		<c:if test="${empty subscriptionOrderItemId || (!empty subscriptionOrderItemId && subscriptionOrderItemId == orderItem.orderItemId)}">
@@ -328,22 +337,6 @@ dojo.addOnLoad(function(){CommonControllersDeclarationJS.setControllerURL('Order
 		
             
             
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             <!-- get the formatted qty for this item -->
 		<fmt:formatNumber	var="quickCartOrderItemQuantity" value="${orderItem.quantity}" type="number" maxFractionDigits="0"/>
 		<c:forEach var="discounts" items="${orderItem.adjustment}">
@@ -366,20 +359,6 @@ dojo.addOnLoad(function(){CommonControllersDeclarationJS.setControllerURL('Order
 					<c:remove var="thumbNail"/>
 				</div>
 				
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
                 
                 
                 <div class="itemspecs" id="WC_OrderItemDetailsSummaryf_div_2_${fn:escapeXml(status.count)}">

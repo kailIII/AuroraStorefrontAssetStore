@@ -424,11 +424,18 @@
 												</c:when>
 											</c:choose>
 
-											<div class="main_header" id="WC_SingleShipmentSummary_div_21">
+                                             
+                                                    
+                                            <!-- aca agregamos la otra pleca gris -->       
+                                            <div class="main_header headingtext gris" id="WC_SingleShipmentSummary_div_21">
+                                                <img class="palomita" src="<c:out value='${jspStoreImgDir}images/'/>ok_az.gif">
+                                                <div class="separador_blanco"></div>
 												<div class="left_corner_straight" id="WC_SingleShipmentSummary_div_22"></div>
 												<div class="headingtext" id="WC_SingleShipmentSummary_div_23"><span aria-level="1" class="main_header_text" role="heading"><fmt:message bundle="${storeText}" key="BILL_BILLING_INFO" /></span></div>
 												<div class="right_corner_straight" id="WC_SingleShipmentSummary_div_24"></div>
 											</div>
+                                                    
+                                                  
 
 											<div class="contentline" id="WC_SingleShipmentSummary_div_25"></div>
 

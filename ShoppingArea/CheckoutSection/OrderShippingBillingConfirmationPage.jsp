@@ -55,7 +55,8 @@
 		<script type="text/javascript" src="<c:out value="${jsAssetsDir}javascript/CommonContextsDeclarations.js"/>"></script>
 		<script type="text/javascript" src="<c:out value="${jsAssetsDir}javascript/CommonControllersDeclaration.js"/>"></script>
 		
-		
+		        
+            
 		<c:choose>
 			<c:when test="${WCParam.isQuote eq true}">
 				<title><c:out value="${storeName}"/> - <fmt:message bundle="${storeText}" key="TITLE_QUOTE_CONFIRMATION"/></title>
@@ -166,6 +167,8 @@
 												<div class="right_border"></div>
 											</a>
 										</div>
+                                            
+                                            
 
 										<div class="crumb" id="WC_OrderShippingBillingConfirmationPage_div_4">
 											<c:set var="ordStatus" value="${order.orderStatus}"/>
@@ -267,12 +270,21 @@
 	                     
 									<!-- Main Content Start -->
 									<div id="box">
-										<div class="main_header" id="WC_OrderShippingBillingConfirmationPage_div_5">
+										
+                                        
+                                        <!-- aca agregamos la otra pleca gris --> 
+                                        <div class="main_header headingtext gris" id="WC_OrderShippingBillingConfirmationPage_div_5">
+                                            <img class="palomita" src="<c:out value='${jspStoreImgDir}images/'/>ok_az.gif">
+                                            <div class="separador_blanco"></div>
 											<div class="left_corner" id="WC_OrderShippingBillingConfirmationPage_div_6"></div>
 											<div class="headingtext" id="WC_OrderShippingBillingConfirmationPage_div_7"><span class="main_header_text" role="heading" aria-level="1"><fmt:message bundle="${storeText}" key="BCT_SHIPPING_INFO"/></span></div>
 											<div class="right_corner" id="WC_OrderShippingBillingConfirmationPage_div_8"></div>
 											<%@ include file="../../Snippets/ReusableObjects/CheckoutTopESpotDisplay.jspf"%>			
 										</div>
+                                            
+                                                                                
+                                                                                       
+                                            
 										<div class="contentline" id="WC_OrderShippingBillingConfirmationPage_div_9"></div>
 										<div class="body shipping_billing_height" id="WC_OrderShippingBillingConfirmationPage_div_13">
 											<div id="shipping">
@@ -559,12 +571,18 @@
 												<%out.flush();%>
 											</c:when>
 										</c:choose>
-										<div class="main_header" id="WC_OrderShippingBillingConfirmationPage_div_21">
+										
+                                                
+                                        <!-- aca agregamos la otra pleca gris -->        
+                                        <div class="main_header headingtext gris" id="WC_OrderShippingBillingConfirmationPage_div_21">
+                                            <img class="palomita" src="<c:out value='${jspStoreImgDir}images/'/>ok_az.gif">
+                                            <div class="separador_blanco"></div>
 											<div class="left_corner_straight" id="WC_OrderShippingBillingConfirmationPage_div_22"></div>
 											<div class="headingtext" id="WC_OrderShippingBillingConfirmationPage_div_23"><span class="main_header_text"><fmt:message bundle="${storeText}" key="BILL_BILLING_INFO"/></span></div>
 											<div class="right_corner_straight" id="WC_OrderShippingBillingConfirmationPage_div_24"></div>
 										</div>
-	
+                                                
+                                        	
 										<div class="contentline" id="WC_OrderShippingBillingConfirmationPage_div_25"></div>
 	                            
 										<%-- Hide the PayInStoreEmailAddress field --%>
