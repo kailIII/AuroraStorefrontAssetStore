@@ -147,38 +147,59 @@
 </c:catch>
 
 <div class="shipping_address" id="WC_ShippingAddressSelectSingle_div_1">
-	<p class="title"><label for="singleShipmentAddress"><fmt:message bundle="${storeText}" key="SHIP_SHIPPING_ADDRESS_COLON"/></label></p>
+	<div><p class="title"><label for="singleShipmentAddress"><fmt:message bundle="${storeText}" key="SHIP_SHIPPING_ADDRESS_COLON"/></label></p></div>
 	<div class="shipping_address_content">
-	<p>
-	   <select class="drop_down_shipping" name="singleShipmentAddress" id="singleShipmentAddress" onChange="JavaScript:setCurrentId('singleShipmentAddress'); CheckoutHelperJS.displayAddressDetails(this.value,'Shipping');CheckoutHelperJS.updateAddressForAllItems(this);CheckoutHelperJS.showHideEditAddressLink(this,'<c:out value='${param.orderId}'/>')">
-			<c:forEach var="contactInfoIdentifier" items="${orderShipInfo.usableShippingAddress}">
-				<c:set var="hasValidAddresses" value="true"/>
-				<option value="<c:out value='${contactInfoIdentifier.addressId}'/>"
-					<c:if test="${selectedAddressId eq contactInfoIdentifier.addressId}" >
-						selected="selected"
-					</c:if>
-				>
-					<c:set var="contactInfoNickName" value="${contactInfoIdentifier.nickName}"/>
-					<c:choose>
-						<c:when test="${contactInfoNickName eq  profileShippingNickname}"><fmt:message bundle="${storeText}" key="QC_DEFAULT_SHIPPING"/></c:when>
-						<c:when test="${contactInfoNickName eq  profileBillingNickname}"><fmt:message bundle="${storeText}" key="QC_DEFAULT_BILLING"/></c:when>
-						<c:otherwise>${contactInfoNickName}</c:otherwise>
-					</c:choose>
-				</option>
-			</c:forEach>
-			<%@ include file="SingleShippingAddressSelectExt.jspf" %>
-			<%@ include file="GiftRegistrySingleShippingAddressSelectExt.jspf" %>
-		</select>
-	</p>
+
 
 	<!-- Area where selected shipping Address details is showed in short.. Needed only in case of Ajax Checkout -->
 	<flow:ifEnabled feature="AjaxCheckout"> 
-		<span id="shippingAddressDisplayArea_ACCE_Label" class="spanacce"><fmt:message bundle="${storeText}" key="ACCE_Region_Shipping"/></span>
-		<div dojoType="wc.widget.RefreshArea" id="shippingAddressDisplayArea" widgetId="shippingAddressDisplayArea" controllerId="shippingAdddressDisplayAreaController" ariaMessage="<fmt:message bundle="${storeText}" key="ACCE_Status_Shipping_Updated"/>" ariaLiveId="${ariaMessageNode}" role="region" aria-labelledby="shippingAddressDisplayArea_ACCE_Label">
+		<div>
+			<span id="shippingAddressDisplayArea_ACCE_Label" class="spanacce"><fmt:message bundle="${storeText}" key="ACCE_Region_Shipping"/></span>
+		</div>
+		<div dojoType="wc.widget.RefreshArea" id="shippingAddressDisplayArea" widgetId="shippingAddressDisplayArea" controllerId="shippingAdddressDisplayAreaController" ariaMessage="<fmt:message bundle="${storeText}" key="ACCE_Status_Shipping_Updated"/>" ariaLiveId="${ariaMessageNode}" role="region" aria-labelledby="shippingAddressDisplayArea_ACCE_Label" class="shippingAddress">
+			
+			<!-- Daniel Torres -->
+			<p>
+			   <select class="drop_down_shipping" name="singleShipmentAddress" id="singleShipmentAddress" onChange="JavaScript:setCurrentId('singleShipmentAddress'); CheckoutHelperJS.displayAddressDetails(this.value,'Shipping');CheckoutHelperJS.updateAddressForAllItems(this);CheckoutHelperJS.showHideEditAddressLink(this,'<c:out value='${param.orderId}'/>')">
+					<c:forEach var="contactInfoIdentifier" items="${orderShipInfo.usableShippingAddress}">
+						<c:set var="hasValidAddresses" value="true"/>
+						<option value="<c:out value='${contactInfoIdentifier.addressId}'/>"
+							<c:if test="${selectedAddressId eq contactInfoIdentifier.addressId}" >
+								selected="selected"
+							</c:if>
+						>
+							<c:set var="contactInfoNickName" value="${contactInfoIdentifier.nickName}"/>
+							<c:choose>
+								<c:when test="${contactInfoNickName eq  profileShippingNickname}"><fmt:message bundle="${storeText}" key="QC_DEFAULT_SHIPPING"/></c:when>
+								<c:when test="${contactInfoNickName eq  profileBillingNickname}"><fmt:message bundle="${storeText}" key="QC_DEFAULT_BILLING"/></c:when>
+								<c:otherwise>${contactInfoNickName}</c:otherwise>
+							</c:choose>
+						</option>
+					</c:forEach>
+					<%@ include file="SingleShippingAddressSelectExt.jspf" %>
+					<%@ include file="GiftRegistrySingleShippingAddressSelectExt.jspf" %>
+				</select>
+			</p>
+
 			<!-- This value is equal to value in struts-config-ext.xml for view Name AjaxAddressDisplayView -->
 			<c:import url="/${sdb.jspStoreDir}/Snippets/Member/Address/AddressDisplay.jsp">
 				<c:param name="addressId" value= "${selectedAddressId}"/>
 			</c:import>
+
+			<c:if test="${selectedAddressId != -1}" >		
+				<div class="editAddressLink hover_underline" id="editAddressLink_<c:out value='${param.orderId}'/>" style="display:block;">
+					<a class="tlignore" href="JavaScript:CheckoutHelperJS.editAddress('singleShipmentAddress','-1','<c:out value='${fn:replace(profileshipping,search01,replaceStr01)}'/>','<c:out value='${fn:replace(profilebilling,search01,replaceStr01)}'/>');CheckoutHelperJS.setLastAddressLinkIdToFocus('WC_ShippingAddressSelectSingle_link_1');" id="WC_ShippingAddressSelectSingle_link_1">
+						<!--<img src="<c:out value='${jspStoreImgDir}'/>images/edit_icon.png" alt="" />-->
+						<fmt:message bundle="${storeText}" key="ADDR_EDIT_ADDRESS"/>
+					</a>
+				</div>
+				<wcf:url var="AddressEditView" value="AddressEditView" type="Ajax">
+					<wcf:param name="langId" value="${WCParam.langId}" />
+					<wcf:param name="storeId" value="${WCParam.storeId}" />
+					<wcf:param name="catalogId" value="${WCParam.catalogId}" />
+				</wcf:url>
+			</c:if>
+
 		</div>
 		<script type="text/javascript">
 			dojo.addOnLoad(function() { 
@@ -209,28 +230,23 @@
 <%-- Use the value of personalAddressAllowed to hide/show the create/edit address link. --%>
 <c:if test="${order.x_isPersonalAddressesAllowedForShipping}">
 	<!-- Show Edit button only if there are any valid address.. -->
-	<c:if test="${selectedAddressId != -1}" >
-		<br/>
-		<div class="editAddressLink hover_underline" id="editAddressLink_<c:out value='${param.orderId}'/>" style="display:block;">
-			<a class="tlignore" href="JavaScript:CheckoutHelperJS.editAddress('singleShipmentAddress','-1','<c:out value='${fn:replace(profileshipping,search01,replaceStr01)}'/>','<c:out value='${fn:replace(profilebilling,search01,replaceStr01)}'/>');CheckoutHelperJS.setLastAddressLinkIdToFocus('WC_ShippingAddressSelectSingle_link_1');" id="WC_ShippingAddressSelectSingle_link_1">
-				<img src="<c:out value='${jspStoreImgDir}'/>images/edit_icon.png" alt="" />
-				<fmt:message bundle="${storeText}" key="ADDR_EDIT_ADDRESS"/>
-			</a>
-		</div>
-		<wcf:url var="AddressEditView" value="AddressEditView" type="Ajax">
-			<wcf:param name="langId" value="${WCParam.langId}" />
-			<wcf:param name="storeId" value="${WCParam.storeId}" />
-			<wcf:param name="catalogId" value="${WCParam.catalogId}" />
-		</wcf:url>
-	</c:if>
 	
 	<!-- new address link -->
-	<div class="newShippingAddressButton hover_underline" id="newShippingAddressLink">
-			<a class="tlignore" href="JavaScript:setCurrentId('singleShipmentAddress'); CheckoutHelperJS.addNewShippingAddress('Shipping');JavaScript:setCurrentId('singleShipmentAddress'); CheckoutHelperJS.updateAddressForAllItems('singleShipmentAddress');CheckoutHelperJS.setLastAddressLinkIdToFocus('WC_ShippingAddressSelectSingle_link_2');" id="WC_ShippingAddressSelectSingle_link_2">
-				<img src="<c:out value='${jspStoreImgDir}${vfileColor}'/>table_plus_add.png" alt="" />
-				<fmt:message bundle="${storeText}" key="ADDR_CREATE_ADDRESS"/>
-			</a>
+	<div class="newShippingAddressButton hover_underline shippingAddress" id="newShippingAddressLink">
+			<div>
+				<div>
+					<div>
+						<a class="tlignore" href="JavaScript:setCurrentId('singleShipmentAddress'); CheckoutHelperJS.addNewShippingAddress('Shipping');JavaScript:setCurrentId('singleShipmentAddress'); CheckoutHelperJS.updateAddressForAllItems('singleShipmentAddress');CheckoutHelperJS.setLastAddressLinkIdToFocus('WC_ShippingAddressSelectSingle_link_2');" id="WC_ShippingAddressSelectSingle_link_2">
+							<img src="<c:out value='${jspStoreImgDir}${vfileColor}'/>table_plus_add.png" alt="" />
+						</a>
+					</div>
+					<a class="tlignore" href="JavaScript:setCurrentId('singleShipmentAddress'); CheckoutHelperJS.addNewShippingAddress('Shipping');JavaScript:setCurrentId('singleShipmentAddress'); CheckoutHelperJS.updateAddressForAllItems('singleShipmentAddress');CheckoutHelperJS.setLastAddressLinkIdToFocus('WC_ShippingAddressSelectSingle_link_2');" id="WC_ShippingAddressSelectSingle_link_2">
+					<fmt:message bundle="${storeText}" key="ADDR_CREATE_ADDRESS"/>
+					</a>
+				</div>
+			</div>
 	</div>
+	
 </c:if>
 
 <script type="text/javascript">
