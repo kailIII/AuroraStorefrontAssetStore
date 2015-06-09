@@ -3640,14 +3640,16 @@ a#WC_CheckoutLogonf_links_1 {
 	padding: 15px 15px;
 	margin-bottom: 15px;
 	margin-right: 15px;
-	width: 159px;
+	width: 180px;
 	min-height: 190px;
-	height: 190px;
 	box-sizing: border-box;
 }
 
 .shippingAddress:hover{
 	border: 1px solid #64afff;
+}
+.newShippingAddressButton{
+	height: 232px;
 }
 
 .newShippingAddressButton > div{
