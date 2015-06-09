@@ -724,7 +724,9 @@
 						</c:otherwise>
 					</c:choose>
 					<c:if test="${WCParam.currentSelection ne 'SubscriptionDetailSlct'}">
-						<div id="total_breakdown">
+						
+                        <!--
+                        <div id="total_breakdown">
 							<table id="order_total" cellpadding="0" cellspacing="0" border="0" role="presentation">
 
 								<%-- ORDER SUBTOTAL--%>
@@ -825,6 +827,10 @@
 								</tr>
 							</table>
 						</div>
+                             -->       
+                                    
+                                    
+                                    
 					</c:if>
 					<br clear="all" />
 				</div>

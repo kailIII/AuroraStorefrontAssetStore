@@ -3506,6 +3506,12 @@ Empty Shopping Cart
 	padding-right: 0;
 	float: left;
 }
+#total_breakdown #order_total2{
+    width: 100%;
+    display: inline-block;
+    padding-right: 0;
+    float: left;
+}
 
 
 div#WC_PromotionCodeDisplay_div_1{

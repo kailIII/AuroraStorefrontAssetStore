@@ -377,6 +377,12 @@
 	text-align: left;
 }
 
+#order_total2 .align_right {
+    text-align: right;
+    width: 50%;
+    font-size: 13px;
+}
+
 #order_details .shipAddress{
 	min-width: 100px;
 	max-width: 150px;

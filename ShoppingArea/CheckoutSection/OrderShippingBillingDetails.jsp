@@ -818,8 +818,13 @@ need to first assign a valid address id to these order items before proceeding w
 													</c:when>
 												</c:choose>
 												<br/>&nbsp;		
-			 
-												<div class="main_header" id="WC_ShipmentDisplay_div_22">
+			                                     
+                                                        
+                                                        
+                                                <!-- aca agregamos la otra pleca gris -->        
+                                                <div class="main_header gris" id="WC_ShipmentDisplay_div_22">
+                                                    <p class="numero_head">2</p>
+                                                    <div class="separador_blanco"></div>
 													<div class="left_corner_straight" id="WC_ShipmentDisplay_div_23"></div>
 													<div class="headingtext" id="WC_ShipmentDisplay_div_24"><span aria-level="1" class="main_header_text" role="heading"><fmt:message bundle="${storeText}" key="BILL_BILLING_INFO"/></span></div>
 													<div class="right_corner_straight" id="WC_ShipmentDisplay_div_25"></div>
