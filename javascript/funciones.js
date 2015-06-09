@@ -20,11 +20,11 @@ console.log("mayor a 952");
 		function () {
 			claseMenu = $(this).attr('rel');			
 			$("."+claseMenu).html();
-	   		$('div.'+claseMenu).slideDown(1);
+	   		$('div.'+claseMenu).show(1);
 		}, 
 		function () {
 			claseMenu = $(this).attr('rel');
-		   $('div.'+claseMenu).slideUp(1);
+		   $('div.'+claseMenu).hide(1);
 		}
 	);
 	
