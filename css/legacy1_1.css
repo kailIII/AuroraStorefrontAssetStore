@@ -2072,7 +2072,7 @@ tr.dijitCalendarMonthContainer {
 #billing_summary .billing_method, .billing_summary .billing_method {
 	float:left;
 	padding:0px 5px 5px 0px;
-	width:320px;
+	/* width:320px; Arturo */
 }
 .shipping_billing_height {
 	height:100%;
@@ -4408,6 +4408,15 @@ td.item .listPrice {
     color: #55667a;
     text-align: left;
     width: 100%;
+}
+
+.gris_sidebar{
+    background-color: rgb(245, 245, 245);
+    font-size: .82em;
+    color: #55667a;
+    text-align: left;
+    width: 100%;
+    padding: 5px 0px 5px 10px;
 }
 
 .gris .palomita{
