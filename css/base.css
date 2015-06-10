@@ -179,7 +179,7 @@ dl, ol, ul {
     color: #fff !important;
     cursor: pointer !important;
     display: inline-block !important;
-    font-size: 12px !important;
+    font-size: 0.95em !important;
     text-decoration: none !important;
     background-image: none !important;
 	min-width: 160px;
@@ -2745,8 +2745,9 @@ background-color:#f7f7f7;
 div.namePartPriceContainer > div > span.price {
 	color: #fa8846 !important;
 	display: block;
-	font-size: 30px !important;
-	font-weight: bold;
+	font-size: 1.9em !important;
+	font-family: Ubuntu,Arial,Helvetica !important;
+	font-weight: normal;
 	line-height: 20px !important;
 }
 
