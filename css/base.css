@@ -3936,3 +3936,25 @@ Alejandro Paredes
     width: 95%;
 }
 
+.widget_product_image_viewer > .content > .other_views > ul > li {
+    height: 74px !important;
+    width: 74px !important;
+}
+
+@media (max-width: 735px) {
+	.product_main_image{
+		width: 85% !important;
+	}
+	
+	.widget_product_image_viewer > .content > .other_views > ul > li {
+		height: 74px !important;
+		width: 74px !important;
+	}
+}
+
+@media (max-width: 650px) {
+	.product_main_image{
+		width: 75% !important;
+	}
+}
+
