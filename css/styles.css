@@ -6273,7 +6273,9 @@ div[dijitpopupparent^='WC_UserMemberGroupManagement_'] > .dijitSelectMenu table 
 		right: 80px;
 		top: 40px;
 		width: 290px;
-		z-index: 100;
+	    left: 50%;
+	    margin-left: -145px;
+        z-index: 100;
 	}
 	
 	#Header_GlobalLogin_signInDropdown.loginMenuDropdown.active {
@@ -7961,7 +7963,7 @@ div[dijitpopupparent^='OrganizationListWidget'] > .dijitSelectMenu table tr.diji
 }
 
 .nonRWDPage {
-	min-width: 600px;
+	/* aca comentamos el min para que no se salgan los contenidos mobiles   min-width: 600px; */
 }
 
 .nonRWDPageB {

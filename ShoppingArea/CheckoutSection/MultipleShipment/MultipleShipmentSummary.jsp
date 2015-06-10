@@ -260,12 +260,21 @@
 
 									<!-- Content Start -->
 									<div id="box">
-										<div class="main_header" id="WC_MultipleShipmentSummary_div_5">
+										
+                                        
+                                        
+                                        <!-- aca agregamos la otra pleca gris -->
+                                        <div class="main_header gris" id="WC_MultipleShipmentSummary_div_5">
+                                            <img class="palomita" src="<c:out value='${jspStoreImgDir}images/'/>ok_az.gif">
+                                            <div class="separador_blanco"></div>
 											<div class="left_corner" id="WC_MultipleShipmentSummary_div_6"></div>
 											<div class="headingtext" id="WC_MultipleShipmentSummary_div_7"><span aria-level="1" class="main_header_text" role="heading"><fmt:message bundle="${storeText}" key="BCT_SHIPPING_INFO"/></span></div>
 											<div class="right_corner" id="WC_MultipleShipmentSummary_div_8"></div>
 											<%@ include file="../../../Snippets/ReusableObjects/CheckoutTopESpotDisplay.jspf"%>
 										</div>
+                                            
+                                            
+                                            
 										<div class="contentline" id="WC_MultipleShipmentSummary_div_9"></div>
 										<div class="body left" id="WC_MultipleShipmentSummary_div_13">
 											<div id="shipping">
@@ -358,11 +367,24 @@
 											</c:when>
 										</c:choose>
 										<br/>&nbsp;
-										<div class="main_header" id="WC_MultipleShipmentSummary_div_20">
+										
+                                                
+                                                
+                                                
+                                                
+                                        <!-- aca agregamos la otra pleca gris -->
+                                                <div class="main_header gris" id="WC_MultipleShipmentSummary_div_20">
+                                                    <img class="palomita" src="<c:out value='${jspStoreImgDir}images/'/>ok_az.gif">
+                                                    <div class="separador_blanco"></div>
 											<div class="left_corner_straight" id="WC_MultipleShipmentSummary_div_21"></div>
 											<div class="headingtext" id="WC_MultipleShipmentSummary_div_22"><span aria-level="1" class="main_header_text" role="heading"><fmt:message bundle="${storeText}" key="BILL_BILLING_INFO"/></span></div>
 											<div class="right_corner_straight" id="WC_MultipleShipmentSummary_div_23"></div>
 										</div>
+                                                
+                                                
+                                                
+                                                
+                                                
 
 										<div class="contentline" id="WC_MultipleShipmentSummary_div_24"></div>
 

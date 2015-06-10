@@ -71,7 +71,7 @@
 			</div>
 		</c:if>
 	</flow:ifEnabled>
-	
+	<!--
 	<table id="order_total" cellpadding="0" cellspacing="0" border="0" role="presentation">
 		
 		<%-- ORDER SUMMARY LINE - order subtotal --%>
@@ -299,11 +299,15 @@
 		</tr>
 	</c:if>
 	</table>
+<<<<<<< HEAD
 
 	<!--  -->
 	<%out.flush();%>
 		<c:import url="/${sdb.jspStoreDir}/Snippets/Order/Cart/CheckoutLogon.jsp"/>
 	<%out.flush();%>
+=======
+-->
+>>>>>>> 06e2faf6c0ad13571258ad4eba741abc7cd65c09
 </div>
 
 <flow:ifEnabled feature="CouponWallet">

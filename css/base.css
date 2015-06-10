@@ -213,7 +213,8 @@ dl, ol, ul {
     background-color: #767f88;
 }
 
-.btnNaranja{ color:#FFF;
+.btnNaranja{ 
+	color:#FFF;
 	padding:10px 55px;
 	font-size:.95em;
 	clear:both;
@@ -3504,6 +3505,12 @@ Empty Shopping Cart
 	padding-right: 0;
 	float: left;
 }
+#total_breakdown #order_total2{
+    width: 100%;
+    display: inline-block;
+    padding-right: 0;
+    float: left;
+}
 
 
 div#WC_PromotionCodeDisplay_div_1{
@@ -3511,11 +3518,12 @@ div#WC_PromotionCodeDisplay_div_1{
 }
 
 div#WC_PromotionCodeDisplay_div_2{
-	width: 60%;
+    margin: 0px;
 }
 
 div#WC_PromotionCodeDisplay_div_2 > input#promoCode{
-	width: 100%;
+	width: 50%;
+    margin: 0px;
 }
 
 #total_breakdown #promotions .promotion_input,
@@ -3899,7 +3907,7 @@ Alejandro Paredes
 #add2CartBtn {
 	width: 58px !important;
 	height: 17px !important;
-    background-color: #fa8039 !important;
+    background-color: #fa8039;
     border: 0 none !important;
     border-radius: 5px !important;
     clear: both !important;
@@ -3911,7 +3919,7 @@ Alejandro Paredes
     text-decoration: none !important;
 }
 #add2CartBtn:hover {
-    background-color: #fa6b19 !important;
+    background-color: #fa6b19;
 }
 
 .product_page_content .tab > .content {
@@ -4007,8 +4015,54 @@ Alejandro Paredes
 /*#shopping_cart_product_table_tall {display: none;} */
 
 
-
-
 #kids1 {
     width: 95%;
+}
+
+.widget_product_image_viewer > .content > .other_views > ul > li {
+    height: 74px !important;
+    width: 74px !important;
+}
+
+@media (max-width: 735px) {
+	.product_main_image{
+		width: 85% !important;
+	}
+	
+	.widget_product_image_viewer > .content > .other_views > ul > li {
+		height: 74px !important;
+		width: 74px !important;
+	}
+}
+
+@media (max-width: 650px) {
+	.product_main_image{
+		width: 75% !important;
+		margin: 0 auto !important;
+	}
+	
+	.image_container{
+		float: none;
+		position: relative;
+		width: 380px;
+		margin: 0 auto;
+	}
+	
+	.widget_product_image_viewer > .content > .other_views > ul {
+		padding-left: 0px !important;
+		margin: 0 auto;
+	}
+}
+
+.txtAzulMed {
+    color: #69b1ff !important;
+    font-size: 0.8em !important;
+    line-height: 1.2 !important;
+}
+
+
+@media (min-width: 601px) and (max-width: 650px) {
+	.zoom{
+		width: 300px !important;
+	}
 }
