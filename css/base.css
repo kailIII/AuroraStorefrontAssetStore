@@ -3955,6 +3955,19 @@ Alejandro Paredes
 @media (max-width: 650px) {
 	.product_main_image{
 		width: 75% !important;
+		margin: 0 auto !important;
+	}
+	
+	.image_container{
+		float: none;
+		position: relative;
+		width: 380px;
+		margin: 0 auto;
+	}
+	
+	.widget_product_image_viewer > .content > .other_views > ul {
+		padding-left: 0px !important;
+		margin: 0 auto;
 	}
 }
 
@@ -3964,3 +3977,9 @@ Alejandro Paredes
     line-height: 1.2 !important;
 }
 
+
+@media (min-width: 601px) and (max-width: 650px) {
+	.zoom{
+		width: 300px !important;
+	}
+}
