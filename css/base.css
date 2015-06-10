@@ -3811,8 +3811,6 @@ div#WC_CheckoutLogonf_div_0{
 	.button_text.tiny{
 		margin-top: 10px !important;
 	}
-
-
 }
 
 .sort-by-input,
@@ -3855,6 +3853,20 @@ div#orderByDropdown_4_-2011_3416{
 #order_details input{
 	margin-top: 4px;
 }
+
+#facet_nav_collapsible_my_account.facetWidget{
+	overflow: hidden;
+}
+
+#facet_nav_collapsible_my_account.facetWidget .optionContainer .title{
+	display: none;
+}
+
+
+	#facet_nav_collapsible_my_account.collapsible[aria-expanded="false"] > .content{
+		max-height: none !important;
+	}
+
 /** **/
 /** **/
 /** **/

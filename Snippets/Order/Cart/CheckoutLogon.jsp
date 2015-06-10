@@ -86,7 +86,7 @@
 	</flow:ifEnabled>
 </c:if>
 
-<c:if test="${userType == 'G'}">	
+<c:if test="${userType == 'G'  && !empty order.orderItem}">	
 	<wcf:url var="orderMove" value="RESTMoveOrderItem" type="Ajax">		
 		<wcf:param name="toOrderId" value="."/>
 		<flow:ifEnabled feature="MultipleActiveOrders">
