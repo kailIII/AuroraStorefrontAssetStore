@@ -71,7 +71,7 @@
 			</div>
 		</c:if>
 	</flow:ifEnabled>
-	
+	<!--
 	<table id="order_total" cellpadding="0" cellspacing="0" border="0" role="presentation">
 		
 		<%-- ORDER SUMMARY LINE - order subtotal --%>
@@ -299,7 +299,7 @@
 		</tr>
 	</c:if>
 	</table>
-
+-->
 </div>
 
 <flow:ifEnabled feature="CouponWallet">

@@ -7963,7 +7963,7 @@ div[dijitpopupparent^='OrganizationListWidget'] > .dijitSelectMenu table tr.diji
 }
 
 .nonRWDPage {
-	min-width: 600px;
+	/* aca comentamos el min para que no se salgan los contenidos mobiles   min-width: 600px; */
 }
 
 .nonRWDPageB {
