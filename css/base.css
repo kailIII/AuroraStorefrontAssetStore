@@ -3519,11 +3519,12 @@ div#WC_PromotionCodeDisplay_div_1{
 }
 
 div#WC_PromotionCodeDisplay_div_2{
-	width: 60%;
+    margin: 0px;
 }
 
 div#WC_PromotionCodeDisplay_div_2 > input#promoCode{
-	width: 100%;
+	width: 50%;
+    margin: 0px;
 }
 
 #total_breakdown #promotions .promotion_input,

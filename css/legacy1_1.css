@@ -381,6 +381,44 @@
     text-align: right;
     width: 50%;
     font-size: 13px;
+    color: rgb(128, 128, 128);
+    line-height: 25px;
+}
+
+#order_total2 .align_left {
+    text-align: left;
+    width: 50%;
+    font-size: 12px;
+    color: rgb(128, 128, 128);
+    line-height: 25px;
+}
+
+#order_total2 .align_right_total {
+    text-align: right;
+    width: 50%;
+    font-size: 18px;
+    color: #1b83ff;
+}
+
+#order_total2 .align_left_total {
+    text-align: left;
+    width: 50%;
+    font-size: 17px;
+    font-weight: bold;
+    color: #1b83ff;
+}
+.linea_total{
+    margin: 10px 0px;
+    height: 5px;
+}
+
+.separador_total{
+    margin: 30px 0px 15px 0px;    
+}
+
+.promotion_btn2{
+    float: right;
+    width: 30%;
 }
 
 #order_details .shipAddress{
