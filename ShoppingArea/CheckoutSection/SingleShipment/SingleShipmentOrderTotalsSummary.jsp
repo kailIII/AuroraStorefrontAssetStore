@@ -300,6 +300,10 @@
 	</c:if>
 	</table>
 
+	<!--  -->
+	<%out.flush();%>
+		<c:import url="/${sdb.jspStoreDir}/Snippets/Order/Cart/CheckoutLogon.jsp"/>
+	<%out.flush();%>
 </div>
 
 <flow:ifEnabled feature="CouponWallet">

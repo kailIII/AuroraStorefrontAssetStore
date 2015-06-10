@@ -3791,7 +3791,7 @@ div#WC_CheckoutLogonf_div_0{
 
 }
 
-@media (min-width: 1px) and (max-width: 600px){
+@media (max-width: 600px){
 	#promoCode{
 		width: 100% !important;
 	}
@@ -3803,6 +3803,41 @@ div#WC_CheckoutLogonf_div_0{
 	.button_text.tiny{
 		margin-top: 10px !important;
 	}
+
+
+}
+
+.sort-by-input,
+.items-per-input{
+	width: 49%;
+	display: inline-block;
+	vertical-align: top;
+	box-sizing: border-box;
+}
+
+@media (max-width: 952px){
+	.sort-by-input,
+	.items-per-input{
+		margin: 0 auto;
+		margin-bottom: 15px;
+		text-align: right;
+		width: 80%;
+		display: block;
+		box-sizing: border-box;
+	}
+
+	.productListingWidget div.orderByDropdown{
+		margin-right: 0px;
+	}
+}
+
+div#orderByDropdown_4_-2011_3416{
+	max-width: 145px;
+}
+
+.dijitInputField.dijitButtonText{
+	height: 21px;
+	overflow: hidden;
 }
 
 .carousel > .header {
