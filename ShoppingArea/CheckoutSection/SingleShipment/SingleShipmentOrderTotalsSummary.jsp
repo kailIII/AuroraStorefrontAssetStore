@@ -298,16 +298,13 @@
 			</c:choose>
 		</tr>
 	</c:if>
-	</table>
-<<<<<<< HEAD
+	</table> -->
 
 	<!--  -->
-	<%out.flush();%>
+	<%--<%out.flush();%>
 		<c:import url="/${sdb.jspStoreDir}/Snippets/Order/Cart/CheckoutLogon.jsp"/>
 	<%out.flush();%>
-=======
--->
->>>>>>> 06e2faf6c0ad13571258ad4eba741abc7cd65c09
+	--%>
 </div>
 
 <flow:ifEnabled feature="CouponWallet">
