@@ -931,7 +931,7 @@ need to first assign a valid address id to these order items before proceeding w
                                                                 
                                                                 
                                                                 <!-- aca agregamos la otra pleca gris -->
-                                                                <div class="gris_sidebar" >
+                                                                <div class="gris_sidebar">
                                                                     <span aria-level="1" role="heading">
                                                                         <fmt:message bundle="${storeText}" key="BILL_BILLING_INFO"/>
                                                                     </span>

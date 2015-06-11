@@ -593,7 +593,7 @@
 
 
                                                         <!-- aca agregamos la otra pleca gris -->
-                                                        <div class="gris_sidebar" >
+                                                        <div class="gris_sidebar" style="margin-top:35px;">
                                                             <span aria-level="1" role="heading">
                                                                 <fmt:message bundle="${storeText}" key="BILL_BILLING_INFO"/>
                                                             </span>
@@ -758,7 +758,10 @@
 
                                                                                         <c:choose>
                                                                                             <c:when test="${isOrderScheduled}">
-                                                                                                <a role="button" class="button_primary button_left_padding tlignore" id="singleOrderSummary" tabindex="0" href="javascript:setCurrentId('singleOrderSummary'); CheckoutHelperJS.scheduleOrder(<c:out value='${order.orderId}'/>,<c:out value='${recurringOrderEnabled}'/>,'<c:out value='${userType}'/>')">
+                                                                                                
+                                                                                                
+                                                                                                
+                                                                                                <a role="button" style="max-width: 50%; margin: 0px;" class="button_primary button_left_padding tlignore" id="singleOrderSummary" tabindex="0" href="javascript:setCurrentId('singleOrderSummary'); CheckoutHelperJS.scheduleOrder(<c:out value='${order.orderId}'/>,<c:out value='${recurringOrderEnabled}'/>,'<c:out value='${userType}'/>')">
                                                                                                     <div class="left_border"></div>
                                                                                                     <c:choose>
                                                                                                         <c:when test="${scheduledOrderEnabled == 'true'}">
@@ -770,13 +773,19 @@
                                                                                                     </c:choose>
                                                                                                     <div class="right_border"></div>
                                                                                                 </a>
+                                                                                                
+                                                                                                
+                                                                                                
                                                                                             </c:when>
                                                                                             <c:otherwise>
-                                                                                                <a role="button" class="button_primary button_left_padding tlignore" id="singleOrderSummary" tabindex="0" href="javascript:setCurrentId('singleOrderSummary'); CheckoutHelperJS.checkoutOrder(<c:out value="${order.orderId}"/>,'<c:out value='${userType}'/>','<c:out value='${addressListForMailNotification}'/>')">
+                                                                                                
+                                                                                                
+                                                                                                <a role="button" style="max-width: 50%; margin: 0px;" class="button_primary button_left_padding tlignore" id="singleOrderSummary" tabindex="0" href="javascript:setCurrentId('singleOrderSummary'); CheckoutHelperJS.checkoutOrder(<c:out value="${order.orderId}"/>,'<c:out value='${userType}'/>','<c:out value='${addressListForMailNotification}'/>')">
                                                                                                     <div class="left_border"></div>
                                                                                                     <div class="button_text btnAzul"><fmt:message bundle="${storeText}" key="ORDER"/></div>
                                                                                                     <div class="right_border"></div>
                                                                                                 </a>
+                                                                                                
 
                                                                                                 <flow:ifEnabled feature="EnableQuotes">
                                                                                                     <div id="WC_SingleShipmentSummary_div_31_4">

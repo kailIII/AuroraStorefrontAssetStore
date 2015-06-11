@@ -212,9 +212,10 @@
             <input type="hidden" name="finalView" value="AjaxOrderItemDisplayView" id="WC_PromotionCodeDisplay_FormInput_finalView_In_PromotionCodeForm_1"/>
 
                         
-            <div class="promotion_code separador_total" id="WC_PromotionCodeDisplay_div_1">
+            <div class="promotion_code separador_total gris_sidebar" id="WC_PromotionCodeDisplay_div_1">
                 <label for="promoCode"><fmt:message bundle="${storeText}" key="PROMOTION_CODE"/></label>
-            </div>
+            </div>                   
+            
 
             <div class="promotion_input" id="WC_PromotionCodeDisplay_div_2">
                 <input type="text" class="input" size="6" name="promoCode" id="promoCode" onchange="javaScript:TealeafWCJS.processDOMEvent(event);" onkeypress="if(event.keyCode==13) JavaScript:CheckoutHelperJS.applyPromotionCode('PromotionCodeForm','<c:out value='${returnView}'/>')"/>
@@ -344,6 +345,9 @@
     
     
     <!-- comenzamos con el resumen de la compra -->    
+    <div class="promotion_code separador_total gris_sidebar" id="WC_PromotionCodeDisplay_div_1">
+        <label for="promoCode">Resumen de pedido</label>
+    </div>
     
     <div id="total_breakdown">
         <table id="order_total2" cellpadding="0" cellspacing="0" border="0" role="presentation">
