@@ -138,7 +138,10 @@
         
 <c:choose>
 	<c:when test = "${shipmentTypeId == 1}">
-		<flow:ifEnabled  feature="MultipleShipments">	
+		
+        
+        <!--  <%-- comentamos el boton de varios envios
+        <flow:ifEnabled  feature="MultipleShipments">	
 		   <div class="checkout_subheader" id="WC_ShipmentDisplay_div_9">		
 				<div class="checkout_subheader_content" id="WC_ShipmentDisplay_div_11"><span class="content_text"><fmt:message bundle="${storeText}" key="SHIP_MULTIPLE_SHIPMENT_MESSAGE"/></span></div>
 				<a role="button" class="button_primary header_element_align" id="WC_ShipmentDisplay_links_3" tabindex="0" href="javascript:setPageLocation('<c:out value="${MultipleShipmentPageURL}"/>')">
@@ -157,6 +160,9 @@
 				</div>
 		   </div>
 	   </flow:ifEnabled>
+           --%>   --> 
+               
+               
 	   <c:if test="${!isAjaxCheckOut}">
 			<script type="text/javascript">
 				///////////////////////////////////////////////////////////////////////
