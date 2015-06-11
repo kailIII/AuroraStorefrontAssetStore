@@ -592,11 +592,10 @@
                                                         <!-- comenzamos con el resumen de la compra -->    
 
 
-                                                        <!-- aca agregamos la otra pleca gris -->
-                                                        <div class="gris_sidebar" style="margin-top:35px;">
-                                                            <span aria-level="1" role="heading">
-                                                                <fmt:message bundle="${storeText}" key="BILL_BILLING_INFO"/>
-                                                            </span>
+                                                        <div class="separador_total gris_sidebar" id="WC_PromotionCodeDisplay_div_1">
+                                                            <c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
+                                                                <c:param name="emsName" value="Resumen_de_pedido" />
+                                                            </c:import>
                                                         </div>
 
 

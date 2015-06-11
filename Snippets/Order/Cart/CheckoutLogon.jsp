@@ -182,6 +182,11 @@
 	</form>
 </c:if>
 
+    
+    
+    
+<c:if test="${!empty order.orderItem}"><!-- codigo para eliminar el sidebar solamente con el carrito vacio -->
+        
 <div id="WC_CheckoutLogonf_div_9">
     
     
@@ -338,15 +343,16 @@
     
     
     
-    
-    
+   
     
     
     
     
     <!-- comenzamos con el resumen de la compra -->    
-    <div class="promotion_code separador_total gris_sidebar" id="WC_PromotionCodeDisplay_div_1">
-        <label for="promoCode">Resumen de pedido</label>
+    <div class="separador_total gris_sidebar" id="WC_PromotionCodeDisplay_div_1">
+            <c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
+                <c:param name="emsName" value="Resumen_de_pedido" />
+            </c:import>
     </div>
     
     <div id="total_breakdown">
@@ -530,6 +536,7 @@
 				</div>
 			</c:if>
 		</div>
+        </c:if><!-- aca terminamos el codigo de Daniel -->
 	</c:if>
 
 	<flow:ifDisabled feature="AjaxCheckout">

@@ -182,13 +182,14 @@ dl, ol, ul {
     font-size: 0.95em !important;
     text-decoration: none !important;
     background-image: none !important;
-	min-width: 160px;
-	max-width: 160px;
+	min-width: 130px;
+	max-width: 130px;
     color: #FFF !important;
     padding: 10px !important;
     border: 0 !important;
     margin: 10px auto 0 auto !important;
     cursor: pointer !important;
+    box-sizing: border-box;
 }
 
 .btnAzul:hover {
@@ -208,8 +209,9 @@ dl, ol, ul {
     cursor: pointer;
     text-decoration: none;
     padding: 10px !important;
-	min-width: 160px;
-	max-width: 160px;
+	min-width: 130px;
+	max-width: 130px;
+    box-sizing: border-box;
 }
 
 .btnGris:hover {

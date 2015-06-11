@@ -210,7 +210,35 @@
 <input type="hidden" name="OrderTotalAmount" value="<c:out value='${pgorder.grandTotal}'/>" id="OrderTotalAmount" />
 <input type="hidden" name="currentPageNumber" value="${currentPage}" id="currentPageNumber"/>
 
- <table id="order_details" cellpadding="0" cellspacing="0" border="0" width="100%" summary="<fmt:message bundle="${storeText}" key="SHOPCART_TABLE_CONFIRM_SUMMARY"  />">
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <!-- aca agregamos la otra pleca gris -->        
+                    <div class="main_header gris">
+                        <p class="numero_head">2</p>
+                        <div class="separador_blanco"></div>
+                        <div class="left_corner_straight"></div>
+                        <div class="headingtext" id="WC_ShipmentDisplay_div_24"><span aria-level="1" class="main_header_text" role="heading"><c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
+                            <c:param name="emsName" value="Resumen_de_Productos" />
+                            </c:import></span></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+<table id="order_details" cellpadding="0" cellspacing="0" border="0" width="100%" summary="<fmt:message bundle="${storeText}" key="SHOPCART_TABLE_CONFIRM_SUMMARY"  />">
 	<c:if test="${isChinaStore}">
 	<tr class="orderDetailsHeader"><td colspan="5"><fmt:message bundle="${storeText}" key="ORDER_SUMMARY"  /></td></tr>
 	</c:if>
@@ -642,7 +670,7 @@
 					</c:otherwise>
 				</c:choose>
 			</td>
-                
+           
                 
                 
                 

@@ -143,6 +143,25 @@ as well as Order Confirmation page
 dojo.addOnLoad(function(){CommonControllersDeclarationJS.setControllerURL('OrderItemPaginationDisplayController','<c:out value='${currentOrderItemDetailPaging}'/>');});
 </script>
 
+    
+    
+    
+    
+    <!--aca agragamos la pleca gris con la palomita -->
+    <div class="headingtext gris" id="WC_SingleShipmentSummary_div_7" style="margin:30px 0px 5px 0px;">
+        <img class="palomita" src="<c:out value='${jspStoreImgDir}images/'/>ok_az.gif">
+        <div class="separador_blanco"></div>
+        <span aria-level="1" class="main_header_text" role="heading">
+        <c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
+            <c:param name="emsName" value="Resumen_de_pedido" />
+        </c:import>
+        </span>
+    </div>
+    
+    
+    
+    
+    
 <c:if test="${empty subscriptionOrderItemId}">
 	<c:if test="${numEntries > pageSize}">
 		<fmt:formatNumber var="totalPages" value="${(numEntries/pageSize)}" maxFractionDigits="0"/>
@@ -200,6 +219,14 @@ dojo.addOnLoad(function(){CommonControllersDeclarationJS.setControllerURL('Order
 		</div>
 	</c:if>
 </c:if>
+    
+    
+  
+            
+
+    
+    
+    
 
  <table id="order_details" cellpadding="0" cellspacing="0" border="0" width="100%" summary="<fmt:message bundle="${storeText}" key="SHOPCART_TABLE_CONFIRM_SUMMARY"/>">
 
@@ -244,6 +271,7 @@ dojo.addOnLoad(function(){CommonControllersDeclarationJS.setControllerURL('Order
 		<c:set var="th_count" value="${th_count + 1}"/>
             <th class="short align_center" id="SingleShipment_tableCell_totalPrice" abbr="<fmt:message bundle="${storeText}" key="TOTAL_PRICE"/>"><fmt:message bundle="${storeText}" key="TOTAL"/></th>
 	</tr>
+    
 
 	<c:if test="${!empty pagorder.orderItem}">
 		<%--
@@ -291,14 +319,7 @@ dojo.addOnLoad(function(){CommonControllersDeclarationJS.setControllerURL('Order
 		</c:if>
 	</c:if>
             
-            
-            
-            <!-- aca agregamos la otra pleca gris --> 
-            <div class="main_header headingtext gris" style="margin: 20px 0;">
-                <img class="palomita" src="<c:out value='${jspStoreImgDir}images/'/>ok_az.gif">
-                <div class="separador_blanco"></div>
-                <div class="left_corner" id="WC_OrderShippingBillingConfirmationPage_div_6"></div>
-            </div>         
+              
 
 	<c:forEach var="orderItem" items="${pagorder.orderItem}" varStatus="status">
 		<c:if test="${empty subscriptionOrderItemId || (!empty subscriptionOrderItemId && subscriptionOrderItemId == orderItem.orderItemId)}">

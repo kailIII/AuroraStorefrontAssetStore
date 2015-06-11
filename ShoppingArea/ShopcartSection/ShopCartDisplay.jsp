@@ -258,12 +258,13 @@ dojo.addOnLoad(
 				<%out.flush();%>
 				
 				<br clear="all" />
-				<%-- Daniel Torres --%>
-				<%--
-				<%out.flush();%>
+				<%-- Daniel Torres --%>				
+				
+                    
+                <%out.flush();%>
 				<c:import url="/${sdb.jspStoreDir}/Snippets/Order/Cart/CheckoutLogon.jsp"/>
 				<%out.flush();%>
-				--%>
+				
 
 				<%@ include file="../../Snippets/ReusableObjects/CheckoutBottomESpotDisplay.jspf"%>
 			</div>

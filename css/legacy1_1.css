@@ -4443,7 +4443,11 @@ td.item .listPrice {
     min-width: 35px;
     font-weight: bold;
     font-size: 1.5em;
-    
 }
 
-
+.genericESpot table, tr td table p{
+    display: table;
+    border-collapse: separate;
+    border-spacing: 0px;
+    border-color: grey;
+}
