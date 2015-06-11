@@ -4095,3 +4095,11 @@ Alejandro Paredes
 .options_dropdown_column .selectWrapper{
 	border: 1px solid #e9e9e9 !important;
 }
+
+.container_content_rightsidebar {
+    display: inline;
+    max-width: 967px;
+    overflow: hidden;
+    padding: 0 16px;
+}
+
