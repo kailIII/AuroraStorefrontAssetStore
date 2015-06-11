@@ -2400,6 +2400,14 @@ background-color:#f7f7f7;
 	  top: 115px!important;
 
 	}
+	
+	.carro-vacio{
+		width: 100% !important;
+	}
+	
+	.carro-vacio-imagen{
+		width: 100% !important;
+	}
 }
 
 
