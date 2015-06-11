@@ -2317,6 +2317,12 @@ background-color:#f7f7f7;
 	.footer-subcategory{
 		display: none;
 	}
+	
+	.inputCorreo {
+		display: inline-block !important;
+		padding-top: 10px;
+		width: auto !important;
+	}
 		
 		
 
@@ -2632,22 +2638,32 @@ background-color:#f7f7f7;
  }
  
  #txtCorreo{
-	background-image: url("../images/btnEnvio.png");
-	background-repeat: no-repeat;
-	background-position: right center; 
 	border: 1px solid gray;
-	border-radius:5px;
-	cursor: pointer; 
+	border-radius: 5px 0px 0px 5px;
+	/* cursor: pointer;  */
 	height: 25px;
-	width: 100%;
+	width: 75%;
 	padding-left: 5px;	
+	border-right-width: 0;
+	float: left;
+	
+	margin-bottom: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 1px;
+    padding-top: 1px;
  }
  
- #sendMailButton{
-	background-image: url("../images/btnEnvio.png");
-	height: 30px; 
-	width: 30px;
- }
+ #sendMailButton {
+    background-image: url("../images/btnEnvio.png");
+    border: 1px solid gray;
+    border-radius: 0 5px 5px 0;
+    float: left;
+    height: 27px;
+    width: 30px !important;
+	border-left-width: 0;
+	cursor: pointer;
+}
  
  #downFooter{
 	font-size: 11px;
@@ -4124,3 +4140,31 @@ Alejandro Paredes
     padding: 0 16px;
 }
 
+
+@media (max-width: 453px){
+	#txtCorreo{
+		padding-right: 20px !important;
+		width: auto !important;
+	}
+}
+
+@media (max-width: 440px){
+	
+	#footer-right {
+		float: none;
+		width: 100%;
+	}
+	
+	#footer-left {
+		float: none;
+		width: 100%;
+	}
+	
+	.floatleft {
+		float: none;
+	}
+	
+	.row .col12 .contentRecommendationWidget {
+		width: 85%;
+	}
+}

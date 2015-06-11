@@ -28,6 +28,7 @@
 			<div id="footer-right">
 				<div class="inputCorreo">
 					<input type="text" placeholder="Ingresa tu correo electr&oacute;nico" id="txtCorreo">
+					<div id="sendMailButton"> </div>
 					
 				</div>
 			</div>
@@ -96,3 +97,10 @@
 		&copy; Derechos Reservados, Teléfonos de México S.A.B. de C.V.
 	</div>
 </div>
+
+<script>
+$("#sendMailButton").click(function(){
+
+	alert("Envía correo");
+});
+</script>
