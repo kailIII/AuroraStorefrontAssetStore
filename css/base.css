@@ -3505,6 +3505,11 @@ div#WC_AjaxAddressBookForm_div_6 {
 
 }
 
+#WC_EmptyShopCartDisplayf_div_1 > .carro-vacio-imagen > img{
+	width: 100%;
+	max-width: 154px;
+}
+
 /***
 Empty Shopping Cart
 ***/
@@ -3834,6 +3839,12 @@ div#WC_CheckoutLogonf_div_0{
 	.button_text.tiny{
 		margin-top: 10px !important;
 	}
+
+}
+
+
+#ShopCartDisplay div#box.shopping_cart_box{
+	min-width: 0px !important;
 }
 
 .sort-by-input,

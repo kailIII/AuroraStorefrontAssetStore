@@ -14,7 +14,7 @@
 
 <!-- BEGIN EmptyShopCartDisplay.jspf-->
 <%-- Daniel Torres --%>
-<div id="WC_EmptyShopCartDisplayf_div_1"><div class="carro-vacio"><fmt:message bundle="${storeText}" key="CART_EMPTY"/><div>
+<div id="WC_EmptyShopCartDisplayf_div_1"><div class="carro-vacio"><p><fmt:message bundle="${storeText}" key="CART_EMPTY"/></p><div>
 	<div id="continueShoppingButton" class="">
 		<a href="#" id="WC_BreadCrumbTrailDisplay_links_2a" class="btnGris" tabindex="0" onclick="JavaScript:setPageLocation('<c:out value='${env_TopCategoriesDisplayURL}'/>');return false;">
 			<div class="left_border"></div>
