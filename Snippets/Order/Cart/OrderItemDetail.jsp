@@ -949,7 +949,11 @@
  
         
 <!-- aca agregamos la pleca azul -->
- <div class="checkout_subheader crecido"></div>
+ <div class="checkout_subheader crecido">
+     <c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
+         <c:param name="emsName" value="Falta_para_envio_gratis" />
+     </c:import>        
+</div>
 
 <c:if test="${numEntries > pageSize}">
 	<div id="ShopcartPaginationText2">

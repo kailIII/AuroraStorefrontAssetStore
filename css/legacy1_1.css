@@ -413,7 +413,7 @@
 }
 
 .separador_total{
-    margin: 30px 0px 15px 0px;    
+    margin: 0px 0px 15px 0px;    
 }
 
 .promotion_btn2{
@@ -4400,6 +4400,8 @@ td.item .listPrice {
     min-height: 30px;
     width: 100%;
     margin-bottom: 20px;
+    text-align: center;
+    padding: 5px 10px;
 }
 
 .gris{
@@ -4450,4 +4452,10 @@ td.item .listPrice {
     border-collapse: separate;
     border-spacing: 0px;
     border-color: grey;
+}
+.flotante_side{
+    position: absolute;
+    right: 20px;
+    top: 100px;
+    z-index: 998;
 }

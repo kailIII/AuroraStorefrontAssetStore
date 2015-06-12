@@ -828,9 +828,7 @@
                 
                 
                 
-                <!-- aca agregamos la pleca azul -->
-                <div class="checkout_subheader crecido"></div>                
-                
+              
                 
                 
 <c:if test="${numEntries > pageSize}">

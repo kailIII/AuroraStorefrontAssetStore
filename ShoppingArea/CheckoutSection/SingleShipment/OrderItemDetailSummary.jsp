@@ -650,8 +650,7 @@ dojo.addOnLoad(function(){CommonControllersDeclarationJS.setControllerURL('Order
                 
                 
                 
-<!-- aca agregamos la pleca azul -->
-<div class="checkout_subheader crecido"></div>
+
                 
                 
 

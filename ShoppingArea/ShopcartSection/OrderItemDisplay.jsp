@@ -338,14 +338,13 @@
 										</div>
 									</div>
 									
-
+                                    
 									<div class="col4 acol12">
 										<div class="logon-inside">
-											<%out.flush();%>
-												<c:import url="/${sdb.jspStoreDir}/Snippets/Order/Cart/CheckoutLogon.jsp"/>
-											<%out.flush();%>
+                                            <!-- aca dejamos el espacio del sidebar para lo demas -->
 										</div>
 									</div>
+                                    
 
 									<div class="col8 acol12">
 										<div class="">
