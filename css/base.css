@@ -4206,3 +4206,22 @@ Alejandro Paredes
 		width: 85%;
 	}
 }
+
+@media (max-width: 430px){
+	#footerCorporateInfoSection{
+		float: none;
+	}
+	
+	#footerExploreSection{
+		float: none;
+		width: 100% !important;
+	}
+	
+	
+}
+
+@media (max-width: 550px){
+	#footerRow1 > .section > ul {
+		float: none !important;
+	}
+}
