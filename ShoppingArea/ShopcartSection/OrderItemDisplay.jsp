@@ -353,7 +353,7 @@
 									
                                     
 
-									<div class="col12 acol12">
+									<div class="col8 acol12">
 										<div class="">
 												<!-- Vertical Recommendations Widget -->
 												<div class="widget_recommended_position">
