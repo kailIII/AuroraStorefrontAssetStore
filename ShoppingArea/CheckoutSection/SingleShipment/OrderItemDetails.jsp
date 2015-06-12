@@ -252,8 +252,7 @@
 		   <th class="each short" id="SingleShipment_tableCell_unitPrice" abbr="<fmt:message bundle="${storeText}" key="UNIT_PRICE"  />"><fmt:message bundle="${storeText}" key="EACH"  /></th>
           <th class="align_center short" id="SingleShipment_tableCell_totalPrice" abbr="<fmt:message bundle="${storeText}" key="TOTAL_PRICE"  />"><fmt:message bundle="${storeText}" key="TOTAL"  /></th>
           <!-- agregamos un th para que caiga el eliminar-->
-          <th class="align_center"></th>
-          
+          <th class="align_center"></th>          
           
 	  </tr>
 
@@ -826,9 +825,8 @@
  </table>
                 
                 
+                     
                 
-                
-              
                 
                 
 <c:if test="${numEntries > pageSize}">
@@ -864,7 +862,11 @@
 		</span>
 	</div>
 </c:if>
-<div class="free_gifts_block">
+                
+                  
+                
+<div class="free_gifts_block">    
+    
 	<%out.flush();%>
 		<c:import url="/${sdb.jspStoreDir}/Snippets/Marketing/Promotions/PromotionPickYourFreeGift.jsp"/>
 	<%out.flush();%>

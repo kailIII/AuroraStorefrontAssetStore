@@ -71,7 +71,7 @@
 			</div>
 		</c:if>
 	</flow:ifEnabled>
-	<!--
+	
 	<table id="order_total" cellpadding="0" cellspacing="0" border="0" role="presentation">
 		
 		<%-- ORDER SUMMARY LINE - order subtotal --%>
@@ -298,9 +298,9 @@
 			</c:choose>
 		</tr>
 	</c:if>
-	</table> -->
+	</table>
 
-	<!--  -->
+	<!-- esta seccion comentamos el resumennnnnnnnnnnnnnnnnn -->
 	<%--<%out.flush();%>
 		<c:import url="/${sdb.jspStoreDir}/Snippets/Order/Cart/CheckoutLogon.jsp"/>
 	<%out.flush();%>

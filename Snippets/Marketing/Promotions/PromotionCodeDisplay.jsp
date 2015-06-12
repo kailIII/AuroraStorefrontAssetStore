@@ -94,7 +94,7 @@
 </script>
 
                                              
-<!-- ocultamos el promo input
+<!-- ocultamos el promo input -->
 <form name="PromotionCodeForm" id="PromotionCodeForm" method="post" action="<c:out value="${PromotionCodeManage}"/>" onsubmit="javascript: return false;">
 	<%-- the "onsubmit" option in the form tag above is to handle problems when a user apply a promotion code by pressing the Enter key in the promotion code input area:
 			1) when in an AJAX checkout flow
@@ -115,8 +115,8 @@
 	<div class="promotion_input" id="WC_PromotionCodeDisplay_div_2">
 		<input type="text" class="input" size="6" name="promoCode" id="promoCode" onchange="javaScript:TealeafWCJS.processDOMEvent(event);" onkeypress="if(event.keyCode==13) JavaScript:CheckoutHelperJS.applyPromotionCode('PromotionCodeForm','<c:out value='${returnView}'/>')"/>
 	</div>
--->
-<!--
+
+<!-- -->
 	<div class="promotion_button" id="WC_PromotionCodeDisplay_div_3">
 		<div class="button_align" id="WC_PromotionCodeDisplay_div_4">
 				<a href="#" role="button" class="button_primary" id="WC_PromotionCodeDisplay_links_1" aria-labelledby="WC_PromotionCodeDisplay_links_1_ACCE_Label" tabindex="0" onclick="JavaScript:setCurrentId('WC_PromotionCodeDisplay_links_1'); CheckoutHelperJS.applyPromotionCode('PromotionCodeForm','<c:out value='${returnView}'/>');return false;">
@@ -129,7 +129,7 @@
 		<br clear="all"/>
 	</div>
 
--->
+
 	<div id="appliedPromotionCodes" class="hover_underline">                                   
 		<c:forEach var="promotionCode" items="${promoCodeListBean.promotionCode}" varStatus="status">
 			<c:set var="promoCodeString" value="${promoCodeString},${promotionCode.code}"/>
