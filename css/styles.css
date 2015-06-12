@@ -4533,7 +4533,7 @@ div#widget_breadcrumb {
 }
 
 .loginMenuDropdown .field {
-    margin-bottom: 18px;
+    margin-bottom: 15px;
 }
 
 .loginMenuDropdown .label {
@@ -4541,7 +4541,7 @@ div#widget_breadcrumb {
 }
 
 .loginMenuDropdown .input_field {
-    width: 233px;
+    width: 210px;
 }
 
 .menuDropdown .errorLabel,
@@ -4571,6 +4571,7 @@ div#widget_breadcrumb {
 .loginMenuDropdown .checkbox{	
 	padding: 5px 5px 5px 0px;
 	width: auto;
+	display:none;
 }
 
 .loginMenuDropdown .checkbox .checkedCheckBox{
@@ -4591,9 +4592,11 @@ div#widget_breadcrumb {
 }
 
 .loginMenuDropdown .footer {
-    border-top: 1px solid #BFBFBF;
+    /*border-top: 1px solid #BFBFBF;
     margin-top: 20px;
-    padding-top: 20px;
+    padding-top: 20px;*/
+  margin: 0 auto;
+  display: table;	
 }
 
 .GlobalLoginWidgetAlt{
@@ -8023,3 +8026,29 @@ div[dijitpopupparent^='OrganizationListWidget'] > .dijitSelectMenu table tr.diji
     {  
         outline: none;  
     }  
+	
+.panel.signInForm  h1{
+  line-height: 25px;
+  padding: 0;
+  margin: 0;
+}
+
+.panel.signInForm .saludo{ font-size:16px!important; font-weight:bold;}
+
+.panel.signInForm  .instruccion{font-size:13px!important; font-family:arial;}
+
+.ayudaPass{
+float: right; position:relative;/* display: block; */line-height: 15px;width: 15px;height: 15px;
+background-color: gray;border-radius: 10px;top: -19px;right: 5px;
+text-align: center;font-size: 10px;font-family: arial;color: white;font-weight: bold;
+top:8px;
+}	
+
+#Header_GlobalLogin_GlobalLogon .button_text.btnAzul{
+  margin: 0 auto!important;
+  display: table!important;
+}
+
+.txtRegistro{display: inline;}
+.ligaRegistro{ color:#1b83ff; text-decoration:underline;}
+.ligaNecesitasAyuda{ color:#1b83ff; text-decoration:underline; margin:0 auto; display:table; font-size:11px; margin-top:5px; }
