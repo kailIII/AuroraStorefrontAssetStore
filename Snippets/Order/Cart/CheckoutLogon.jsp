@@ -187,7 +187,7 @@
     
 <c:if test="${!empty order.orderItem}"><!-- codigo para eliminar el sidebar solamente con el carrito vacio -->
         
-<div id="WC_CheckoutLogonf_div_9" class="flotante_side">
+<div id="WC_CheckoutLogonf_div_9">
     
     
     

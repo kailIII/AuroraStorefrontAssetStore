@@ -160,7 +160,12 @@ dojo.addOnLoad(
 			<%out.flush();%>
 			</div>
 
-			<div class="body" id="WC_ShopCartDisplay_div_5">
+                <div class="body row" id="WC_ShopCartDisplay_div_5">
+                    
+                    
+                    
+            <div class="col8 acol12">
+                
 				<input type="hidden" id="OrderFirstItemId" value="${order.orderItem[0].orderItemId}"/>
 				<flow:ifEnabled feature="RecurringOrders">
 					<%-- Moved to here from ShipmodeSelectionExt.jsp in order to move shipping selection into the header --%>
@@ -258,13 +263,17 @@ dojo.addOnLoad(
 				<%out.flush();%>
 				
 				<br clear="all" />
-				<%-- Daniel Torres --%>				
-				
+            </div>   
                     
+                    
+           <div class="col4 acol12">
+               <div class="logon-inside">
+				<%-- Daniel Torres el codigo del resumen --%>
                 <%out.flush();%>
 				<c:import url="/${sdb.jspStoreDir}/Snippets/Order/Cart/CheckoutLogon.jsp"/>
 				<%out.flush();%>
-				
+               </div>
+           </div>	
 
 				<%@ include file="../../Snippets/ReusableObjects/CheckoutBottomESpotDisplay.jspf"%>
 			</div>

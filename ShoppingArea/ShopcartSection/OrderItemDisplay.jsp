@@ -284,7 +284,15 @@
 								</c:import>
 								<%out.flush();%>
 								<div class="row margin-true">
-									<div class="col8 acol12">
+									
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    <div class="col12 acol12">
 										<div class="container_content_rightsidebar shop_cart">
 											<div>
 												<flow:ifDisabled feature="AjaxCheckout">
@@ -337,16 +345,15 @@
 											
 										</div>
 									</div>
+                                                    
+                                                    
+                                                    
 									
                                     
-									<div class="col4 acol12">
-										<div class="logon-inside">
-                                            <!-- aca dejamos el espacio del sidebar para lo demas -->
-										</div>
-									</div>
+									
                                     
 
-									<div class="col8 acol12">
+									<div class="col12 acol12">
 										<div class="">
 												<!-- Vertical Recommendations Widget -->
 												<div class="widget_recommended_position">
