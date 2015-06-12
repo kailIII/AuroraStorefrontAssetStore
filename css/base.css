@@ -23,7 +23,6 @@
 		 url('../fonts/ubuntu-regular-webfont.svg#ubunturegular') format('svg');
 	font-weight: normal;
 	font-style: normal;
-
 }
 
 @font-face {
@@ -179,7 +178,7 @@ dl, ol, ul {
     color: #fff !important;
     cursor: pointer !important;
     display: inline-block !important;
-    font-size: 0.95em !important;
+    //font-size: 0.95em !important;
     text-decoration: none !important;
     background-image: none !important;
 	min-width: 130px;
@@ -3877,7 +3876,7 @@ div#WC_CheckoutLogonf_div_0{
 		margin: 0 auto;
 		margin-bottom: 15px;
 		text-align: right;
-		width: 80%;
+		width: 100%;
 		display: block;
 		box-sizing: border-box;
 	}
@@ -3913,13 +3912,25 @@ div#orderByDropdown_4_-2011_3416{
 }
 
 
-	#facet_nav_collapsible_my_account.collapsible[aria-expanded="false"] > .content{
-		max-height: none !important;
-	}
+#facet_nav_collapsible_my_account.collapsible[aria-expanded="false"] > .content{
+	max-height: none !important;
+}
 
 /** **/
 /** **/
 /** **/
+
+@media (min-width: 441px) and (max-width: 1024px){
+	.static_page_content {
+  		padding-left: 15px !important;
+  		padding-bottom: 15px !important;
+	}
+}
+
+select#singleShipmentAddress,
+select#billing_address_id_1{
+	max-width: 100%;
+}
 
 /** 
 FICHA PRODUCTO
