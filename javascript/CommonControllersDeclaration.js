@@ -248,8 +248,16 @@ wc.render.declareRefreshController({
 			dojo.eval(node.innerHTML);
 		  });
         dojo.query('input[id^="orderItem_"]').forEach(function(orderItem) {
-      	  dojo.eval(dojo.byId('addToRequisitionListScript_' + orderItem.value).innerHTML);
-      	  dojo.eval('addReqListsJS' + orderItem.value + '.setCatEntryId("' + dojo.byId('catalogId_' + (orderItem.id.substring(orderItem.id.indexOf('_') + 1))).value + '");');
+      	  
+        	var aux=dojo.byId('addToRequisitionListScript_' + orderItem.value);
+        	
+        	if(aux!=null){
+        		dojo.eval(aux.innerHTML);
+        		 dojo.eval('addReqListsJS' + orderItem.value + '.setCatEntryId("' + dojo.byId('catalogId_' + (orderItem.id.substring(orderItem.id.indexOf('_') + 1))).value + '");');
+        	}
+        	
+      	  
+      	 
         });
 			  cursor_clear();
        }
