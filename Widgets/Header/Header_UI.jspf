@@ -127,12 +127,14 @@
 						data-toggle="quickLinksMenu"><span role="presentation"></span>
 					</a>
 					<ul>
+						<%-- 
 						<c:if test="${userType != 'G'}">
 							<li role="menuitem" class="separator-false"><a id="myAccountQuickLink"
 								href="${fn:escapeXml(MyAccountURL)}"><fmt:message
 										bundle="${storeText}" key="HEADER_MY_ACCOUNT" />
 							</a></li>
 						</c:if>
+						--%>
 						<c:choose>
 							<c:when test="${!env_globalLoginViewDisabled eq true}">
 								<li id="globalLoginWidget" role="menuitem" class="separator-false">
