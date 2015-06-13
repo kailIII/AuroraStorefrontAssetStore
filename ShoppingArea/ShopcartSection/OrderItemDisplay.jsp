@@ -353,7 +353,7 @@
 									
                                     
 
-									<div class="col8 acol12">
+									<div class="col12 acol12">
 										<div class="">
 												<!-- Vertical Recommendations Widget -->
 												<div class="widget_recommended_position">
@@ -367,13 +367,11 @@
 												</div>
 											</div>
 									</div>
-									<div class="col4 acol12">
-										<div class="necesitas-ayuda">
-											<c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
-												<c:param name="emsName" value="telmex__necesitas_ayuda" />
-											</c:import>
-										</div>
-									</div>
+                                            
+									<!-- comentamos la columna de recomendados 
+                                    <div class="col4 acol12">
+										
+                                    </div>-->
 
 								</div>
 								

@@ -299,6 +299,8 @@
 		</tr>
 	</c:if>
 	</table>
+	
+	
 
 	<!-- esta seccion comentamos el resumennnnnnnnnnnnnnnnnn -->
 	<%--<%out.flush();%>

@@ -613,7 +613,7 @@
 							</flow:ifEnabled>
 							
 						
-                        <!--
+                        <!-- boton eliminar
                         <flow:ifEnabled feature="AjaxCheckout">
 							<a class="remove_address_link hover_underline tlignore" id="WC_OrderItemDetailsf_links_2_<c:out value='${status.count}'/>" href="JavaScript:setCurrentId('WC_OrderItemDetailsf_links_2_<c:out value='${status.count}'/>'); CheckoutHelperJS.deleteFromCart('<c:out value='${orderItem.orderItemId}'/>');">
 								<img src="<c:out value='${jspStoreImgDir}${vfileColor}'/>table_x_delete.png" alt=""/>

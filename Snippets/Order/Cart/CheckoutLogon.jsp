@@ -536,8 +536,8 @@
 				</div>
 			</c:if>
 		</div>
-        </c:if><!-- aca terminamos el codigo de Daniel -->
-	</c:if>
+        </c:if>
+    </c:if><!-- aca terminamos el codigo de Daniel -->
 
 	<flow:ifDisabled feature="AjaxCheckout">
 		<div class="left" id="updateShopCart"> 

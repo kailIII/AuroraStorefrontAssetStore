@@ -149,6 +149,16 @@ dojo.addOnLoad(
 		<fmt:param value="${lockedBy}"/>
 	</fmt:message></span></div>
 </c:if>
+    
+    
+    
+ <div class="row margin-true"><!-- comenzamos con el contenedor responsivo -->     
+    
+<!-- aca colocamos los column para organizar -->
+<div id="mainContents" style="display:block" class="col8 acol12">
+    
+    
+    
 <div id="box" class="shopping_cart_box">
 	<div class="myaccount_header bottom_line" id="shopping_cart_product_table_tall">
 		<%@ include file="../../Snippets/ReusableObjects/CheckoutTopESpotDisplay.jspf"%>
@@ -160,12 +170,7 @@ dojo.addOnLoad(
 			<%out.flush();%>
 			</div>
 
-                <div class="body row" id="WC_ShopCartDisplay_div_5">
-                    
-                    
-                    
-            <div class="col8 acol12">
-                
+			<div class="body" id="WC_ShopCartDisplay_div_5">
 				<input type="hidden" id="OrderFirstItemId" value="${order.orderItem[0].orderItemId}"/>
 				<flow:ifEnabled feature="RecurringOrders">
 					<%-- Moved to here from ShipmodeSelectionExt.jsp in order to move shipping selection into the header --%>
@@ -255,36 +260,52 @@ dojo.addOnLoad(
 					<%out.flush();%>
 				</div>
 
-				<%out.flush();%>
+				
+                 <!-- <%-- comentamos el resumen de pedido anterior       
+                <%out.flush();%>
 				<c:import url="/${sdb.jspStoreDir}/ShoppingArea/CheckoutSection/SingleShipment/SingleShipmentOrderTotalsSummary.jsp">
 					<c:param name="returnView" value="AjaxOrderItemDisplayView"/>
 					<c:param name="fromPage" value="shoppingCartDisplay"/>
 				</c:import>
-				<%out.flush();%>
-				
+				<%out.flush();%> --%> -->
+                    
+                    
+                    
+				<!-- aca colocamos el resumen de pedido -->
 				<br clear="all" />
-            </div>   
-                    
-                    
-           <div class="col4 acol12">
-               <div class="logon-inside">
-				<%-- Daniel Torres el codigo del resumen --%>
+				<%-- Daniel Torres --%>
                 <%out.flush();%>
 				<c:import url="/${sdb.jspStoreDir}/Snippets/Order/Cart/CheckoutLogon.jsp"/>
 				<%out.flush();%>
-               </div>
-           </div>	
+				
 
 				<%@ include file="../../Snippets/ReusableObjects/CheckoutBottomESpotDisplay.jspf"%>
 			</div>
 		</c:when>
+                    
 		<c:otherwise>
-			</div>
 			<div class="body" id="WC_ShopCartDisplay_div_6">
 				<%@ include file="../../Snippets/ReusableObjects/EmptyShopCartDisplay.jspf"%>
 			</div>
 		</c:otherwise>
 	</c:choose>
+                    
+  
+                    </div><!-- aca termina el box -->
+                    
+                    </div><!-- termina con 8 columna grande -->
+                        
+                        
+                        <div class="col4 acol12"> <!-- columna de necesitas ayuda -->
+                            <div class="necesitas-ayuda">
+                                <c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
+                                    <c:param name="emsName" value="telmex__necesitas_ayuda" />
+                                </c:import>
+                            </div>
+                        </div>                  
+                        
+                        </div><!-- termina el row y contenedor de las columnas -->         
+                    
 
 	<div class="footer" id="WC_ShopCartDisplay_div_7">
 		<div class="left_corner" id="WC_ShopCartDisplay_div_8"></div>
