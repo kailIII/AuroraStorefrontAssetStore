@@ -39,7 +39,10 @@
 			<div class="col3 acol3 ccol3 slot4" data-slot-id="4"><wcpgl:widgetImport slotId="4"/></div>
 			<div id="productFullWidthSlot56" class="acol12 col9 ccol9 right">
 				<div class="col12 acol9 ccol12 left slot5" data-slot-id="5"><wcpgl:widgetImport slotId="5"/></div>
-				<div class="col12 acol12 ccol12 left slot6" data-slot-id="6"><wcpgl:widgetImport slotId="6"/></div>
+				<div class="col12 acol12 ccol12 left slot6" data-slot-id="6">
+                    
+                    <wcpgl:widgetImport slotId="6"/>
+                </div>
 			</div>
 		</div>
 		
