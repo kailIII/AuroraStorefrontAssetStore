@@ -4541,7 +4541,8 @@ div#widget_breadcrumb {
 }
 
 .loginMenuDropdown .input_field {
-    width: 210px;
+    width: 210px!important;
+	padding: 6px;
 }
 
 .menuDropdown .errorLabel,
