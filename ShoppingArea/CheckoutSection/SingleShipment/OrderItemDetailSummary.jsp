@@ -229,7 +229,7 @@ dojo.addOnLoad(function(){CommonControllersDeclarationJS.setControllerURL('Order
     
 
  <table id="order_details" cellpadding="0" cellspacing="0" border="0" width="100%" summary="<fmt:message bundle="${storeText}" key="SHOPCART_TABLE_CONFIRM_SUMMARY"/>">
-	 <thead>
+	 
 	<tr class="nested">
 	   
 		<th class="align_center" id="SingleShipment_tableCell_productName"><fmt:message bundle="${storeText}" key="PRODUCT"/></th>
@@ -273,7 +273,7 @@ dojo.addOnLoad(function(){CommonControllersDeclarationJS.setControllerURL('Order
 		<c:set var="th_count" value="${th_count + 1}"/>
             <th class="short align_center" id="SingleShipment_tableCell_totalPrice" abbr="<fmt:message bundle="${storeText}" key="TOTAL_PRICE"/>"><fmt:message bundle="${storeText}" key="TOTAL"/></th>
 	</tr>
-    </thead>
+  
 
 	<c:if test="${!empty pagorder.orderItem}">
 		<%--
