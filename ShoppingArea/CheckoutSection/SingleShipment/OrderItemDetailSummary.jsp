@@ -269,7 +269,12 @@ dojo.addOnLoad(function(){CommonControllersDeclarationJS.setControllerURL('Order
 		</flow:ifDisabled>
 		<th class="QTY" id="SingleShipment_tableCell_quantity" abbr="<fmt:message bundle="${storeText}" key="QUANTITY1"/>"><fmt:message bundle="${storeText}" key="QTY"/></th>
 		<c:set var="th_count" value="${th_count + 1}"/>
-		<th class="each short" id="SingleShipment_tableCell_unitPrice" abbr="<fmt:message bundle="${storeText}" key="UNIT_PRICE"/>"><fmt:message bundle="${storeText}" key="EACH"/></th>
+		
+         <!-- ocultamos la columna de precio unitario   
+        <th class="each short" id="SingleShipment_tableCell_unitPrice" abbr="<fmt:message bundle="${storeText}" key="UNIT_PRICE"/>"><fmt:message bundle="${storeText}" key="EACH"/></th>
+    -->
+
+
 		<c:set var="th_count" value="${th_count + 1}"/>
             <th class="short align_center" id="SingleShipment_tableCell_totalPrice" abbr="<fmt:message bundle="${storeText}" key="TOTAL_PRICE"/>"><fmt:message bundle="${storeText}" key="TOTAL"/></th>
 	</tr>
@@ -547,7 +552,10 @@ dojo.addOnLoad(function(){CommonControllersDeclarationJS.setControllerURL('Order
 
 				</p>
 			</td>
-			<td class="each ${fn:escapeXml(nobottom)}" id="WC_OrderItemDetailsSummaryf_td_3_${fn:escapeXml(status.count)}" headers="SingleShipment_tableCell_unitPrice SingleShipment_rowHeader_product${fn:escapeXml(status.count)}">
+			
+                        
+            <!-- aca comentamos la columan de precio unitario         
+            <td class="each ${fn:escapeXml(nobottom)}" id="WC_OrderItemDetailsSummaryf_td_3_${fn:escapeXml(status.count)}" headers="SingleShipment_tableCell_unitPrice SingleShipment_rowHeader_product${fn:escapeXml(status.count)}">
 				<%-- unit price column of order item details table --%>
 				<%-- shows unit price of the order item --%>
 				<span class="price">
@@ -565,6 +573,12 @@ dojo.addOnLoad(function(){CommonControllersDeclarationJS.setControllerURL('Order
 
 				</span>
 			</td>
+              -->      
+                    
+                    
+                    
+                    
+                    
 			<td class="total ${fn:escapeXml(nobottom)}" id="WC_OrderItemDetailsSummaryf_td_4_${fn:escapeXml(status.count)}" headers="SingleShipment_tableCell_totalPrice SingleShipment_rowHeader_product${fn:escapeXml(status.count)}">
 				<c:choose>
 					<c:when test="${orderItem.freeGift}">

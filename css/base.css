@@ -177,7 +177,6 @@ dl, ol, ul {
     border-radius: 5px !important;
     color: #fff !important;
     cursor: pointer !important;
-    display: inline-block !important;
     //font-size: 0.95em !important;
     text-decoration: none !important;
     background-image: none !important;
@@ -3534,11 +3533,6 @@ div#WC_AjaxAddressBookForm_div_6 {
 Empty Shopping Cart
 ***/
 
-#total_breakdown {
-	float: none;
-	width: 100%;
-	text-align: left;
-}
 
 #total_breakdown #promotions{
 	width: 100%;

@@ -7415,6 +7415,7 @@ div.widget_search_tab_wrapper .tab_header .tab_container {
 			}
 			.widget_product_compare > .middle > .left_border > .right_border > .content > .compare_main .compare_3 .row > .item {
 				width: 24%;
+                text-align: center;
 			}
 			.widget_product_compare > .middle > .left_border > .right_border > .content > .compare_main .compare_2 .row > .item {
 				width: 37%;

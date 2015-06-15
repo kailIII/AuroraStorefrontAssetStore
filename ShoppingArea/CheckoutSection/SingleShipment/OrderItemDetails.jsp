@@ -249,7 +249,12 @@
 		   <flow:ifEnabled feature="ExpeditedOrders"><th class="expedite" id="SingleShipment_tableCell_expedite"><fmt:message bundle="${storeText}" key="SHIP_EXPEDITE_SHIPPING" /></th></flow:ifEnabled>
 		   <th class="avail" id="SingleShipment_tableCell_availability"><fmt:message bundle="${storeText}" key="AVAILABILITY"  /></th>
 		   <th class="QTY" id="SingleShipment_tableCell_quantity" abbr="<fmt:message bundle="${storeText}" key="QUANTITY1"  />"><fmt:message bundle="${storeText}" key="QTY"  /></th>
-		   <th class="each short" id="SingleShipment_tableCell_unitPrice" abbr="<fmt:message bundle="${storeText}" key="UNIT_PRICE"  />"><fmt:message bundle="${storeText}" key="EACH"  /></th>
+		   
+          <!-- ocultamos la columna de precio unitarioa
+          <th class="each short" id="SingleShipment_tableCell_unitPrice" abbr="<fmt:message bundle="${storeText}" key="UNIT_PRICE"  />"><fmt:message bundle="${storeText}" key="EACH"  /></th>
+          -->
+          
+          
           <th class="align_center short" id="SingleShipment_tableCell_totalPrice" abbr="<fmt:message bundle="${storeText}" key="TOTAL_PRICE"  />"><fmt:message bundle="${storeText}" key="TOTAL"  /></th>
           <!-- agregamos un th para que caiga el eliminar-->
           <th class="align_center"></th>          
@@ -638,7 +643,7 @@
 			</td>
 			
                         
-                        
+             <!-- ocultamos la columna de precio unitario           
             <td class="each short <c:out value="${nobottom}"/>" id="WC_OrderItemDetails_td_3_<c:out value='${status.count}'/>" headers="SingleShipment_tableCell_unitPrice SingleShipment_rowHeader_product<c:out value='${status.count}'/>">
 				<%-- unit price column of order item details table --%>
 				<%-- shows unit price of the order item --%>
@@ -647,7 +652,7 @@
 					<c:out value="${CurrencySymbol}"/>
 				</span>
 			</td>
-                   
+            -->
                     
                     
                     

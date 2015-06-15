@@ -261,7 +261,8 @@
 		   <th class="align_center" id="shoppingCart_tableCell_quantity" abbr="<fmt:message bundle="${storeText}" key="QUANTITY1" />"><fmt:message bundle="${storeText}" key="SHOPCART_QTY" /></th>
           
           
-          <th class="align_center" id="shoppingCart_tableCell_each" abbr="<fmt:message bundle="${storeText}" key="UNIT_PRICE" />"><fmt:message bundle="${storeText}" key="SHOPCART_EACH" /></th>
+          <!-- ocultamos la columna de precio unitario <th class="align_center" id="shoppingCart_tableCell_each" abbr="<fmt:message bundle="${storeText}" key="UNIT_PRICE" />"><fmt:message bundle="${storeText}" key="SHOPCART_EACH" /></th>-->
+          
           <th class="align_center" id="shoppingCart_tableCell_total" abbr="<fmt:message bundle="${storeText}" key="TOTAL_PRICE" />"><fmt:message bundle="${storeText}" key="SHOPCART_TOTAL" /></th>
           <!-- agregamos un th para que caiga el eliminar-->
           <th class="align_center"></th>
@@ -741,7 +742,7 @@
                                     
                                     
                                     
-                                    
+             <!-- ocultamos la columna de precio unitario
 			<td id="WC_OrderItemDetailsf_td_3_<c:out value='${status.count}'/>" class="<c:out value="${nobottom}"/> each" headers="shoppingCart_tableCell_each shoppingCart_rowHeader_product<c:out value='${status.count}'/>">
 
 				<%-- unit price column of order item details table --%>
@@ -753,7 +754,7 @@
 				</span>
 
 			</td>
-                    
+                    -->
                     
                     
                     

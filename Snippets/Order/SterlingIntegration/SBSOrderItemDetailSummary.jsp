@@ -149,7 +149,12 @@ sterlingIntegrationJS.populateOrderLineInfoForSingleShipment('${order}', '${begi
 		
 		<th class="avail" id="SingleShipment_tableCell_availability"><fmt:message bundle="${storeText}" key="MO_SUBSCRIPTION_STATUS" /></th>
 		<th class="QTY" id="SingleShipment_tableCell_quantity" abbr="<fmt:message bundle="${storeText}" key="QUANTITY1" />"><fmt:message bundle="${storeText}" key="QTY" /></th>
-		<th class="each short" id="SingleShipment_tableCell_unitPrice" abbr="<fmt:message bundle="${storeText}" key="UNIT_PRICE" />"><fmt:message bundle="${storeText}" key="EACH" /></th>
+		
+        <!-- aca comentamos la columna de precio unitario
+        <th class="each short" id="SingleShipment_tableCell_unitPrice" abbr="<fmt:message bundle="${storeText}" key="UNIT_PRICE" />"><fmt:message bundle="${storeText}" key="EACH" /></th>
+        -->
+        
+        
 		<th class="total short" id="SingleShipment_tableCell_totalPrice" abbr="<fmt:message bundle="${storeText}" key="TOTAL_PRICE" />"><fmt:message bundle="${storeText}" key="TOTAL" /></th>
 	</tr>
 	
