@@ -780,7 +780,7 @@ dl, ol, ul {
 
 #quick_cart{
   position: absolute;
-  right: 0px;
+  /*right: 0px;*/
   width: 360px;
   top: 0px;
 }
@@ -1981,6 +1981,11 @@ background-color:#f7f7f7;
 		width: auto;
 	}
 */
+
+	#quick_cart{
+	  right: 0px;
+	}
+
 
 	#MiniShopCartProductAdded {
 	  top: 68px!important;
