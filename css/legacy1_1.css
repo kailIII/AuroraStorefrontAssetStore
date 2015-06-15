@@ -263,8 +263,7 @@
 }
 
 /* ShopCartDisplay.jsp cost breakdown */
-#total_breakdown {
-	float:right;
+#total_breakdown {	
 	padding:5px 9px 10px 0px;
 	text-align: right;
 	display:inline-block;
