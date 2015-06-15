@@ -3655,9 +3655,8 @@ table#order_total tbody tr:last-child{
 }
 
 #customers_new_or_returning #WC_CheckoutLogonf_div_4.returning{
-	text-align: center !important;
 	margin-bottom: 0;
-	//padding: 30px;
+	padding: 30px;
 	padding-bottom: 0;
 
 }
