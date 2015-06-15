@@ -320,8 +320,10 @@
 			                   <li>
 								<c:set var="key" value="${department.uniqueID}_${category.uniqueID}_${subcategory.uniqueID}"/>
 								<a id="subcategoryLink_${key}" href="${fn:escapeXml(categoryURLMap[key])}" class="menuLink" role="menuitem" tabindex="-1"><c:out value="${subcategory.name}"/></a>
-							</li></c:forEach>
-			                   
+							
+							</c:forEach>
+			               </li>
+			                </ul>   
 			               
 			               </li>
 			              
