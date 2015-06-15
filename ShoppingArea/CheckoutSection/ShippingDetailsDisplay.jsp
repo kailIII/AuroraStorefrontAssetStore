@@ -49,6 +49,8 @@
 		<wcf:param name="pageNumber" value="1"/>
 	</wcf:rest>
 </c:if>
+
+    
 <c:set var="hideSingleShipment" value="false"/>
 <fmt:parseNumber var="maxOrderItemsToInspect" value="${maxOrderItemsToInspect}"/>
 <fmt:parseNumber var="numEntries" value="${param.recordSetTotal}" integerOnly="true" />
@@ -120,7 +122,7 @@
 	<wcf:param name="forceShipmentType" value="2" />
 </wcf:url>
 
-<%@ include file="../../Snippets/Marketing/Promotions/PromotionChoiceOfFreeGiftsPopup.jspf" %>
+<%@ include file="../../Snippets/Marketing/Promotions/PromotionChoiceOfFreeGiftsPopup.jspf" %> 
 
 
 <!-- aca agregamos la otra pleca gris -->    
@@ -140,7 +142,7 @@
 	<c:when test = "${shipmentTypeId == 1}">
 		
         
-        <!--  <%-- comentamos el boton de varios envios
+        
         <flow:ifEnabled  feature="MultipleShipments">	
 		   <div class="checkout_subheader" id="WC_ShipmentDisplay_div_9">		
 				<div class="checkout_subheader_content" id="WC_ShipmentDisplay_div_11"><span class="content_text"><fmt:message bundle="${storeText}" key="SHIP_MULTIPLE_SHIPMENT_MESSAGE"/></span></div>
@@ -160,7 +162,7 @@
 				</div>
 		   </div>
 	   </flow:ifEnabled>
-           --%>   --> 
+      
                
                
 	   <c:if test="${!isAjaxCheckOut}">

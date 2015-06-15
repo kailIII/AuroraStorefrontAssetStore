@@ -224,9 +224,13 @@
 
             <div class="promotion_input" id="WC_PromotionCodeDisplay_div_2">
                 <input type="text" class="input" size="6" name="promoCode" id="promoCode" onchange="javaScript:TealeafWCJS.processDOMEvent(event);" onkeypress="if(event.keyCode==13) JavaScript:CheckoutHelperJS.applyPromotionCode('PromotionCodeForm','<c:out value='${returnView}'/>')"/>
+                
+                
                 <a href="#" role="button" class="button_primary promotion_btn2" id="WC_PromotionCodeDisplay_links_1" aria-labelledby="WC_PromotionCodeDisplay_links_1_ACCE_Label" tabindex="0" onclick="JavaScript:setCurrentId('WC_PromotionCodeDisplay_links_1'); CheckoutHelperJS.applyPromotionCode('PromotionCodeForm','<c:out value='${returnView}'/>');return false;">
-                    <div class="button_text tiny"><fmt:message bundle="${storeText}" key="APPLY"/><span id="WC_PromotionCodeDisplay_links_1_ACCE_Label" class="spanacce"><fmt:message bundle="${storeText}" key="Checkout_ACCE_promo_code_apply" /></span></div>                    
+                    <div class="button_text"><fmt:message bundle="${storeText}" key="APPLY"/><span id="WC_PromotionCodeDisplay_links_1_ACCE_Label" class="spanacce"><fmt:message bundle="${storeText}" key="Checkout_ACCE_promo_code_apply" /></span></div>                    
                 </a>
+                
+                
                 <c:set var="promoCodeString" value=""/>
             </div>
             
