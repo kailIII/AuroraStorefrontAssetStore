@@ -3536,7 +3536,7 @@ Empty Shopping Cart
 }
 
 #total_breakdown #promotions{
-	width: 50%;
+	width: 100%;
 	display: inline-block;
 	padding-right: 0;
 	float: left;
