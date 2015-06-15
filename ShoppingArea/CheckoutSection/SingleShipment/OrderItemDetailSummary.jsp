@@ -153,7 +153,7 @@ dojo.addOnLoad(function(){CommonControllersDeclarationJS.setControllerURL('Order
         <div class="separador_blanco"></div>
         <span aria-level="1" class="main_header_text" role="heading">
         <c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
-            <c:param name="emsName" value="Resumen_de_pedido" />
+            <c:param name="emsName" value="Resumen_de_Productos" />
         </c:import>
         </span>
     </div>
