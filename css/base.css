@@ -873,9 +873,8 @@ dl, ol, ul {
 	position: absolute;
 	/*left: 2px;*/
 	top: 100%;
-	width: 153px;
+	width: 185px;
 	margin: 0;
-	padding: 0 16px;
 	background-color:#fff;
 	background-color: rgba(255, 255, 255, 0.9);
 	border-bottom: 1px solid #c9cece;
@@ -1017,12 +1016,12 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 }
 .categoryList > li > a {
 	display: block;
-	margin: 0 -8px;
 	padding: 8px;
 	/*font-weight: bold;*/
 	/*text-transform: uppercase;*/
 	color:#384452;
 	min-width: 150px;
+	width:100%;
 }
 
 .categoryList > li > a:after{
@@ -1036,7 +1035,8 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 }
 
 .categoryList > li > a:hover{
-background-color:#f7f7f7;
+background-color:#1791ce;
+color:#ffffff;
 }
 
 .categoryList > li > a:last-child {
@@ -1056,10 +1056,24 @@ background-color:#f7f7f7;
 	list-style: none;
 	/* display:none; */
 }
+
+.subcategoryList >li{
+	display:inline-block;
+	margin-left:40px;
+	vertical-align:top;
+}
+
 .subcategoryList > li > a {
 	display: block;
 	margin: 0 -8px;
 	padding: 8px;
+	color:#1b83fe;
+	font-family:'ubuntubold', Arial;
+}
+
+.sucategoryList >li > a ul{
+ 	padding:0px;
+ 	list-style-type:none;
 }
 
 .subMenuPage{
@@ -1069,11 +1083,11 @@ background-color:#f7f7f7;
 	border-left: 1px solid #c9cece;
 	border-right: 1px solid #c9cece;
 	font-size: 12px;
-	left: 170px;
+	left: 185px;
 	opacity: 0.95;
 	position: relative;
 	top: -45px;
-	width: auto;
+	width: 812px;
 	height: auto;
 	background-color: #FFFFFF;
 	text-transform: uppercase;
@@ -1084,7 +1098,7 @@ background-color:#f7f7f7;
 @media (min-width: 952px) {
 
 	.categoryList > li {
-		width: 112%;
+		width: 100%;
 	}
 }
 
