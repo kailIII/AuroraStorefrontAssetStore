@@ -565,7 +565,7 @@
                                                         <c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
                                                             <c:param name="emsName" value="telmex__necesitas_ayuda" />
                                                         </c:import>
-                                                    </div>
+                                                     </div>
 
                                                  </div><!--termina la columna de resumen-->
                                                                     <!-- terminamos con el movimiento del total al sidebar ================================================================================= -->
