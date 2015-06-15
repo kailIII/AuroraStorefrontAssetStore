@@ -431,11 +431,13 @@ require([
 		renderContextChangedHandler: function(message, widget) {
 			cursor_wait();
 			widget.refresh(this.renderContext.properties);
+			
 		},
 		postRefreshHandler: function(widget) {
-				updateDepartmentsMenu(); // Browser may be re-sized. From server we return entire department list.. updateHeader to fit to the list within available size
+			//updateDepartmentsMenu(); // Browser may be re-sized. From server we return entire department list.. updateHeader to fit to the list within available size
 			activate(document.getElementById(this.renderContext.properties.targetId)); // We have all the data.. Activate the menu...
 			cursor_clear();
+			menuF();
 		}
 	});
 
