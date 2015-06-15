@@ -55,7 +55,7 @@
 </flow:ifDisabled>
 
 
-<div id="total_breakdown">
+
 	
 	<%-- promotion code area --%>
 	<flow:ifEnabled feature="promotionCode">
@@ -71,13 +71,25 @@
 			</div>
 		</c:if>
 	</flow:ifEnabled>
+
+
 	
-	<table id="order_total" cellpadding="0" cellspacing="0" border="0" role="presentation">
+
+	
+	<div class="separador_total gris_sidebar" id="WC_PromotionCodeDisplay_div_1">
+            <c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
+                <c:param name="emsName" value="Resumen_de_pedido" />
+            </c:import>
+    </div>
+	
+	
+<div id="total_breakdown">	
+	<table id="order_total2" cellpadding="0" cellspacing="0" border="0" role="presentation">
 		
 		<%-- ORDER SUMMARY LINE - order subtotal --%>
 		<tr> 
-			<td class="total_details" id="WC_SingleShipmentOrderTotalsSummary_td_1"><fmt:message bundle="${storeText}" key="MO_ORDERSUBTOTAL" /></td>
-			<td class="total_figures" id="WC_SingleShipmentOrderTotalsSummary_td_2"><fmt:formatNumber value="${order.totalProductPrice}" type="currency" maxFractionDigits="${env_currencyDecimal}" minFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}"/><c:out value="${CurrencySymbol}"/></td>
+			<td class="total_details align_left" id="WC_SingleShipmentOrderTotalsSummary_td_1"><fmt:message bundle="${storeText}" key="MO_ORDERSUBTOTAL" /></td>
+			<td class="total_figures align_right" id="WC_SingleShipmentOrderTotalsSummary_td_2"><fmt:formatNumber value="${order.totalProductPrice}" type="currency" maxFractionDigits="${env_currencyDecimal}" minFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}"/><c:out value="${CurrencySymbol}"/></td>
 		</tr>
 		
 	<c:if test="${showTotals eq true}">
@@ -88,7 +100,7 @@
 				<c:if test="${!hasProductDiscount}">
 					<c:if test="${orderItemAdjustment.displayLevel == 'OrderItem'}">
 						<c:set var="hasProductDiscount" value="true"/>
-						<td class="total_details" id="WC_SingleShipmentOrderTotalsSummary_td_11"><fmt:message bundle="${storeText}" key="ORD_ORDER_DISCOUNTS_PRODUCTS" /></td>
+						<td class="total_details align_left" id="WC_SingleShipmentOrderTotalsSummary_td_11"><fmt:message bundle="${storeText}" key="ORD_ORDER_DISCOUNTS_PRODUCTS" /></td>
 					</c:if>
 				</c:if>
 			</c:forEach>
@@ -100,7 +112,7 @@
 				</c:if>
 			</c:forEach>
 			<c:if test="${hasProductDiscount}">
-				<td class="total_figures" id="WC_SingleShipmentOrderTotalsSummary_td_12"><fmt:formatNumber value="${totalProductDiscount}" type="currency" maxFractionDigits="${env_currencyDecimal}" minFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}"/><c:out value="${CurrencySymbol}"/></td>
+				<td class="total_figures align_right" id="WC_SingleShipmentOrderTotalsSummary_td_12"><fmt:formatNumber value="${totalProductDiscount}" type="currency" maxFractionDigits="${env_currencyDecimal}" minFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}"/><c:out value="${CurrencySymbol}"/></td>
 			</c:if>
 			<c:if test="${!hasProductDiscount}">
 				<td></td>
@@ -109,7 +121,7 @@
 		
 		<%-- ORDER SUMMARY LINE - total order discount --%>
 		<tr>
-			<td class="total_details" id="WC_SingleShipmentOrderTotalsSummary_td_3">
+			<td class="total_details align_left" id="WC_SingleShipmentOrderTotalsSummary_td_3">
 				<%-- Check and see if there is any order level adjustment to display --%>
 				<c:set var="displayDiscountTooltip" value="false"/>
 				<c:choose>
@@ -221,7 +233,7 @@
 						</c:if>
 					</c:forEach>
 					
-					<td class="total_figures" id="WC_SingleShipmentOrderTotalsSummary_td_4">
+					<td class="total_figures align_right" id="WC_SingleShipmentOrderTotalsSummary_td_4">
 						<c:choose>
 							<c:when test="${isBiDiLocale}">
 								<fmt:formatNumber pattern="#,##0.00 ¤;#,##0.00- ¤" value="${totalOrderLevelDiscount}" type="currency" maxFractionDigits="${env_currencyDecimal}" minFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}"/>
@@ -234,7 +246,7 @@
 					</td>
 				</c:when>
 				<c:otherwise>
-					<td class="total_figures" id="WC_SingleShipmentOrderTotalsSummary_td_4">
+					<td class="total_figures align_right" id="WC_SingleShipmentOrderTotalsSummary_td_4">
 						<c:choose>
 							<c:when test="${isBiDiLocale}">
 								<fmt:formatNumber pattern="#,##0.00 ¤;#,##0.00- ¤" value="${order.totalAdjustment - totalProductDiscount}" type="currency" maxFractionDigits="${env_currencyDecimal}" minFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}"/>
@@ -260,40 +272,40 @@
 					     the tax line. In most case, for the Brazil store, they will be registered from Brazil --%>
 					<c:if test="${order.totalSalesTax > 0}">
 						<tr> <%-- Unusual case so show tax line --%>
-							<td class="total_details" id="WC_SingleShipmentOrderTotalsSummary_td_5"><fmt:message bundle="${storeText}" key="MO_TAX" /></td>
-							<td class="total_figures" id="WC_SingleShipmentOrderTotalsSummary_td_6"><fmt:formatNumber value="${order.totalSalesTax}" type="currency" maxFractionDigits="${env_currencyDecimal}" minFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}"/><c:out value="${CurrencySymbol}"/></td>
+							<td class="total_details align_left" id="WC_SingleShipmentOrderTotalsSummary_td_5"><fmt:message bundle="${storeText}" key="MO_TAX" /></td>
+							<td class="total_figures align_right" id="WC_SingleShipmentOrderTotalsSummary_td_6"><fmt:formatNumber value="${order.totalSalesTax}" type="currency" maxFractionDigits="${env_currencyDecimal}" minFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}"/><c:out value="${CurrencySymbol}"/></td>
 						</tr>	
 					</c:if>		  		    
 		  		</c:when>
 		  		<c:otherwise> <%-- Output Madisons tax line  --%>
 					<tr>
-						<td class="total_details" id="WC_SingleShipmentOrderTotalsSummary_td_5"><fmt:message bundle="${storeText}" key="MO_TAX" /></td>
-						<td class="total_figures" id="WC_SingleShipmentOrderTotalsSummary_td_6"><fmt:formatNumber value="${order.totalSalesTax}" type="currency" maxFractionDigits="${env_currencyDecimal}" minFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}"/><c:out value="${CurrencySymbol}"/></td>
+						<td class="total_details align_left" id="WC_SingleShipmentOrderTotalsSummary_td_5"><fmt:message bundle="${storeText}" key="MO_TAX" /></td>
+						<td class="total_figures align_right" id="WC_SingleShipmentOrderTotalsSummary_td_6"><fmt:formatNumber value="${order.totalSalesTax}" type="currency" maxFractionDigits="${env_currencyDecimal}" minFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}"/><c:out value="${CurrencySymbol}"/></td>
 					</tr>	
 		  		</c:otherwise>
 			</c:choose>
 			
 			<%-- ORDER SUMMARY LINE - shipping charge --%>
 			<tr>
-				<td class="total_details" id="WC_SingleShipmentOrderTotalsSummary_td_7"><fmt:message bundle="${storeText}" key="MO_SHIPPING" /></td>
-				<td class="total_figures" id="WC_SingleShipmentOrderTotalsSummary_td_8"><fmt:formatNumber value="${order.totalShippingCharge}" type="currency" maxFractionDigits="${env_currencyDecimal}" minFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}"/><c:out value="${CurrencySymbol}"/></td>
+				<td class="total_details align_left" id="WC_SingleShipmentOrderTotalsSummary_td_7"><fmt:message bundle="${storeText}" key="MO_SHIPPING" /></td>
+				<td class="total_figures align_right" id="WC_SingleShipmentOrderTotalsSummary_td_8"><fmt:formatNumber value="${order.totalShippingCharge}" type="currency" maxFractionDigits="${env_currencyDecimal}" minFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}"/><c:out value="${CurrencySymbol}"/></td>
 			</tr>				
 			<%-- ORDER SUMMARY LINE - shipping tax --%>
 			<tr>
-				<td class="total_details" id="WC_SingleShipmentOrderTotalsSummary_td_14"><fmt:message bundle="${storeText}" key="MO_SHIPPING_TAX" /></td>
-				<td class="total_figures" id="WC_SingleShipmentOrderTotalsSummary_td_15"><fmt:formatNumber value="${order.totalShippingTax}" type="currency" maxFractionDigits="${env_currencyDecimal}" minFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}"/><c:out value="${CurrencySymbol}"/></td>
+				<td class="total_details align_left" id="WC_SingleShipmentOrderTotalsSummary_td_14"><fmt:message bundle="${storeText}" key="MO_SHIPPING_TAX" /></td>
+				<td class="total_figures align_right" id="WC_SingleShipmentOrderTotalsSummary_td_15"><fmt:formatNumber value="${order.totalShippingTax}" type="currency" maxFractionDigits="${env_currencyDecimal}" minFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}"/><c:out value="${CurrencySymbol}"/></td>
 			</tr>
 		</c:if>
 		
 		<%-- ORDER SUMMARY LINE - order total --%>
 		<tr>
-			<td class="total_details order_total" id="WC_SingleShipmentOrderTotalsSummary_td_9"><fmt:message bundle="${storeText}" key="MO_ORDERTOTAL" /></td>
+			<td class="total_details order_total align_left_total" id="WC_SingleShipmentOrderTotalsSummary_td_9"><fmt:message bundle="${storeText}" key="MO_ORDERTOTAL" /></td>
 			<c:choose>
 				<c:when test="${param.fromPage == 'shoppingCartDisplay'}">
-					<td class="total_figures breadcrumb_current" id="WC_SingleShipmentOrderTotalsSummary_td_13"><fmt:formatNumber value="${order.totalProductPrice + totalProductDiscount + totalOrderLevelDiscount}" type="currency" maxFractionDigits="${env_currencyDecimal}" minFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}"/><c:out value="${CurrencySymbol}"/></td>
+					<td class="total_figures breadcrumb_current align_right_total" id="WC_SingleShipmentOrderTotalsSummary_td_13"><fmt:formatNumber value="${order.totalProductPrice + totalProductDiscount + totalOrderLevelDiscount}" type="currency" maxFractionDigits="${env_currencyDecimal}" minFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}"/><c:out value="${CurrencySymbol}"/></td>
 				</c:when>
 				<c:otherwise>
-					<td class="total_figures breadcrumb_current" id="WC_SingleShipmentOrderTotalsSummary_td_10"><fmt:formatNumber value="${order.grandTotal}" type="currency" maxFractionDigits="${env_currencyDecimal}" minFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}"/><c:out value="${CurrencySymbol}"/></td>
+					<td class="total_figures breadcrumb_current align_right_total" id="WC_SingleShipmentOrderTotalsSummary_td_10"><fmt:formatNumber value="${order.grandTotal}" type="currency" maxFractionDigits="${env_currencyDecimal}" minFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}"/><c:out value="${CurrencySymbol}"/></td>
 				</c:otherwise>
 			</c:choose>
 		</tr>
