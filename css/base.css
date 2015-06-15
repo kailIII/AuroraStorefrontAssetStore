@@ -4270,3 +4270,7 @@ Alejandro Paredes
 		float: none !important;
 	}
 }
+
+.product_page_content .widget_product_image_viewer .image_container {
+    width: 385px !important;
+}
