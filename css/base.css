@@ -1034,10 +1034,14 @@ li.menuCategorias :hover  <  .departmentButton.selected{
   background-position: -282px -40px;
 }
 
-.categoryList > li > a:hover{
-background-color:#1791ce;
-color:#ffffff;
+.categoryList > li > a:hover, .categoryList >li:hover{
+	background-color:#1791ce;
 }
+
+.categoryList > li:hover > a{
+	color:#ffffff;
+}
+
 
 .categoryList > li > a:last-child {
 	font-weight: normal;
@@ -1071,10 +1075,30 @@ color:#ffffff;
 	font-family:'ubuntubold', Arial;
 }
 
-.sucategoryList >li > a ul{
+.subcategoryList >li > ul{
  	padding:0px;
  	list-style-type:none;
+ 	text-transform:capitalize;
 }
+
+.subcategoryList > li > ul > li{
+	display:block;
+}
+
+.subcategoryList > li > ul > li:hover, .subcategoryList > li > ul > li > a:hover{
+	color:#384452;
+}
+
+.subcategoryList > li > ul > li > a{
+	display:block;
+	padding:3px 0;
+}
+
+.subcategoryList > li > ul > li > a:hover{
+	color:#48a5d3;
+}
+
+
 
 .subMenuPage{
 	display: none;
@@ -1091,6 +1115,7 @@ color:#ffffff;
 	height: auto;
 	background-color: #FFFFFF;
 	text-transform: uppercase;
+	padding:15px 0;
 }
 
 /* Department menu (1025px+) */
