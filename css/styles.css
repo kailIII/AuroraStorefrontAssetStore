@@ -1967,6 +1967,13 @@ div#purchase_options input {
 	.product_page_content #productFullWidthSlot56 {
 		float: none;
 	}
+
+	#Header_GlobalLogin_loggedInDropdown.menuDropdown {
+		right: 44px!important;
+		top: 40px!important;
+	}
+
+	
 }
 @media (min-width: 601px) {
 	.productListingWidget {
@@ -4465,7 +4472,7 @@ div#widget_breadcrumb {
 }
 
 #Header_GlobalLogin_loggedInDropdown.menuDropdown {
-    right: 122px;
+    right: 100px;
 }
 
 .menuDropdown {
@@ -4490,7 +4497,7 @@ div#widget_breadcrumb {
 }
 
 .menuDropdown .panel {
-    padding: 12px;
+    /*padding: 12px;*/
 }
 
 .menuDropdown .field {
@@ -6341,16 +6348,16 @@ div[dijitpopupparent^='WC_UserMemberGroupManagement_'] > .dijitSelectMenu table 
 	#Header_GlobalLogin_loggedInDropdown.menuDropdown {
 		background: linear-gradient(to bottom, #FFFFFF 46%, #F5F5F5 100%) repeat scroll 0 0 hsla(0, 0%, 0%, 0);
 		border: 1px solid #BFBFBF;
-		border-bottom-left-radius: 10px;
+		/*border-bottom-left-radius: 10px;
 		border-bottom-right-radius: 10px;
-		border-top-left-radius: 10px;
+		border-top-left-radius: 10px;*/
 		color: #4D4D4D;
 		display: none;
 		font-size: 13px;
 		position: absolute;
-		right: 125px;
+		right: 120px;
 		top: 38px;
-		width: 290px;
+		width: auto;
 		z-index: 100;
 	}
 	
@@ -6367,7 +6374,7 @@ div[dijitpopupparent^='WC_UserMemberGroupManagement_'] > .dijitSelectMenu table 
 	}			
 	
 	#Header_GlobalLogin_loggedInDropdown.menuDropdown .panel {
-		padding: 20px;
+		/*padding: 20px;*/
 	}
 	
 	#QuickLinks_GlobalLogin_signInQuickLink.panelLinkSelected:after{
@@ -8054,5 +8061,14 @@ top:8px;
 .txtRegistro{display: inline;}
 .ligaRegistro{ color:#1b83ff; text-decoration:underline;}
 .ligaNecesitasAyuda{ color:#1b83ff; text-decoration:underline; margin:0 auto; display:table; font-size:11px; margin-top:5px; }
-.signOutDrop{ display: block; padding-top: 6px; border-top: 1px solid #CCCCCC;}
-.ligasSignOut{display: inline-block!important; margin-bottom: 6px;}
+.signOutDrop{ display: block!important; padding-top: 6px; border-top: 1px solid #CCCCCC;}
+.ligasSignOut{
+  display: block;
+  font-family: arial;
+  font-size: 11px;
+  padding: 6px 12px;
+}
+.ligasSignOut:hover{
+	background-color:#F5F5F5;
+	text-decoration:underline;
+}
