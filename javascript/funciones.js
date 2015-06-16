@@ -62,16 +62,15 @@ var responsiveMenu = function(){
 	
 	if(checkWidth() < 953){
 		menuCont.css('display', 'none');
+		activeButton.removeClass('selected');
 		activeButton.click(function(e){
 			e.stopPropagation()
 			menuCont.animate({width: 'toggle'});
-			/*if(menuCont.hasClass('open')== false){
-			   menuCont.stop().animate({width: 'toggle'},1000,function(){$(this).addClass('open')});
+			if($(this).hasClass('selected')){
+				activeButton.removeClass('selected');
 			}else{
-			menuCont.stop().animate({width: '0px'},1000,function(){
-				$(this).removeClass('open')
-			});
-			}*/
+				activeButton.addClass('selected');
+			}
 		})
 	}else{
 		menuCont.css('display', 'block');
