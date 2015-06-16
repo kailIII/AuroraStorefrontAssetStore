@@ -4038,6 +4038,14 @@ select#billing_address_id_1{
     line-height: 1.4;
 }
 
+/*.row + #editAddressContents {
+	display: none;
+}*/
+
+#OI65001addToShoppingListBtn {
+	width: 122px;
+}
+
 
 /** 
 FICHA PRODUCTO
