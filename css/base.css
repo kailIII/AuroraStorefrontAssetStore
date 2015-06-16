@@ -876,7 +876,6 @@ position: absolute;
 	background-color:#fff;
 	background-color: rgba(255, 255, 255, 0.9);
 	border-bottom: 1px solid #c9cece;
-	border-right: 1px solid #c9cece;
 	border-left: 1px solid #c9cece;
 	/*border-top: 1px solid #fff;*/
 	/*border-top: 3px solid #ffa200;*/
@@ -887,6 +886,7 @@ position: absolute;
 }
 .departmentMenu.active {
 	display: block;
+	border-radius:0px 0px 5px 5px;
 }
 .departmentMenu > .header {
 	margin: 0;
@@ -995,6 +995,9 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 	margin: 0;
 	padding: 8px 0;
 	list-style: none;
+	font-family:Arial, Sans-serif;
+	text-transform:capitalize;
+	font-size:13px;
 }
 
 .categoryList > li {
@@ -1067,8 +1070,7 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 	display: block;
 	margin: 0 -8px;
 	padding: 8px;
-	color:#1b83fe;
-	font-family:'ubuntubold', Arial;
+	color:#00a8e0;
 }
 
 .subcategoryList >li > ul{
@@ -1100,7 +1102,6 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 	display: none;
 	border-top: 1px solid #c9cece;
 	border-bottom: 1px solid #c9cece;
-	border-left: 1px solid #c9cece;
 	border-right: 1px solid #c9cece;
 	font-size: 12px;
 	left: 185px;
@@ -1108,11 +1109,14 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 	position: relative;
 	top: -45px;
 	width: 812px;
-	height: auto;
+	height:auto;
+	/*height: 254px;*/
 	background-color: #FFFFFF;
-	text-transform: uppercase;
 	padding:15px 0;
+	border-radius: 0px 5px 5px 0px
 }
+
+.subMenuPage .caption{background:none;}
 
 /* Department menu (1025px+) */
 
@@ -2085,6 +2089,8 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 		padding: 0 10px;
 		text-align: left;
 	}
+	
+	
 	#departmentsMenu {
 		width:265px;
 		overflow:hidden;

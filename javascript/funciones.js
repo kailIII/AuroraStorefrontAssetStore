@@ -29,7 +29,7 @@ $( document ).ready(function() {
 	});
 
 	responsiveMenu();
-	
+	menuF();
 });
 
 
@@ -37,19 +37,46 @@ $( document ).ready(function() {
 /*Función hover menú escritorio*/
 function menuF(){
 	
+	var menuCont =$('#departmentsMenu');
+	
 	if (checkWidth() > 952) {
 	var claseMenu = "";
-	//console.log("mayor a 952");
-		$(".menuLink").hover(
+	
+
+		
+	/*Menu Hover*/
+		$("li.menuLink").hover(
 			function () {
 				if($(this).find('li').length > 0){
-					claseMenu = $(this).attr('rel');			
+					claseMenu = $(this).attr('rel');
+					//Show childs
 					$(this).find('div').show();
+					
+					//Set border radius;
+					$('.departmentMenu.active').css('borderBottomRightRadius', '0px ');
+					
+					 var index = $( "li.menuLink" ).index( this );
+					
+					 //Menu Same Height of select
+					$('.subMenuPage').outerHeight($('.categoryList').outerHeight()+ 6);
+					
+					//Position of the div menu
+					var topItem = 0
+					for(var i=0; i<index; i++){
+						var thisSize = $('li.menuLink').eq(i).outerHeight();
+						topItem = topItem + thisSize;
+					}
+					$(this).find('.subMenuPage').css('top', -topItem-45);	
+				}else{
+				    $('.departmentMenu.active').css('borderBottomRightRadius', '5px ');
+				    $(this).find('.subMenuPage').css('display','none');
 				}
 			}, 
 			function () {
 				claseMenu = $(this).attr('rel');
+				
 			   $('div.'+claseMenu).hide(1);
+			   
 			}
 		);
 		
@@ -63,7 +90,7 @@ function menuF(){
 	}
 }
 
-menuF();
+
 
 var responsiveMenu = function(){
 	var activeButton= $('#departmentsButton');
@@ -106,6 +133,7 @@ var responsiveMenu = function(){
 			if(divParent.css('display')== "none"){
 				divParent.show();
 			}
+			$(this).find('div').height('auto').css('top','0px');
 			
 			
 			if(ulParent.length > 1){
@@ -122,11 +150,9 @@ var responsiveMenu = function(){
 					})
 					childUl.slideToggle();
 					e.preventDefault();
-				}else{
-					
 				}
 			}
-			//$(this).parent('#departmentsMenu').prepend(returnBtn);
+			$(this).parent('#departmentsMenu').prepend(returnBtn);
 		});
 		
 		returnBtn.click(function(){
@@ -141,9 +167,6 @@ var responsiveMenu = function(){
 			})
 			
 		})
-		
-		
-		
 	}else{
 		menuCont.show();
 		var elemFirst = menuCont.find('>li');
