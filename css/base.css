@@ -1987,6 +1987,21 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 	#headerRow1 {
 		height: 53px;
 	}
+	
+	
+	#logo {
+	  left:40px;
+	}
+	#headerRow2{
+	  width: auto;
+	  display: inline-block;
+	  position: absolute;;
+	  top: 0px;
+	  height: 28px;
+	  border: none;
+	  left: 0px;
+	  z-index:99;
+	}
 
 	/* Quick links bar */
 
@@ -2043,7 +2058,9 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 	  background-image: url("../images/responsive/rwdUI.png");
 	  background-repeat: no-repeat;
 	  background-position: -194px -58px;
-	  top: 3px;	  
+	  position:absolute; 
+	  top:15px;
+	  left:11px;
 	}
 	 
 	#departmentsButton.selected {
@@ -2058,17 +2075,14 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 		text-align: left;
 	}
 	#departmentsMenu {
-		display: none;
-	}
-	#departmentsMenu.active {
-		display: block;
+		width:265px;
+		overflow:hidden;
 		position: absolute;
-		  min-width: 265px;
 		left: 0;
 		right: 0;
-		top: 100%;
+		top: 53px;
 		margin: 0;
-		padding: 0 15px 15px 15px;
+		padding: 0 0 15px 0;
 		background-color: #ffffff;
 		border: 1px solid #c9cece;
 		/*border-top: 3px solid #ffa200; */
@@ -2079,6 +2093,8 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 	}
 	#departmentsMenu > li {
 		display: block;
+		padding:0 15px;
+		width:235px;
 	}
 	#departmentsMenu > li.hidden {
 		position: static;
@@ -2372,19 +2388,6 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 
 	.contentCarouselWidget {
 		/*overflow: hidden;*/
-	}
-
-	#logo {
-	  left:40px;
-	}
-	#headerRow2{
-	  width: auto;
-	  display: inline-block;
-	  position: absolute;
-	  top: 15px;
-	  height: 28px;
-	  border: none;
-	  left: 10px;
 	}
 	
 }
