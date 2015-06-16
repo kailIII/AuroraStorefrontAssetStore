@@ -360,7 +360,7 @@
     </div>
     
     <div id="total_breakdown">
-        <table id="order_total2" cellpadding="0" cellspacing="0" border="0" role="presentation">
+        <table width="100%" id="order_total2" cellpadding="0" cellspacing="0" border="0" role="presentation">
 
             <%-- ORDER SUBTOTAL--%>
                 <tr>
@@ -439,18 +439,10 @@
                                 
                                 <tr>
                                     <td>
-                                        <div class="linea_total">
-                                        <svg version="1.2" width="100%">
-                                            <line x1="0" y1="5.5" x2="244" y2="5.5" stroke="#f2eff0" stroke-width="1" stroke-dasharray="" stroke-linecap="square"></line>
-                                        </svg>
-                                        </div>
+                                        <div class="linea_total"></div>
                                     </td>
                                     <td>
-                                        <div class="linea_total">
-                                        <svg version="1.2" width="100%">
-                                            <line x1="0" y1="5.5" x2="244" y2="5.5" stroke="#f2eff0" stroke-width="1" stroke-dasharray="" stroke-linecap="square"></line>
-                                        </svg>
-                                        </div>
+                                        <div class="linea_total"></div>
                                     </td>
                                 </tr>
 
@@ -476,22 +468,7 @@
                                         </td>
                                     </tr>
                                     
-                                    <tr>
-                                        <td>
-                                            <div class="linea_total">
-                                                <svg version="1.2" width="100%">
-                                                    <line x1="0" y1="5.5" x2="244" y2="5.5" stroke="#f2eff0" stroke-width="1" stroke-dasharray="" stroke-linecap="square"></line>
-                                                </svg>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="linea_total">
-                                                <svg version="1.2" width="100%">
-                                                    <line x1="0" y1="5.5" x2="244" y2="5.5" stroke="#f2eff0" stroke-width="1" stroke-dasharray="" stroke-linecap="square"></line>
-                                                </svg>
-                                            </div>
-                                        </td>
-                                    </tr>
+                                    
                                     </table>
                                 
                                 </div>

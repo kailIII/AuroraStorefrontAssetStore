@@ -75,16 +75,17 @@
 
 	
 
-	
+	<!-- colocamos el resumen de pedido -->
 	<div class="separador_total gris_sidebar" id="WC_PromotionCodeDisplay_div_1">
             <c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
                 <c:param name="emsName" value="Resumen_de_pedido" />
             </c:import>
     </div>
 	
-	
-<div id="total_breakdown">	
-	<table id="order_total2" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<!-- comentamos todo esta seccion de resumen de pedido para cambiarlo por el otro del archivo CheckoutLogon.jsp
+
+ <div id="total_breakdown">    
+    <table id="order_total2" cellpadding="0" cellspacing="0" border="0" role="presentation">
 		
 		<%-- ORDER SUMMARY LINE - order subtotal --%>
 		<tr> 
@@ -312,14 +313,138 @@
 	</c:if>
 	</table>
 	
-	
-
-	<!-- esta seccion comentamos el resumennnnnnnnnnnnnnnnnn -->
-	<%--<%out.flush();%>
-		<c:import url="/${sdb.jspStoreDir}/Snippets/Order/Cart/CheckoutLogon.jsp"/>
-	<%out.flush();%>
-	--%>
 </div>
+ terminamos de comentar toda la seccion de resumen de pedido -->
+
+<!-- esta es la nueva seccion de resumen de pedido -->
+                <div id="total_breakdown">
+                    <table width="100%" id="order_total2" cellpadding="0" cellspacing="0" border="0" role="presentation">
+
+                        <%-- ORDER SUBTOTAL--%>
+                            <tr>
+                                <td class="total_details align_left" id="WC_SingleShipmentOrderTotalsSummary_td_1"><fmt:message bundle="${storeText}" key="MO_ORDERSUBTOTAL" /></td>
+                                <td class="total_figures align_right" id="WC_SingleShipmentOrderTotalsSummary_td_2">
+                                    <c:choose>
+                                        <c:when test="${!empty order.totalProductPrice}">
+                                            <fmt:formatNumber value="${order.totalProductPrice}" type="currency" maxFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}"/><c:out value="${CurrencySymbol}"/>
+                                        </c:when>
+                                        <c:otherwise>
+                                            <fmt:message bundle="${storeText}" key="MO_NOT_AVAILABLE" />
+                                        </c:otherwise>
+                                    </c:choose>
+                                </td>
+                            </tr>
+
+                            <%-- DISCOUNT ADJUSTMENTS --%>
+                                <tr>
+                                    <td class="total_details align_left" id="WC_SingleShipmentOrderTotalsSummary_td_11"><fmt:message bundle="${storeText}" key="MO_DISCOUNTADJ" /></td>
+                                    <td class="total_figures align_right" id="WC_SingleShipmentOrderTotalsSummary_td_12">
+                                        <c:choose>
+                                            <c:when test="${!empty order.totalAdjustment}">
+                                                <fmt:formatNumber value="${order.totalAdjustment}" type="currency" maxFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}"/><c:out value="${CurrencySymbol}"/>
+                                            </c:when>
+                                            <c:otherwise>
+                                                <fmt:message bundle="${storeText}" key="MO_NOT_AVAILABLE" />
+                                            </c:otherwise>
+                                        </c:choose>
+                                    </td>
+                                </tr>
+
+                                <%-- TAX --%>
+                                    <tr>
+                                        <td class="total_details align_left" id="WC_SingleShipmentOrderTotalsSummary_td_5"><fmt:message bundle="${storeText}" key="MO_TAX" /></td>
+                                        <td class="total_figures align_right" id="WC_SingleShipmentOrderTotalsSummary_td_6">
+                                            <c:choose>
+                                                <c:when test="${!empty order.totalSalesTax}">
+                                                    <fmt:formatNumber value="${order.totalSalesTax}" type="currency" maxFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}"/><c:out value="${CurrencySymbol}"/>
+                                                </c:when>
+                                                <c:otherwise>
+                                                    <fmt:message bundle="${storeText}" key="MO_NOT_AVAILABLE" />
+                                                </c:otherwise>
+                                            </c:choose>
+                                        </td>
+                                    </tr>
+
+                                    <%-- SHIPPING CHARGE --%>
+                                        <tr>
+                                            <td class="total_details align_left" id="WC_SingleShipmentOrderTotalsSummary_td_7"><fmt:message bundle="${storeText}" key="MO_SHIPPING" /></td>
+                                            <td class="total_figures align_right" id="WC_SingleShipmentOrderTotalsSummary_td_8">
+                                                <c:choose>
+                                                    <c:when test="${!empty order.totalShippingCharge}">
+                                                        <fmt:formatNumber value="${order.totalShippingCharge}" type="currency" maxFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}"/><c:out value="${CurrencySymbol}"/>
+                                                    </c:when>
+                                                    <c:otherwise>
+                                                        <fmt:message bundle="${storeText}" key="MO_NOT_AVAILABLE" />
+                                                    </c:otherwise>
+                                                </c:choose>
+                                            </td>
+                                        </tr>
+
+                                        <%-- SHIPPING TAX --%>
+                                            <tr>
+                                                <td class="total_details align_left" id="WC_SingleShipmentOrderTotalsSummary_td_14"><fmt:message bundle="${storeText}" key="MO_SHIPPING_TAX" /></td>
+                                                <td class="total_figures align_right" id="WC_SingleShipmentOrderTotalsSummary_td_15">
+                                                    <c:choose>
+                                                        <c:when test="${!empty order.totalShippingTax}">
+                                                            <fmt:formatNumber value="${order.totalShippingTax}" type="currency" maxFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}"/><c:out value="${CurrencySymbol}"/>
+                                                        </c:when>
+                                                        <c:otherwise>
+                                                            <fmt:message bundle="${storeText}" key="MO_NOT_AVAILABLE" />
+                                                        </c:otherwise>
+                                                    </c:choose>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <div class="linea_total"></div>
+                                                </td>
+                                                <td>
+                                                    <div class="linea_total"></div>
+                                                </td>
+                                            </tr>
+
+                                            <%-- ORDER TOTAL --%>
+                                                <tr>
+                                                    <td class="total_details align_left_total" id="WC_SingleShipmentOrderTotalsSummary_td_9"><fmt:message bundle="${storeText}" key="MO_ORDERTOTAL" /></td>
+                                                    <td class="total_figures align_right_total" id="WC_SingleShipmentOrderTotalsSummary_td_10">
+                                                        <c:choose>
+                                                            <c:when test="${order.grandTotal != null}">
+                                                                <c:choose>
+                                                                    <c:when test="${!empty order.grandTotal}">
+                                                                        <fmt:formatNumber value="${order.grandTotal}" type="currency" maxFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}"/><c:out value="${CurrencySymbol}"/>
+                                                                    </c:when>
+                                                                    <c:otherwise>
+                                                                        <fmt:message bundle="${storeText}" key="MO_NOT_AVAILABLE" />
+                                                                    </c:otherwise>
+                                                                </c:choose>
+                                                            </c:when>
+                                                            <c:otherwise>
+                                                                <fmt:message bundle="${storeText}" key="MO_NOT_AVAILABLE" />
+                                                            </c:otherwise>
+                                                        </c:choose>
+                                                    </td>
+                                                </tr>
+
+                                                
+                                                </table>
+
+                                            </div>
+                                        <!--termina el codigo del resumen -->
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+        
+        
+
 
 <flow:ifEnabled feature="CouponWallet">
 	<c:if test="${param.fromPage != 'orderConfirmationPage' && param.fromPage != 'orderSummaryPage' && param.fromPage != 'pendingOrderDisplay'}">

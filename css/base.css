@@ -540,6 +540,8 @@ dl, ol, ul {
 		margin-left: 0;
 		margin-right: 0;
 	}
+    
+    
 }
 
 /* Grid system - RWD-C */
@@ -562,7 +564,7 @@ dl, ol, ul {
 	.rowContainer > .row.margin-true { padding: 0 10px; }
 	.row.margin-true > div > div { /*margin: 10px 10px;*/ margin: 10px 10px; }
 	.row.margin-true > div > div:first-of-type { /*margin-top: 10px;*/ }
-	.row.margin-true > div > div:last-of-type { margin-bottom: 10px; }
+	.row.margin-true > div > div:last-of-type { margin-bottom: 10px; }    
 }
 
 /* wc/widget/Grid - fluid grid responsive to container width */
@@ -3588,9 +3590,8 @@ Empty Shopping Cart
 }
 #total_breakdown #order_total2{
     width: 100%;
-    display: inline-block;
     padding-right: 0;
-    float: left;
+    float: right;
 }
 
 

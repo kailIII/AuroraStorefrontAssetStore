@@ -264,10 +264,11 @@
 
 /* ShopCartDisplay.jsp cost breakdown */
 #total_breakdown {	
-	padding:5px 9px 10px 0px;
+	padding:5px 0px 10px 10px;
 	text-align: right;
-	display:inline-block;
 	vertical-align:top;
+    float: right;
+    width: 100%;
 }
 
 #total_breakdown #order_total {
@@ -408,7 +409,9 @@
 }
 .linea_total{
     margin: 10px 0px;
-    height: 5px;
+    height: 2px;
+    background-color: rgb(242, 239, 240);
+    width: 100%;
 }
 
 .separador_total{
