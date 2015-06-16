@@ -858,10 +858,7 @@ position: absolute;
 	display: inline-block;
 	position: relative;
 }
-#departmentsMenu > li.hidden {
-	position: absolute;
-	visibility: hidden;
-}
+
 #departmentsMenu > li > .link,
 #departmentsMenu > li > .toggle {
 	display: none;

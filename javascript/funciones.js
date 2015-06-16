@@ -44,6 +44,8 @@ function menuF(){
 			   $('div.'+claseMenu).hide(1);
 			}
 		);
+		
+
 	}
 	else {
 
@@ -72,8 +74,8 @@ var responsiveMenu = function(){
 		})
 		
 		var elemClick = menuCont.find('li')
-		
-		var returnBtn = $('<div><a class="menuReturn"></a></div>')
+		elemClick.unbind('click');
+		var returnBtn = $('<div class="menuReturn"></div>')
 		elemClick.click(function(e){
 			e.preventDefault();
 			e.stopPropagation();
@@ -109,13 +111,19 @@ var responsiveMenu = function(){
 				$(this).find('ul').hide();
 			})
 			
-			//elemClick.eq(childLevel-1).show()
 		})
 		
 		
 		
 	}else{
-		menuCont.css('display', 'block');
+		menuCont.show();
+		var elemFirst = menuCont.find('li');
+		elemFirst.each(function(){
+			$(this).css('display','inline-block');
+		})
+		menuCont.find('li').unbind('click');
+		$('.menuReturn').remove();
+		
 	}
 	
 
