@@ -4460,3 +4460,12 @@ td.item .listPrice {
     top: 100px;
     z-index: 998;
 }
+
+
+.contentRecommendationWidget .left_espot div{
+    padding: 0px !important;
+    text-align: center;
+    color: rgb(112, 112, 112);
+    font-size: 15px;
+    background-color: #fff !important;
+}
