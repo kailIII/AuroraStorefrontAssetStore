@@ -3931,6 +3931,22 @@ div#WC_CheckoutLogonf_div_0{
 	.productListingWidget div.orderByDropdown{
 		margin-right: 0px;
 	}
+	
+	/*Menu*/
+	
+	.subMenuPage{
+		border:none;
+		display:block;
+		left:0px;
+		top:0px;
+		width:auto;
+		background:none;
+	}
+	
+	.categoryList > li{
+		height:auto;
+	}
+		
 }
 
 div#orderByDropdown_4_-2011_3416{
