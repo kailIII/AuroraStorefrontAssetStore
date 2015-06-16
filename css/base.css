@@ -177,7 +177,7 @@ dl, ol, ul {
     border-radius: 5px !important;
     color: #fff !important;
     cursor: pointer !important;
-    //font-size: 0.95em !important;
+    font-size: 0.95em !important;
     text-decoration: none !important;
     background-image: none !important;
 	min-width: 130px;
@@ -185,7 +185,7 @@ dl, ol, ul {
     color: #FFF !important;
     padding: 10px !important;
     border: 0 !important;
-    margin: 10px auto 0 auto !important;
+    /* margin: 10px auto 0 auto !important; */
     cursor: pointer !important;
     box-sizing: border-box;
 }
@@ -4320,4 +4320,10 @@ Alejandro Paredes
 
 .product_page_content .widget_product_image_viewer .image_container {
     width: 385px !important;
+}
+
+@media (max-width: 765px){
+	.product_page_content .widget_product_image_viewer .image_container {
+		width: 95% !important;
+	}
 }
