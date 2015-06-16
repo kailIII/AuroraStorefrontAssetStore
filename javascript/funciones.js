@@ -46,11 +46,8 @@ function menuF(){
 		);
 	}
 	else {
-<<<<<<< HEAD
+
 	   console.log('Less than 960');
-=======
-	   //console.log('Less than 960');   
->>>>>>> origin/master
 	}
 }
 
