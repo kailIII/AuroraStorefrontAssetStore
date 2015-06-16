@@ -75,10 +75,10 @@
 
 			
 			<div class="asistenciaTienda"> 				
-				<a>Asistencia</a>				
+				<a> <fmt:message bundle="${storeText}" key="HEADER_ASISTENCIA" /> </a>				
 				<ul class="asistenciaLista"> 
-					<li><a>Preguntas frecuentes</a></li>
-					<li><a>Chat en linea</a></li> 
+					<li><a target="_blank"  href="http://www.telmex.com/web/asistencia/hogar-preguntas-frecuentes-tienda-en-linea"><fmt:message bundle="${storeText}" key="HEADER_ASISTENCIA_FAQ" /> </a></li>
+					<li><a><fmt:message bundle="${storeText}" key="HEADER_ASISTENCIA_CHAT" /> </a></li> 
 				</ul>
 			</div>
 
@@ -158,9 +158,9 @@
 			</li>
 
 			<flow:ifEnabled feature="StoreLocator">
-				<li class="separator-false localizadorTienda" role="menuitem" ><a id="storeLocatorQuickLink"
+				<li class="separator-false localizadorTienda" role="menuitem" ><a  target="_blank" id="storeLocatorQuickLink"
 					href="http://telmex.com/web/buscador?q=&output=xml_no_dtd&oe=UTF-8&ie=UTF-8&client=_nuevo_telmex_lugares&proxystylesheet=_nuevo_telmex_lugares&entqr=3&entqrm=0&ud=1&getfields=*&site=tiendas_fisicas|sitios_wifi|cibercafes&filter=0&requiredfields=&giro=Mostrar+todo&estado=Mostrar+todo">
-					Localiza&nbsp;tu&nbsp;tienda	</a>
+					<fmt:message bundle="${storeText}" key="HEADER_LOCALIZA_TIENDA" />	</a>
 				</li>
 			</flow:ifEnabled>
 			
@@ -278,7 +278,7 @@
 		<li class="menuCategorias">
 			
 			<a id="departmentButton_90001" href="#" class="departmentButton" role="menuitem" aria-haspopup="true" data-toggle="departmentMenu_90001">
-				<span>Todas las categorías</span>
+				<span> <fmt:message bundle="${storeText}" key="MENU_PRINCIPAL_TODAS_CAT" /> </span>
 				<div class="arrow_button_icon"></div>	
 			</a>
 		
@@ -351,7 +351,7 @@
 				
 				<li class="active">
 					<a id="departmentButton_" href="#" class="departmentButton" role="menuitem" aria-haspopup="true" data-toggle="departmentMenu_001">
-						<span>Estilos de vida</span>
+						<span>  <fmt:message bundle="${storeText}" key="MENU_PRINCIPAL_ESTILOS_VIDA" /> </span>
 					</a>
 					
 					<div id="departmentMenu_001" class="departmentMenu" role="menu" data-parent="departmentsMenu" data-id="0001" aria-label="telmex">
@@ -372,12 +372,9 @@
 				
 				<li class="active">
 				
-				<!--
-				link completo con data-toogle, que es la que muestra el spot 
-				<a id="departmentButton_" href="http://www.telmex.com" class="departmentButton" role="menuitem" aria-haspopup="true" data-toggle="departmentMenu_002">  
-				-->
+
 					<a id="departmentButton_" href="auroraesite/electronics"   class="departmentButton" role="menuitem" aria-haspopup="true" >
-						<span>Novedades</span>
+						<span> <fmt:message bundle="${storeText}" key="MENU_PRINCIPAL_NOVEDADES" /> </span>
 					</a>
 					
 					<div id="departmentMenu_002" class="departmentMenu" role="menu"  data-parent="departmentsMenu" data-id="002" aria-label="002">
@@ -398,7 +395,7 @@
 				
 				<li class="active">
 					<a id="departmentButton_" href="auroraesite/electronics" class="departmentButton" role="menuitem" aria-haspopup="true" >
-						<span>Exclusivos</span>
+						<span> <fmt:message bundle="${storeText}" key="MENU_PRINCIPAL_EXCLUSIVOS" /> </span>
 					</a>
 					
 					<div id="departmentMenu_003" class="departmentMenu" role="menu"
@@ -421,7 +418,7 @@
 				
 				<li class="active">
 					<a id="departmentButton_" href="auroraesite/electronics" class="departmentButton" role="menuitem" aria-haspopup="true" >
-						<span>Go Pro</span>
+						<span> <fmt:message bundle="${storeText}" key="MENU_PRINCIPAL_GOPRO" /> </span>
 					</a>
 					
 					<div id="departmentMenu_004" class="departmentMenu" role="menu" data-parent="departmentsMenu" data-id="004" aria-label="004">
@@ -442,7 +439,7 @@
 				
 				<li class="active">
 					<a id="departmentButton_" href="auroraesite/electronics" class="departmentButton" role="menuitem" aria-haspopup="true" >
-						<span>Apple</span>
+						<span> <fmt:message bundle="${storeText}" key="MENU_PRINCIPAL_APPLE" /> </span>
 					</a>
 					
 					<div id="departmentMenu_005" class="departmentMenu" role="menu" data-parent="departmentsMenu" data-id="005" aria-label="005">
@@ -463,7 +460,7 @@
 				
 				<li class="active">
 					<a id="departmentButton_" href="auroraesite/electronics" class="departmentButton" role="menuitem" aria-haspopup="true" >
-						<span>Negocio</span>
+						<span>  <fmt:message bundle="${storeText}" key="MENU_PRINCIPAL_NEGOCIO" /> </span>
 					</a>
 					
 					<div id="departmentMenu_006" class="departmentMenu" role="menu" data-parent="departmentsMenu" data-id="006" aria-label="006">
@@ -484,7 +481,7 @@
 				
 				<li class="active">
 					<a id="departmentButton_" href="auroraesite/electronics" class="departmentButton" role="menuitem" aria-haspopup="true" >
-						<span>Ofertas Wow</span>
+						<span> <fmt:message bundle="${storeText}" key="MENU_PRINCIPAL_OFERTAS_WOW" />  </span>
 					</a>
 					
 					<div id="departmentMenu_007" class="departmentMenu" role="menu" data-parent="departmentsMenu" data-id="007" aria-label="007">
@@ -506,7 +503,7 @@
 				
 					<li class="active">
 					<a id="departmentButton_" href="auroraesite/electronics" class="departmentButton" role="menuitem" aria-haspopup="true" >
-						<span>Payback</span>
+						<span> <fmt:message bundle="${storeText}" key="MENU_PRINCIPAL_PAYBACK" />  </span>
 					</a>
 					
 					<div id="departmentMenu_009" class="departmentMenu" role="menu" data-parent="departmentsMenu" data-id="009" aria-label="009">

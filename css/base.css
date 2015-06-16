@@ -2020,7 +2020,8 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 	}
 
 	#Header_GlobalLogin_signOutQuickLinkUser, 
-	#Header_GlobalLogin_signOutQuickLink > .userProfileIcon{
+	#Header_GlobalLogin_signOutQuickLink > .userProfileIcon,
+	#Header_GlobalLogin_signOutQuickLink > .userProfileSaludo{
 		display:none;
 	}
 
