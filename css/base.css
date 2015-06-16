@@ -3107,7 +3107,7 @@ li.localizadorTienda :before {
   left: 50%;
   margin-left: 200px!important;
   top: 30px;
-  z-index: 1;
+  z-index: 200;
   color: #767676;
   font-size: 11px;
 	height: 18px;

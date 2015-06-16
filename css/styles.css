@@ -4481,7 +4481,7 @@ div#widget_breadcrumb {
     position: absolute;
     right: 299px;
     top: 70px;
-    width: 328px;
+    /*width: 328px;*/
     z-index: 100;    
 }
 
@@ -4490,7 +4490,7 @@ div#widget_breadcrumb {
 }
 
 .menuDropdown .panel {
-    padding: 20px;
+    padding: 12px;
 }
 
 .menuDropdown .field {
@@ -8054,4 +8054,5 @@ top:8px;
 .txtRegistro{display: inline;}
 .ligaRegistro{ color:#1b83ff; text-decoration:underline;}
 .ligaNecesitasAyuda{ color:#1b83ff; text-decoration:underline; margin:0 auto; display:table; font-size:11px; margin-top:5px; }
-.signOutDrop{ display:inline-block;}
+.signOutDrop{ display: block; padding-top: 6px; border-top: 1px solid #CCCCCC;}
+.ligasSignOut{display: inline-block!important; margin-bottom: 6px;}
