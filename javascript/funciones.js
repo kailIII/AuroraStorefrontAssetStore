@@ -16,7 +16,7 @@ function menuF(){
 	
 	if ($(window).width() > 952) {
 	var claseMenu = "";
-	console.log("mayor a 952");
+	//console.log("mayor a 952");
 		$(".menuLink").hover(
 			function () {
 				
@@ -32,7 +32,7 @@ function menuF(){
 
 	}
 	else {
-	   console.log('Less than 960');   
+	   //console.log('Less than 960');   
 	}
 }
 

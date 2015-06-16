@@ -219,7 +219,7 @@ require([
 						node.innerHTML = node.innerHTML.replace(s, sBr);
 					}
 				}
-			});
+			});/*
 			on(quickLinksButton, "click", function(e) {
 				var target = this.getAttribute("data-toggle");
 				toggle(document.getElementById(target));
@@ -238,7 +238,7 @@ require([
 					deactivate(document.getElementById(target));
 					event.stop(e);
 				}
-			});
+			});*/
 			on(quickLinksMenu, "keydown", function(e) {
 				if (e.keyCode == 27 || e.keyCode == 9 || (e.keyCode ==9 && e.shiftKey)) {
 					deactivate(quickLinksMenu);
