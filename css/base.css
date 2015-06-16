@@ -2773,11 +2773,9 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 
 .contentRecommendationWidget {
 	background: none repeat scroll 0 0;
-	margin: 20px auto 0px !important;
+    margin: 0 auto !important;
 	max-width: 1000px;
-    border-top: solid #bfbfbf 1px;
-    border-bottom: solid #bfbfbf 1px;
-    padding: 25px 0px;
+    
 }
 
 .categoryRecommendationWidget, .catalogEntryRecommendationWidget {
