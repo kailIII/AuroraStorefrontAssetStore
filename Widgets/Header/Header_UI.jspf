@@ -128,10 +128,10 @@
 					</a>
 					<ul>
 						<c:if test="${userType != 'G'}">
-							<li role="menuitem" class="separator-false"><a id="myAccountQuickLink"
+							<li role="menuitem" class="separator-false"><%--<a id="myAccountQuickLink"
 								href="${fn:escapeXml(MyAccountURL)}"><fmt:message
 										bundle="${storeText}" key="HEADER_MY_ACCOUNT" />
-							</a></li>
+							</a> --%></li>
 						</c:if>
 						<c:choose>
 							<c:when test="${!env_globalLoginViewDisabled eq true}">

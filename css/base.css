@@ -177,7 +177,7 @@ dl, ol, ul {
     border-radius: 5px !important;
     color: #fff !important;
     cursor: pointer !important;
-    //font-size: 0.95em !important;
+    font-size: 0.95em !important;
     text-decoration: none !important;
     background-image: none !important;
 	min-width: 130px;
@@ -185,7 +185,7 @@ dl, ol, ul {
     color: #FFF !important;
     padding: 10px !important;
     border: 0 !important;
-    margin: 10px auto 0 auto !important;
+    /* margin: 10px auto 0 auto !important; */
     cursor: pointer !important;
     box-sizing: border-box;
 }
@@ -540,6 +540,8 @@ dl, ol, ul {
 		margin-left: 0;
 		margin-right: 0;
 	}
+    
+    
 }
 
 /* Grid system - RWD-C */
@@ -562,7 +564,7 @@ dl, ol, ul {
 	.rowContainer > .row.margin-true { padding: 0 10px; }
 	.row.margin-true > div > div { /*margin: 10px 10px;*/ margin: 10px 10px; }
 	.row.margin-true > div > div:first-of-type { /*margin-top: 10px;*/ }
-	.row.margin-true > div > div:last-of-type { margin-bottom: 10px; }
+	.row.margin-true > div > div:last-of-type { margin-bottom: 10px; }    
 }
 
 /* wc/widget/Grid - fluid grid responsive to container width */
@@ -2774,8 +2776,9 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 
 .contentRecommendationWidget {
 	background: none repeat scroll 0 0;
-	margin: 0 auto !important;
+    margin: 0 auto !important;
 	max-width: 1000px;
+    
 }
 
 .categoryRecommendationWidget, .catalogEntryRecommendationWidget {
@@ -3108,7 +3111,7 @@ li.localizadorTienda :before {
   left: 50%;
   margin-left: 200px!important;
   top: 30px;
-  z-index: 1;
+  z-index: 200;
   color: #767676;
   font-size: 11px;
 	height: 18px;
@@ -3591,9 +3594,8 @@ Empty Shopping Cart
 }
 #total_breakdown #order_total2{
     width: 100%;
-    display: inline-block;
     padding-right: 0;
-    float: left;
+    float: right;
 }
 
 
@@ -4040,6 +4042,18 @@ select#billing_address_id_1{
     line-height: 1.4;
 }
 
+/*.row + #editAddressContents {
+	display: none;
+}*/
+
+#OI65001addToShoppingListBtn {
+	width: 122px;
+}
+
+div#orderByDropdown_4_-2011_3907{
+	max-width: 140px;
+}
+
 
 /** 
 FICHA PRODUCTO
@@ -4309,4 +4323,10 @@ Alejandro Paredes
 
 .product_page_content .widget_product_image_viewer .image_container {
     width: 385px !important;
+}
+
+@media (max-width: 765px){
+	.product_page_content .widget_product_image_viewer .image_container {
+		width: 95% !important;
+	}
 }
