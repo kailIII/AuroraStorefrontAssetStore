@@ -3998,6 +3998,10 @@ select#billing_address_id_1{
 	height: 20px;
 }
 
+.promo-container{
+	padding: 10px;
+}
+
 .promo {
     padding: 10px 18px;
     border: 0;
@@ -4017,7 +4021,7 @@ select#billing_address_id_1{
 }
 
 .fotoPromo {
-    width: 33%;
+    width: 32%;
     display: inline-block;
     text-align: center;
 }

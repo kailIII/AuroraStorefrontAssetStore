@@ -50,25 +50,31 @@
 			<div class="col5 acol12 ccol12 left slot6" data-slot-id="6">
                 <%-- Daniel Torres --%>
                     
-                    <c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
-                        <c:param name="emsName" value="telmex_promociones" />
-                    </c:import>
-                    <%--
-                    <div class="promo">
-                        <div class="contPromo">
-                            <span>
-                                Promoci&oacute;n
-                            </span>
-                            <p>
-                                Ll&eacute;vate un Speaker Harman/ Kardon* de regalo y adem&aacute;s 18 MSI**
-                            </p>
+                    
+                                
+                    <div class="promo-container">
+                    	<%--
+                    	<c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
+                        	<c:param name="emsName" value="telmex_promociones" />
+                    	</c:import>
+						--%>
+						
+                    	<div class="promo">
+                            <div class="contPromo">
+                                <span>
+                                    Promoci&oacute;n
+                                </span>
+                                <p>
+                                    Ll&eacute;vate un Speaker Harman/ Kardon* de regalo y adem&aacute;s 18 MSI**
+                                </p>
+                            </div>
+    
+    
+                            <div class="fotoPromo">
+                                <img src="<c:out value="${jspStoreImgDir}images/bocinas.jpg"/>">
+                            </div>
                         </div>
-
-
-                        <div class="fotoPromo">
-                            <img src="<c:out value="${jspStoreImgDir}images/bocinas.jpg"/>">
-                        </div>
-                    </div> --%>
+                    </div>
                 <wcpgl:widgetImport slotId="6"/>
             </div>
 			</div>		
