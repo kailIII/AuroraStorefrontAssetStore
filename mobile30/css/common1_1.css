@@ -62,12 +62,9 @@ span.required {
 
 /* Orange Button */
 .primary_button {
-    background-color: #48baf6;
-	border: 1px solid #b6bebd;
+    background-color: #48baf6;	
 	color: #fff;
-	-webkit-box-shadow:inset 0 1px 1px #fcdeb7;
-	box-shadow:inset 0 1px 1px #fcdeb7;
-    cursor: pointer;
+	cursor: pointer;
 }
 
 	.primary_button:hover{
@@ -83,9 +80,7 @@ span.required {
 
 .secondary_button{
     background-color: #fa8039;
-	border: 1px solid #B6BEBD;
 	color: #fff;
-	box-shadow: inset 0 1px 1px #FCFCFC;
     cursor: pointer;
 }
 
@@ -101,9 +96,7 @@ span.required {
 
 	.secondary_button:hover {
         background-color:#fa6b19;
-		border: 1px solid #B6BEBD;
 		color: #fff;
-		box-shadow: inset 0 1px 1px #FCFCFC
 	}
 
 	.secondary_button:active {
@@ -334,3 +327,29 @@ Daniel Torres
 	width: 100%;
 	max-width: 154px;
 }
+
+/* Arturo agregamos los estilos para el ayuda */
+.genericESpot table{
+    margin-top: 7px;
+    text-align: center;
+}
+
+.genericESpot table tbody tr td p + p{
+    text-align: center !important;
+    line-height: 13px;
+}
+
+.genericESpot table tbody tr td p + p + p{
+    text-align: center !important;    
+}
+
+.genericESpot table tbody tr td p + p + p + p{
+    text-align: left !important;
+    line-height: 13px;
+}
+
+.genericESpot table tbody tr td p strong span span{
+    text-align: center !important;
+}
+
+

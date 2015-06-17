@@ -4449,11 +4449,12 @@ td.item .listPrice {
 }
 
 .genericESpot table, tr td table p{
-    display: table;
     border-collapse: separate;
     border-spacing: 0px;
     border-color: grey;
 }
+
+
 .flotante_side{
     position: absolute;
     right: 20px;

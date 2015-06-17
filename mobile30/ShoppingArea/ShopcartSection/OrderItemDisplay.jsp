@@ -180,7 +180,8 @@
 								<img src="<c:out value="${jspStoreImgDir}images/bolsita.png"/>"/>
 							</div>
 						</div>
-
+                        
+                        
 					</c:when>
 					<%--
 						***
@@ -526,7 +527,10 @@
 							</c:otherwise>
 						</c:choose>
 
-						<div id="proceed_to_checkout" class="item_wrapper_button">
+						
+                            
+                            
+                        <div id="proceed_to_checkout" class="item_wrapper_button">
 							<wcf:url var="ContinueShoppingURL" patternName="HomePageURLWithLang" value="TopCategoriesDisplayView">
 								<wcf:param name="langId" value="${WCParam.langId}" />
 								<wcf:param name="storeId" value="${WCParam.storeId}" />
@@ -540,6 +544,15 @@
 							</div>
 							<div class="clear_float"></div>
 						</div>
+                            
+                            <!-- aca metemos mano en necesitas ayuda-->
+                            <div class="necesitas-ayuda">
+                                <c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
+                                    <c:param name="emsName" value="telmex__necesitas_ayuda" />
+                                </c:import>
+                            </div>    
+                            
+                            
 					</c:otherwise>
 				</c:choose>
 			</div>
