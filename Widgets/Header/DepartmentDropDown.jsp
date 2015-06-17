@@ -141,11 +141,7 @@
 			           
 			    </li>
 			</c:forEach>
-<<<<<<< HEAD
-			
-			</ul>
-=======
->>>>>>> origin/master
+
 			
 			</ul>
 			
