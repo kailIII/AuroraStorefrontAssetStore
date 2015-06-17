@@ -172,12 +172,13 @@ dl, ol, ul {
 
 /* Button */
 
+/* NO MOVER ESTILOS DE btnAzul */
 .btnAzul {
     background-color: #48baf6 !important;
     border-radius: 5px !important;
     color: #fff !important;
     cursor: pointer !important;
-    //font-size: 0.95em !important;
+    font-size: 0.95em !important;
     text-decoration: none !important;
     background-image: none !important;
 	min-width: 130px;
@@ -185,7 +186,6 @@ dl, ol, ul {
     color: #FFF !important;
     padding: 10px !important;
     border: 0 !important;
-    margin: 10px auto 0 auto !important;
     cursor: pointer !important;
     box-sizing: border-box;
 }
