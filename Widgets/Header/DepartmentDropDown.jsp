@@ -105,7 +105,7 @@
 				
 				
 				
-			    <c:forEach var="department" items="${categoryHierarchy.catalogGroupView}">
+			   <c:forEach var="department" items="${categoryHierarchy.catalogGroupView}">
 			    
 			    <c:set var="count" value="#{count+1}" />
 			    
@@ -120,13 +120,29 @@
 			                    <c:set var="key" value="${department.uniqueID}_${category.uniqueID}"/>
 			                     <li> <a id="categoryLink_${key}" href="${fn:escapeXml(categoryURLMap[key])}" class="menuLink" role="menuitem" tabindex="-1">
 			                    <c:out value="${category.name}"/></a>
+			                   
+			                   <ul class="subcategoryList2"><c:forEach var="subcategory" items="${category.catalogGroupView}" >
+			                   
+			                   <li>
+								<c:set var="key" value="${department.uniqueID}_${category.uniqueID}_${subcategory.uniqueID}"/>
+								<a id="subcategoryLink_${key}" href="${fn:escapeXml(categoryURLMap[key])}" class="menuLink" role="menuitem" tabindex="-1"><c:out value="${subcategory.name}"/></a>
+							
+							</c:forEach>
 			               </li>
-			              </c:forEach></ul>
+			                </ul>   
+			               
+			               </li>
+			              
+			              </c:forEach>
+			              
+			             </ul>
 				    </div>
 			           
 			           
 			    </li>
-			</c:forEach></ul>
+			</c:forEach>
+			
+			</ul>
 			
 			
 			 
