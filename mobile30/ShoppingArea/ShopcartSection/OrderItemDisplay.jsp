@@ -164,8 +164,23 @@
 				<c:choose>
 					<c:when test="${ !bHasShopCart }">
 						<div id="shoppingCart_emptyShopCart" class="item_wrapper">
-							<p><fmt:message bundle="${storeText}" key="EMPTY_SHOPPING_CART"/></p>
+							<div class="carro-vacio">
+								<p><fmt:message bundle="${storeText}" key="EMPTY_SHOPPING_CART"/></p>
+								<div>
+									<div id="continueShoppingButton" class="">
+										<a href="#" id="WC_BreadCrumbTrailDisplay_links_2a" class="btnGris" tabindex="0" onclick="JavaScript:setPageLocation('<c:out value='${env_TopCategoriesDisplayURL}'/>');return false;">
+											<div class="left_border"></div>
+											<div class="button_text"><fmt:message bundle="${storeText}" key="CONTINUE_SHOPPING"/></div>								
+											<div class="right_border"></div>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="carro-vacio-imagen">
+								<img src="<c:out value="${jspStoreImgDir}images/bolsita.png"/>"/>
+							</div>
 						</div>
+
 					</c:when>
 					<%--
 						***
