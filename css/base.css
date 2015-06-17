@@ -2806,12 +2806,18 @@ li.menuCategorias :hover  <  .departmentButton.selected{
     background-color: #fa6b19!important;
 }
 
-.product > .product_image img {
+/* .product > .product_image img {
 	height: 100%;
 	max-height: 160px!important;
 	max-width: 243px!important;
 	width: 243px!important;
-}
+} */
+
+/* .product > .product_image img {
+    height: 100%;
+    max-height: 160px;
+    max-width: 240px;
+} */
 
 div.namePartPriceContainer > div > span.price {
 	color: #fa8846 !important;
@@ -3067,7 +3073,7 @@ div.grid_icon, a.grid_icon:hover, div.list_icon, a.list_icon:hover {
 	top: 30px;
 }
 
-.product > .product_image img {
+/* .product > .product_image img {
   width: 100% !important;
   height: 100%;
   max-width: 200px;
@@ -3076,7 +3082,7 @@ div.grid_icon, a.grid_icon:hover, div.list_icon, a.list_icon:hover {
 
 .product > .product_image img {
   width: 100% !important;
-}
+} */
 
 .catPos > .container > a {
   color: #666666;
@@ -4316,7 +4322,7 @@ Alejandro Paredes
 
 /* hay que checar que no choque con todas las imagenes de la tienda, se agregó para cuadrar las imagenes de los carruseles del home */
 
-.catPos > .product_image > a > img {
+/* .catPos > .product_image > a > img {
     margin: 0px !important;
     width: 100% !important;
-}
+} */
