@@ -81,13 +81,23 @@ span.required {
         cursor: pointer;
 	}
 
-.secondary_button, select.secondary_input {
+.secondary_button{
     background-color: #fa8039;
 	border: 1px solid #B6BEBD;
 	color: #fff;
 	box-shadow: inset 0 1px 1px #FCFCFC;
     cursor: pointer;
 }
+
+.select.secondary_input {
+    background-color: #fa8039;
+    border: 1px solid #B6BEBD;
+    color: #000;
+    box-shadow: inset 0 1px 1px #FCFCFC;
+    cursor: pointer;
+    text-align: center;
+}
+
 
 	.secondary_button:hover {
         background-color:#fa6b19;
@@ -128,10 +138,6 @@ span.required {
 	border: 1px solid darkGray;
 }
 
-select.inputfield {
-	background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #FFFFFF), color-stop(1, #C6CBCE));
-	background: linear-gradient(top, #ffffff 0%, #C6CBCE 100%);
-}
 
 .back_arrow_icon {
 	background: url('../images/colors/color1/back_arrow.gif') no-repeat;
