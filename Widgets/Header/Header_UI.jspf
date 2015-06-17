@@ -261,6 +261,7 @@
 </div>
 
 <div id="headerRow2">
+
 	<a id="departmentsButton" href="#" class="basicButton" role="button"
 		aria-haspopup="true" data-toggle="departmentsMenu"> <span><fmt:message
 				bundle="${storeText}" key="DEPARTMENTS" />
@@ -371,9 +372,8 @@
 				</li>
 				
 				<li class="active">
-				
 
-					<a id="departmentButton_" href="auroraesite/electronics"   class="departmentButton" role="menuitem" aria-haspopup="true" >
+					<a id="departmentButton_" href="${fn:escapeXml(categoryURLMap[key])}"  class="departmentButton" role="menuitem" aria-haspopup="true" >
 						<span> <fmt:message bundle="${storeText}" key="MENU_PRINCIPAL_NOVEDADES" /> </span>
 					</a>
 					
@@ -394,7 +394,7 @@
 				</li/>
 				
 				<li class="active">
-					<a id="departmentButton_" href="auroraesite/electronics" class="departmentButton" role="menuitem" aria-haspopup="true" >
+					<a id="departmentButton_" href="${fn:escapeXml(categoryURLMap[key])}" class="departmentButton" role="menuitem" aria-haspopup="true" >
 						<span> <fmt:message bundle="${storeText}" key="MENU_PRINCIPAL_EXCLUSIVOS" /> </span>
 					</a>
 					
@@ -417,7 +417,7 @@
 				</li>
 				
 				<li class="active">
-					<a id="departmentButton_" href="auroraesite/electronics" class="departmentButton" role="menuitem" aria-haspopup="true" >
+					<a id="departmentButton_" href="${fn:escapeXml(categoryURLMap[key])}" class="departmentButton" role="menuitem" aria-haspopup="true" >
 						<span> <fmt:message bundle="${storeText}" key="MENU_PRINCIPAL_GOPRO" /> </span>
 					</a>
 					
@@ -438,7 +438,7 @@
 				</li>
 				
 				<li class="active">
-					<a id="departmentButton_" href="auroraesite/electronics" class="departmentButton" role="menuitem" aria-haspopup="true" >
+					<a id="departmentButton_" href="${fn:escapeXml(categoryURLMap[key])}" class="departmentButton" role="menuitem" aria-haspopup="true" >
 						<span> <fmt:message bundle="${storeText}" key="MENU_PRINCIPAL_APPLE" /> </span>
 					</a>
 					
@@ -459,7 +459,7 @@
 				</li>
 				
 				<li class="active">
-					<a id="departmentButton_" href="auroraesite/electronics" class="departmentButton" role="menuitem" aria-haspopup="true" >
+					<a id="departmentButton_" href="${fn:escapeXml(categoryURLMap[key])}" class="departmentButton" role="menuitem" aria-haspopup="true" >
 						<span>  <fmt:message bundle="${storeText}" key="MENU_PRINCIPAL_NEGOCIO" /> </span>
 					</a>
 					
@@ -480,7 +480,7 @@
 				</li>
 				
 				<li class="active">
-					<a id="departmentButton_" href="auroraesite/electronics" class="departmentButton" role="menuitem" aria-haspopup="true" >
+					<a id="departmentButton_" href="${fn:escapeXml(categoryURLMap[key])}" class="departmentButton" role="menuitem" aria-haspopup="true" >
 						<span> <fmt:message bundle="${storeText}" key="MENU_PRINCIPAL_OFERTAS_WOW" />  </span>
 					</a>
 					
@@ -502,7 +502,7 @@
 				
 				
 					<li class="active">
-					<a id="departmentButton_" href="auroraesite/electronics" class="departmentButton" role="menuitem" aria-haspopup="true" >
+					<a id="departmentButton_" href="${fn:escapeXml(categoryURLMap[key])}" class="departmentButton" role="menuitem" aria-haspopup="true" >
 						<span> <fmt:message bundle="${storeText}" key="MENU_PRINCIPAL_PAYBACK" />  </span>
 					</a>
 					
