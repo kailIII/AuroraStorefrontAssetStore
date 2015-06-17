@@ -260,6 +260,20 @@ dl, ol, ul {
 	text-transform: uppercase;
 }
 
+.menuReturn:before{
+	width:15px;
+	height:14px;
+	background: url("../images/responsive/rwdUI.png") no-repeat -20px 2px;
+	content:'';
+	display:inline-block;
+}
+
+.menuReturn{
+	margin:15px 0 15px 13px;
+	cursor:pointer;
+	color:#00a8e8
+}
+
 .basicButton {
 	display: inline-block;
 	position: relative;
@@ -873,8 +887,6 @@ position: absolute;
 	top: 100%;
 	width: 185px;
 	margin: 0;
-	background-color:#fff;
-	background-color: rgba(255, 255, 255, 0.9);
 	border-bottom: 1px solid #c9cece;
 	border-left: 1px solid #c9cece;
 	/*border-top: 1px solid #fff;*/
@@ -891,13 +903,9 @@ position: absolute;
 .departmentMenu > .header {
 	margin: 0;
 	padding: 8px 0;
-	border-bottom: 1px solid #b5b5b5;
+	border-bottom: 1px solid #dbdcdc;
 	font-size: inherit;
 	display:none;	
-}
-
-#departmentsMenu > li.menuCategorias {
-
 }
 
 #departmentsMenu > li.menuCategorias   .departmentButton {
@@ -998,6 +1006,11 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 	font-family:Arial, Sans-serif;
 	text-transform:capitalize;
 	font-size:13px;
+	background: -webkit-linear-gradient(center top , #fefeff, #c9cece); /* For Safari 5.1 to 6.0 */
+  	background: -o-linear-gradient(center top , #fefeff, #c9cece); /* For Opera 11.1 to 12.0 */
+  	background: -moz-linear-gradient(center top , #fefeff, #ebebeb);
+  	background: linear-gradient(center top , #fefeff, #c9cece); /* Standard syntax */
+  	color:#55667a;
 }
 
 .categoryList > li {
@@ -1033,12 +1046,14 @@ li.menuCategorias :hover  <  .departmentButton.selected{
   background-position: -282px -40px;
 }
 
-.categoryList > li > a:hover, .categoryList >li:hover{
-	background-color:#1791ce;
+.categoryList > li > a:hover:after{
+	background-position:-220px -40px;
 }
 
+
+
 .categoryList > li:hover > a{
-	color:#ffffff;
+	color:#00a8e0;
 }
 
 
@@ -1090,6 +1105,7 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 .subcategoryList > li > ul > li > a{
 	display:block;
 	padding:3px 0;
+	color:355667a;
 }
 
 .subcategoryList > li > ul > li > a:hover{
@@ -1111,9 +1127,14 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 	width: 812px;
 	height:auto;
 	/*height: 254px;*/
-	background-color: #FFFFFF;
 	padding:15px 0;
-	border-radius: 0px 5px 5px 0px
+	border-radius: 0px 5px 5px 0px;
+	background-image: url("../images/responsive/divisor.png"), -webkit-linear-gradient(center top , #fefeff, #c9cece); /* For Safari 5.1 to 6.0 */
+  	background-image: url("../images/responsive/divisor.png"), -o-linear-gradient(center top , #fefeff, #c9cece); /* For Opera 11.1 to 12.0 */
+  	background-image: url("../images/responsive/divisor.png"), -moz-linear-gradient(center top , #fefeff, #ebebeb);
+  	background-image: url("../images/responsive/divisor.png"), linear-gradient(center top , #fefeff, #c9cece); /* Standard syntax */
+  	background-repeat:no-repeat;
+  	background-position: left center;
 }
 
 .subMenuPage .caption{background:none;}
@@ -1951,11 +1972,6 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 	#Header_GlobalLogin_signInQuickLink .msgLoginUser{
 		display:none!important; 
 	}
-	
-	.categoryList > li > a:hover, .categoryList >li:hover{
-	background-color:white;
-}
-
 	.categoryList > li:hover > a{
 		color:#4d4d4d;
 	}	
@@ -2099,14 +2115,18 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 		right: 0;
 		top: 53px;
 		margin: 0;
-		padding: 0 0 15px 0;
-		background-color: #ffffff;
+		padding: 0;
 		border: 1px solid #c9cece;
 		/*border-top: 3px solid #ffa200; */
 		border-radius: 0 0 4px 4px;
 		color: #404040;
 		font-size: 12px;
 		list-style: none;
+		background: -webkit-linear-gradient(center top , #fefeff, #c9cece); /* For Safari 5.1 to 6.0 */
+	  	background: -o-linear-gradient(center top , #fefeff, #c9cece); /* For Opera 11.1 to 12.0 */
+	  	background: -moz-linear-gradient(center top , #fefeff, #ebebeb);
+	  	background: linear-gradient(center top , #fefeff, #c9cece); /* Standard syntax */
+	  	color:#55667a;
 	}
 	#departmentsMenu > li {
 		display: block;
@@ -2152,11 +2172,12 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 
 	.categoryList {
 		display: none;
-		border-bottom: 1px solid #ffa200;
+		background:none;<
 	}
 	.departmentMenu.active .categoryList {
 		display: none;
 	}
+	
 
 	/* Subcategory list */
 
@@ -3964,11 +3985,11 @@ div#WC_CheckoutLogonf_div_0{
 	
 	.subMenuPage{
 		border:none;
-		display:block;
 		left:0px;
 		top:0px;
 		width:auto;
 		background:none;
+		padding: 10px 0px 0px;
 	}
 	
 	.categoryList > li{

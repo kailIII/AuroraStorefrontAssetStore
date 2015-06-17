@@ -98,6 +98,8 @@ var responsiveMenu = function(){
 	var ibmBtn = menuCont.find('span[role="presentation"]');
 	activeButton.unbind('click');
 	
+	$('.categoryList').hide();
+	
 	ibmBtn.closest('a').hide();
 	
 	if(checkWidth() < 953){
@@ -155,9 +157,10 @@ var responsiveMenu = function(){
 			$(this).parent('#departmentsMenu').prepend(returnBtn);
 		});
 		
-		returnBtn.click(function(){
+		$(document).on('click', returnBtn, function(){
 			var childLevel = $(this).parents('ul').length;
 			console.log(childLevel)
+			
 			var elemFirst = menuCont.find('>li');
 			console.log(elemFirst.length);
 			
@@ -166,7 +169,9 @@ var responsiveMenu = function(){
 				$(this).find('ul').hide();
 			})
 			
+			returnBtn.remove();
 		})
+
 	}else{
 		menuCont.show();
 		var elemFirst = menuCont.find('>li');
@@ -176,6 +181,7 @@ var responsiveMenu = function(){
 			$(this).css('display','inline-block');
 		})
 		
+		$('.departmentMenu').css('top', '100%');
 		allElems.each(function(){
 			$(this).show();
 		})
