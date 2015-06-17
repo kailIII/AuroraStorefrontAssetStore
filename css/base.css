@@ -4313,3 +4313,10 @@ Alejandro Paredes
 .product_page_content .widget_product_image_viewer .image_container {
     width: 385px !important;
 }
+
+/* hay que checar que no choque con todas las imagenes de la tienda, se agregó para cuadrar las imagenes de los carruseles del home */
+
+.catPos > .product_image > a > img {
+    margin: 0px !important;
+    width: 100% !important;
+}
