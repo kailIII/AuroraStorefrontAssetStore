@@ -293,3 +293,44 @@ div#paging_control img{
 .productLargeImage {
 	width: 320px
 }
+
+
+/**************
+Daniel Torres
+**************/
+
+#shoppingCart_emptyShopCart{
+	width: 100%;
+	box-sizing: border-box;
+}
+
+#shoppingCart_emptyShopCart > .carro-vacio{
+	width: 66% !important;
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+}
+
+#shoppingCart_emptyShopCart > p {
+	color: #8c97a1
+}
+
+#shoppingCart_emptyShopCart > .carro-vacio > div {
+	text-align: center;
+}
+
+#shoppingCart_emptyShopCart > .carro-vacio > div > .btnGris{
+	margin: 25px 0;
+}
+
+#shoppingCart_emptyShopCart > .carro-vacio-imagen{
+	width: 32% !important;
+	display: inline-block;
+	vertical-align: middle;
+
+}
+
+#shoppingCart_emptyShopCart > .carro-vacio-imagen > img{
+	width: 100%;
+	max-width: 154px;
+}
