@@ -693,13 +693,12 @@ dl, ol, ul {
 
 
 #quickLinksBar li.signIn > a{
-  position: absolute;
-  /*left: 50%;
-  margin-left: 255px;*/
-  right: 85px;
+position: absolute;
+  right: 65px;
   top: 44px;
   width: auto;
   display: inline-block;
+  max-width: 120px;
 }
 
 #quickLinksBar .spanacce {
