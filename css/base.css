@@ -3304,6 +3304,7 @@ div.compare_target {
 .sorting_controls span {
 	vertical-align: middle !important;
 	margin-right: 10px;
+	font-size: 12px
 }
 
 .dijitRight {
