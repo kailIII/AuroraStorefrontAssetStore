@@ -28,8 +28,8 @@
 	</div>
 	<div class="row margin-true">
 		<div class="col4 acol12 ccol3" data-slot-id="4"><wcpgl:widgetImport slotId="4"/></div>
-		<div class="col8 acol12 ccol9 right" data-slot-id="5"><wcpgl:widgetImport slotId="5"/></div>
-		<div class="col8 acol12 ccol9 right">
+		<div class="col8 acol12 ccol9" data-slot-id="5"><wcpgl:widgetImport slotId="5"/></div>
+		<div class="col8 acol12 ccol9">
 			
 			<wcf:useBean var="tabSlotIds" classname="java.util.ArrayList"/>
 			<%-- Double loop to get the slots into the array list in proper order. The service does not return the child widgets in any predictable order. --%>

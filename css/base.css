@@ -3509,6 +3509,13 @@ div#widget_breadcrumb > ul li a {
 	
 }
 
+@media (max-width: 599px){
+	.searchSummaryWidget{
+		margin-top: 440px !important;
+	}
+	
+}
+
 .facetWidget .optionContainer > .title {
 	//display: none;
 }
