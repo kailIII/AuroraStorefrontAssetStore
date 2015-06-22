@@ -41,7 +41,6 @@ function menuF(){
 	
 	if (checkWidth() > 952) {
 	var claseMenu = "";
-	
 
 		
 	/*Menu Hover*/
@@ -93,6 +92,7 @@ function menuF(){
 
 
 var responsiveMenu = function(){
+	var thFunction = $(this);
 	var activeButton= $('#departmentsButton');
 	var menuCont =$('#departmentsMenu');
 	var ibmBtn = menuCont.find('span[role="presentation"]');
@@ -157,13 +157,11 @@ var responsiveMenu = function(){
 			$(this).parent('#departmentsMenu').prepend(returnBtn);
 		});
 		
-		$(document).on('click', returnBtn, function(){
+		
+		menuCont.on('click', '.menuReturn', function(e){
+			e.stopPropagation();
 			var childLevel = $(this).parents('ul').length;
-			console.log(childLevel)
-			
 			var elemFirst = menuCont.find('>li');
-			console.log(elemFirst.length);
-			
 			elemFirst.each(function(){
 				$(this).show();
 				$(this).find('ul').hide();
@@ -185,7 +183,10 @@ var responsiveMenu = function(){
 		allElems.each(function(){
 			$(this).show();
 		})
-		menuCont.find('li').unbind('click');
+		
+		menuCont.find('li').unbind('click')
+		menuCont.off('click', '.menuReturn');
+
 		$('.menuReturn').remove();
 		
 	}

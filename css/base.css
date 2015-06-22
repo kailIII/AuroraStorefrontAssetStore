@@ -1006,10 +1006,14 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 	font-family:Arial, Sans-serif;
 	text-transform:capitalize;
 	font-size:13px;
-	background: -webkit-linear-gradient(center top , #fefeff, #c9cece); /* For Safari 5.1 to 6.0 */
-  	background: -o-linear-gradient(center top , #fefeff, #c9cece); /* For Opera 11.1 to 12.0 */
-  	background: -moz-linear-gradient(center top , #fefeff, #ebebeb);
-  	background: linear-gradient(center top , #fefeff, #c9cece); /* Standard syntax */
+	background: #fefeff; /* Old browsers */
+	background: -moz-linear-gradient(top, #fefeff 0%, #f3f2f2 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefeff), color-stop(100%,#f3f2f2)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #fefeff 0%,#f3f2f2 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #fefeff 0%,#f3f2f2 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #fefeff 0%,#f3f2f2 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #fefeff 0%,#f3f2f2 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefeff', endColorstr='#f3f2f2',GradientType=0 ); /* IE6-9 */
   	color:#55667a;
 }
 
@@ -1129,10 +1133,14 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 	/*height: 254px;*/
 	padding:15px 0;
 	border-radius: 0px 5px 5px 0px;
-	background-image: url("../images/responsive/divisor.png"), -webkit-linear-gradient(center top , #fefeff, #c9cece); /* For Safari 5.1 to 6.0 */
-  	background-image: url("../images/responsive/divisor.png"), -o-linear-gradient(center top , #fefeff, #c9cece); /* For Opera 11.1 to 12.0 */
-  	background-image: url("../images/responsive/divisor.png"), -moz-linear-gradient(center top , #fefeff, #ebebeb);
-  	background-image: url("../images/responsive/divisor.png"), linear-gradient(center top , #fefeff, #c9cece); /* Standard syntax */
+	background: #fefeff; /* Old browsers */
+	background-image: url("../images/responsive/divisor.png"), -moz-linear-gradient(top, #fefeff 0%, #f3f2f2 100%); /* FF3.6+ */
+	background-image: url("../images/responsive/divisor.png"), -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefeff), color-stop(100%,#f3f2f2)); /* Chrome,Safari4+ */
+	background-image: url("../images/responsive/divisor.png"), -webkit-linear-gradient(top, #fefeff 0%,#f3f2f2 100%); /* Chrome10+,Safari5.1+ */
+	background-image: url("../images/responsive/divisor.png"), -o-linear-gradient(top, #fefeff 0%,#f3f2f2 100%); /* Opera 11.10+ */
+	background-image: url("../images/responsive/divisor.png"), -ms-linear-gradient(top, #fefeff 0%,#f3f2f2 100%); /* IE10+ */
+	background-image: url("../images/responsive/divisor.png"), linear-gradient(to bottom, #fefeff 0%,#f3f2f2 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefeff', endColorstr='#f3f2f2',GradientType=0 ); /* IE6-9 */
   	background-repeat:no-repeat;
   	background-position: left center;
 }
@@ -2122,10 +2130,13 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 		color: #404040;
 		font-size: 12px;
 		list-style: none;
-		background: -webkit-linear-gradient(center top , #fefeff, #c9cece); /* For Safari 5.1 to 6.0 */
-	  	background: -o-linear-gradient(center top , #fefeff, #c9cece); /* For Opera 11.1 to 12.0 */
-	  	background: -moz-linear-gradient(center top , #fefeff, #ebebeb);
-	  	background: linear-gradient(center top , #fefeff, #c9cece); /* Standard syntax */
+		background: -moz-linear-gradient(top, #fefeff 0%, #f3f2f2 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefeff), color-stop(100%,#f3f2f2)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #fefeff 0%,#f3f2f2 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #fefeff 0%,#f3f2f2 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #fefeff 0%,#f3f2f2 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #fefeff 0%,#f3f2f2 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefeff', endColorstr='#f3f2f2',GradientType=0 ); /* IE6-9 */
 	  	color:#55667a;
 	}
 	#departmentsMenu > li {
