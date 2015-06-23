@@ -1930,6 +1930,8 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 /*** RWD-A ***/
 
 @media (max-width: 952px) {
+	
+	.spotVida	{ display:none!important;   left: 0px!important;} 
 
 	.departmentMenu > .header {
 		display:block;
@@ -2445,6 +2447,7 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 
 @media (max-width: 600px){
 
+
 	.btnAzul {        
 	   padding: 10px 20px !important;
 	}    
@@ -2510,6 +2513,7 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 	.carro-vacio-imagen{
 		width: 100% !important;
 	}
+
 }
 
 
@@ -4404,3 +4408,41 @@ Alejandro Paredes
     margin: 0px !important;
     width: 100% !important;
 } */
+
+
+.spotVida {
+  width: 1000px;
+  background-color: white;
+  left: -190px;
+}
+
+.estiloVida{
+  float: left;
+  width: 160px;
+  margin-right: 6px;
+  position: relative;
+}
+
+.estiloVida img{
+  /* position: relative; */
+  /* top: 0px; */
+  /* left: 0px; */
+  /* float: left; */
+  /* width: 160px; */
+  /* clear: both; */
+}
+
+span.descEstiloVida{
+  position: absolute;
+  bottom: 3px;
+  left: 0px;
+  width: 100%;
+  float: left;
+  text-align: center;
+  background-color: rgba(150,215,256,0.5);
+  text-transform: none;
+  padding: 5px 0;
+  color:white;
+  font-family: ubunturegular,Arial, Helvetica;
+  font-size:13px;
+}
