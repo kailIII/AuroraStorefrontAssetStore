@@ -39,7 +39,7 @@
 	});
 	</script>
 </flow:ifEnabled>
-<script>var isGuest = ${userType == 'G'};</script>
+<script> var isGuest = ${userType == 'G'};</script>
 
 <script src="${jsAssetsDir}javascript/Widgets/header.js"></script>
 
@@ -53,9 +53,7 @@
 <div id="header" role="banner">
 	<div id="headerRow1">
 		<div id="logo">
-			<%
-				out.flush();
-			%>
+			<%out.flush();%>
 			<%-- Note: for any e-Marketing Spots included on the header page, then the parameter --%>
 			<%--       cacheWithParent should be set to true if the header is dynacached         --%>
 			<c:import
@@ -68,9 +66,7 @@
 				<c:param name="marketingSpotBehavior" value="0" />
 				<c:param name="cacheWithParent" value="true" />
 			</c:import>
-			<%
-				out.flush();
-			%>
+			<%out.flush();%>
 		</div>
 
 			
@@ -88,9 +84,7 @@
 		<ul id="quickLinksBar">
 			<c:if test="${!env_globalLoginViewDisabled eq true}">
 				<li class="signIn">
-					<%
-						out.flush();
-					%> <c:import
+					<%out.flush();%> <c:import
 						url="${env_siteWidgetsDir}com.ibm.commerce.store.widgets.GlobalLogin/GlobalLogin.jsp">
 						<c:param name="langId" value="${langId}" />
 						<c:param name="cmdName" value="${lastCmdName}" />
@@ -98,9 +92,7 @@
 					</c:import> 
 
 					
-					<%
- 	out.flush();
- %>
+					<%out.flush();%>
 				</li>
 			</c:if>
 			
@@ -128,26 +120,26 @@
 					</a>
 					<ul>
 						<c:if test="${userType != 'G'}">
-							<li role="menuitem" class="separator-false"><%--<a id="myAccountQuickLink"
+							<li role="menuitem" class="separator-false">
+                                
+                                <!-- <%--<a id="myAccountQuickLink"
 								href="${fn:escapeXml(MyAccountURL)}"><fmt:message
 										bundle="${storeText}" key="HEADER_MY_ACCOUNT" />
-							</a> --%></li>
+							</a> --%> -->
+                            
+                            </li>
 						</c:if>
 						<c:choose>
 							<c:when test="${!env_globalLoginViewDisabled eq true}">
 								<li id="globalLoginWidget" role="menuitem" class="separator-false">
-									<%
-										out.flush();
-									%> <c:import
+									<%out.flush();%> <c:import
 										url="${env_siteWidgetsDir}com.ibm.commerce.store.widgets.GlobalLogin/GlobalLogin.jsp">
 										<c:param name="langId" value="${langId}" />
 										<c:param name="cmdName" value="${lastCmdName}" />
 										<c:param name="widgetId" value="QuickLinks_GlobalLogin" />
 										<c:param name="userDisplayName" value="${userDisplayName}" />
 									</c:import> 
-									<%
- 	out.flush();
- %>
+									<%out.flush();%>
 								
 							</c:when>
 							<c:otherwise>
@@ -241,13 +233,9 @@
 	</c:if>  
 	-->
 	<li class="separator-false">
-		<%
-			out.flush();
-		%><c:import
+		<%out.flush();%><c:import
 			url="${env_jspStoreDir}Widgets/MiniShopCartDisplay/MiniShopCartDisplayRefresh.jsp" />
-		<%
-			out.flush();
-		%>
+		<%out.flush();%>
 	</li>
 	
 	<li>
@@ -321,8 +309,8 @@
 								<c:set var="key" value="${department.uniqueID}_${category.uniqueID}_${subcategory.uniqueID}"/>
 								<a id="subcategoryLink_${key}" href="${fn:escapeXml(categoryURLMap[key])}" class="menuLink" role="menuitem" tabindex="-1"><c:out value="${subcategory.name}"/></a>
 							
-							</c:forEach>
-			               </li>
+							
+                                   </li></c:forEach>
 			                </ul>   
 			               
 			               </li>
@@ -392,17 +380,17 @@
 					<a id="departmentToggle_002" href="#" class="toggle" role="button" data-toggle="departmentMenu_002" aria-labelledby="departmentLink_002">
 					<span role="presentation"></span></a> -->
 				   </div>
-				   <%--	   
+				   <!-- <%--	   
 						<%out.flush();%>
 							<c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
 								<c:param name="emsName" value="telmexHeader_NovedadesESP" />
 							    <c:param name="catalogId" value="${WCParam.catalogId}" />
 							</c:import>
 						<%out.flush();%>	
-					--%>
+					--%> -->
 					</div>
 					 
-				</li/>
+				</li>
 				
 				<li class="active">
 					<a id="departmentButton_" href="${fn:escapeXml(categoryURLMap[1])}"  class="departmentButton" role="menuitem" aria-haspopup="true" >
@@ -418,14 +406,14 @@
 					<a id="departmentToggle_003" href="#" class="toggle" role="button" data-toggle="departmentMenu_003" aria-labelledby="departmentLink_003">
 					<span role="presentation"></span></a> -->
 					</div>
-					<%-- 
+					<!-- <%-- 
 						<%out.flush();%>
 							<c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
 								<c:param name="emsName" value="telmexHeader_ExlusivosESP" />
 							    <c:param name="catalogId" value="${WCParam.catalogId}" />
 							</c:import>
 						<%out.flush();%>
-					--%>
+					--%> -->
 					</div>
 					
 				</li>
@@ -442,14 +430,14 @@
 					<a id="departmentToggle_004" href="#" class="toggle" role="button" data-toggle="departmentMenu_004" aria-labelledby="departmentLink_004">
 					<span role="presentation"></span></a> -->
 					</div>
-					<%--
+					<!-- <%--
 						<%out.flush();%>
 							<c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
 								<c:param name="emsName" value="telmexHeader_GoproESP" />
 							    <c:param name="catalogId" value="${WCParam.catalogId}" />
 							</c:import>
 						<%out.flush();%>
-					 --%>
+					 --%> -->
 					</div>
 					
 				</li>
@@ -466,14 +454,14 @@
 					<a id="departmentToggle_005" href="#" class="toggle" role="button" data-toggle="departmentMenu_005" aria-labelledby="departmentLink_005">
 					<span role="presentation"></span></a> -->
 					</div>
-					<%-- 
+					<!-- <%-- 
 						<%out.flush();%>
 							<c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
 								<c:param name="emsName" value="telmexHeader_AppleESP" />
 							    <c:param name="catalogId" value="${WCParam.catalogId}" />
 							</c:import>
 						<%out.flush();%>
-					--%>
+					--%>-->
 					</div>
 					
 				</li>
@@ -490,14 +478,14 @@
 					<a id="departmentToggle_006" href="#" class="toggle" role="button" data-toggle="departmentMenu_006" aria-labelledby="departmentLink_006">
 					<span role="presentation"></span></a> -->
 					</div>
-					<%--
+					<!-- <%--
 						<%out.flush();%>
 							<c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
 								<c:param name="emsName" value="telmexHeader_NegocioESP" />
 							    <c:param name="catalogId" value="${WCParam.catalogId}" />
 							</c:import>
 						<%out.flush();%>
-					 --%>
+					 --%> -->
 					</div>
 					
 				</li>
@@ -514,14 +502,14 @@
 					<a id="departmentToggle_007" href="#" class="toggle" role="button" data-toggle="departmentMenu_007" aria-labelledby="departmentLink_007">
 					<span role="presentation"></span></a>-->
 					</div>
-					<%--
+					<!-- <%--
 						<%out.flush();%>
 							<c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
 								<c:param name="emsName" value="telmexHeader_OfertasWOWESP" />
 							    <c:param name="catalogId" value="${WCParam.catalogId}" />
 							</c:import>
 						<%out.flush();%>
-					 --%>
+					 --%> -->
 					</div>
 					
 				</li>
@@ -539,14 +527,14 @@
 					<a id="departmentToggle_009" href="#" class="toggle" role="button" data-toggle="departmentMenu_009" aria-labelledby="departmentLink_009">
 					<span role="presentation"></span></a> -->
 					</div>
-					<%-- 
+					<!-- <%-- 
 						<%out.flush();%>
 							<c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
 								<c:param name="emsName" value="telmexHeader_PaybackESP" />
 							    <c:param name="catalogId" value="${WCParam.catalogId}" />
 							</c:import>
 						<%out.flush();%>
-					--%>
+					--%> -->
 					</div>
 					
 				</li>

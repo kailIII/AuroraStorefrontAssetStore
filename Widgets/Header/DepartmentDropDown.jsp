@@ -194,17 +194,17 @@
 					<a id="departmentToggle_002" href="#" class="toggle" role="button" data-toggle="departmentMenu_002" aria-labelledby="departmentLink_002">
 					<span role="presentation"></span></a> -->
 				   </div>
-				   <%--	   
+				   <!-- <%--	   
 						<%out.flush();%>
 							<c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
 								<c:param name="emsName" value="telmexHeader_NovedadesESP" />
 							    <c:param name="catalogId" value="${WCParam.catalogId}" />
 							</c:import>
 						<%out.flush();%>	
-					--%>
+					--%> -->
 					</div>
 					 
-				</li/>
+				</li>
 				
 				<li class="active">
 					<a id="departmentButton_" href="${fn:escapeXml(categoryURLMap[1])}"  class="departmentButton" role="menuitem" aria-haspopup="true" >
@@ -220,14 +220,14 @@
 					<a id="departmentToggle_003" href="#" class="toggle" role="button" data-toggle="departmentMenu_003" aria-labelledby="departmentLink_003">
 					<span role="presentation"></span></a> -->
 					</div>
-					<%-- 
+					<!-- <%-- 
 						<%out.flush();%>
 							<c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
 								<c:param name="emsName" value="telmexHeader_ExlusivosESP" />
 							    <c:param name="catalogId" value="${WCParam.catalogId}" />
 							</c:import>
 						<%out.flush();%>
-					--%>
+					--%> -->
 					</div>
 					
 				</li>
@@ -244,14 +244,14 @@
 					<a id="departmentToggle_004" href="#" class="toggle" role="button" data-toggle="departmentMenu_004" aria-labelledby="departmentLink_004">
 					<span role="presentation"></span></a> -->
 					</div>
-					<%--
+					<!-- <%--
 						<%out.flush();%>
 							<c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
 								<c:param name="emsName" value="telmexHeader_GoproESP" />
 							    <c:param name="catalogId" value="${WCParam.catalogId}" />
 							</c:import>
 						<%out.flush();%>
-					 --%>
+					 --%> -->
 					</div>
 					
 				</li>
@@ -268,14 +268,14 @@
 					<a id="departmentToggle_005" href="#" class="toggle" role="button" data-toggle="departmentMenu_005" aria-labelledby="departmentLink_005">
 					<span role="presentation"></span></a> -->
 					</div>
-					<%-- 
+					<!-- <%-- 
 						<%out.flush();%>
 							<c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
 								<c:param name="emsName" value="telmexHeader_AppleESP" />
 							    <c:param name="catalogId" value="${WCParam.catalogId}" />
 							</c:import>
 						<%out.flush();%>
-					--%>
+					--%> -->
 					</div>
 					
 				</li>
@@ -292,14 +292,14 @@
 					<a id="departmentToggle_006" href="#" class="toggle" role="button" data-toggle="departmentMenu_006" aria-labelledby="departmentLink_006">
 					<span role="presentation"></span></a> -->
 					</div>
-					<%--
+					<!-- <%--
 						<%out.flush();%>
 							<c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
 								<c:param name="emsName" value="telmexHeader_NegocioESP" />
 							    <c:param name="catalogId" value="${WCParam.catalogId}" />
 							</c:import>
 						<%out.flush();%>
-					 --%>
+					 --%> -->
 					</div>
 					
 				</li>
@@ -316,14 +316,14 @@
 					<a id="departmentToggle_007" href="#" class="toggle" role="button" data-toggle="departmentMenu_007" aria-labelledby="departmentLink_007">
 					<span role="presentation"></span></a>-->
 					</div>
-					<%--
+					<!-- <%--
 						<%out.flush();%>
 							<c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
 								<c:param name="emsName" value="telmexHeader_OfertasWOWESP" />
 							    <c:param name="catalogId" value="${WCParam.catalogId}" />
 							</c:import>
 						<%out.flush();%>
-					 --%>
+					 --%> -->
 					</div>
 					
 				</li>
@@ -341,14 +341,14 @@
 					<a id="departmentToggle_009" href="#" class="toggle" role="button" data-toggle="departmentMenu_009" aria-labelledby="departmentLink_009">
 					<span role="presentation"></span></a> -->
 					</div>
-					<%-- 
+					<!-- <%-- 
 						<%out.flush();%>
 							<c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
 								<c:param name="emsName" value="telmexHeader_PaybackESP" />
 							    <c:param name="catalogId" value="${WCParam.catalogId}" />
 							</c:import>
 						<%out.flush();%>
-					--%>
+					--%> -->
 					</div>
 					
 				</li>
