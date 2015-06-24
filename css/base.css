@@ -664,6 +664,43 @@ dl, ol, ul {
 	height: 100%;
 }
 
+.spotVida {
+  width: auto;
+  background-color: white;
+  top:110%;
+}
+
+.estiloVida{
+  display:inline-block;
+  width: 160px;
+  margin-left: 1px;
+  position: relative;
+}
+
+.estiloVida img{
+  /* position: relative; */
+  /* top: 0px; */
+  /* left: 0px; */
+  /* float: left; */
+  /* width: 160px; */
+  /* clear: both; */
+}
+
+span.descEstiloVida{
+  position: absolute;
+  bottom: 3px;
+  left: 0px;
+  width: 100%;
+  float: left;
+  text-align: center;
+  background-color: rgba(150,215,256,0.5);
+  text-transform: none;
+  padding: 5px 0;
+  color:white;
+  font-family: ubunturegular,Arial, Helvetica;
+  font-size:13px;
+}
+
 /*** Quick links bar ***/
 
 #quickLinksBar {
@@ -1003,7 +1040,7 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 	margin: 0;
 	padding: 8px 0;
 	list-style: none;
-	font-family:Arial, Sans-serif;
+	font-family:'ubunturegular', Arial, Sans-serif;
 	text-transform:capitalize;
 	font-size:13px;
 	background: #fefeff; /* Old browsers */
@@ -1931,7 +1968,16 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 
 @media (max-width: 952px) {
 	
-	.spotVida	{ display:none!important;   left: 0px!important;} 
+	.spotVida	{left: 0px!important; background:none;} 
+	
+	.estiloVida{
+		display:block;
+		height:25px;
+		overflow:hidden;
+	}
+	.estiloVida >img{display:none;}
+	
+	span.descEstiloVida{bottom:0px; background:none; color:#55667a; text-align:left;}
 
 	.departmentMenu > .header {
 		display:block;
@@ -1990,6 +2036,7 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 	.departmentMenu.active .categoryList {
 		display: none;
 	}
+	
 
 
 
@@ -4410,39 +4457,3 @@ Alejandro Paredes
 } */
 
 
-.spotVida {
-  width: 1000px;
-  background-color: white;
-  left: -190px;
-}
-
-.estiloVida{
-  float: left;
-  width: 160px;
-  margin-left: 5px;
-  position: relative;
-}
-
-.estiloVida img{
-  /* position: relative; */
-  /* top: 0px; */
-  /* left: 0px; */
-  /* float: left; */
-  /* width: 160px; */
-  /* clear: both; */
-}
-
-span.descEstiloVida{
-  position: absolute;
-  bottom: 3px;
-  left: 0px;
-  width: 100%;
-  float: left;
-  text-align: center;
-  background-color: rgba(150,215,256,0.5);
-  text-transform: none;
-  padding: 5px 0;
-  color:white;
-  font-family: ubunturegular,Arial, Helvetica;
-  font-size:13px;
-}

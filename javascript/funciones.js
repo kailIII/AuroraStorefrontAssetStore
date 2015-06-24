@@ -123,9 +123,12 @@ var responsiveMenu = function(){
 		var elemClick = menuCont.find('li')
 		elemClick.unbind('click');
 		var returnBtn = $('<div class="menuReturn"></div>')
-		elemClick.click(function(e){
-			
+		
+		//Click function
+		elemClick.click(function(e){	
 			e.stopPropagation();
+			
+			var clickScope = $(this);
 			var siblingsElem = $(this).parent('ul').find('>li');
 			var ulParent = $(this).find('ul')
 			var childUl = $(this).find('ul').eq(0);
@@ -137,8 +140,8 @@ var responsiveMenu = function(){
 			}
 			$(this).find('div').height('auto').css('top','0px');
 			
-			
-			if(ulParent.length > 1){
+			alert(clickScope.find('.spotVida').length);
+			if(ulParent.length > 1 && clickScope.find('.spotVida').length == 0){
 				e.preventDefault();
 				siblingsElem.not(this).hide();
 				childUl.show();
@@ -175,11 +178,37 @@ var responsiveMenu = function(){
 		var elemFirst = menuCont.find('>li');
 		var allElems = elemFirst.find('li');
 		var listMen = menuCont.find('ul').show();
+		
+			
 		elemFirst.each(function(){
-			$(this).css('display','inline-block');
+			var eachScope = $(this);
+			var imgContainer = $(this).find('.spotVida');
+			var imageCont = $(this).find('.estiloVida');
+			
+			eachScope.css('display','inline-block');
+			
+			if(eachScope.find('.spotVida').length > 0){
+				var imageNumber = imgContainer.find('img').length;
+				var imageSize = imageCont.outerWidth();
+				var newSize = (imageSize+4.5)*imageNumber;
+				
+				imgContainer.outerWidth(newSize);
+				console.log(eachScope.outerWidth()/2);
+				//imgContainer.css('left',(-newSize/2) + eachScope.position().left + (eachScope.outerWidth()/2));
+				imgContainer.css('left',(-1000+eachScope.position().left+(newSize/2) +(eachScope.outerWidth()/2)));
+								
+			}
 		})
 		
-		$('.departmentMenu').css('top', '100%');
+		
+		$('.departmentMenu').each(function(){
+			var thisDiv = $(this);
+			if(thisDiv.hasClass('spotVida')== false){
+				thisDiv.css('top', '100%');
+			}else{
+				thisDiv.css('top', '110%');
+			}
+		})
 		allElems.each(function(){
 			$(this).show();
 		})
@@ -188,6 +217,8 @@ var responsiveMenu = function(){
 		menuCont.off('click', '.menuReturn');
 
 		$('.menuReturn').remove();
+		
+		/*Images menu*/
 		
 	}
 	

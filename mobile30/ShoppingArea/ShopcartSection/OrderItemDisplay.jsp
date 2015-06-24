@@ -297,16 +297,17 @@
 														</div>
 													</c:when>
 													<c:otherwise>
-														<div>
+														<div class="quantityMobil">
 															<div id='quantity_<c:out value="${status.count}"/>' class="left_column left_label left"><fmt:message bundle="${storeText}" key="QUANTITY"/></div>
 															<input type="hidden" value='<c:out value="${orderItem.orderItemId}"/>' name='orderItemId_<c:out value="${status.count}"/>' id='orderItemId_<c:out value="${status.count}"/>'/>
 															<div class="right_column left">
-																<input type="text" pattern="[0-9]*" id='quantity_<c:out value="${status.count}"/>' name='quantity_<c:out value="${status.count}"/>' class="inputfield input_width_60" size="4" value='<c:out value="${quickCartOrderItemQuantity}"/>' onfocus='javascript:updateOrderChangeButtonStyle();'/>
+																<input type="text" pattern="[0-9]*" id='quantity_<c:out value="${status.count}"/>' name='quantity_<c:out value="${status.count}"/>' class="inputfield input_width_60" value='<c:out value="${quickCartOrderItemQuantity}"/>' onfocus='javascript:updateOrderChangeButtonStyle();'/>
 															</div>
 															<div class="clear_float"></div>
 														</div>
 													</c:otherwise>
 												</c:choose>
+												</div><!-- productInfo close from OrderItemEntryDisplay -->
 											</div>
 										</div>
 										<div class="item_spacer clear_float"></div>
