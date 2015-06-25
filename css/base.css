@@ -1485,7 +1485,7 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 	margin-left: 10px;
 	padding: 10px;
 	color: #808080;
-	font-size: 11px;
+	font-size: 12px;
 	list-style: none;
 	margin-right: 10px;
 }
@@ -4042,13 +4042,13 @@ div#WC_CheckoutLogonf_div_0{
 
 }
 
-@media (min-width: 953px) and (max-width: 1015px){
+@media (min-width: 953px) and (max-width: 1010px){
 	#footerCustomerServiceSection{
-		width: 29%;
+		width: 26%;
 	}
 
 	#footerCorporateInfoSection{
-		width: 50%;
+		width: 53%;
 	}
 
 	#footerExploreSection{
