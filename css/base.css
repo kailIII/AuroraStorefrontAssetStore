@@ -785,19 +785,16 @@ position: absolute;
 /* Mini cart button */
 
 #widget_minishopcart {
-	display: block;
-	position: relative;
-	width: 58px;
-	height: 43px;
-	/*margin: 0px 20px;*/
-	padding: 0 !important;
-	top: 0px;
-	/*background-image: -webkit-gradient(linear, left top, left bottom, from(#f7f9f9), to(#e5e8e9));
-	background-image: linear-gradient(#f7f9f9, #e5e8e9);
-	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr='#f7f9f9', endColorStr='#e5e8e9')";
-	border: 1px solid #e1e1e1 !important;
-	border-radius: 4px;*/
-	overflow: hidden;
+  display: block;
+  /* position: relative; */
+  width: 50px;
+  height: 43px;
+  /* margin: 0px 20px; */
+  padding: 0 !important;
+  /* top: -8px; */
+  /* right: 175%; */
+  /* margin-right: 500px; */
+  /* overflow: hidden; */
 }
 #widget_minishopcart:before {
 	content: url("../images/responsive/rwdUI.png");
@@ -818,10 +815,10 @@ position: absolute;
 #minishopcart_total {
 	display: block;
 	position: absolute;
-	right: 26px;
+	right: 20px;
 	top: 13px;
 	padding: 0 5px;
-	background-color: #dc8039;
+	background-color: #fa8039;
 	border-radius: 8px;
 	color: #ffffff;
 	font-size: 12px;
@@ -1838,7 +1835,7 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 }
 
 .contentCarouselWidget > .content {
-	width: 125%;
+	width: 125%; overflow:hidden;
 	margin: 0 -12.5%;
 }
 /*.contentCarouselWidget .left_espot,
@@ -2356,7 +2353,7 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 	
 	#MiniShoppingCart {
 	  top: -11px!important;
-	  right: 72px!important;
+	  right: 75px!important;
 	}
 
 	/* Autocomplete menu */
@@ -2543,11 +2540,6 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 	  margin-left: 40px;
 	}
 
-	#MiniShoppingCart {
-		left:50%;
-		margin-left:100px;
-	}
-
 	#departmentsButton > span {
 		display:none;
 	}
@@ -2568,7 +2560,14 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 	.carro-vacio-imagen{
 		width: 100% !important;
 	}
-
+	
+	#MiniShoppingCart {
+		margin-right: -145px;
+		position: absolute !important;
+		right: 50%!important;
+		top: -11px !important;
+	}
+	
 }
 
 
@@ -3152,9 +3151,9 @@ div.grid_icon, a.grid_icon:hover, div.list_icon, a.list_icon:hover {
   }
   
  #MiniShoppingCart {
-	position: absolute;
-	right: 0px;
-	top: 30px;
+  position: relative;
+  overflow: hidden;
+  top: 30px;
 }
 
 /* .product > .product_image img {
@@ -4055,7 +4054,6 @@ div#WC_CheckoutLogonf_div_0{
 		width: 21%;
 	}
 }
-
 @media (max-width: 600px){
 	#promoCode{
 		width: 100% !important;
