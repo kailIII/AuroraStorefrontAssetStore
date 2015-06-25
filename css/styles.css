@@ -4481,13 +4481,13 @@ div#widget_breadcrumb {
 }
 
 #Header_GlobalLogin_desktopExpandArrow{
-	bottom: 9px;
+	bottom: 12px;
 	position: absolute;
 	right: 7px;
 }
 
 #Header_GlobalLogin_loggedInDropdown.menuDropdown {
-    right: 100px;
+    right: 70px;
 }
 
 .menuDropdown {

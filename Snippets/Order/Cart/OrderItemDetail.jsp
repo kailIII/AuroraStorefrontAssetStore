@@ -254,19 +254,42 @@
 
 <c:set var="allContractsValid" value="true" scope="request"/>
 <table id="order_details" cellpadding="0" cellspacing="0" border="0" width="100%" summary="<fmt:message bundle="${storeText}" key="SHOPCART_TABLE_SUMMARY" />">
-	  <tr class="nested">
+	  
+    
+    
+    
+    
+    
+    
+    
+    
+    <tr class="nested">
           <th class="align_center" id="shoppingCart_tableCell_productName"><fmt:message bundle="${storeText}" key="SHOPCART_PRODUCT" /></th>
           <th class="align_center" id="shoppingCart_tableCell_availability"><fmt:message bundle="${storeText}" key="SHOPCART_AVAILABILITY" /></th>
           
 		   <th class="align_center" id="shoppingCart_tableCell_quantity" abbr="<fmt:message bundle="${storeText}" key="QUANTITY1" />"><fmt:message bundle="${storeText}" key="SHOPCART_QTY" /></th>
           
-          
-          <!-- ocultamos la columna de precio unitario <th class="align_center" id="shoppingCart_tableCell_each" abbr="<fmt:message bundle="${storeText}" key="UNIT_PRICE" />"><fmt:message bundle="${storeText}" key="SHOPCART_EACH" /></th>-->
-          
+          <!--
+          <th class="align_center" id="shoppingCart_tableCell_each" abbr="<fmt:message bundle="${storeText}" key="UNIT_PRICE" />"><fmt:message bundle="${storeText}" key="SHOPCART_EACH" /></th>
+            -->
+        
           <th class="align_center" id="shoppingCart_tableCell_total" abbr="<fmt:message bundle="${storeText}" key="TOTAL_PRICE" />"><fmt:message bundle="${storeText}" key="SHOPCART_TOTAL" /></th>
+          
+          
+          
           <!-- agregamos un th para que caiga el eliminar-->
           <th class="align_center"></th>
 	  </tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 <flow:ifDisabled feature="AjaxCheckout">
 
@@ -447,8 +470,12 @@
 						<c:set var="nobottom" value="th_align_left_no_bottom"/>
 					</c:if>
 			</c:forEach>
-			<th class="th_align_left_normal <c:out value="${nobottom}"/>" id="shoppingCart_rowHeader_product<c:out value='${status.count}'/>" abbr="<fmt:message bundle="${storeText}" key="Checkout_ACCE_for" /> <c:out value="${fn:replace(cartItemName, search, replaceStr)}" escapeXml="false"/>">
-				<div class="img" id="WC_OrderItemDetailsf_div_1_<c:out value='${status.count}'/>">
+			
+                
+                
+                
+                <th class="th_align_left_detalles <c:out value="${nobottom}"/>" id="shoppingCart_rowHeader_product<c:out value='${status.count}'/>" abbr="<fmt:message bundle="${storeText}" key="Checkout_ACCE_for" /> <c:out value="${fn:replace(cartItemName, search, replaceStr)}" escapeXml="false"/>">
+                    <div class="img imagen_resumen_pedido" id="WC_OrderItemDetailsf_div_1_<c:out value='${status.count}'/>">
 					<c:set var="catEntryIdentifier" value="${orderItem.productId}"/>
 					<c:choose>
 						<c:when test="${!empty thumbNail}">
@@ -463,7 +490,7 @@
 					</a>
 					<c:remove var="thumbNail"/>
 				</div>
-				<div id="WC_OrderItemDetailsf_div_2_<c:out value='${status.count}'/>" class="img">
+                    <div class="itemspecs especificaciones_resumen_pedido" id="WC_OrderItemDetailsf_div_2_<c:out value='${status.count}'/>" class="img">
 					<c:if test="${!empty  catEntry.name}">
 						<p><a class="hover_underline" id="catalogEntry_name_${orderItem.orderItemId}" href="<c:out value="${catEntryDisplayUrl}"/>"><c:out value="${cartItemName}" escapeXml="false"/></a></p>
 					</c:if>
@@ -614,7 +641,7 @@
 							</flow:ifEnabled>
 							
 						
-                        <!-- boton eliminar
+                        <!--
                         <flow:ifEnabled feature="AjaxCheckout">
 							<a class="remove_address_link hover_underline tlignore" id="WC_OrderItemDetailsf_links_2_<c:out value='${status.count}'/>" href="JavaScript:setCurrentId('WC_OrderItemDetailsf_links_2_<c:out value='${status.count}'/>'); CheckoutHelperJS.deleteFromCart('<c:out value='${orderItem.orderItemId}'/>');">
 								<img src="<c:out value='${jspStoreImgDir}${vfileColor}'/>table_x_delete.png" alt=""/>
@@ -742,7 +769,7 @@
                                     
                                     
                                     
-             <!-- ocultamos la columna de precio unitario
+             <!--                       
 			<td id="WC_OrderItemDetailsf_td_3_<c:out value='${status.count}'/>" class="<c:out value="${nobottom}"/> each" headers="shoppingCart_tableCell_each shoppingCart_rowHeader_product<c:out value='${status.count}'/>">
 
 				<%-- unit price column of order item details table --%>
@@ -754,7 +781,7 @@
 				</span>
 
 			</td>
-                    -->
+               -->     
                     
                     
                     
@@ -950,11 +977,7 @@
  
         
 <!-- aca agregamos la pleca azul -->
- <div class="checkout_subheader crecido">
-     <c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
-         <c:param name="emsName" value="Falta_para_envio_gratis" />
-     </c:import>        
-</div>
+ <div class="checkout_subheader crecido"></div>
 
 <c:if test="${numEntries > pageSize}">
 	<div id="ShopcartPaginationText2">

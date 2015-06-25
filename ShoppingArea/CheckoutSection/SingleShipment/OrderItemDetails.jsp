@@ -28,6 +28,10 @@
 <%@ include file="../../../Common/EnvironmentSetup.jspf"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 
+<script type="text/javascript" src="<c:out value='${jsAssetsDir}javascript/CheckoutArea/CheckoutPayments.js'/>"></script>
+<script type="text/javascript" src="<c:out value='${jsAssetsDir}javascript/CheckoutArea/CheckoutHelper.js'/>"></script>
+<script type="text/javascript" src="<c:out value='${jsAssetsDir}javascript/InstallmentReciboTelmex.js'/>"></script>
+
 <%@ include file="../../../../Widgets_701/Common/QuickInfo/QuickInfoPopup.jspf" %>
 
 <script type="text/javascript">
@@ -210,56 +214,57 @@
 <input type="hidden" name="OrderTotalAmount" value="<c:out value='${pgorder.grandTotal}'/>" id="OrderTotalAmount" />
 <input type="hidden" name="currentPageNumber" value="${currentPage}" id="currentPageNumber"/>
 
-
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <!-- aca agregamos la otra pleca gris -->        
-                    <div class="main_header gris">
-                        <p class="numero_head">2</p>
-                        <div class="separador_blanco"></div>
-                        <div class="left_corner_straight"></div>
-                        <div class="headingtext" id="WC_ShipmentDisplay_div_24"><span aria-level="1" class="main_header_text" role="heading"><c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
-                            <c:param name="emsName" value="Resumen_de_Productos" />
-                            </c:import></span></div>
-                        
-                    </div>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
 <table id="order_details" cellpadding="0" cellspacing="0" border="0" width="100%" summary="<fmt:message bundle="${storeText}" key="SHOPCART_TABLE_CONFIRM_SUMMARY"  />">
 	<c:if test="${isChinaStore}">
 	<tr class="orderDetailsHeader"><td colspan="5"><fmt:message bundle="${storeText}" key="ORDER_SUMMARY"  /></td></tr>
 	</c:if>
+    
+    
+    
+    
+    
 	  <tr class="nested">
-		   
-          
           <th class="align_center" id="SingleShipment_tableCell_productName"><fmt:message bundle="${storeText}" key="PRODUCT"  /></th>
-		   <flow:ifEnabled feature="ExpeditedOrders"><th class="expedite" id="SingleShipment_tableCell_expedite"><fmt:message bundle="${storeText}" key="SHIP_EXPEDITE_SHIPPING" /></th></flow:ifEnabled>
-		   <th class="avail" id="SingleShipment_tableCell_availability"><fmt:message bundle="${storeText}" key="AVAILABILITY"  /></th>
-		   <th class="QTY" id="SingleShipment_tableCell_quantity" abbr="<fmt:message bundle="${storeText}" key="QUANTITY1"  />"><fmt:message bundle="${storeText}" key="QTY"  /></th>
 		   
-          <!-- ocultamos la columna de precio unitarioa
+          <flow:ifEnabled feature="ExpeditedOrders">
+               <th class="expedite" id="SingleShipment_tableCell_expedite"><fmt:message bundle="${storeText}" key="SHIP_EXPEDITE_SHIPPING" /></th>
+          </flow:ifEnabled>
+          
+		   <th id ="mesesReciboTMX">Meses</th>
+          
+		   <th class="avail" id="SingleShipment_tableCell_availability"><fmt:message bundle="${storeText}" key="AVAILABILITY"  /></th>
+          
+          <th class="QTY short align_center" id="SingleShipment_tableCell_quantity" abbr="<fmt:message bundle="${storeText}" key="QUANTITY1"  />"><fmt:message bundle="${storeText}" key="QTY"  /></th>
+          
+		   <!-- aca comentamos lo de precio unitario
           <th class="each short" id="SingleShipment_tableCell_unitPrice" abbr="<fmt:message bundle="${storeText}" key="UNIT_PRICE"  />"><fmt:message bundle="${storeText}" key="EACH"  /></th>
           -->
+          <!-- ocultamos este total 
+		   <th class="total short" id="SingleShipment_tableCell_totalPrice" abbr="<fmt:message bundle="${storeText}" key="TOTAL_PRICE"  />"><fmt:message bundle="${storeText}" key="TOTAL"  /></th>
+            -->
+		   <!-- aca comentamos el total restante
+          <th id="totalRReciboTMX">Total Restante</th>
+            -->
+          <!-- aca comentamos el factor restante 
+		   <th id ="factorReciboTMX">Factor</th>
+            -->
+          <!-- aca comentamos el financiamiento
+		   <th id ="financiamientoReciboTMX">Financiamiento</th>
+            -->
+          <!-- aca comentamos el valor del producto
+		   <th id="valorProductoTMX">Valor de Producto</th>
+            -->
           
-          
-          <th class="align_center short" id="SingleShipment_tableCell_totalPrice" abbr="<fmt:message bundle="${storeText}" key="TOTAL_PRICE"  />"><fmt:message bundle="${storeText}" key="TOTAL"  /></th>
+          <th class="total short align_center" id ="totalFinalPagarTMX">Total Final</th>
           <!-- agregamos un th para que caiga el eliminar-->
-          <th class="align_center"></th>          
-          
+          <th class="align_center"></th>
+           
 	  </tr>
+    
+    
+    
+    
+    
 
 	<c:if test="${!empty pgorder.orderItem}">
 		<c:if test="${showDynamicKit eq 'true'}">
@@ -359,6 +364,34 @@
 	</c:if>
 
 	<c:forEach var="orderItem" items="${pgorder.orderItem}" varStatus="status">
+		<%-- ini installment for product --%>
+		<wcf:getData type="com.ibm.commerce.installment.facade.datatypes.CatalogEntryInstallmentPriceType" var="CatalogEntryInstallmentPrice"
+	        expressionBuilder="findCatalogEntryInstallmentPrices">
+			    <wcf:contextData name="storeId" data="${WCParam.storeId}" />
+			    <wcf:param name="catalogEntryId" value="12661" />
+			    <wcf:param name="paymentMethodName" value="TelmexRecibo" /> <%-- This variable is set in CheckoutPaymentAndBillingAddress.jspf --%>
+			    <wcf:param name="nonInstallmentPrice" value="1000" />
+		</wcf:getData>
+	
+		    <c:forEach var="installmentOption" items="${CatalogEntryInstallmentPrice.installmentOption}">
+		        <c:set var="piAmounts" value="${piAmounts},${installmentOption.installmentAmount.value*installmentOption.numberOfInstallments}" />
+		    </c:forEach>
+		   
+		    <%
+		    	int iCount = 0;
+		     %>
+	        <c:forEach var="installmentOption" items="${CatalogEntryInstallmentPrice.installmentOption}">
+	        	<%
+		    	iCount = iCount+1;
+		     	%>
+	            <input type="hidden" id="InsOpt_<c:out value='${status.count}'/>_<%=iCount%>"  name="arrInsOpt_<c:out value='${status.count}'/>"  value="${installmentOption.numberOfInstallments}">
+				<input type="hidden" id="valfac_<c:out value='${status.count}'/>_<%=iCount%>"  name="valfac_<c:out value='${status.count}'/>"  value="${installmentOption.interestRate}">
+				<input type="hidden" id="aplEng_<c:out value='${status.count}'/>_<%=iCount%>"  name="aplEng_<c:out value='${status.count}'/>"  value="0">
+				<input type="hidden" id="valEng_<c:out value='${status.count}'/>_<%=iCount%>"  name="valEng_<c:out value='${status.count}'/>"  value="0">
+	        <br>
+	        </c:forEach>
+	        <input type="hidden" id="valTotInsOpt_<c:out value='${status.count}'/>"  name="valTotInsOpt_<c:out value='${status.count}'/>"  value="<%=iCount%>">
+		<%-- end installment for product --%>
 		<c:set var="isFreeGift" value="${orderItem.freeGift}"/>
 		<c:set var="itemUniqueId" value="${orderItem.orderItemId}"/>
 		<c:set var="catEntryUniqueId" value="${orderItem.productId}"/>
@@ -409,8 +442,8 @@
 		</c:forEach>
 
 		<tr>
-			<th class="th_align_left_normal <c:out value="${nobottom}"/>" id="SingleShipment_rowHeader_product<c:out value='${status.count}'/>" abbr="<fmt:message bundle="${storeText}" key="Checkout_ACCE_for"  /> ${catEntry.name}">
-				<div class="img" id="WC_OrderItemDetails_div_1_<c:out value='${status.count}'/>">
+			<th class="th_align_left_detalles <c:out value="${nobottom}"/>" id="SingleShipment_rowHeader_product<c:out value='${status.count}'/>" abbr="<fmt:message bundle="${storeText}" key="Checkout_ACCE_for"  /> ${catEntry.name}">
+				<div class="img imagen_resumen_pedido" id="WC_OrderItemDetails_div_1_<c:out value='${status.count}'/>">
 					<c:set var="catEntryIdentifier" value="${catEntry.uniqueID}"/>
 					<c:choose>
 						<c:when test="${!empty thumbNail}">
@@ -425,7 +458,7 @@
 					</a>
 					<c:remove var="thumbNail"/>
 				</div>
-				<div class="itemspecs" id="WC_OrderItemDetails_div_2_<c:out value='${status.count}'/>">
+				<div class="itemspecs especificaciones_resumen_pedido" id="WC_OrderItemDetails_div_2_<c:out value='${status.count}'/>">
 					<p><a class="hover_underline" id="catalogEntry_name_${orderItem.orderItemId}" href="<c:out value="${catEntryDisplayUrl}"/>"><c:out value="${catEntry.name}" escapeXml="false"/></a></p>
 					<span><fmt:message bundle="${storeText}" key="CurrentOrder_SKU"  /> <c:out value="${catEntry.partNumber}" escapeXml="false"/></span>
 					<br />
@@ -553,24 +586,14 @@
 					<p class="hover_underline">
 					<c:if test="${!isFreeGift}">
 						
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        <!-- aca comentamos el boton eliminar del listado
+                        <!-- <%--
                         <flow:ifEnabled feature="AjaxCheckout">
 							<a class="remove_address_link tlignore" href="JavaScript:setCurrentId('WC_OrderItemDetails_links_2_<c:out value='${status.count}'/>'); CheckoutHelperJS.deleteFromCart('<c:out value='${itemUniqueId}'/>');" id="WC_OrderItemDetails_links_2_<c:out value='${status.count}'/>">
 								<img src="<c:out value='${jspStoreImgDir}${vfileColor}'/>table_x_delete.png" alt=""/>
 								<fmt:message bundle="${storeText}" key="REMOVE"  />
 							</a>
 						</flow:ifEnabled>
-                       
-                        
+                        --%> -->
                         
 						<flow:ifDisabled feature="AjaxCheckout">
 							<wcf:url var="OrderItemDelete" value="OrderChangeServiceItemDelete">
@@ -595,12 +618,6 @@
 								<fmt:message bundle="${storeText}" key="REMOVE"  />
 							</a>
 						</flow:ifDisabled>
-                        -->
-                        
-                        
-                        
-                        
-                        
 					</c:if>
 					</p>
 				</div>
@@ -621,14 +638,24 @@
 					</span>
 				</td>
 			</flow:ifEnabled>
+			
+			<td id=tdMesesReciboTMX headers="mesesReciboTMX">	
+				<span>
+					<select id="mesesRTMX_<c:out value='${status.count}'/>" name="mesesRTMX" onchange="updateDetailsProduct(<c:out value='${status.count}'/>);cambioInstamell(); 	;">
+					</select>
+				</span>
+			</td>
 			<td class="avail <c:out value="${nobottom}"/>" id="WC_OrderItemDetails_td_1_<c:out value='${status.count}'/>" headers="SingleShipment_tableCell_availability SingleShipment_rowHeader_product<c:out value='${status.count}'/>">
 
 				<%@ include file="../../../Snippets/ReusableObjects/CatalogEntryAvailabilityDisplay.jspf" %>
 				<c:if test="${fn:contains(availabilityFlag,'outofStock')}">
 					<c:set var="availabilityStatus" value="${availabilityFlag}" scope="request"/>
-				</c:if>
+				</c:if>		
 			</td>
-			<td class="QTY <c:out value="${nobottom}"/>" id="WC_OrderItemDetails_td_2_<c:out value='${status.count}'/>" headers="SingleShipment_tableCell_quantity SingleShipment_rowHeader_product<c:out value='${status.count}'/>">
+			
+                        
+                        
+                        <td class="QTY <c:out value="${nobottom}"/>" id="WC_OrderItemDetails_td_2_<c:out value='${status.count}'/>" headers="SingleShipment_tableCell_quantity SingleShipment_rowHeader_product<c:out value='${status.count}'/>">
 				<p class="item-quantity">
 					<c:choose>
 						<c:when test="${isFreeGift}">
@@ -641,22 +668,23 @@
 					</c:choose>
 				</p>
 			</td>
-			
                         
-             <!-- ocultamos la columna de precio unitario           
-            <td class="each short <c:out value="${nobottom}"/>" id="WC_OrderItemDetails_td_3_<c:out value='${status.count}'/>" headers="SingleShipment_tableCell_unitPrice SingleShipment_rowHeader_product<c:out value='${status.count}'/>">
+                        
+                        
+            <!-- aca comentamos lo de precio unitario            
+			<td class="each short <c:out value="${nobottom}"/>" id="WC_OrderItemDetails_td_3_<c:out value='${status.count}'/>" headers="SingleShipment_tableCell_unitPrice SingleShipment_rowHeader_product<c:out value='${status.count}'/>">
 				<%-- unit price column of order item details table --%>
 				<%-- shows unit price of the order item --%>
 				<span class="price">
 					<fmt:formatNumber value="${orderItem.unitPrice}" type="currency" maxFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}"/>
 					<c:out value="${CurrencySymbol}"/>
+					<input type="hidden" id="unitPrice_<c:out value='${status.count}'/>" name="unitPrice" value="${orderItem.unitPrice}"/>
 				</span>
 			</td>
-            -->
+                 -->   
                     
                     
-                    
-                    
+            <!--  aca ocultamos este total
 			<td class="total short <c:out value="${nobottom}"/>" id="WC_OrderItemDetails_td_4_<c:out value='${status.count}'/>" headers="SingleShipment_tableCell_totalPrice SingleShipment_rowHeader_product<c:out value='${status.count}'/>">
 				<c:choose>
 					<c:when test="${orderItem.freeGift}">
@@ -670,54 +698,198 @@
 							<fmt:formatNumber var="totalFormattedProductPrice" value="${orderItem.orderItemPrice}" type="currency" maxFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}"/>
 							<c:out value="${totalFormattedProductPrice}" escapeXml="false" />
 							<c:out value="${CurrencySymbol}"/>
+							<input type="hidden" id="totalFormattedProductPrice_<c:out value='${status.count}'/>" name="totalFormattedProductPrice" value="${orderItem.orderItemPrice}"/>
 						</span>
 					</c:otherwise>
 				</c:choose>
 			</td>
-           
+			-->
+                        
+           <!-- aca ocultamos el total restante        
+        <td headers="totalRReciboTMX"> 
+				<span class="price">
+					<input type="text" id="totalRFinal_<c:out value='${status.count}'/>" name="totalRFinal" size="10" disabled="disabled" value="<fmt:formatNumber value="${orderItem.unitPrice}" type="currency" maxFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}"/>"/>
+					<p class="nested">Porcentaje de enganche</p>
+					<input type="text" id="valorEnganchePorcentaje_<c:out value='${status.count}'/>" name="valorEnganchePorcentaje" size="10" onchange="updateDetailsProduct(<c:out value='${status.count}'/>);sumaTotalFinanciamiento();asignarMonederoandPayback();"/>	
+				</span>
+			</td>
+               -->         
+                        
+                        
+            <!-- aca comentamos el factor restante             
+			<td headers="factorReciboTMX"> 
+				<input type="text" id="factorPriceItem_<c:out value='${status.count}'/>" name="factorPriceItem" value="0" size="10" onchange="updateDetailsProduct(<c:out value='${status.count}'/>);sumaTotalFinanciamiento();" />
+				<p class="nested">Aplica Monedero
+				
+							<span class="price">
+								<input type="text" id="valorAplicaMonedero_<c:out value='${status.count}'/>" name="valorAplicaMonedero" size="10" disabled="disabled" value="0"/>	
+							</span>
+				</p> 
+			</td>
+            -->
+                <!-- aca comentamos financiamiento
+			<td headers="financiamientoReciboTMX">
+				<span class="price">
+					<input type="text" id="finaProducto_<c:out value='${status.count}'/>" name="finaProducto" disabled="disabled" size="10" value="<fmt:formatNumber value="" type="currency" maxFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}"/>"/>
+					<c:out value="${CurrencySymbol}"/>
+					
+					<p class="nested">Aplica Payback</p>
+					<p>
+							<span class="price">
+								<input type="text" id="valorAplicaPayback_<c:out value='${status.count}'/>" name="valorAplicaPayback_" size="10" disabled="disabled" value="0"/>	
+							</span>
+						</p>
+				</span>
+			</td>
+            -->
+            <!-- aca comentamos valor del producto
+			<td headers="valorProductoTMX"> 
+			<c:set  var="valProducto" value="0"></c:set>
+				<input type="text" id="valorProductoTMX_<c:out value='${status.count}'/>" name="valorProductoTMX" size="10" disabled="disabled" value="<fmt:formatNumber value="${valProducto}" type="currency" maxFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}"/>"/>
+				<p class="nested">Aplica Monto Monedero Payback</p>
+					<p>
+							<span class="price">
+								<input type="text" id="valorAplicaPaybackMonedero_<c:out value='${status.count}'/>" name="valorAplicaPaybackMonedero" size="10" disabled="disabled" value="0"/>	
+							</span>
+						</p>
+				
+			</td>
+            -->
                 
-                
-                
-          <!-- aca cambiamos el eliminar pero solo el tache png -->
-           <td>
-               <flow:ifEnabled feature="AjaxCheckout">
-                   <a class="remove_address_link tlignore" href="JavaScript:setCurrentId('WC_OrderItemDetails_links_2_<c:out value='${status.count}'/>'); CheckoutHelperJS.deleteFromCart('<c:out value='${itemUniqueId}'/>');" id="WC_OrderItemDetails_links_2_<c:out value='${status.count}'/>">
-                       <img class="tache" src="<c:out value='${jspStoreImgDir}${vfileColor}'/>table_x_delete.png" alt=""/>
-                       <!-- <fmt:message bundle="${storeText}" key="REMOVE"  /> -->
-                   </a>
-               </flow:ifEnabled>
-               
-               <flow:ifDisabled feature="AjaxCheckout">
-                   <wcf:url var="OrderItemDelete" value="OrderChangeServiceItemDelete">
-                       <wcf:param name="orderItemId" value="${itemUniqueId}"/>
-                       <wcf:param name="orderId" value="${orderUniqueId}"/>
-                       <wcf:param name="langId" value="${WCParam.langId}" />
-                       <wcf:param name="storeId" value="${WCParam.storeId}" />
-                       <wcf:param name="catalogId" value="${WCParam.catalogId}" />
-                       <wcf:param name="calculationUsage" value="-1,-2,-3,-4,-5,-6,-7" />
-                       <wcf:param name="URL" value="${currentView}" />
-                       <c:if test="${callOrderPrepareOnItemRemove}">
-                           <wcf:param name="allocate" value="***" />
-                           <wcf:param name="backorder" value="***" />
-                           <wcf:param name="remerge" value="***" />
-                           <wcf:param name="check" value="*n" />
-                       </c:if>
-                       <wcf:param name="errorViewName" value="${currentView}" />
-                       <wcf:param name="beginIndex" value="${beginIndex}" />
-                   </wcf:url>
-                   <a class="remove_address_link" href="#" onclick="Javascript:setPageLocation('${OrderItemDelete}');return false;" id="WC_OrderItemDetails_links_3_<c:out value='${status.count}'/>">
-                       <img src="<c:out value='${jspStoreImgDir}${vfileColor}'/>table_x_delete.png" alt=""/>
-                       <fmt:message bundle="${storeText}" key="REMOVE"  />
-                   </a>
-               </flow:ifDisabled>
-           </td>     
-                      
-                
-                
-                
-                
-                
-		</tr>
+            
+			<td headers="totalFinalPagarTMX"> 
+				<input type="text" id="totalFinalReciboTMX_<c:out value='${status.count}'/>" name="totalFinalReciboTMX" size="10" disabled="disabled" value="${orderItem.unitPrice}"/>
+			</td>
+                        
+                        
+                        <!-- aca colocamos el boton de eliminar producto, pero solo la x -->       
+                        <td class="align_center">
+                            <flow:ifEnabled feature="AjaxCheckout">
+                                <a class="remove_address_link hover_underline tlignore" id="WC_OrderItemDetailsf_links_2_<c:out value='${status.count}'/>" href="JavaScript:setCurrentId('WC_OrderItemDetailsf_links_2_<c:out value='${status.count}'/>'); CheckoutHelperJS.deleteFromCart('<c:out value='${orderItem.orderItemId}'/>');">
+                                    <img class="tache" src="<c:out value='${jspStoreImgDir}${vfileColor}'/>table_x_delete.png" alt=""/>
+                                </a>
+                            </flow:ifEnabled>
+
+
+
+                            <flow:ifDisabled feature="AjaxCheckout">
+                                <wcf:url var="OrderItemDelete" value="OrderChangeServiceItemDelete">
+                                    <wcf:param name="orderItemId" value="${orderItem.orderItemId}"/>
+                                    <wcf:param name="orderId" value="${pagorder.orderId}"/>
+                                    <wcf:param name="langId" value="${WCParam.langId}" />
+                                    <wcf:param name="storeId" value="${WCParam.storeId}" />
+                                    <wcf:param name="catalogId" value="${WCParam.catalogId}" />
+                                    <wcf:param name="calculationUsage" value="-1,-2,-3,-4,-5,-6,-7" />
+                                    <c:choose>
+                                        <c:when test="${param.fromPage != null && param.fromPage == 'pendingOrderDisplay'}">
+                                            <wcf:param name="URL" value="PendingOrderDisplayView" />
+                                            <wcf:param name="errorViewName" value="PendingOrderDisplayView" />
+                                        </c:when>
+                                        <c:otherwise>
+                                            <wcf:param name="URL" value="AjaxOrderItemDisplayView" />
+                                            <wcf:param name="errorViewName" value="AjaxOrderItemDisplayView" />
+                                        </c:otherwise>
+                                    </c:choose>
+
+                                    <wcf:param name="beginIndex" value="${beginIndex}" />
+                                </wcf:url>
+                                <a class="hover_underline" href="#" onclick="Javascript:setPageLocation('<c:out value='${OrderItemDelete}'/>');return false;" id="WC_OrderItemDetailsf_links_3_<c:out value='${status.count}'/>">
+                                    <img src="<c:out value='${jspStoreImgDir}${vfileColor}'/>table_x_delete.png" alt=""/>
+                                    <fmt:message bundle="${storeText}" key="SHOPCART_REMOVE"  />
+                                </a>
+                            </flow:ifDisabled>
+
+
+                        </td>            
+        </tr>
+        <!--ocultamos la segunda linea de la tabla
+		<tr> 
+		<td></td>
+			<td colspan="2" id="tdEnganche_<c:out value='${status.count}'/>">
+				<table>
+					<tr class="nested">
+						<th id="conEnganche" align="center">Con Enganche</th>
+					</tr>
+					<tr>
+						<td>
+							<input type="checkbox" id="checkboxYES_<c:out value='${status.count}'/>" name="checkboxEnganche" value="Y" checked="checked" onclick="cambiodeRadio(<c:out value='${status.count}'/>);">&nbsp;Si</input>
+						</td>
+					</tr>
+				</table>
+			</td>
+			
+			<td colspan="7">
+				<table id="tableEnganche_<c:out value='${status.count}'/>" name="tableEnganche" cellpadding="0" cellspacing="3" border="0">
+					<tr class="nested">
+						<th id="pagoEnganche" align="center">Pago para Enganche</th>
+			  			<th class="QTY" id="SingleShipment_tableCell_quantity" abbr="<fmt:message bundle="${storeText}" key="QUANTITY1"  />"><fmt:message bundle="${storeText}" key="QTY"  /></th>
+			  			<th id ="engancheReciboTMX">Enganche</th>
+			  			<th id ="engancheMonederoTMX">Monedero</th>
+			  			<th id ="enganchePaybackTMX">Payback</th>
+			  			<th id ="engancheSumaTMX">Suma</th>
+			  			<th id ="engancheRestantePagarTMX">Enganche Restante</th>
+					</tr>
+                                
+					<tr>
+						<td headers="pagoEnganche">
+							<select id="mesesRTMXEnganche_<c:out value='${status.count}'/>" name="mesesRTMXEnganche"  onchange="cambioInstamell();sumaRestateCardAndRecibo();">
+							
+							<c:forEach var="payment" varStatus="paymentCounter" items="${usablePaymentInfo.usablePaymentInformation}">
+									<c:set var="currentPaymentMethodName" value="${payment.paymentMethodName}"/>
+									<c:if test="${currentPaymentMethodName eq 'TelmexRecibo'}">
+										<c:if test="${paymentMethodSelected == payment.paymentMethodName}">
+											<c:set var="selectStr" value='selected="selected"' />
+										</c:if>
+										<option <c:out value="${selectStr}" escapeXml="false"/> value="${currentPaymentMethodName}<c:if test='${!empty payment.paymentTermConditionId}'><c:out value='_${payment.paymentTermConditionId}'/></c:if>">${payment.description} /1 pago</option>
+										<c:set var="selectStr" value="" />
+									</c:if>
+								</c:forEach>
+								<option value="0">Pago con Tarjeta </option>
+							</select>
+						</td>
+						<td class="QTY <c:out value="${nobottom}"/>" id="WC_OrderItemDetails_td_2_<c:out value='${status.count}'/>" headers="SingleShipment_tableCell_quantity SingleShipment_rowHeader_product<c:out value='${status.count}'/>">
+							<p class="item-quantity">
+								<c:choose>
+									<c:when test="${isFreeGift}">
+										<%-- This is a free item..can't change the qty --%>
+										<input type="hidden" value="-1" id='freeGift_qty_<c:out value="${status.count}"/>' name='qty_<c:out value="${status.count}"/>'><span><c:out value="${quickCartOrderItemQuantity}"/></span>
+									</c:when>
+									<c:otherwise>
+										<input type="hidden" value="<c:out value="${quickCartOrderItemQuantity}"/>" id='qty_<c:out value="${status.count}"/>' name='qty_<c:out value="${status.count}"/>' /><span><c:out value="${quickCartOrderItemQuantity}"/></span>
+									</c:otherwise>
+								</c:choose>
+							</p>
+						</td>
+						<td headers="engancheReciboTMX" > 
+							<span class="price">
+								<input type="text" id="valorEnganche_<c:out value='${status.count}'/>" name="valorEnganche" size="10" disabled="disabled" value="0"/>	
+							</span>
+						</td>
+						<td headers="engancheMonederoTMX">
+							<span class="price">
+								<input type="text" id="valorAplicaEngancheMT_<c:out value='${status.count}'/>" name="valorAplicaEngancheMT" size="10" value="0"/>	
+							</span>
+						</td>
+						<td headers="enganchePaybackTMX">
+							<span class="price">
+								<input type="text" id="valorAplicaEnganchePB_<c:out value='${status.count}'/>" name="valorAplicaEnganchePB" size="10"  value="0"/>	
+							</span>
+						</td>
+						<td headers="enganchePaybackTMX">
+							<span class="price">
+								<input type="text" id="valorAplicaEnganchePBM_<c:out value='${status.count}'/>" name="valorAplicaEnganchePBM" size="10"  value="0"/>	
+							</span>
+						</td>
+						<td headers="engancheRestantePagarTMX">
+							<span class="price">
+								<input type="text" id="totalRestanteEnganchePg_<c:out value='${status.count}'/>" name="totalRestanteEnganchePg" size="10"  value="0"/>	
+							</span>
+						</td>
+						</td>
+					</tr>                        
+				</table>
+			</td>
+		</tr>-->
 		<c:remove var="nobottom"/>
 
 		<%-- row to display product level discount --%>
@@ -828,12 +1000,6 @@
 	</form>
 </flow:ifDisabled>
  </table>
-                
-                
-                     
-                
-                
-                
 <c:if test="${numEntries > pageSize}">
 	<div class="shopcart_pagination" id="OrderItemDetailsPaginationText2">
 		<span class="text">
@@ -867,13 +1033,12 @@
 		</span>
 	</div>
 </c:if>
-                
-                  
-                
-<div class="free_gifts_block">    
-    
+<div class="free_gifts_block">
 	<%out.flush();%>
 		<c:import url="/${sdb.jspStoreDir}/Snippets/Marketing/Promotions/PromotionPickYourFreeGift.jsp"/>
 	<%out.flush();%>
 </div>
+<script type="text/javascript">
+	addInstallment("<c:out value='${recordSetTotal}'/>");
+</script>
 <!-- END OrderItemDetails.jsp -->
