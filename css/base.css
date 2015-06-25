@@ -705,7 +705,7 @@ span.descEstiloVida{
 /*** Quick links bar ***/
 
 #quickLinksBar {
-	color: #767676;
+	color: #384452;
 	font-size: 11px;
 	list-style: outside none none;
 	margin: 0;
@@ -1214,10 +1214,10 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 }
 #searchBox {
 	position: relative;
-	height:35px;
+	height:30px;
 	background-color: #ffffff;
-	border: 1px solid #bfbfbf;
-	border-radius: 4px;
+	border: 1px solid #d5dce7;
+	border-radius: 5px;
 	text-align: right;
 	vertical-align: middle;
 	/*width: calc(150% - 60%);
@@ -1240,12 +1240,12 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 #searchTermWrapper > input {
 	position: relative;
 	width: 100%;
-	margin: 2px;
+	/*margin: 2px;*/
 	/*padding: 0px;*/
 	background-color: transparent;
 	border: 0 none;
 	font-size: inherit;
-	line-height: 18px;
+	line-height: 16px;
 }
 #searchFormLabel {
 	display: none;
@@ -1293,20 +1293,20 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 #searchBox > .submitButton {
   display: inline-block;
   position: relative;
-  width: 20px;
-  height: 20px;
-  border: 8px solid #374452;
+  width: 24px;
+  height: 18px;
+  border: 6px solid #374452;
   vertical-align: middle;
   overflow: hidden;
   background: #374452;
-  border-radius: 0 2px 2px 0;
+  border-radius: 0 4px 4px 0;
  }
 #searchBox > .submitButton:before {
 	content: url("../images/responsive/rwdUI.png");
 	display: block;
 	position: absolute;
-	left: -118px;
-	top: -18px;
+	left: -115px;
+	top: -19px;
 }
 
 
@@ -2116,6 +2116,7 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 		display:none;
 	}
 
+	#Header_GlobalLogin_desktopExpandArrow{ display:none; }
 	/* Mini cart button */
 
 	#widget_minishopcart {
@@ -3220,7 +3221,7 @@ li.localizadorTienda :before {
   margin-left: 200px!important;
   top: 30px;
   z-index: 200;
-  color: #767676;
+  color: #384452;
   font-size: 11px;
 	height: 18px;
 	cursor:pointer;
@@ -3244,7 +3245,7 @@ li.localizadorTienda :before {
   margin-left: -65px;
   top: 17px;
   padding: 0px;
-  border: 1px solid;
+  border: 1px solid #d5dce7;
   z-index: 1;
   list-style: none;
   background-color: white;
@@ -3254,7 +3255,7 @@ li.localizadorTienda :before {
 }
 
 .asistenciaLista li{ 
-	border-top: 1px solid #b5b5b5;
+	border-top: 1px solid #d5dce7;
 	width: 140px;
 }
 .asistenciaLista a {
