@@ -8069,8 +8069,10 @@ top:8px;
 }	
 
 #Header_GlobalLogin_GlobalLogon .button_text.btnAzul{
-  margin: 0 auto!important;
-  display: table!important;
+	margin: 0 auto!important;
+	display: table!important;
+	max-width: 130px !important;
+	min-width: 130px !important;
 }
 
 .txtRegistro{display: inline;}

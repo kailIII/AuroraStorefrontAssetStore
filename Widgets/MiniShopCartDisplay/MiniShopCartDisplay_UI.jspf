@@ -83,7 +83,7 @@
 					</div>
 				</div>
 				<div class="footer">
-					<a id="GotoCartButton2" href="${fn:escapeXml(ShoppingCartURL)}" class="basicButton">
+					<a id="GotoCartButton2" href="${fn:escapeXml(ShoppingCartURL)}" class="btnAzul">
 						<span><fmt:message bundle="${storeText}" key="MSC_GO_TO_CART"/></span>
 					</a>
 				</div>
