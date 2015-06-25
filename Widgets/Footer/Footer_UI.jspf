@@ -64,9 +64,9 @@
 					</a> --%>
 					<span class="footer-titles"><fmt:message bundle="${storeText}" key="FOOTER_TELMEX"/></span>
 				</div>
-				<li class="footer-subcategory"><a id="footer_telmex_acerca" href="#"><fmt:message bundle="${storeText}" key="FOOTER_TELMEX_ACERCA"/></a></li>
-				<li class="footer-subcategory"><a id="footer_telmex_payback" href="#"><fmt:message bundle="${storeText}" key="FOOTER_TELMEX_PAYBACK"/></a></li>
-				<li class="footer-subcategory"><a id="footer_telmex_aviso" href="#"><fmt:message bundle="${storeText}" key="FOOTER_TELMEX_AVISO"/></a></li>
+				<li class="footer-subcategory"><a id="footer_telmex_acerca" href="http://www.telmex.com.mx/web/acerca-de-telmex"><fmt:message bundle="${storeText}" key="FOOTER_TELMEX_ACERCA"/></a></li>
+				<li class="footer-subcategory"><a id="footer_telmex_payback" href="http://www.telmex.com.mx/web/hogar/telmex-payback"><fmt:message bundle="${storeText}" key="FOOTER_TELMEX_PAYBACK"/></a></li>
+				<li class="footer-subcategory"><a id="footer_telmex_aviso" href="http://www.telmex.com.mx/web/acerca-de-telmex/aviso-de-privacidad"><fmt:message bundle="${storeText}" key="FOOTER_TELMEX_AVISO"/></a></li>
 				
 			</ul>
 			
@@ -80,10 +80,10 @@
 					<span class="footer-titles"><fmt:message bundle="${storeText}" key="FOOTER_ASISTENCIA"/></span>
 				</div>
 				<li class="footer-subcategory"><a id="asistencia1" href="#"><fmt:message bundle="${storeText}" key="FOOTER_ASISTENCIA1"/></a></li>
-				<li class="footer-subcategory"><a id="asistencia2" href="#"><fmt:message bundle="${storeText}" key="FOOTER_ASISTENCIA2"/></a></li>
-				<li class="footer-subcategory"><a id="asistencia3" href="#"><fmt:message bundle="${storeText}" key="FOOTER_ASISTENCIA3"/></a></li>
-				<li class="footer-subcategory"><a id="asistencia4" href="#"><fmt:message bundle="${storeText}" key="FOOTER_ASISTENCIA4"/></a></li>
-				<li class="footer-subcategory"><a id="asistencia5" href="#"><fmt:message bundle="${storeText}" key="FOOTER_ASISTENCIA5"/></a></li>
+				<li class="footer-subcategory"><a id="asistencia2" href="https://tienda.telmex.com/shell/af/politicas.do"><fmt:message bundle="${storeText}" key="FOOTER_ASISTENCIA2"/></a></li>
+				<li class="footer-subcategory"><a id="asistencia3" href="https://tienda.telmex.com/shell/af/garantias.do"><fmt:message bundle="${storeText}" key="FOOTER_ASISTENCIA3"/></a></li>
+				<li class="footer-subcategory"><a id="asistencia4" href="https://tienda.telmex.com/shell/af/seguridad.do"><fmt:message bundle="${storeText}" key="FOOTER_ASISTENCIA4"/></a></li>
+				<li class="footer-subcategory"><a id="asistencia5" href="http://www.telmex.com/web/asistencia/hogar-preguntas-frecuentes-tienda-en-linea"><fmt:message bundle="${storeText}" key="FOOTER_ASISTENCIA5"/></a></li>
 				
 				
 		   </ul>
@@ -94,10 +94,10 @@
 
 		   
 		   <ul class="footer-list floatright">
-				<li><span id="llamanos">Ll&aacute;manos: 01800 123 11 14</span></li>
-				<li class="noDisplay"><a id="footerContactUsLink" href="${fn:escapeXml(ContactUsPageViewURL)}">Comentarios y sugerencias<!--<fmt:message bundle="${storeText}" key="FOOTER_CONTACT_US"/>--></a></li>
+				<li><span id="llamanos"><fmt:message bundle="${storeText}" key="FOOTER_LLAMANOS"/></span></li>
+<%-- 				<li class="noDisplay"><a id="footerContactUsLink" href="${fn:escapeXml(ContactUsPageViewURL)}"><fmt:message bundle="${storeText}" key="FOOTER_SUGERENCIAS"/></a></li> --%>
 				<li>
-					<a id="footerFacebookLink" href="${facebookURL}">Siguenos 
+					<a id="footerFacebookLink" href="${facebookURL}"><fmt:message bundle="${storeText}" key="FOOTER_REDES"/> 
 					<a id="btnFacebook"></a> 
 					<a id="btnTwitter"></a>
 				</li>
