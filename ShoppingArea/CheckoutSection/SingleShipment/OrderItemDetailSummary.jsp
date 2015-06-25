@@ -153,7 +153,7 @@ dojo.addOnLoad(function(){CommonControllersDeclarationJS.setControllerURL('Order
         <div class="separador_blanco"></div>
         <span aria-level="1" class="main_header_text" role="heading">
         <c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
-            <c:param name="emsName" value="Resumen_de_Productos" />
+            <c:param name="emsName" value="Resumen_de_pedido" />
         </c:import>
         </span>
     </div>
@@ -229,11 +229,9 @@ dojo.addOnLoad(function(){CommonControllersDeclarationJS.setControllerURL('Order
     
 
  <table id="order_details" cellpadding="0" cellspacing="0" border="0" width="100%" summary="<fmt:message bundle="${storeText}" key="SHOPCART_TABLE_CONFIRM_SUMMARY"/>">
-	 
-	<tr class="nested">
-	   
-		<th class="align_center" id="SingleShipment_tableCell_productName"><fmt:message bundle="${storeText}" key="PRODUCT"/></th>
 
+	<tr class="nested">
+		<th class="align_center" id="SingleShipment_tableCell_productName"><fmt:message bundle="${storeText}" key="PRODUCT"/></th>
 		<c:set var="th_count" value="1"/>
 		<c:if test="${isFromOrderDetailsPage && !(orderStatus eq 'I')}">
 			<flow:ifEnabled feature="FutureOrders">
@@ -270,15 +268,15 @@ dojo.addOnLoad(function(){CommonControllersDeclarationJS.setControllerURL('Order
 		<th class="QTY" id="SingleShipment_tableCell_quantity" abbr="<fmt:message bundle="${storeText}" key="QUANTITY1"/>"><fmt:message bundle="${storeText}" key="QTY"/></th>
 		<c:set var="th_count" value="${th_count + 1}"/>
 		
-         <!-- ocultamos la columna de precio unitario   
-        <th class="each short" id="SingleShipment_tableCell_unitPrice" abbr="<fmt:message bundle="${storeText}" key="UNIT_PRICE"/>"><fmt:message bundle="${storeText}" key="EACH"/></th>
-    -->
-
-
+       <!--     aca comentamos el precio unitario
+            <th class="each short" id="SingleShipment_tableCell_unitPrice" abbr="<fmt:message bundle="${storeText}" key="UNIT_PRICE"/>"><fmt:message bundle="${storeText}" key="EACH"/></th>
+            -->
+            
+            
 		<c:set var="th_count" value="${th_count + 1}"/>
             <th class="short align_center" id="SingleShipment_tableCell_totalPrice" abbr="<fmt:message bundle="${storeText}" key="TOTAL_PRICE"/>"><fmt:message bundle="${storeText}" key="TOTAL"/></th>
 	</tr>
-  
+    
 
 	<c:if test="${!empty pagorder.orderItem}">
 		<%--
@@ -374,8 +372,12 @@ dojo.addOnLoad(function(){CommonControllersDeclarationJS.setControllerURL('Order
 		</c:forEach>
 
 		<tr>
-			<th class="th_align_left_normal ${fn:escapeXml(nobottom)}" id="SingleShipment_rowHeader_product${fn:escapeXml(status.count)}" abbr="<fmt:message bundle="${storeText}" key="Checkout_ACCE_for"/> ${catEntry.name}">
-				<div class="img" id="WC_OrderItemDetailsSummaryf_div_1_${fn:escapeXml(status.count)}">
+            <th class="th_align_left_detalles ${fn:escapeXml(nobottom)}" id="SingleShipment_rowHeader_product${fn:escapeXml(status.count)}" abbr="<fmt:message bundle="${storeText}" key="Checkout_ACCE_for"/> ${catEntry.name}">
+				
+                
+                
+                
+                <div class="img imagen_resumen_pedido" id="WC_OrderItemDetailsSummaryf_div_1_${fn:escapeXml(status.count)}">
 					<c:choose>
 						<c:when test="${!empty thumbNail}">
 							<img src="${fn:escapeXml(thumbNail)}" alt="${fn:escapeXml(catEntry.name)}" />
@@ -389,7 +391,7 @@ dojo.addOnLoad(function(){CommonControllersDeclarationJS.setControllerURL('Order
 				
                 
                 
-                <div class="itemspecs" id="WC_OrderItemDetailsSummaryf_div_2_${fn:escapeXml(status.count)}">
+                <div class="itemspecs especificaciones_resumen_pedido" id="WC_OrderItemDetailsSummaryf_div_2_${fn:escapeXml(status.count)}">
 					<p class="strong_content"><c:out value="${catEntry.name}"/></p>
 					<span><fmt:message bundle="${storeText}" key="CurrentOrder_SKU" /> <c:out value="${catEntry.partNumber}"/></span><br />
 					<c:if test="${empty subscriptionOrderItemId}">
@@ -554,8 +556,8 @@ dojo.addOnLoad(function(){CommonControllersDeclarationJS.setControllerURL('Order
 			</td>
 			
                         
-            <!-- aca comentamos la columan de precio unitario         
-            <td class="each ${fn:escapeXml(nobottom)}" id="WC_OrderItemDetailsSummaryf_td_3_${fn:escapeXml(status.count)}" headers="SingleShipment_tableCell_unitPrice SingleShipment_rowHeader_product${fn:escapeXml(status.count)}">
+        <!--   aca ocultamos lo de precio unitario
+        <td class="each ${fn:escapeXml(nobottom)}" id="WC_OrderItemDetailsSummaryf_td_3_${fn:escapeXml(status.count)}" headers="SingleShipment_tableCell_unitPrice SingleShipment_rowHeader_product${fn:escapeXml(status.count)}">
 				<%-- unit price column of order item details table --%>
 				<%-- shows unit price of the order item --%>
 				<span class="price">
@@ -574,7 +576,6 @@ dojo.addOnLoad(function(){CommonControllersDeclarationJS.setControllerURL('Order
 				</span>
 			</td>
               -->      
-                    
                     
                     
                     
@@ -666,7 +667,8 @@ dojo.addOnLoad(function(){CommonControllersDeclarationJS.setControllerURL('Order
                 
                 
                 
-
+<!-- aca agregamos la pleca azul -->
+<div class="checkout_subheader crecido"></div>
                 
                 
 

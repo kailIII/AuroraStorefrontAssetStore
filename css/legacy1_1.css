@@ -510,14 +510,14 @@
 }
 #order_details .img {
 	float:left;
-	padding-right: 7px;
+	/*padding-right: 7px;*/
 }
 #order_details  div[id^="WC_OrderItemDetailsf_div_1_"] ,
 #order_details  div[id^="WC_OrderItemDetailsSummaryf_div_1_"],
 #order_details  div[id^="WC_OrderItemDetails_div_1_"],
 #order_details  div[id^="WC_MSOrderItemDetailsSummaryf_div_1_"],
 #order_details  div[id^="WC_MSOrderItemDetails_div_1_"] {
-	width: 94px;
+	/*width: 94px;*/
 	text-align: center;
 }
 #order_details  div[id^="WC_OrderItemDetailsf_div_1_"] img, 
@@ -528,7 +528,7 @@
 	width: 100%;
 }
 #order_details  div[id^="WC_OrderItemDetailsf_div_2_"] {
-	width: 220px;
+	/*width: 220px;*/
 }
 #order_details .product_specs {
 	margin-left: 16px;
@@ -569,8 +569,16 @@
 	vertical-align: top;
 }
 
+#order_details .th_align_left_detalles {
+    min-width: 250px;
+    font-weight: normal;
+    padding: 6px 0px;
+    text-align: left;
+    vertical-align: top;
+}
+
 #order_details .th_align_left_normal .itemspecs {
-	padding-right:10px;
+	/*padding-right:10px;*/
 }
 
 #order_details .th_align_left_no_bottom {
