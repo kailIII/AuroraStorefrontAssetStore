@@ -1501,11 +1501,11 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 	color: #010f1c;
 	font-weight: inherit;
 }
-.carousel h2 .titleItems{
+.titleItems{
 	color: #1b83ff;
     font-size: 22px;
 	font-weight: normal;
-	margin: 20px auto 0 auto;
+	margin: 20px auto 5px auto;
 	max-width: 1000px;
 	padding: 0;	
 	text-align: center;
@@ -4457,3 +4457,4 @@ Alejandro Paredes
 } */
 
 
+.imagenCategoria{ background:red;}
