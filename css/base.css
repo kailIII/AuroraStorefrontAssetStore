@@ -1424,6 +1424,7 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 #llamanos {
 	font-size: 12px;
 	font-weight: bold;
+	color: rgb(90, 100, 115);
 }
 
 #footerFacebookLink {
@@ -2570,28 +2571,6 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 }
 
 
-@media (max-width: 895px){
-	#footerCorporateInfoSection{
-		width: 63% !important;
-	}
-}
-
-@media (max-width: 943px){
-	#footerCorporateInfoSection {
-		width: 63% !important;
-	}
-}
-
-@media (max-width: 612px){
-	#footerCorporateInfoSection {
-		width: 55% !important;
-	}
-	
-	#footerExploreSection {
-		width: 45% !important;
-	}
-}
-
 /*** Mobile (portrait) - 0-400px ***/
 
 @media (max-width: 400px) {
@@ -2702,14 +2681,14 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 
 /* <!-- CSS PERSONALIZADO --> */
  #footerCustomerServiceSection{
-  width: 35%;
+  width: 33%;
   padding-right: 0px !important; 
   padding-left: 0px !important;
   float: left;
  }
  
  #footerCorporateInfoSection{
-  width: 45%;
+  width: 47%;
   padding-right: 0px !important; 
   padding-left: 0px !important;
   float: left;
@@ -4002,7 +3981,79 @@ div#WC_CheckoutLogonf_div_0{
 	.button_text.tiny{
 		margin-top: 10px !important;
 	}
+	
+	#footerCustomerServiceSection{
+		width: 100%;
+		padding-right: 0px !important; 
+		padding-left: 0px !important;
+		float: none;
+	}
 
+	#footerCorporateInfoSection{
+		width: 50%;
+		padding-right: 0px !important; 
+		padding-left: 0px !important;
+		float: left;
+		border-color: #EBEBEB;
+		border-style: solid;
+		border-width: 1px 0;
+		margin-top: 15px;
+	}
+
+	#footerExploreSection{
+		width: 50%;
+		padding-right: 0px !important; 
+		padding-left: 0px !important;
+		float: right;
+		margin-top: 15px;
+		border-color: #EBEBEB;
+		border-style: solid;
+		border-width: 1px 0;
+		margin-top: 15px;
+		height: 68px;
+	}
+	
+	#footerContactUsLink, #footerRow1 > .section > ul > li > a#footerFacebookLink{
+		visibility: hidden;
+		display:none!important;
+		
+	}
+	
+	#footerRow1 > .section > ul {
+		margin-top: 11px;
+	}
+	
+	.noDisplay{
+		display: none !important;
+	}
+	
+	.footer-list > li {
+		float: left;
+	}
+
+}
+
+@media (min-width: 601px) and (max-width: 720px){
+
+	#footerRow1 > .section > ul {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
+}
+
+@media (min-width: 953px) and (max-width: 1015px){
+	#footerCustomerServiceSection{
+		width: 29%;
+	}
+
+	#footerCorporateInfoSection{
+		width: 50%;
+	}
+
+	#footerExploreSection{
+		width: 21%;
+	}
 }
 
 @media (max-width: 600px){
@@ -4017,6 +4068,49 @@ div#WC_CheckoutLogonf_div_0{
 	.button_text.tiny{
 		margin-top: 10px !important;
 	}
+	
+	#footerCustomerServiceSection{
+		width: 100%;
+	}
+
+	#footerCorporateInfoSection{
+		width: 100%;
+	}
+
+	#footerExploreSection{
+		width: 100%;
+	}
+	
+	#footer-left {
+		float: none;
+		width: 100%;
+	}
+	
+	#footer-right {
+		float: none;
+		width: 100%;
+	}
+	
+	
+	
+	#footerContactUsLink, #footerRow1 > .section > ul > li > a#footerFacebookLink{
+		visibility: hidden;
+		display:none!important;
+		
+	}
+	
+	.floatright {
+		float: none;
+	}
+	
+	.noDisplay{
+		display: none !important;
+	}
+	
+	.footer-list > li {
+		float: none;
+	}
+	
 
 }
 
@@ -4412,7 +4506,7 @@ Alejandro Paredes
 
 @media (max-width: 440px){
 	
-	#footer-right {
+/* 	#footer-right {
 		float: none;
 		width: 100%;
 	}
@@ -4424,29 +4518,10 @@ Alejandro Paredes
 	
 	.floatleft {
 		float: none;
-	}
+	} */
 	
 	.row .col12 .contentRecommendationWidget {
 		width: 85%;
-	}
-}
-
-@media (max-width: 430px){
-	#footerCorporateInfoSection{
-		float: none;
-	}
-	
-	#footerExploreSection{
-		float: none;
-		width: 100% !important;
-	}
-	
-	
-}
-
-@media (max-width: 550px){
-	#footerRow1 > .section > ul {
-		float: none !important;
 	}
 }
 
@@ -4462,4 +4537,3 @@ Alejandro Paredes
 } */
 
 
-.imagenCategoria{ background:red;}

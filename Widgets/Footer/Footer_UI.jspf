@@ -93,14 +93,14 @@
 			
 
 		   
-		   <ul class="footer-list floatleft">
+		   <ul class="footer-list floatright">
 				<li><span id="llamanos">Ll&aacute;manos: 01800 123 11 14</span></li>
-				<li><a id="footerContactUsLink" href="${fn:escapeXml(ContactUsPageViewURL)}">Comentarios y sugerencias<!--<fmt:message bundle="${storeText}" key="FOOTER_CONTACT_US"/>--></a></li>
+				<li class="noDisplay"><a id="footerContactUsLink" href="${fn:escapeXml(ContactUsPageViewURL)}">Comentarios y sugerencias<!--<fmt:message bundle="${storeText}" key="FOOTER_CONTACT_US"/>--></a></li>
 				<li>
 					<a id="footerFacebookLink" href="${facebookURL}">Siguenos 
 					<a id="btnFacebook"></a> 
 					<a id="btnTwitter"></a>
-					<!--<fmt:message bundle="${storeText}" key="FOOTER_FACEBOOK"/>--></a></li>
+				</li>
 				
 			</ul>
 		</div>
