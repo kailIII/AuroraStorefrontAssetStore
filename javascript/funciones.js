@@ -123,6 +123,8 @@ var responsiveMenu = function(){
 		var elemClick = menuCont.find('li')
 		elemClick.unbind('click');
 		var returnBtn = $('<div class="menuReturn"></div>')
+		returnBtn.text('Regresar a Menu principal' );
+		$('.contentEstilos').hide();
 		
 		//Click function
 		elemClick.click(function(e){	
@@ -134,33 +136,37 @@ var responsiveMenu = function(){
 			var childUl = $(this).find('ul').eq(0);
 			var textParent=$(this).find('.menuLink').eq(0).text();
 			var divParent = childUl.closest('div');
+			var imageDisplay = clickScope.find('.spotVida');
 			
 			if(divParent.css('display')== "none"){
 				divParent.show();
 			}
-			$(this).find('div').height('auto').css('top','0px');
-			
-			alert(clickScope.find('.spotVida').length);
-			if(ulParent.length > 1 && clickScope.find('.spotVida').length == 0){
+			$(this).find('div').not('.estiloVida').height('auto').css('top','0px');
+						
+			if(ulParent.length > 1 && imageDisplay.length == 0){
 				e.preventDefault();
 				siblingsElem.not(this).hide();
 				childUl.show();
 				childUl.find('li').show();
 				childUl.find('ul').hide();
-				returnBtn.text('Regresar a Menu principal' );
 			}else{
-				if(ulParent.find('li').length > 0){
+				if(ulParent.find('li').length > 0 && imageDisplay.length == 0){
 					siblingsElem.not(this).each(function(){
 						$(this).find('ul').slideUp();
 					})
 					childUl.slideToggle();
 					e.preventDefault();
+				}else if(imageDisplay.length > 0){
+					siblingsElem.not(clickScope).each(function(){
+					    $(this).find('.contentEstilos').slideUp();
+					})
+					imageDisplay.find('.contentEstilos').slideToggle();
 				}
 			}
 			$(this).parent('#departmentsMenu').prepend(returnBtn);
 		});
 		
-		
+		/*Click para cerrar menú*/
 		menuCont.on('click', '.menuReturn', function(e){
 			e.stopPropagation();
 			var childLevel = $(this).parents('ul').length;
@@ -170,17 +176,19 @@ var responsiveMenu = function(){
 				$(this).find('ul').hide();
 			})
 			
+			$('.contentEstilos').hide();
 			returnBtn.remove();
 		})
 
 	}else{
 		menuCont.show();
+		$('.contentEstilos').show();
 		var elemFirst = menuCont.find('>li');
 		var allElems = elemFirst.find('li');
 		var listMen = menuCont.find('ul').show();
 		
 			
-		elemFirst.each(function(){
+		elemFirst.each(function(index){
 			var eachScope = $(this);
 			var imgContainer = $(this).find('.spotVida');
 			var imageCont = $(this).find('.estiloVida');
@@ -190,20 +198,37 @@ var responsiveMenu = function(){
 			if(eachScope.find('.spotVida').length > 0){
 				var imageNumber = imgContainer.find('img').length;
 				var imageSize = imageCont.outerWidth();
-				var newSize = (imageSize+4.5)*imageNumber;
+				var newSize = (imageSize+5)*imageNumber;
 				
 				imgContainer.outerWidth(newSize);
-				console.log(eachScope.outerWidth()/2);
-				//imgContainer.css('left',(-newSize/2) + eachScope.position().left + (eachScope.outerWidth()/2));
-				imgContainer.css('left',(-1000+eachScope.position().left+(newSize/2) +(eachScope.outerWidth()/2)));
-								
+				
+				var centerSpace = -newSize/2 + (eachScope.outerWidth()/2)
+				var menuContmiddle = menuCont.width()/2
+				
+				console.log(-centerSpace + 'center' + index);
+				console.log(menuCont.width()-eachScope.position().left + index);
+				//console.log(-eachScope.position().left + eachScope.outerWidth())
+				
+				if(menuContmiddle > eachScope.position().left + eachScope.outerWidth()){
+					if(centerSpace < -eachScope.position().left + eachScope.outerWidth()){
+						imgContainer.css('left', centerSpace + ((newSize/2)-eachScope.position().left)-(eachScope.outerWidth()/2));
+					}else{
+						imgContainer.css('left', centerSpace);
+					}
+				}else{
+					if(-centerSpace > menuCont.width()-eachScope.position().left){
+						imgContainer.css('left', centerSpace - ((newSize/2)-(menuCont.width()-eachScope.position().left))-(eachScope.outerWidth()/2));
+					}else{
+						imgContainer.css('left', centerSpace);
+					}
+				}
 			}
 		})
 		
 		
 		$('.departmentMenu').each(function(){
 			var thisDiv = $(this);
-			if(thisDiv.hasClass('spotVida')== false){
+			if(thisDiv.hasClass('spotVida')== false){																																																																		
 				thisDiv.css('top', '100%');
 			}else{
 				thisDiv.css('top', '110%');
