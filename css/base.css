@@ -219,8 +219,8 @@ dl, ol, ul {
 .btnNaranja{ 
 	color:#FFF;
 	padding:10px;
-	min-width: 160px;
-	max-width: 160px;
+	min-width: 130px;
+	max-width: 130px;
 	font-size:.95em;
 	clear:both;
 	border:0;
@@ -231,6 +231,7 @@ dl, ol, ul {
 	cursor:pointer;
 	text-decoration:none;
 	text-align: center;
+	box-sizing: border-box;
 }
 .btnNaranja:hover{
 	background-color:#fa6b19;
