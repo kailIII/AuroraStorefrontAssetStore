@@ -1430,6 +1430,10 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 	vertical-align: text-bottom !important;
 }
 
+.footer-titles{
+	font-size: 14px;
+}
+
 @media (max-width: 480px) {
 	#footerRow1 {
 		width: 220px;
@@ -1482,6 +1486,7 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 	color: #808080;
 	font-size: 11px;
 	list-style: none;
+	margin-right: 10px;
 }
 #footerRow1 > .section > ul > li > a {
 	display: block;
@@ -2402,7 +2407,7 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 		display: block;
 	}
 	
-	#footerCustomerServiceSection{
+/* 	#footerCustomerServiceSection{
 		width: 100% !important;
 	}
 
@@ -2412,7 +2417,7 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 
 	#footerExploreSection{
 		width: 35% !important;
-	}
+	} */
 	
 	#footerRow1 > .section {
 	  text-align: center;
@@ -2697,14 +2702,14 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 
 /* <!-- CSS PERSONALIZADO --> */
  #footerCustomerServiceSection{
-  width: 25%;
+  width: 35%;
   padding-right: 0px !important; 
   padding-left: 0px !important;
   float: left;
  }
  
  #footerCorporateInfoSection{
-  width: 55%;
+  width: 45%;
   padding-right: 0px !important; 
   padding-left: 0px !important;
   float: left;
@@ -2718,8 +2723,7 @@ li.menuCategorias :hover  <  .departmentButton.selected{
  }
 
  #footerCustomerServiceSection > .textoSuscribete{
-  color: #82add7 !important;
-  color: #3e7ec7 !important;
+  color: #808080 !important;
   font-weight: 600 !important;
   font-size: 15px;
   padding-top: 10px; 
@@ -2727,7 +2731,7 @@ li.menuCategorias :hover  <  .departmentButton.selected{
  }
  
  .textoSuscribete{
-  color: #82add7 !important;
+  color: #3E7EC7 !important;
   font-weight: 600 !important;
   font-size: 14px;
   padding-top: 10px; 
@@ -2735,13 +2739,13 @@ li.menuCategorias :hover  <  .departmentButton.selected{
  }
  
  #footerCustomerServiceSection > .textoRecibePromos{
-  color: a7a7a7 !important;
+  color: #808080 !important;
   font-size: 12px !important;
   font-weight: 900;
  }
  
  .textoRecibePromos{
-  color: a7a7a7 !important;
+  color: #808080 !important;
   font-size: 11px !important;
   font-weight: 900;
   font-family: Arial,Helvetica,sans-serif !important;
