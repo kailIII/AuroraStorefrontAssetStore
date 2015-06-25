@@ -158,11 +158,10 @@
 			
 
 		
-						
-			<!-- 
+		    <!-- 		
 			<li role="menuitem">
 				
-				<%--
+				<%-- 
 				 
 				<%
 					out.flush();
@@ -172,7 +171,8 @@
 					out.flush();
 				%>
 				
-				 --%>
+				--%>
+				
 				 
 			</li>
 			-->
@@ -199,10 +199,11 @@
 			<li role="menuitem"><span id="contactQuickLink"><c:out
 						value="${storeInfoContactTelephone}" />
 			</span></li>
+			 -->
 			<flow:ifEnabled feature="FacebookIntegration">
 				<li id="facebookQuickLinkItem" role="menuitem">
 				
-				 	<%--
+				 	
 				 	
 					<%
 						out.flush();
@@ -212,11 +213,11 @@
 						out.flush();
 					%>
 					
-					 --%>
+					 
 				</li>
 			</flow:ifEnabled>
 			
-		 -->
+		
 		</ul>
 	</div>
 	</li>
