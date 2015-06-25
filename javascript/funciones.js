@@ -1,4 +1,4 @@
-/*Script telmexianos*/
+/*Script telmexianos /Pixseles*/
 
 
 /*Función para checar el ancho de la pantalla.  Incorrecto poner $(window).width ya que difiere del usado por media queries*/
@@ -38,11 +38,31 @@ $( document ).ready(function() {
 function menuF(){
 	
 	var menuCont =$('#departmentsMenu');
+	var menuCategorias = $('.menuCategorias');
 	
 	if (checkWidth() > 952) {
 	var claseMenu = "";
-
-		
+	var hasSize = false;
+	
+	
+	/*Grow the menu respect at list of categories*/
+	if(hasSize == false){
+		menuCategorias.mousedown(function(){
+			setTimeout(function(){
+				var categoryMenu =$('.categoryList').find('>li');
+				categoryMenu.each(function(){
+					 var scope = $(this);
+					 if(scope.find('.subMenuPage').outerHeight()< $('.categoryList').outerHeight()){
+						 scope.find('.subMenuPage').outerHeight($('.categoryList').outerHeight()+ 5);
+					 }else{
+						 scope.find('.subMenuPage').height('auto');
+					 }
+				})
+				hasSize = true;
+			}, 500);
+		});
+	}
+	
 	/*Menu Hover*/
 		$("li.menuLink").hover(
 			function () {
@@ -55,9 +75,6 @@ function menuF(){
 					$('.departmentMenu.active').css('borderBottomRightRadius', '0px ');
 					
 					 var index = $( "li.menuLink" ).index( this );
-					
-					 //Menu Same Height of select
-					$('.subMenuPage').outerHeight($('.categoryList').outerHeight()+ 6);
 					
 					//Position of the div menu
 					var topItem = 0
@@ -84,12 +101,8 @@ function menuF(){
 	else {
 		
 	   $('.menuLink').unbind('mouseenter mouseleave');
-	   
-	   console.log('Less than 960');
 	}
 }
-
-
 
 var responsiveMenu = function(){
 	var thFunction = $(this);
@@ -137,12 +150,19 @@ var responsiveMenu = function(){
 			var textParent=$(this).find('.menuLink').eq(0).text();
 			var divParent = childUl.closest('div');
 			var imageDisplay = clickScope.find('.spotVida');
+			var isGoingSection = true;
+			
 			
 			if(divParent.css('display')== "none"){
 				divParent.show();
 			}
 			$(this).find('div').not('.estiloVida').height('auto').css('top','0px');
-						
+			
+			if(imageDisplay.length > 0){
+				isGoingSection = false;
+			}
+			
+		
 			if(ulParent.length > 1 && imageDisplay.length == 0){
 				e.preventDefault();
 				siblingsElem.not(this).hide();
@@ -161,6 +181,7 @@ var responsiveMenu = function(){
 					    $(this).find('.contentEstilos').slideUp();
 					})
 					imageDisplay.find('.contentEstilos').slideToggle();
+					//e.preventDefault();
 				}
 			}
 			$(this).parent('#departmentsMenu').prepend(returnBtn);
@@ -205,10 +226,6 @@ var responsiveMenu = function(){
 				var centerSpace = -newSize/2 + (eachScope.outerWidth()/2)
 				var menuContmiddle = menuCont.width()/2
 				
-				console.log(-centerSpace + 'center' + index);
-				console.log(menuCont.width()-eachScope.position().left + index);
-				//console.log(-eachScope.position().left + eachScope.outerWidth())
-				
 				if(menuContmiddle > eachScope.position().left + eachScope.outerWidth()){
 					if(centerSpace < -eachScope.position().left + eachScope.outerWidth()){
 						imgContainer.css('left', centerSpace + ((newSize/2)-eachScope.position().left)-(eachScope.outerWidth()/2));
@@ -242,9 +259,6 @@ var responsiveMenu = function(){
 		menuCont.off('click', '.menuReturn');
 
 		$('.menuReturn').remove();
-		
-		/*Images menu*/
-		
 	}
 	
 

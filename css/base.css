@@ -676,6 +676,7 @@ dl, ol, ul {
   width: 160px;
   margin-left: 1px;
   position: relative;
+  cursor:pointer;
 }
 
 .estiloVida img{
@@ -701,6 +702,8 @@ span.descEstiloVida{
   font-family: ubunturegular,Arial, Helvetica;
   font-size:13px;
 }
+
+.descEstiloVida > strong{display:none;}
 
 /*** Quick links bar ***/
 
@@ -1973,17 +1976,22 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 
 @media (max-width: 952px) {
 	
-	.spotVida	{left: 0px!important; background:none;} 
+	.spotVida	{left: 0px!important; background:none; width:100% !important;} 
 	
 	.estiloVida{
 		display:block;
-		height:25px;
-		overflow:hidden;
+		height:auto;
+		width:210px;
+		padding:2px 0;
 	}
 	.estiloVida >img{display:none;}
 	
-	span.descEstiloVida{bottom:0px; background:none; color:#55667a; text-align:left;}
-
+	.contentEstilos{margin-top:10px;}
+	
+	span.descEstiloVida{bottom:0px; background:none; color:#55667a; text-align:left; height:25px; float:none; position:relative;}
+	
+	.descEstiloVida > strong{display:inline-block; margin-right:5px; width:30px; height:30px; vertical-align:top;}
+	
 	.departmentMenu > .header {
 		display:block;
 	}
