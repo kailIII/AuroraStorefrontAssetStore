@@ -365,10 +365,10 @@ dl, ol, ul {
 	text-align: center;
 	vertical-align: middle;
 	font-family: 'ubunturegular',arial;
-	font-size: 12px;
+	font-size: 12.5px;
 	text-rendering: optimizeLegibility;
-	color:#374652;
-	font-weight:bold;
+	color:#384452;
+	/*font-weight:bold;*/
 }
 .departmentButton.selected > span {
 	/*border-color: #fdd466;*/
@@ -789,7 +789,7 @@ position: absolute;
 	position: relative;
 	width: 58px;
 	height: 43px;
-	margin: 0px 20px;
+	/*margin: 0px 20px;*/
 	padding: 0 !important;
 	top: 0px;
 	/*background-image: -webkit-gradient(linear, left top, left bottom, from(#f7f9f9), to(#e5e8e9));
@@ -2051,7 +2051,7 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 	  width: 12px!important;
 	  height: 18px;
 	  left: inherit !important;
-	  right: 120px;
+	  right: 125px;
 	}
     *:focus  
     {  
@@ -4285,7 +4285,7 @@ Alejandro Paredes
     height: 32px;
 }
 
-#Header_GlobalLogin_desktopExpandArrow{display:none;}
+/*#Header_GlobalLogin_desktopExpandArrow{display:none;}*/
 
 .loginMenuDropdown .button_primary   .button_text {
   font-size: 12px;
