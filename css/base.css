@@ -2682,14 +2682,14 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 
 /* <!-- CSS PERSONALIZADO --> */
  #footerCustomerServiceSection{
-  width: 33%;
+  width: 30%;
   padding-right: 0px !important; 
   padding-left: 0px !important;
   float: left;
  }
  
  #footerCorporateInfoSection{
-  width: 47%;
+  width: 50%;
   padding-right: 0px !important; 
   padding-left: 0px !important;
   float: left;
@@ -2726,8 +2726,7 @@ li.menuCategorias :hover  <  .departmentButton.selected{
  
  .textoRecibePromos{
   color: #808080 !important;
-  font-size: 11px !important;
-  font-weight: 900;
+  font-size: 12px !important;
   font-family: Arial,Helvetica,sans-serif !important;
  }
  
@@ -4537,10 +4536,7 @@ Alejandro Paredes
     width: 100% !important;
 } */
 
-
-<<<<<<< HEAD
-=======
 .imagen_resumen_pedido{float: left; width:30%;}
 .especificaciones_resumen_pedido{float: left; width: 60%; margin-left: 10%;}
 
->>>>>>> origin/master
+
