@@ -4627,17 +4627,14 @@ input#piAmount_4_display,
 	margin-top: 0px;
 }
 
+
 @media (max-width: 857px){
 	ul.footer-list.floatleft{
 		float: none;
 		display: inline-block !important;
 		vertical-align: top;
-		
+		max-width: 32%;
+		margin-right: 9px;
+		box-sizing: border-box;
 	}
-}
-
-@media (min-width: 649) and (max-width: 685){
-	ul.footer-list.floatleft{
-		margin-right: 5px;		
-	}	
 }
