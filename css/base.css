@@ -4626,3 +4626,18 @@ input#piAmount_4_display,
 .billing_method {
 	margin-top: 0px;
 }
+
+@media (max-width: 857px){
+	ul.footer-list.floatleft{
+		float: none;
+		display: inline-block !important;
+		vertical-align: top;
+		
+	}
+}
+
+@media (min-width: 649) and (max-width: 685){
+	ul.footer-list.floatleft{
+		margin-right: 5px;		
+	}	
+}
