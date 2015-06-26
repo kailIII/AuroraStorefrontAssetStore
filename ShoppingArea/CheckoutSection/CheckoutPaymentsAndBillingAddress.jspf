@@ -84,7 +84,7 @@ order.
 		CheckoutPayments.initializeOverallPaymentObjects();
 		CheckoutPayments.initializePaymentAreaDataDirtyFlags();
 	
-		wc.render.declareContext("paymentContext", {payment1: "empty", payment2: "empty", payment3: "empty", currentAreaNumber: "1", billingMode1: "none", billingMode2: "none", billingMode3: "none",currentTotal:"0"},	"");
+		wc.render.declareContext("paymentContext", {payment1: "empty", payment2: "empty", payment3: "empty", payment4: "empty", currentAreaNumber: "1", billingMode1: "none", billingMode2: "none", billingMode3: "none",currentTotal:"0"},	"");
 	});
 </script>
 
@@ -417,6 +417,8 @@ wc.render.declareRefreshController({
 		</c:otherwise>
 	</c:choose>
 
+	
+
 	<div id="paymentSection<c:out value="${i}"/>" style="<c:out value="${displayMethod}"/>" >
 
 		<div id="WC_CheckoutPaymentsAndBillingAddressf_div_1_<c:out value='${status2.count}'/>">
@@ -436,6 +438,7 @@ wc.render.declareRefreshController({
 					<input type="hidden" name="piId" value="" id="WC_CheckoutPaymentsAndBillingAddressf_piId_<c:out value='${i}'/>"/>
 					<input type="hidden" name="paymentDataEditable" value="" id="WC_CheckoutPaymentsAndBillingAddressf_paymentDataEditable_<c:out value='${i}'/>"/>
 					<input type="hidden" name="orderId" value="${order.orderId}" id="WC_CheckoutPaymentsAndBillingAddressf_orderId_<c:out value='${i}'/>"/>
+					<%-- Daniel Torres Se comento la direccion de facturación ya que no esta contemplada en los diseños--%>
 					<div id="billingAddress<c:out value="${i}"/>" class="billing_address_container">
 						<div dojoType="wc.widget.RefreshArea" id = "billingAddressSelectBoxArea_<c:out value='${i}'/>" widgetId="billingAddressSelectBoxArea_<c:out value='${i}'/>" objectId='<c:out value="${i}"/>' controllerId="billingAddressSelectBoxAreaController" >	
 							<%out.flush();%>
@@ -447,6 +450,7 @@ wc.render.declareRefreshController({
 							<%out.flush();%>
 						</div>
 					</div>
+					
 					<script type="text/javascript">
 						dojo.addOnLoad(function() { 
 							var widgetText = "billingAddressSelectBoxArea_" + "<c:out value="${i}"/>";
@@ -469,6 +473,9 @@ wc.render.declareRefreshController({
 							<input type="hidden" name="curr_month" value="<c:out value='${now.month + 1}'/>" id="WC_CheckoutPaymentsAndBillingAddressf_inputs_6_<c:out value='${status2.count}'/>"/>
 							<input type="hidden" name="curr_date" value="<c:out value='${now.date}'/>" id="WC_CheckoutPaymentsAndBillingAddressf_inputs_7_<c:out value='${status2.count}'/>"/>
 							<!-- Payment type promotion: onchange call the function CheckoutPayments.updateUnboundPaymentToOrder(); -->
+							<div class="tarjeta-icon">
+								<img src="<c:out value="${jspStoreImgDir}images/tarjeta.png"/>"/>
+							
 							<select class="drop_down_billing" name="payMethodId" id="payMethodId_<c:out value='${i}'/>" 
 								onchange="JavaScript:this.blur(); 
 								CheckoutHelperJS.setOrderId('<c:out value='${usablePaymentInfo.orderId}'/>');
@@ -501,12 +508,12 @@ wc.render.declareRefreshController({
 											<c:set var="selectStr" value='selected="selected"' />
 											<c:set var="attrPageName" value="${env_jspStoreDir}/Snippets/EDP/PaymentMethods/${payment.xumet_attrPageName}.jsp" />
 										</c:if>
-										<option <c:out value="${selectStr}" escapeXml="false"/> value="${currentPaymentMethodName}<c:if test='${!empty payment.paymentTermConditionId}'><c:out value='_${payment.paymentTermConditionId}'/></c:if>">${payment.description} </option>
+										<option id="payMethodId_<c:out value='${i}'/>_<c:out value='${currentPaymentMethodName}'/>" <c:out value="${selectStr}" escapeXml="false"/> value="${currentPaymentMethodName}<c:if test='${!empty payment.paymentTermConditionId}'><c:out value='_${payment.paymentTermConditionId}'/></c:if>">${payment.description} </option>
 										<c:set var="selectStr" value="" />
 									</c:if>
 								</c:forEach>
 							</select>
-	
+							</div>
 							<input type="hidden" name="buyerOrgDN" value="${order.orgDistinguishedName}"/>
 							
 							<!-- This div is for Web2.0 Style -->
@@ -663,6 +670,47 @@ wc.render.declareRefreshController({
 		</c:forEach>
 	</flow:ifDisabled>
 </c:forEach>
+<script type="text/javascript">
+						dojo.addOnLoad(function() { 
+						
+						document.getElementById("numberOfPaymentMethods").value = '3';
+						document.getElementById("numberOfPaymentMethods").onchange();
+						
+							var totatItemId = document.getElementById("totalNumberOfItems");
+								for (var i=1; i<=totatItemId.value; i++){
+									updateDetailsProduct(i);
+								}
+								
+							sumaTotalFinanciamiento();
+							sumaRestateCardAndRecibo();
+							
+							// if(document.getElementById("payMethodId_1").value != 'TelmexRecibo'){
+								document.getElementById("payMethodId_1").value = 'TelmexRecibo';
+								document.getElementById("payMethodId_1").onchange();
+							// } 
+							//if(document.getElementById("payMethodId_2").value != 'TelmexMonedero'){
+								document.getElementById("payMethodId_2").value = 'TelmexMonedero';
+								document.getElementById("payMethodId_2").onchange();
+								
+							//}
+							// if(document.getElementById("payMethodId_3").value != 'TelmexMonedero'){
+								document.getElementById("payMethodId_3").value = 'TelmexPayBack';
+								document.getElementById("payMethodId_3").onchange();
+							//} 
+							 
+							if(document.getElementById("payMethodId_4").value != 'empty'){
+								document.getElementById("payMethodId_4").value = 'empty';
+								document.getElementById("payMethodId_4_TelmexMonedero").style.display  = "none";
+	   							document.getElementById("payMethodId_4_TelmexPayBack").style.display  = "none";
+	  							document.getElementById("payMethodId_4_TelmexRecibo").style.display  = "none";
+							}
+							
+							document.getElementById("payMethodId_1").disabled = true;						
+							document.getElementById("payMethodId_2").disabled = true;
+							document.getElementById("payMethodId_3").disabled = true;
+							
+						});
+					</script>
 
 <!-- END CheckoutPaymentsAndBillingAddress.jspf -->
 

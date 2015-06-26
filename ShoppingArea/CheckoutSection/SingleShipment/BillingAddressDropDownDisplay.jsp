@@ -193,12 +193,13 @@
 		</flow:ifDisabled>
 		<c:if test="${selectedAddressId != -1 && hasValidAddresses}" >		
 			<br/>
-			<div id="editBillingAddressLink_<c:out value='${param.paymentAreaNumber}'/>" class="editAddressLink hover_underline">
+			<%-- Daniel Torres --%>
+			<%--<div id="editBillingAddressLink_<c:out value='${param.paymentAreaNumber}'/>" class="editAddressLink hover_underline">
 					<a class="tlignore" href="JavaScript:CheckoutPayments.saveBillingAddressDropDownBoxContextProperties('edit','<c:out value="${param.paymentAreaNumber}"/>');JavaScript:CheckoutHelperJS.editBillingAddress('-1','<c:out value="${param.paymentAreaNumber}"/>','<c:out value='${fn:replace(profileshipping,search01,replaceStr01)}'/>','<c:out value='${fn:replace(profilebilling,search01,replaceStr01)}'/>');CheckoutHelperJS.setLastAddressLinkIdToFocus('editBillingAddressLink_a_edit_<c:out value='${param.paymentAreaNumber}'/>');" id="editBillingAddressLink_a_edit_<c:out value='${param.paymentAreaNumber}'/>">
 					<img src="<c:out value='${jspStoreImgDir}'/>images/edit_icon.png" alt="" />
 					<fmt:message bundle="${storeText}" key="ADDR_EDIT_ADDRESS" />
 					</a>
-			</div>
+			</div>--%>
 			
 		</c:if>
 		
@@ -213,12 +214,13 @@
 			<c:set var="allowCreateAddress" value="${usableBillingAddressListBean.resultList[0].isPersonalAddressAllowForBilling}" />
 		</c:if>
 		<c:if test="${allowCreateAddress}">
-			<div id="createNewBillingAddress_<c:out value='${param.paymentAreaNumber}'/>" class="newShippingAddressButton hover_underline">
+			<%-- Daniel torres --%>
+			<%--<div id="createNewBillingAddress_<c:out value='${param.paymentAreaNumber}'/>" class="newShippingAddressButton hover_underline">
 					<a class="tlignore" href="JavaScript:MessageHelper.hideAndClearMessage();CheckoutPayments.createBillingAddress(<c:out value="${param.paymentAreaNumber}"/>,'Billing');CheckoutHelperJS.setLastAddressLinkIdToFocus('editBillingAddressLink_a_create_<c:out value='${param.paymentAreaNumber}'/>');" id="editBillingAddressLink_a_create_<c:out value='${param.paymentAreaNumber}'/>">
 						<img src="<c:out value='${jspStoreImgDir}${vfileColor}'/>table_plus_add.png" alt="" />
 						<fmt:message bundle="${storeText}" key="ADDR_CREATE_ADDRESS" />
 					</a>
-			</div>
+			</div> --%>
 		</c:if>
  </div>
 <!-- END BillingAddressDropDownDisplay.jsp -->

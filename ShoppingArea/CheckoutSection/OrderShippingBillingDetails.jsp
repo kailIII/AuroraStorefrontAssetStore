@@ -875,10 +875,14 @@ need to first assign a valid address id to these order items before proceeding w
 												</div>
 
 												<c:set var="showPayInStore" value="false"/>
-												<div class="body shipping_billing_height" id="WC_ShipmentDisplay_div_30">
+													<div class="body shipping_billing_height" id="WC_ShipmentDisplay_div_30">
+														<div class="tarjtas-check">
+														<h2 class="">Utiliza tu correo electrónico</h2>
+														<p>Ingresa el monto que deseas aplicar al total de tu compra.</p>
+													     </div>
 													<%@ include file="CheckoutPaymentsAndBillingAddress.jspf"%>
 													<%@ include file="OrderAdditionalDetailExt.jspf"%>
-												</div>
+													</div>
 											</flow:ifEnabled>
 
 											
