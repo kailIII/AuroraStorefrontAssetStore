@@ -19,7 +19,7 @@
 <%@ page import="com.ibm.commerce.server.ECConstants" %>
 
 <%@ include file= "../../Common/EnvironmentSetup.jspf" %>
-
+ 
 <c:if test="${WCParam.omitHeader != 1}">
 	<%@ include file="ext/Footer_Data.jspf" %>
 	<c:if test = "${param.custom_data ne 'true'}">
