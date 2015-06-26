@@ -2925,14 +2925,17 @@ div.namePartPriceContainer > div > span.price {
 	border-radius: 0% !important;
 	box-shadow: 0 0 0 3px #fac549;
 	vertical-align: middle;
-	width: 15px !important;
+	/* width: 15px !important; */
 }
 
 
+.color_swatch_list ul li, div.product_listing_container .list_mode .product > .product_info > .product_color_swatches > .color_swatch_list ul li {
+    margin: 0 40px 10px 0 !important;
+}
 
 .color_swatch_list .color_swatch, div.product_listing_container .list_mode .product > .product_info > .product_color_swatches > .color_swatch_list .color_swatch {
 	border-radius: 0% !important;
-	width: 15px !important;
+	/* width: 15px !important; */
 }
 
 .product_text {
