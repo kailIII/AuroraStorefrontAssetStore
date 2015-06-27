@@ -1976,6 +1976,14 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 /*** RWD-A ***/
 
 @media (max-width: 952px) {
+
+	.telmexMenuImage  img{
+		display:none;
+	}
+	
+	.telmexMenuImage  .genericESpot{
+		display:none;
+	}	
 	
 	.spotVida	{left: 0px!important; background:none; width:100% !important;} 
 	
