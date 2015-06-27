@@ -325,9 +325,9 @@
 			              
 			             </ul>
 
-			             <div>
+			             <div class="telmexMenuImage">
 			             	<c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
-								<c:param name="emsName" value="telmexMenu_Image" />
+								<c:param name="emsName" value="telmexMenuImage${count}" />
 							    <c:param name="catalogId" value="${WCParam.catalogId}" />
 							</c:import>
 			             </div>						 

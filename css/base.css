@@ -4626,3 +4626,17 @@ input#piAmount_4_display,
 .billing_method {
 	margin-top: 0px;
 }
+
+.telmexMenuImage{
+  width: 250px;
+  height: 250px;
+  display: block;
+  position: absolute;
+  float: right;
+  top: 0px;
+  right: 15px;
+}
+
+.telmexMenuImage  img{
+	width:100%;
+}
