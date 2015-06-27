@@ -4540,6 +4540,10 @@ Alejandro Paredes
     //width: 95% !important;
 }
 
+.product_page_content .widget_product_image_viewer > .content {
+  padding-right: 10px !important;
+}
+
 /* hay que checar que no choque con todas las imagenes de la tienda, se agregó para cuadrar las imagenes de los carruseles del home */
 
 /* .catPos > .product_image > a > img {
