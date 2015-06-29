@@ -114,26 +114,27 @@
 				<a id="departmentLink_${department.uniqueID}_alt" href="${fn:escapeXml(categoryURLMap[department.uniqueID])}"  role="menuitem" tabindex="-1"><c:out value="${department.name}"/></a>
 			           
 		           <div class="subMenuPage subMenu${count} menuLink">
-				         <ul class="subcategoryList" >
-			               
-			               <c:forEach var="category" items="${department.catalogGroupView}">    
+				         <ul class="subcategoryList">
+                             
+                             <c:forEach var="category" items="${department.catalogGroupView}">    
 			                    <c:set var="key" value="${department.uniqueID}_${category.uniqueID}"/>
-			                     <li> <a id="categoryLink_${key}" href="${fn:escapeXml(categoryURLMap[key])}" class="menuLink" role="menuitem" tabindex="-1">
-			                    <c:out value="${category.name}"/></a>
+			                     
+                                 <li>
+                                     <a id="categoryLink_${key}" href="${fn:escapeXml(categoryURLMap[key])}" class="menuLink" role="menuitem" tabindex="-1">
+			                         <c:out value="${category.name}"/>
+                                     </a>
 			                   
-			                   <ul class="subcategoryList2"><c:forEach var="subcategory" items="${category.catalogGroupView}" >
-			                   
-			                   <li>
-								<c:set var="key" value="${department.uniqueID}_${category.uniqueID}_${subcategory.uniqueID}"/>
-								<a id="subcategoryLink_${key}" href="${fn:escapeXml(categoryURLMap[key])}" class="menuLink" role="menuitem" tabindex="-1"><c:out value="${subcategory.name}"/></a>
-							
-							</c:forEach>
-			               </li>
-			                </ul>   
-			               
-			               </li>
-			              
-			              </c:forEach>
+                                    <ul class="subcategoryList2">
+                                    <c:forEach var="subcategory" items="${category.catalogGroupView}" >
+                                        <li>
+                                        <c:set var="key" value="${department.uniqueID}_${category.uniqueID}_${subcategory.uniqueID}"/>
+                                        <a id="subcategoryLink_${key}" href="${fn:escapeXml(categoryURLMap[key])}" class="menuLink" role="menuitem" tabindex="-1"><c:out value="${subcategory.name}"/></a>
+                                         </li>
+                                    </c:forEach>
+                                    </ul>
+        			             </li>
+                       
+                            </c:forEach>
 			              
 			             </ul>
 

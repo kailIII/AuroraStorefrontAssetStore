@@ -235,7 +235,7 @@
                                     </a>
                                     </c:when>
                                     <c:otherwise>
-                                    <p><fmt:message bundle="${storeText}" key="SKU_NOT_BUYABLE"/></p>
+                                        <p class="producto_agotado"><fmt:message bundle="${storeText}" key="SKU_NOT_BUYABLE"/></p>
                                     </c:otherwise>
                                     </c:choose>
                                     </div>
@@ -328,7 +328,7 @@
                                     </a>
                                     </c:when>
                                     <c:otherwise>
-                                    <p><fmt:message bundle="${storeText}" key="SKU_NOT_BUYABLE"/></p>
+                                        <p class="producto_agotado"><fmt:message bundle="${storeText}" key="SKU_NOT_BUYABLE"/></p>
                                     </c:otherwise>
                                     </c:choose>
                                     </div>
@@ -511,7 +511,7 @@
                                     </a>
                                     </c:when>
                                     <c:otherwise>
-                                    <p><fmt:message bundle="${storeText}" key="SKU_NOT_BUYABLE"/></p>
+                                        <p class="producto_agotado"><fmt:message bundle="${storeText}" key="SKU_NOT_BUYABLE"/></p>
                                     </c:otherwise>
                                     </c:choose>
                                     </div>
@@ -620,7 +620,7 @@
                                     </a>
                                     </c:when>
                                     <c:otherwise>
-                                    <p><fmt:message bundle="${storeText}" key="SKU_NOT_BUYABLE"/></p>
+                                        <p class="producto_agotado"><fmt:message bundle="${storeText}" key="SKU_NOT_BUYABLE"/></p>
                                     </c:otherwise>
                                     </c:choose>
                                     </div>
