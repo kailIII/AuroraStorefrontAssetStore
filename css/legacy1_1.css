@@ -4378,4 +4378,94 @@ td.item .listPrice {
 }
 
 
+/* Arturo agregue nuevos estilos ============================================================================================================================== */
 
+.nested{
+    background-color: rgb(245, 245, 245);
+    font-size: .82em;
+    color: #55667a;
+    line-height: 1.4;
+    text-align: center;
+}
+
+#WC_PromotionCodeDisplay_div_3{
+    background-color: #8c97a1 !important;
+    border: 0 none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 0.95em;
+    text-decoration: none;
+}
+
+#WC_PromotionCodeDisplay_div_3:hover{
+    background-color: #767f88 !important;
+}
+
+.tache{
+    margin: 0 25px;
+}
+
+.crecido{
+    min-height: 30px;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 5px 10px;
+}
+
+.gris{
+    background-color: rgb(245, 245, 245);
+    font-size: .82em;
+    color: #55667a;
+    text-align: left;
+    width: 100%;
+}
+
+.gris_sidebar{
+    background-color: rgb(245, 245, 245);
+    font-size: .82em;
+    color: #55667a;
+    text-align: left;
+    width: 100%;
+    padding: 5px 0px 5px 10px;
+}
+
+.gris .palomita{
+    float: left;
+}
+
+.separador_blanco{
+    height: 35px;
+    display: block;
+    background-color: #ffffff;
+    width: 5px;
+    float: left;
+    margin-right: 10px;    
+}
+.numero_head{
+    background-color: #5a6473;
+    display: table-column;
+    text-align: center;
+    line-height: 35px;
+    color: white;
+    float: left;
+    height: 35px;
+    max-height: 35px;
+    min-width: 35px;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.genericESpot table, tr td table p{
+    border-collapse: separate;
+    border-spacing: 0px;
+    border-color: grey;
+}
+
+
+.flotante_side{
+    position: absolute;
+    right: 20px;
+    top: 100px;
+    z-index: 998;
+}
