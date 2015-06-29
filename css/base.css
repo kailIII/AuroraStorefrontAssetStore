@@ -1191,7 +1191,7 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 .telmexMenuImage{
   width: 250px;
   height: 250px;
-  display: inline-block;
+  display: none;
   vertical-align:top;
 }
 
@@ -4185,7 +4185,7 @@ div#WC_CheckoutLogonf_div_0{
 		top:0px;
 		width:auto;
 		background:none;
-		padding: 10px 0px 0px;
+		padding: 0px;
 	}
 	
 	.categoryList > li{
