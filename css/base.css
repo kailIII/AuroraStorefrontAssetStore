@@ -991,7 +991,7 @@ li.menuCategorias :hover  <  .departmentButton.selected{
     width: 380px;
 }
 
-@media (max-width: 990px){
+@media (max-width: 999px){
  	
 	.product_page_content .widget_product_image_viewer .image_container {
 		float: none !important;
@@ -2947,9 +2947,9 @@ div.namePartPriceContainer > div > span.price {
 	/* width: 15px !important; */
 }
 
-
-
-
+.color_swatch_list ul li, div.product_listing_container .list_mode .product > .product_info > .product_color_swatches > .color_swatch_list ul li {
+    margin: 0 40px 10px 0 !important;
+}
 
 
 .color_swatch_list .color_swatch, div.product_listing_container .list_mode .product > .product_info > .product_color_swatches > .color_swatch_list .color_swatch {
@@ -3313,7 +3313,7 @@ div.compare_target {
 
 .product_info > .product_name > a {
 	font-size: 15px !important;
-	font-family: ubunturegular;
+	/* font-family: ubunturegular; */
 }
 
 .product_info > .product_price > .price{
