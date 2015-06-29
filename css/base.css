@@ -1116,7 +1116,8 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 	margin: 0 0 8px 0;
 	padding: 0 0 8px 0;
 	list-style: none;
-	/* display:none; */
+	display:inline-block;
+	vertical-align:top;
 }
 
 .subcategoryList >li{
@@ -1186,6 +1187,18 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 }
 
 .subMenuPage .caption{background:none;}
+
+.telmexMenuImage{
+  width: 250px;
+  height: 250px;
+  display: inline-block;
+  vertical-align:top;
+}
+
+.telmexMenuImage  img{
+	width:100%;
+}
+
 
 /* Department menu (1025px+) */
 
@@ -2268,6 +2281,7 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 
 	.subcategoryList {
 		border-bottom: 1px solid #e0dee5;
+		width:100% !important;
 	}
 	.subcategoryList > li {
 		display: inline-block;
@@ -4656,19 +4670,6 @@ input#piAmount_4_display,
 }
 
 
-.telmexMenuImage{
-  width: 250px;
-  height: 250px;
-  display: block;
-  position: absolute;
-  float: right;
-  top: 0px;
-  right: 15px;
-}
-
-.telmexMenuImage  img{
-	width:100%;
-}
 
 
 

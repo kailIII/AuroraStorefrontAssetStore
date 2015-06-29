@@ -66,6 +66,7 @@ function menuF(){
 	/*Menu Hover*/
 		$("li.menuLink").hover(
 			function () {
+				var scope = $(this);
 				if($(this).find('li').length > 0){
 					claseMenu = $(this).attr('rel');
 					//Show childs
@@ -73,7 +74,7 @@ function menuF(){
 					
 					//Set border radius;
 					$('.departmentMenu.active').css('borderBottomRightRadius', '0px ');
-					
+				
 					 var index = $( "li.menuLink" ).index( this );
 					
 					//Position of the div menu
@@ -83,6 +84,10 @@ function menuF(){
 						topItem = topItem + thisSize;
 					}
 					$(this).find('.subMenuPage').css('top', -topItem-45);	
+					
+					if(scope.find('img').length > 0){
+					  	scope.find('ul.subcategoryList').width('550px');
+					}
 				}else{
 				    $('.departmentMenu.active').css('borderBottomRightRadius', '5px ');
 				    $(this).find('.subMenuPage').css('display','none');
@@ -101,6 +106,13 @@ function menuF(){
 	else {
 		
 	   $('.menuLink').unbind('mouseenter mouseleave');
+		
+		$('.subMenuPage').each(function(){
+			$(this).height('auto');
+		});
+		
+		$('.menuCategorias').unbind('mousedown');
+
 	}
 }
 
@@ -150,18 +162,11 @@ var responsiveMenu = function(){
 			var textParent=$(this).find('.menuLink').eq(0).text();
 			var divParent = childUl.closest('div');
 			var imageDisplay = clickScope.find('.spotVida');
-			var isGoingSection = true;
-			
-			
+	
 			if(divParent.css('display')== "none"){
 				divParent.show();
 			}
 			$(this).find('div').not('.estiloVida').height('auto').css('top','0px');
-			
-			if(imageDisplay.length > 0){
-				isGoingSection = false;
-			}
-			
 		
 			if(ulParent.length > 1 && imageDisplay.length == 0){
 				e.preventDefault();
@@ -169,6 +174,7 @@ var responsiveMenu = function(){
 				childUl.show();
 				childUl.find('li').show();
 				childUl.find('ul').hide();
+				$(this).parent('#departmentsMenu').prepend(returnBtn);
 			}else{
 				if(ulParent.find('li').length > 0 && imageDisplay.length == 0){
 					siblingsElem.not(this).each(function(){
@@ -184,7 +190,7 @@ var responsiveMenu = function(){
 					//e.preventDefault();
 				}
 			}
-			$(this).parent('#departmentsMenu').prepend(returnBtn);
+			
 		});
 		
 		/*Click para cerrar menú*/
@@ -254,8 +260,9 @@ var responsiveMenu = function(){
 		allElems.each(function(){
 			$(this).show();
 		})
+
+		menuCont.find('li').unbind('click');
 		
-		menuCont.find('li').unbind('click')
 		menuCont.off('click', '.menuReturn');
 
 		$('.menuReturn').remove();
