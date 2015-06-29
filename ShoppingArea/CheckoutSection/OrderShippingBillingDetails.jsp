@@ -877,12 +877,12 @@ need to first assign a valid address id to these order items before proceeding w
 												<c:set var="showPayInStore" value="false"/>
 													<div class="body shipping_billing_height" id="WC_ShipmentDisplay_div_30">
 														<div class="tarjtas-check">
-														<h2 class="">Utiliza tu correo electrónico</h2>
+														<h2 class="">Utiliza tu correo electrÃ³nico</h2>
 														<p>Ingresa el monto que deseas aplicar al total de tu compra.</p>
-													     </div>
+													</div>
 													<%@ include file="CheckoutPaymentsAndBillingAddress.jspf"%>
 													<%@ include file="OrderAdditionalDetailExt.jspf"%>
-													</div>
+												</div>
 											</flow:ifEnabled>
 
 											
@@ -929,21 +929,13 @@ need to first assign a valid address id to these order items before proceeding w
                                                         
                                                         <!-- aca comenzamos el sidebar con el resumen ///////////////////////////////////////////////////////////////////////////// -->            
                                                         <div class="col4 acol12">
-                                                            <!-- aca colocamos el necesitas ayuda -->
-                                                            <div class="necesitas-ayuda">
-                                                                <c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
-                                                                    <c:param name="emsName" value="telmex__necesitas_ayuda" />
-                                                                </c:import>
-                                                            </div>
+                                                            <div class="logon-inside">
                                                             
-                                                            
-                                                           <!-- <div class="logon-inside">
-                                                            
-                                                            <%-- comenzamos con el resumen de la compra --%>    
+                                                            <!-- comenzamos con el resumen de la compra -->    
                                                                 
                                                                 
-                                                                <%-- aca agregamos la otra pleca gris --%>
-                                                                <%-- comenzamos con el resumen de la compra --%>    
+                                                                <!-- aca agregamos la otra pleca gris -->
+                                                                <!-- comenzamos con el resumen de la compra -->    
                                                                 <div class="separador_total gris_sidebar" id="WC_PromotionCodeDisplay_div_1">
                                                                     <c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
                                                                         <c:param name="emsName" value="Resumen_de_pedido" />
@@ -1087,9 +1079,9 @@ need to first assign a valid address id to these order items before proceeding w
                                                                                             </tr>
                                                                                             </table>
 
-                                                                                        </div><%-- aca termina el codigo de resumen --%>
+                                                                                        </div><!-- aca termina el codigo de resumen -->
                                                                                     
-                                                                                    <%-- aca comenzamos con los botones de siguiente y atras--%>
+                                                                                    <!-- aca comenzamos con los botones de siguiente y atras-->
                                                                                     <div class="button_footer_line" id="WC_ShipmentDisplay_div_32_1"> 
                                                                                         <a role="button" class="button_secondary tlignore" id="WC_ShipmentDisplay_links_5" tabindex="0" href="javascript:setPageLocation('<c:out value='${ShoppingCartURL}'/>')">
                                                                                             <div class="left_border"></div>
@@ -1114,7 +1106,7 @@ need to first assign a valid address id to these order items before proceeding w
                                                                                             <fmt:message bundle="${storeText}" key="ORD_MESSAGE_BILLING"/>
                                                                                         </flow:ifDisabled>
                                                                                     </span>
-                                                                                    </div><%-- terminanan los botones de siguietne y atras --%>
+                                                                                    </div><!-- terminanan los botones de siguietne y atras -->
                                                                                     
                                                                                     
                                                                                     
