@@ -217,6 +217,7 @@ input.primary_button, input.secondary_button, select.secondary_input {
 	font-size: 9pt;
 	font-family: Verdana;
 	float: left;
+    border: solid #fff 0px;
 }
 
 /*Center the text in the div button*/
@@ -382,3 +383,46 @@ MUST Add one or the other to main wrapper div element as class */
 .ucp_active { padding-bottom: 110px; }
 .ucp_inactive { padding-bottom: 110px; }
 */
+
+.descripcion_mobile30{float: left; width: 60%;}
+.input_cantidad_mobile30{float: left; width: 40%;}
+.borderarriba{border-top: 1px solid #c6d0dc; color: rgb(90, 100, 115); margin: 10px 0px 20px 0px; padding-top: 10px;}
+.borderarriba .font18{font-size: 18px;}
+.borderarriba .font20{font-size: 20px;}
+
+.gris_mobile30{
+    background-color: #DEE0E3;    
+    color: #5A6473;
+    text-align: left;
+    width: 100%;
+    height: 35px;
+    max-height: 35px;
+    padding: 0px !important;
+}
+.numero_head_mobile30{
+    background-color: #A9AEB6;
+    display: table-column;
+    text-align: center;
+    line-height: 35px;
+    color: white;
+    float: left;
+    height: 35px;
+    max-height: 35px;
+    min-width: 35px;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.page_title_mobile30{
+    line-height: 35px;
+    font-size: 1.2em;
+    margin-left: 10px;
+}
+
+#breadcrumb {
+    min-height:25px;
+    margin:0 auto;
+    padding:0px;
+    margin-bottom:0px;
+    background-color: #F8F8F8;
+    border-top: 1px solid #d5d5d5;
+}

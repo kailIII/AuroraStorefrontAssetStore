@@ -230,7 +230,9 @@
 			<!-- End Breadcrumb Bar -->
 			
 			<c:if test="${fromPage == 'ShoppingCart'}">
-				<!-- Start Step Container -->
+				
+                <!-- Start Step Container -->
+                <!-- <%--
 				<div id="step_container" class="item_wrapper" style="display:block">
 					<div class="small_text left">
 						<fmt:message bundle="${storeText}" key="CHECKOUT_STEP">
@@ -239,8 +241,31 @@
 						</fmt:message>		
 					</div>
 					<div class="clear_float"></div>
-				</div>			
+				</div>
+                --%> -->
 				<!--End Step Container -->
+                
+                
+                
+                
+                <!-- Start Step Container -->
+                <div id="step_container" class="item_wrapper gris_mobile30" style="display:block">
+                    <p class="numero_head_mobile30">2</p>
+                    <div class="page_title_mobile30 left">
+                        <fmt:message bundle="${storeText}" key="SHIPPING_OPTIONS" />
+                        <!-- <%--
+<fmt:message bundle="${storeText}" key="CHECKOUT_STEP">
+<fmt:param value="1"/>
+<fmt:param value="${totalCheckoutSteps}"/>				
+</fmt:message>	--%>	-->
+                    </div>                
+                </div>			
+                <!--End Step Container -->
+
+                <div class="clear_float"></div>
+                
+                
+                
 			</c:if>
 			
 			<!-- Start Notification Container -->
@@ -261,7 +286,10 @@
 				
 					<c:set var="resultStoreNum" value="${fn:length(physicalStores.PhysicalStore)}" />
 					<c:forEach var="i" begin="0" end="${resultStoreNum-1}" varStatus="status">
-						<div  class="item_wrapper item_wrapper_gradient">
+						
+                        
+                        <!--comenzamos a estilar lo de las direcciones-->
+                        <div  class="item_wrapper item_wrapper_gradient">
 							<c:set var="storeListIndex" value="${i}" />
 							
 							<c:url var="mStoreDetailURL" value="m30StoreDetailView">
@@ -393,6 +421,13 @@
 								</c:otherwise>
 							</c:choose>
 						</div>
+                       <!-- termina el bloque para estilar la direccion -->     
+                            
+                            
+                            
+                            
+                            
+                            
 					</c:forEach>
 				</c:if>
 
@@ -470,14 +505,6 @@
 					</c:otherwise>
 				</c:choose>
 			</div>
-                
-                <!-- aca metemos mano en necesitas ayuda-->
-                <div class="necesitas-ayuda">
-                    <c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
-                        <c:param name="emsName" value="telmex__necesitas_ayuda" />
-                    </c:import>
-                </div>   
-                
 			
 			<%@ include file="../include/FooterDisplay.jspf" %>						
 

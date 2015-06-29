@@ -173,12 +173,17 @@ div#breadcrumb{
 	position: relative;
 }
 	div#breadcrumb .page_title {
-		border-left: 1px solid #d5d5d5;
+		/*border-left: 1px solid #d5d5d5;*/
 		font-size: 13px;
 		font-weight: bold;
 		padding: 6px 5px 5px 10px;
 		margin: 1px 0 0 28px;
 	}
+    div#breadcrumb .page_title2 {
+        font-size: 13px;
+        padding: 6px 5px 5px 10px;
+        margin: 1px 0 0 28px;
+    }
 	div#breadcrumb .page_title_only {
 		font-size: 13px;
 		font-weight: bold;
@@ -216,7 +221,7 @@ div#breadcrumb{
 */
 
 div.item_wrapper, div.item_wrapper_button, div.item_wrapper div.sub_wrapper {
-	border-top: 1px solid #c6d0dc;
+	/*border-top: 1px solid #c6d0dc;*/
 }
 
 	div.item_wrapper div.sub_wrapper:hover {
@@ -353,3 +358,36 @@ Daniel Torres
 }
 
 
+.contornos2{
+    border: 1px solid #64afff;
+    border-radius: 5px;
+    color: #000000;
+    font-size: 14px;
+    font-family: Arial;
+    width: 95%;
+    padding: 12px;
+    box-sizing: border-box;
+    margin: 10px auto;
+    display: inline-block;
+}
+
+.contornos2:hover{
+    border: 1px solid #64afff;
+}
+
+.contornos2 .shipping-icon{
+    display: inline-block;
+    vertical-align: middle;
+    float: left;
+    height: 100%;
+    margin: 10% 20px;
+}
+
+.contornos2 .entry{
+    float:left;
+}
+
+#overview_select_billing_address{
+    color: rgb(62, 126, 199);
+    font-size: 14px;
+}

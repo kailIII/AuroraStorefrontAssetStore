@@ -58,7 +58,8 @@
 
 			<%@ include file="../../include/HeaderDisplay.jspf" %>
 
-			<!-- Start Breadcrumb Bar -->
+			<!-- Start Breadcrumb Bar -->                
+            <!-- <%--
 			<div id="breadcrumb" class="item_wrapper_gradient">
 				<a id="back_link" href="javascript:if (history.length>0) {history.go(-1);}"><div class="back_arrow left">
 					<div class="arrow_icon"></div>
@@ -66,9 +67,11 @@
 				<div class="page_title left"><fmt:message bundle="${storeText}" key="SHIPPING_OPTIONS_TITLE"/></div>
 				<div class="clear_float"></div>
 			</div>
+            --%> -->
 			<!-- End Breadcrumb Bar -->
 
 			<!-- Start Step Container -->
+            <!-- <%--
 			<div id="step_container" class="item_wrapper" style="display:block">
 				<div class="small_text left">
 					<fmt:message bundle="${storeText}" key="CHECKOUT_STEP">
@@ -77,8 +80,24 @@
 					</fmt:message>		
 				</div>
 				<div class="clear_float"></div>
-			</div>			
+			</div>		
+            --%> -->
 			<!--End Step Container -->
+                
+                
+                
+                <!-- Start Step Container -->
+                <div id="step_container" class="item_wrapper gris_mobile30" style="display:block">
+                    <p class="numero_head_mobile30">1</p>
+                    <div class="page_title_mobile30 left">
+                        <fmt:message bundle="${storeText}" key="SHIPPING_OPTIONS" />
+                    </div>                
+                </div>			
+                <!--End Step Container -->   
+                
+                
+                
+                
 			
 			<!-- Start Shipping Options -->
 			<div id="shipping_options" class="item_wrapper">
@@ -111,11 +130,16 @@
 					</wcf:url>
 				
 					<form id="shipping_options_form" name="shipping_options_form">
-						<div><label for="shipping_option"><fmt:message bundle="${storeText}" key="SHIPPING_OPTIONS" /></label></div>
+						<div><label for="shipping_option">
+                            <!-- <%--
+                            <fmt:message bundle="${storeText}" key="SHIPPING_OPTIONS" />
+                            --%> -->
+                            </label></div>
 						<div class="dropdown_container">
 							<select id="shipping_option" name="shippingOption" class="inputfield input_width_full">
 								<flow:ifEnabled feature="BOPIS">
-								<option value="<c:out value="${pickUpAtStore}" />"><fmt:message bundle="${storeText}" key="PICK_UP_AT_STORE"/></option>
+								<option value="<c:out value="${pickUpAtStore}" />">
+                                    <fmt:message bundle="${storeText}" key="PICK_UP_AT_STORE"/></option>
 								</flow:ifEnabled>
 								<c:choose>
 									<c:when test="${blockShipModeCode eq 'PickupInStore'}">

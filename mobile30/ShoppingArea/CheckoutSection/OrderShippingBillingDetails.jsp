@@ -191,7 +191,9 @@
 					<c:set var="personChangeServiceAction" value="PersonChangeServiceAddressUpdate" />
 				</c:if>
 
-				<form id="billing_address_form" action="${personChangeServiceAction}">
+				
+                <!-- aca modificamos los tamaños de los campos de texto-->
+                <form id="billing_address_form" action="${personChangeServiceAction}">
 					<fieldset>
 						<c:if test="${_androidHybridApp || _iPhoneHybridApp || _worklightHybridApp }" >
 							<div class="single_button_container">
@@ -207,7 +209,7 @@
 							</c:when>
 							<c:otherwise>
 								<div><label for="nickName"><span class="required">*</span><fmt:message bundle="${storeText}" key="NICK_NAME" /></label></div>
-								<input type="text" id="nickName" name="nickName" value="<c:out value="${nickName}" escapeXml="true"/>" class="inputfield input_width_standard" />
+                                <input type="text" id="nickName" name="nickName" value="<c:out value="${nickName}" escapeXml="true"/>" class="inputfield input_width_standard" style="width: 100% !important;"/>
 							</c:otherwise>
 						</c:choose>
 						<div class="item_spacer"></div>
@@ -252,22 +254,22 @@
 						</c:if>
 					
 						<div><label for="firstName"><c:if test="${fn:contains(mandatoryFields, 'firstName')}"><span class="required">*</span></c:if><fmt:message bundle="${storeText}" key="MUSREG_FNAME"/></label></div>
-						<input type="text" id="firstName" name="firstName" value="<c:out value="${firstName}" escapeXml="true"/>" class="inputfield input_width_standard" />
+                        <input type="text" id="firstName" name="firstName" value="<c:out value="${firstName}" escapeXml="true"/>" class="inputfield input_width_standard" style="width: 100% !important;" />
 						<div class="item_spacer"></div>
 
 						<div><label for="lastName"><c:if test="${fn:contains(mandatoryFields, 'lastName')}"><span class="required">*</span></c:if><fmt:message bundle="${storeText}" key="MUSREG_LNAME"/></label></div>
-						<input type="text" id="lastName" name="lastName" value="<c:out value="${lastName}" escapeXml="true"/>" class="inputfield input_width_standard" />
+                        <input type="text" id="lastName" name="lastName" value="<c:out value="${lastName}" escapeXml="true"/>" class="inputfield input_width_standard" style="width: 100% !important;"/>
 						<div class="item_spacer"></div>
 
 						<div><label for="address1"><c:if test="${fn:contains(mandatoryFields, 'address1')}"><span class="required">*</span></c:if><fmt:message bundle="${storeText}" key="MOSB_STREET_ADDRESS"/></label></div>
-						<input type="text" id="address1" name="address1" value="<c:out value="${addressLine0}" escapeXml="true"/>" class="inputfield input_width_standard" />
+                        <input type="text" id="address1" name="address1" value="<c:out value="${addressLine0}" escapeXml="true"/>" class="inputfield input_width_standard" style="width: 100% !important;"/>
 						<div class="clear_float"></div>
 						<label for="address2" class="nodisplay"><fmt:message bundle="${storeText}" key="MOSB_STREET_ADDRESS"/></label>
-						<input type="text" id="address2" name="address2" value="<c:out value="${addressLine1}" escapeXml="true"/>" class="inputfield input_width_standard" />
+                        <input type="text" id="address2" name="address2" value="<c:out value="${addressLine1}" escapeXml="true"/>" class="inputfield input_width_standard" style="width: 100% !important;"/>
 						<div class="item_spacer"></div>
 
 						<div><label for="city"><c:if test="${fn:contains(mandatoryFields, 'city')}"><span class="required">*</span></c:if><fmt:message bundle="${storeText}" key="MOSB_CITY"/></label></div>
-						<input type="text" id="city" name="city" value="<c:out value="${city}" escapeXml="true"/>" class="inputfield input_width_standard" />
+                        <input type="text" id="city" name="city" value="<c:out value="${city}" escapeXml="true"/>" class="inputfield input_width_standard" style="width: 100% !important;"/>
 						<div class="item_spacer"></div>
 
 						<div><label for="country"><c:if test="${fn:contains(mandatoryFields, 'country')}"><span class="required">*</span></c:if><fmt:message bundle="${storeText}" key="COUNTRY_REGION"/></label></div>
@@ -316,11 +318,11 @@
 						<div class="item_spacer"></div>
 
 						<div><label for="phone1"><c:if test="${fn:contains(mandatoryFields, 'phone1')}"><span class="required">*</span></c:if><fmt:message bundle="${storeText}" key="MOSB_PHONE_NUMBER"/></label></div>
-						<input type="tel" id="phone1" name="phone1" value="<c:out value="${telephone1}" escapeXml="true"/>" class="inputfield input_width_standard" />
+                <input type="tel" id="phone1" name="phone1" value="<c:out value="${telephone1}" escapeXml="true"/>" class="inputfield input_width_standard" style="width: 100% !important;"/>
 						<div class="item_spacer"></div>
 
 						<div><label for="email1"><c:if test="${fn:contains(mandatoryFields, 'email1')}"><span class="required">*</span></c:if><fmt:message bundle="${storeText}" key="MUSREG_EMAIL"/></label></div>
-						<input type="email" id="email1" name="email1" value="<c:out value="${emailAddress1}" escapeXml="true"/>" class="inputfield input_width_standard" />
+                <input type="email" id="email1" name="email1" value="<c:out value="${emailAddress1}" escapeXml="true"/>" class="inputfield input_width_standard" style="width: 100% !important;"/>
 						<div class="item_spacer"></div>
 
 						<input type="hidden" name="storeId" value="${storeId}" />

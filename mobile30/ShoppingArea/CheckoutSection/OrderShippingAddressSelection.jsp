@@ -85,6 +85,7 @@
 			<%@ include file="../../include/HeaderDisplay.jspf" %>
 
 			<!-- Start Breadcrumb Bar -->
+            <!-- <%--
 			<div id="breadcrumb" class="item_wrapper_gradient">
 				<a id ="back_link" href="javascript:if (history.length>0) {history.go(-1);}"><div class="back_arrow left">
 					<div class="arrow_icon"></div>
@@ -94,9 +95,11 @@
 				</div>
 				<div class="clear_float"></div>
 			</div>
+            --%> -->
 			<!-- End Breadcrumb Bar -->
 
 			<!-- Start Step Container -->
+            <!-- <%--
 			<div id="step_container" class="item_wrapper" style="display:block">
 				<div class="small_text left">
 					<fmt:message bundle="${storeText}" key="CHECKOUT_STEP">
@@ -105,8 +108,60 @@
 					</fmt:message>		
 				</div>
 				<div class="clear_float"></div>
-			</div>			
+			</div>
+            --%> -->
 			<!-- End Step Container -->
+                
+                
+              
+                <!-- Start Breadcrumb Bar -->                
+                <div id="breadcrumb" class="item_wrapper_gradient">
+                    <div class="back_arrow left">
+                       <img class="palomita" src="<c:out value='${jspStoreImgDir}images/'/>ok_az.gif">
+                    </div>                    
+                    <div class="page_title left">
+                        <fmt:message bundle="${storeText}" key="SHIPPING_OPTIONS" />
+                    </div>
+                    <div class="page_title2 right">
+                        <a id ="back_link" href="javascript:if (history.length>0) {history.go(-1);}">Editar</a>
+                    </div>                    
+                    <div class="clear_float"></div>
+                </div>
+                <!-- End Breadcrumb Bar --> 
+                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <!-- Start Step Container -->
+                <div id="step_container" class="item_wrapper gris_mobile30" style="display:block">
+                    <p class="numero_head_mobile30">2</p>
+                    <div class="page_title_mobile30 left">
+                        <fmt:message bundle="${storeText}" key="CHECKOUT_YOUR_SHIPPING_ADDRESSES" />
+                    </div>                
+                </div>			
+                <!--End Step Container -->
+
+                <div class="clear_float"></div>    
+                
+                
+                
+                
+                
+                
 
 			<!-- Start Notification Container -->
 			<c:choose>
@@ -171,8 +226,15 @@
 								<c:set var="addressId" value="${contactInfoIdentifier.addressId}" />
 								<c:set var="addressSelected" value="primary_button button_half left"/>
 								
-								<div id="address_${contactInfoIdentifier.addressId}" style="display:none" class="item_wrapper item_wrapper_gradient">
-									<ul class="entry">
+                                <div id="address_${contactInfoIdentifier.addressId}" style="display:none" class="item_wrapper item_wrapper_gradient">
+                                    
+                                    <div class="contornos2">
+                                        
+                                        <div class="shipping-icon">
+                                            <img src="/wcsstore/AuroraStorefrontAssetStore/images/ic_bus.png">
+                                        </div>
+                                        
+                                    <ul class="entry">
 										<c:set var="contact" value="${person}"/>
 										<c:choose>
 											<c:when test="${contact.addressId eq addressId}">
@@ -226,6 +288,7 @@
 											<c:when test="${contactInfoIdentifier.nickName eq  profileBillingNickname}"><fmt:message bundle="${storeText}" key="QC_DEFAULT_BILLING"/></c:when>
 											<c:otherwise><c:out value="${contactInfoIdentifier.nickName}"/></c:otherwise>
 										</c:choose>
+                                            
 										</li>
 										<li><c:out value="${contact.firstName}"/> <c:out value="${contact.lastName}"/></li>
 										<li><c:out value="${contact.addressLine[0]}"/> <c:out value="${contact.addressLine[1]}"/></li>
@@ -236,13 +299,25 @@
 										</c:if>
 										<li><c:out value="${contact.email1}"/></li>
 
-										<div class="multi_button_container">
+										<!-- comentamos estos botones para pasarlos abajo
+                                        <div class="multi_button_container">
 											<a id="<c:out value='address_${status.count}_details'/>" href="${OrderBillingDetailsURL}&addressId=${addressId}"><div class="secondary_button button_half left"><fmt:message bundle="${storeText}" key="MO_EDIT"/></div></a>
 											<div class="button_spacing left"></div>
 											<a id="new_address_${status.count}" href="${OrderBillingDetailsURL}" title="<fmt:message bundle="${storeText}" key="CREATE_NEW_ADDRESS" />"><div class="secondary_button button_half left"><fmt:message bundle="${storeText}" key="CREATE_NEW_ADDRESS"/></div></a>
 											<div class="clear_float"></div>
 										</div>
+                                        -->
 									</ul>
+                                        </div>
+                                        <!-- pegamos los botones aca abajo-->
+                                        <div class="multi_button_container">
+                                            <a id="<c:out value='address_${status.count}_details'/>" href="${OrderBillingDetailsURL}&addressId=${addressId}"><div class="secondary_button button_half left"><fmt:message bundle="${storeText}" key="MO_EDIT"/></div></a>
+                                            <div class="button_spacing left"></div>
+                                            <a id="new_address_${status.count}" href="${OrderBillingDetailsURL}" title="<fmt:message bundle="${storeText}" key="CREATE_NEW_ADDRESS" />"><div class="secondary_button button_half left"><fmt:message bundle="${storeText}" key="CREATE_NEW_ADDRESS"/></div></a>
+                                            <div class="clear_float"></div>
+                                        </div>
+                                        <!-- terminamos los botones -->                                        
+                                        
 								</div>
 							</c:forEach>
 					

@@ -167,6 +167,10 @@
 				<div class="clear_float"></div>
 			</div>
 			<!--End Step Container -->
+                
+                
+                
+                
 
 			<div id="order_summary">
 				<div id="overview+order_summary" class="item_wrapper">
@@ -436,9 +440,7 @@
 					</div>
 				</form>
 			</div>
-                    
-                    
-                    <!-- aca metemos mano en necesitas ayuda-->
+  <!-- aca metemos mano en necesitas ayuda-->
                     <div class="necesitas-ayuda">
                         <c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
                             <c:param name="emsName" value="telmex__necesitas_ayuda" />

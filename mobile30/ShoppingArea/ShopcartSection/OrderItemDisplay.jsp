@@ -286,9 +286,87 @@
 
 										<div class="product_info_container">
 											<div class="price_details_wrapper">
-												<%@ include file="../../Snippets/ReusableObjects/OrderItemEntryDisplay.jspf" %>
-
-												<c:choose>
+												
+                                                <div class="descripcion_mobile30">
+                                                <%@ include file="../../Snippets/ReusableObjects/OrderItemEntryDisplay.jspf" %>
+                                                 </div> 
+                                                    
+                                                    
+                                                    <!-- aca colocamos el input de cantidad-->
+                                                    <div class="input_cantidad_mobile30">
+                                                    <c:choose>
+                                                        <c:when test="${OrderItemEntryFreeGift}">
+                                                            <div>
+                                                                <!--
+                                                                <div class="left_column left_label left">
+                                                                    <fmt:message bundle="${storeText}" key="QUANTITY"/>
+                                                                    <c:out value="${quickCartOrderItemQuantity}"/>
+                                                                </div>
+                                                                -->
+                                                                <div class="clear_float"></div>
+                                                            </div>
+                                                        </c:when>
+                                                        <c:otherwise>
+                                                            <div>
+                                                                <!--
+                                                                <div id='quantity_<c:out value="${status.count}"/>' class="left_column left_label left">
+                                                                    <fmt:message bundle="${storeText}" key="QUANTITY"/>
+                                                                </div>
+                                                                -->
+                                                                <input type="hidden" value='<c:out value="${orderItem.orderItemId}"/>' name='orderItemId_<c:out value="${status.count}"/>' id='orderItemId_<c:out value="${status.count}"/>'/>
+                                                                <div class="right_column left">
+                                                                    <input type="text" pattern="[0-9]*" id='quantity_<c:out value="${status.count}"/>' name='quantity_<c:out value="${status.count}"/>' class="inputfield input_width_60" size="10" style="width: 60% !important;" value='<c:out value="${quickCartOrderItemQuantity}"/>' onfocus='javascript:updateOrderChangeButtonStyle();'/>
+                                                                </div>
+                                                                <div class="clear_float"></div>
+                                                            </div>
+                                                        </c:otherwise>
+                                                    </c:choose>
+                                                    </div>
+                                                    <!-- termina el input de cantidad -->
+                                                    
+                                                    
+                                                    <c:if test="${!OrderItemEntryFreeGift}">
+                                                        <div class="multi_button_container">
+                                                            <div class="dropdown_container">
+                                                                <flow:ifEnabled feature="SOAWishlist">
+                                                                    <div><label for="wishListSelection"></label></div>
+                                                                    <select class="secondary_button inputfield button_full" id="wishListSelection_${status.count}" name="wishListSelection" onchange="moveToWishList(${status.count});">
+                                                                        <option value="<c:out value="${orderItem.productId}" escapeXml="false"/>"><fmt:message bundle="${storeText}" key="MOVE_TO_WISHLIST"/></option>
+                                                                        <option value=""><fmt:message bundle="${storeText}" key="CREATE_WISHLIST_OPTION"/></option>
+                                                                        <c:if test="${defaultShoppingListId == -1}">
+                                                                            <option value="-1"><c:out value="${defaultWishListName}"/></option>
+                                                                        </c:if>
+                                                                        <c:forEach var="userList" items="${userWishLists}">
+                                                                            <option value="<c:out value="${userList.uniqueID}" escapeXml="false"/>"><c:out value="${userList.descriptionName}" escapeXml="false"/></option>
+                                                                        </c:forEach>
+                                                                        <%--
+                                                                             <c:set var="userListSize" value="${fn:length(userWishLists)}" />
+                                                                        <c:choose>
+                                                                            <c:when test="${userListSize > 0}">
+                                                                                <c:forEach var="userList" items="${userWishLists}">
+                                                                                    <option value="<c:out value="${userList.uniqueID}" escapeXml="false"/>"><c:out value="${userList.descriptionName}" escapeXml="false"/></option>
+                                                                                </c:forEach>
+                                                                            </c:when>
+                                                                            <c:otherwise>
+                                                                                <option value=""><fmt:message bundle="${storeText}" key="FIRST_WISHLIST_DEFAULT_NAME"/></option>
+                                                                            </c:otherwise>
+                                                                        </c:choose>
+                                                                        --%>
+                                                                    </select>
+                                                                    </div>
+                                                                </flow:ifEnabled>
+                                                            <!-- ocultamos el boton de eliminar del carrito
+                                                            <a id="<c:out value='item_${status.count}_delete'/>" href="${fn:escapeXml(OrderItemDelete)}"><div class="secondary_button button_full"><fmt:message bundle="${storeText}" key="WISHLIST_REMOVE"/></div></a>
+                                                            -->
+                                                            
+                                                            <div class="clear_float"></div>
+                                                        </div>
+                                                    </c:if> 
+                                                    
+												
+                                                    
+                                                 <!-- <%--   
+                                                <c:choose>
 													<c:when test="${OrderItemEntryFreeGift}">
 														<div>
 															<div class="left_column left_label left"><fmt:message bundle="${storeText}" key="QUANTITY"/>
@@ -297,24 +375,33 @@
 														</div>
 													</c:when>
 													<c:otherwise>
-														<div class="quantityMobil">
+														<div>
 															<div id='quantity_<c:out value="${status.count}"/>' class="left_column left_label left"><fmt:message bundle="${storeText}" key="QUANTITY"/></div>
 															<input type="hidden" value='<c:out value="${orderItem.orderItemId}"/>' name='orderItemId_<c:out value="${status.count}"/>' id='orderItemId_<c:out value="${status.count}"/>'/>
 															<div class="right_column left">
-																<input type="text" pattern="[0-9]*" id='quantity_<c:out value="${status.count}"/>' name='quantity_<c:out value="${status.count}"/>' class="inputfield input_width_60" value='<c:out value="${quickCartOrderItemQuantity}"/>' onfocus='javascript:updateOrderChangeButtonStyle();'/>
+																<input type="text" pattern="[0-9]*" id='quantity_<c:out value="${status.count}"/>' name='quantity_<c:out value="${status.count}"/>' class="inputfield input_width_60" size="4" value='<c:out value="${quickCartOrderItemQuantity}"/>' onfocus='javascript:updateOrderChangeButtonStyle();'/>
 															</div>
 															<div class="clear_float"></div>
 														</div>
 													</c:otherwise>
 												</c:choose>
-												</div><!-- productInfo close from OrderItemEntryDisplay -->
+                                                    --%>  --> 
+                                                    
+                                                    
 											</div>
 										</div>
 										<div class="item_spacer clear_float"></div>
-										<c:if test="${!OrderItemEntryFreeGift}">
-											<div class="multi_button_container">
-												<div class="dropdown_container">
-												<flow:ifEnabled feature="SOAWishlist">
+										
+                                            
+                                            
+                                            
+                                            <!-- aca esta la parte de lista de deseos y eliminar-->
+                                            <c:if test="${!OrderItemEntryFreeGift}">
+											<div class="multi_button_container">												
+                                                <div class="dropdown_container">
+												
+                                                 <!--   comentamos el boton de lista de deseos para pasarlo arriba
+                                                <flow:ifEnabled feature="SOAWishlist">
 													<div><label for="wishListSelection"></label></div>
 													<select class="secondary_button inputfield button_full" id="wishListSelection_${status.count}" name="wishListSelection" onchange="moveToWishList(${status.count});">
 													<option value="<c:out value="${orderItem.productId}" escapeXml="false"/>"><fmt:message bundle="${storeText}" key="MOVE_TO_WISHLIST"/></option>
@@ -341,10 +428,22 @@
 													</select>
 												</div>
 												</flow:ifEnabled>
-												<a id="<c:out value='item_${status.count}_delete'/>" href="${fn:escapeXml(OrderItemDelete)}"><div class="secondary_button button_full"><fmt:message bundle="${storeText}" key="WISHLIST_REMOVE"/></div></a>
+												-->
+                                                
+                                                <a id="<c:out value='item_${status.count}_delete'/>" href="${fn:escapeXml(OrderItemDelete)}">
+                                                    <div class="secondary_button button_full">
+                                                        <fmt:message bundle="${storeText}" key="WISHLIST_REMOVE"/>
+                                                    </div>
+                                                </a>
+                                                    
+                                                    
 												<div class="clear_float"></div>
 											</div>
 										</c:if>
+                                            
+                                            
+                                            
+                                            
 
 										<c:remove var="catalogEntry"/>
 									</div>
@@ -439,7 +538,18 @@
 							<wcf:param name="addressId" value="${WCParam.addressId}" />
 						</wcf:url>
 
-						<div id="promotion_codes" class="item_wrapper">
+						
+                            
+                            <!-- aca agregamos la pleca azul -->
+                            <div class="checkout_subheader crecido">
+                                <c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
+                                    <c:param name="emsName" value="Falta_para_envio_gratis" />
+                                </c:import>        
+                            </div>    
+                            
+                            
+                            
+                        <div id="promotion_codes" class="item_wrapper">
 							<div id="promotion_container">
 								<div class="left input_align"><label for="promotion_code"><fmt:message bundle="${storeText}" key="MOSC_PROMOTION_CODE"/>&nbsp;</label></div>
 								<input type="text" name="promotion_code" id="promotion_code" size="8" class="inputfield input_width_promo left" onfocus='javascript:updateOrderChangeButtonStyle();' />
@@ -478,36 +588,54 @@
 						<c:set var="returnView" value="AjaxOrderItemDisplayView"/>
 						<%@ include file="../../Snippets/Order/CouponWallet.jspf" %>
 						<c:set var="orderTotal" value="${order.totalProductPrice + order.totalAdjustment}"/>
-						<div id="shopping_cart_costs" class="item_wrapper">
+						
+                            
+                            
+                            
+                            
+                            
+                            <div id="shopping_cart_costs" class="item_wrapper">
 							<div class="price_details_wrapper">
 								<div>
-									<div class="width50 left_column left"><fmt:message bundle="${storeText}" key="ORDER_SUBTOTAL"/></div>
-									<div class="right_column left"><fmt:formatNumber type="currency" maxFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}" value="${order.totalProductPrice}" /></div>
+                                    <div class="width50 left"><fmt:message bundle="${storeText}" key="ORDER_SUBTOTAL"/></div>
+                                    <div class="right"><fmt:formatNumber type="currency" maxFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}" value="${order.totalProductPrice}" /></div>
 									<div class="clear_float"></div>
 								</div>
 								<div>
-									<div class="width50 left_column left"><fmt:message bundle="${storeText}" key="DISCOUNT"/></div>
-									<div class="right_column left"><fmt:formatNumber type="currency" maxFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}" value="${order.totalAdjustment}" /></div>
+                                    <div class="width50 left"><fmt:message bundle="${storeText}" key="DISCOUNT"/></div>
+                                    <div class="right"><fmt:formatNumber type="currency" maxFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}" value="${order.totalAdjustment}" /></div>
 									<div class="clear_float"></div>
 								</div>
-								<div>
-									<div class="width50 left_column left"><fmt:message bundle="${storeText}" key="ORDER_TOTAL"/></div>
-									<div class="right_column left"><fmt:formatNumber type="currency" maxFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}" value="${orderTotal}" /></div>
+								
+                                
+                                <div class="borderarriba">
+									<div class="width50 left font18"><fmt:message bundle="${storeText}" key="ORDER_TOTAL"/></div>
+                                    <div class="right font20"><fmt:formatNumber type="currency" maxFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}" value="${orderTotal}" /></div>
 									<div class="clear_float"></div>
 								</div>
+                                
+                                
 								<wcf:url var="QuantityErrorURL" value="AjaxOrderItemDisplayView">
 									<wcf:param name="langId" value="${WCParam.langId}" />
 									<wcf:param name="storeId" value="${WCParam.storeId}" />
 									<wcf:param name="catalogId" value="${WCParam.catalogId}" />
 									<wcf:param name="quantityError" value="true" />
 								</wcf:url>
-								<div class="single_button_container">
+								
+                                
+                                <div class="single_button_container">
 									<a id="shop_cart_update" href="#" onclick="javascript:updateShoppingCart(document.ShopCartForm); return false;"><div id="shop_cart_update_button" class="secondary_button button_full"><fmt:message bundle="${storeText}" key="UPDATE_ORDER_TOTAL"/></div></a>
 								</div>
 
 								<div class="clear_float"></div>
 							</div>
 						</div>
+                            
+                            
+                            
+                            
+                            
+                            
 
 						<%-- Bypass checkout logon when already signed in --%>
 						<c:choose>

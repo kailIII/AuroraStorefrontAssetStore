@@ -87,6 +87,7 @@
 			<%@ include file="../../include/HeaderDisplay.jspf" %>
 
 			<!-- Start Breadcrumb Bar -->
+            <!-- <%--
 			<div id="breadcrumb" class="item_wrapper_gradient">
 				<a id="back_link" href="javascript:if (history.length>0) {history.go(-1);}"><div class="back_arrow left">
 					<div class="arrow_icon"></div>
@@ -94,9 +95,12 @@
 				<div class="page_title left"><fmt:message bundle="${storeText}" key="PAYMENT_TITLE"/></div>
 				<div class="clear_float"></div>
 			</div>
+            --%> -->
 			<!-- End Breadcrumb Bar -->
 
-			<!-- Start Step Container -->
+			
+            <!-- Start Step Container -->
+            <!-- <%--
 			<div id="step_container" class="item_wrapper" style="display:block">
 				<div class="small_text left">
 					<fmt:message bundle="${storeText}" key="CHECKOUT_STEP">
@@ -106,7 +110,83 @@
 				</div>
 				<div class="clear_float"></div>
 			</div>
+            --%> -->
 			<!--End Step Container -->
+                
+                
+                
+                
+                
+                <!-- Start Breadcrumb Bar -->                
+                <div id="breadcrumb" class="item_wrapper_gradient">
+                    <div class="back_arrow left">
+                        <img class="palomita" src="<c:out value='${jspStoreImgDir}images/'/>ok_az.gif">
+                    </div>                    
+                    <div class="page_title left">
+                        <fmt:message bundle="${storeText}" key="SHIPPING_OPTIONS" />
+                    </div>
+                    <div class="page_title2 right">
+                        <a id ="back_link" href="javascript:if (history.length>0) {history.go(-5);}">Editar</a>
+                    </div>                    
+                    <div class="clear_float"></div>
+                </div>
+                <!-- End Breadcrumb Bar -->
+
+
+
+
+                <!-- Start Breadcrumb Bar -->                
+                <div id="breadcrumb" class="item_wrapper_gradient">
+                    <div class="back_arrow left">
+                        <img class="palomita" src="<c:out value='${jspStoreImgDir}images/'/>ok_az.gif">
+                    </div>                    
+                    <div class="page_title left">
+                        <fmt:message bundle="${storeText}" key="CHECKOUT_YOUR_SHIPPING_ADDRESSES" />
+                    </div>
+                    <div class="page_title2 right">
+                        <a id ="back_link" href="javascript:if (history.length>0) {history.go(-3);}">Editar</a>
+                    </div>                    
+                    <div class="clear_float"></div>
+                </div>
+                <!-- End Breadcrumb Bar -->
+                
+                
+                
+                
+                <!-- Start Breadcrumb Bar -->                
+                <div id="breadcrumb" class="item_wrapper_gradient">
+                    <div class="back_arrow left">
+                        <img class="palomita" src="<c:out value='${jspStoreImgDir}images/'/>ok_az.gif">
+                    </div>                    
+                    <div class="page_title left">
+                        <fmt:message bundle="${storeText}" key="CHECKOUT_YOUR_BILLING_ADDRESSES"/>
+                    </div>
+                    <div class="page_title2 right">
+                        <a id ="back_link" href="javascript:if (history.length>0) {history.go(-1);}">Editar</a>
+                    </div>                    
+                    <div class="clear_float"></div>
+                </div>
+                <!-- End Breadcrumb Bar -->
+                
+                
+                
+                
+                <!-- Start Step Container -->
+                <div id="step_container" class="item_wrapper gris_mobile30" style="display:block">
+                    <p class="numero_head_mobile30">4</p>
+                    <div class="page_title_mobile30 left">
+                        <fmt:message bundle="${storeText}" key="PAYMENT_TITLE"/>
+                    </div>                
+                </div>			
+                <!--End Step Container -->
+
+                <div class="clear_float"></div>
+                
+                
+                
+                
+                
+                
 
 			<!-- Start Notification Container -->
 			<c:if test="${!empty errorMessage}">
@@ -126,7 +206,7 @@
 								<wcf:param name="catalogId" value="${WCParam.catalogId}" />
 							</wcf:url>
 
-							<p><fmt:message bundle="${storeText}" key="ENTER_PROMOTION"/></p>
+                            <p id="overview_select_billing_address"><fmt:message bundle="${storeText}" key="ENTER_PROMOTION"/></p>
 							<div class="item_spacer_5px"></div>
 							<div class="left input_align"><label for="promoCode"><fmt:message bundle="${storeText}" key="MOSC_PROMOTION_CODE"/>&nbsp;</label></div>
 							<input type="text" name="promoCode" id="promoCode" size="8" class="inputfield input_width_promo left" onfocus='javascript:document.getElementById("shop_cart_update_button").setAttribute("class", "secondary_button button_full");'/>
