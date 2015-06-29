@@ -85,7 +85,6 @@ function menuF(){
 					}
 					$(this).find('.subMenuPage').css('top', -topItem-45);	
 					
-					console.log(scope.find('img').length);
 					if(scope.find('img').length > 0){
 					  	scope.find('ul.subcategoryList').width('550px');
 					  	scope.find('.telmexMenuImage').css('display','inline-block');
