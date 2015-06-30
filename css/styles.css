@@ -1630,7 +1630,7 @@ div.widget_bundle_package_list .quantity_discount > p > span.price{
 }
 
 .widget_product_image_viewer > .content > .other_views {
-	margin-right: 15px;
+	margin-right: 5px;
 	border-bottom: 1px dotted #eeeeee;
 	margin-top: 1px;
 	position: relative;
@@ -1659,6 +1659,7 @@ div.widget_bundle_package_list .quantity_discount > p > span.price{
 	height: 94px;
 	text-align: center;
 	border: 1px dotted #e5e5e5;
+	margin-bottom: 10px;
 }
 
 .widget_product_image_viewer > .content > .other_views > ul > li.selected {

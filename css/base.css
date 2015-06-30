@@ -980,9 +980,9 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 } 
   
 .widget_product_image_viewer > .content > .other_views {
-	width: 100px !important;
+	width: 14% !important;
 	position: relative;
-	float: right;
+	float: left;
 }
 
 .image_container{
@@ -991,7 +991,36 @@ li.menuCategorias :hover  <  .departmentButton.selected{
     width: 380px;
 }
 
-@media (max-width: 999px){
+#imagenFichaProducto{
+	float: right !important;
+	width: 84% !important;
+}
+
+.product_pageDesign_pageGroup{
+	padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.widget_product_image_viewer{
+	margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+#imagen1{
+	 width: 100%;
+}
+
+
+.zoom img {
+    display: block;
+    width: 100%;
+}
+
+.namePartPriceContainer, .definingAttributes, .shopperActions, .facebookLikeWidget{
+	 margin-left: 50px;
+}
+
+/* @media (max-width: 999px){
  	
 	.product_page_content .widget_product_image_viewer .image_container {
 		float: none !important;
@@ -1002,7 +1031,7 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 		float: none !important;
 		width: 100% !important;
 	}
-}
+} */
 
 .departmentMenu > .header > .link {
 	display: block;
@@ -2020,7 +2049,7 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 		display:block;
 	}
 	
-	.product_page_content .widget_product_image_viewer .image_container {
+/* 	.product_page_content .widget_product_image_viewer .image_container {
 		float: none !important;
 		width: 100% !important;
 	}
@@ -2034,7 +2063,7 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 		float: none;
 		position: relative;
 		width: 380px;
-	}
+	} */
 	
 	
 
@@ -4066,6 +4095,31 @@ div#WC_CheckoutLogonf_div_0{
 	.footer-list > li {
 		float: left;
 	}
+	
+	#ProductAngleImagesArea{
+		width: 100% !important;
+	}
+	
+	
+	#imagenFichaProducto {
+		float: none !important;
+		margin: 0 auto;
+		width: 290px !important;
+	}
+	
+	#contentFichaProducto{
+		 padding-left: 15px;
+	}
+	
+	.widget_product_image_viewer > .content > .other_views > ul {
+		display: table;
+		margin: 0 auto !important;
+		padding-left: 0;
+	}
+	
+	.widget_product_image_viewer > .content > .other_views > ul > li {
+		margin-right: 10px !important;
+	}
 
 }
 
@@ -4146,7 +4200,44 @@ div#WC_CheckoutLogonf_div_0{
 		float: none;
 	}
 	
-
+	#imagenFichaProducto {
+		float: none !important;
+		margin: 0 auto;
+		width: 54% !important;
+	}
+	
+	.widget_product_image_viewer > .content > .other_views > ul {
+		display: table;
+		margin: 0 auto;
+		padding-left: 0px !important;
+	}
+	
+	.widget_product_image_viewer > .content > .other_views {
+		width: 100% !important;
+	}
+	
+	.shopperActions > .disabled{
+		display: inline-block;
+	}
+	
+	.shopperActions {
+		padding-left: 0px !important;
+		text-align: center;
+	}
+	
+	.widget_product_image_viewer > .content > .other_views > ul > li > a > img {
+		height: 100%;
+		width: 100%;
+	}
+	
+	.widget_product_image_viewer > .content > .other_views > ul > li {
+		margin-right: 10px;
+	}
+	
+	.namePartPriceContainer, .definingAttributes, .shopperActions, .facebookLikeWidget {
+		margin-left: 10px;
+	}
+	
 }
 
 
@@ -4477,7 +4568,7 @@ Alejandro Paredes
     width: 74px !important;
 }
 
-@media (max-width: 735px) {
+/* @media (max-width: 735px) {
 	.product_main_image{
 		width: 85% !important;
 	}
@@ -4505,7 +4596,7 @@ Alejandro Paredes
 		padding-left: 0px !important;
 		margin: 0 auto;
 	}
-}
+} */
 
 .txtAzulMed {
     color: #69b1ff !important;
@@ -4566,9 +4657,9 @@ Alejandro Paredes
 
 }
 
-.product_page_content .widget_product_image_viewer > .content {
+/* .product_page_content .widget_product_image_viewer > .content {
 	padding-right: 10px !important;
-}
+} */
 
 /* hay que checar que no choque con todas las imagenes de la tienda, se agregó para cuadrar las imagenes de los carruseles del home */
 
@@ -4695,4 +4786,8 @@ input#piAmount_4_display,
     font-weight: normal;
     font-style: normal;
     font-family: Arial;
+}
+
+.fichaProducto_page{
+	max-width: 1000px;
 }
