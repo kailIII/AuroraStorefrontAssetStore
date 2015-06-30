@@ -417,10 +417,14 @@ wc.render.declareRefreshController({
 		</c:otherwise>
 	</c:choose>
 
-	
-
+																				
 	<div id="paymentSection<c:out value="${i}"/>" style="<c:out value="${displayMethod}"/>" >
-
+	
+		<c:if test="${i eq 4}">
+			<div class="tarjtas-check">
+			<h2 class="">¿Qué tarjeta deseas utilizar?</h2>
+			</div>
+		</c:if>	
 		<div id="WC_CheckoutPaymentsAndBillingAddressf_div_1_<c:out value='${status2.count}'/>">
 			<div id="billing_<c:out value='${i}'/>" class="billing<c:if test="${i >= 2}"> billing_border</c:if>">
 				<c:if test="${numberOfPaymentMethods > 1}">
@@ -712,5 +716,5 @@ wc.render.declareRefreshController({
 						});
 					</script>
 
-<!-- END CheckoutPaymentsAndBillingAddress.jspf  -->
+<!-- END CheckoutPaymentsAndBillingAddress.jspf -->
 

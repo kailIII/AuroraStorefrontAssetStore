@@ -4761,6 +4761,7 @@ input#piAmount_4_display,
 
 
 /* Margen azul */
+/ Margen azul /
 .billing.billing_border .payment_heading,
 .billing.billing_border .payment_heading{
  display: none !important;
@@ -4785,12 +4786,11 @@ input#piAmount_4_display,
  border: 1px solid #64afff;
 }
 
-#paymentSection4{
+#paymentSection4 .tarjtas-check{
  padding-top: 15px;
  border-top: 1px solid rgb(235, 235, 235);
  box-sizing: border-box;
 }
-
 
 @media (max-width: 857px){
 	ul.footer-list.floatleft{
@@ -4833,3 +4833,6 @@ input#piAmount_4_display,
 }
 
 
+.elementosocultos{
+    display: none !important;
+}
