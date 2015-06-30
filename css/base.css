@@ -4669,7 +4669,36 @@ input#piAmount_4_display,
 }
 
 
+/* Margen azul */
+.billing.billing_border .payment_heading,
+.billing.billing_border .payment_heading{
+ display: none !important;
+}
 
+.billing #paymentHeading1.payment_heading {
+ display: none !important;
+}
+
+#WC_CheckoutPaymentsAndBillingAddressf_div_1_4 {
+ border: 1px solid rgb(235, 235, 235);
+ border-radius: 5px;
+    font-size: 11px;
+    padding: 15px 15px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#WC_CheckoutPaymentsAndBillingAddressf_div_1_4:hover {
+ border: 1px solid #64afff;
+}
+
+#paymentSection4{
+ padding-top: 15px;
+ border-top: 1px solid rgb(235, 235, 235);
+ box-sizing: border-box;
+}
 
 
 @media (max-width: 857px){
