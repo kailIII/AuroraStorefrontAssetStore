@@ -70,7 +70,7 @@ function menuF(){
 				if($(this).find('li').length > 0){
 					claseMenu = $(this).attr('rel');
 					//Show childs
-					$(this).find('div').show();
+					$(this).find('div.subMenuPage').show();
 					
 					//Set border radius;
 					$('.departmentMenu.active').css('borderBottomRightRadius', '0px ');
@@ -85,8 +85,10 @@ function menuF(){
 					}
 					$(this).find('.subMenuPage').css('top', -topItem-45);	
 					
+					console.log(scope.find('img').length);
 					if(scope.find('img').length > 0){
 					  	scope.find('ul.subcategoryList').width('550px');
+					  	scope.find('.telmexMenuImage').css('display','inline-block');
 					}
 				}else{
 				    $('.departmentMenu.active').css('borderBottomRightRadius', '5px ');
@@ -223,7 +225,7 @@ var responsiveMenu = function(){
 			eachScope.css('display','inline-block');
 			
 			if(eachScope.find('.spotVida').length > 0){
-				var imageNumber = imgContainer.find('img').length;
+				var imageNumber = imageCont.find('>img').length;
 				var imageSize = imageCont.outerWidth();
 				var newSize = (imageSize+5)*imageNumber;
 				

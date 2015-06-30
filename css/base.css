@@ -889,7 +889,7 @@ position: absolute;
 	padding: 15px;
 }
 #cartDropdown > .footer {
-	padding: 10px 15px;
+	padding: 15px;
 	border-top: 1px solid #edeff0;
 	text-align: right;
 }
@@ -1220,7 +1220,7 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 .telmexMenuImage{
   width: 250px;
   height: 250px;
-  display: inline-block;
+  display: none;
   vertical-align:top;
 }
 
@@ -4276,7 +4276,7 @@ div#WC_CheckoutLogonf_div_0{
 		top:0px;
 		width:auto;
 		background:none;
-		padding: 10px 0px 0px;
+		padding: 0px;
 	}
 	
 	.categoryList > li{
@@ -4674,10 +4674,10 @@ Alejandro Paredes
 
 /** estilos metodos de pago tarjeta */
 
+
 #billingAddress1 .dijitContentPane,
 #billingAddress2 .dijitContentPane,
-#billingAddress3 .dijitContentPane,
-#billingAddress4 .dijitContentPane{
+#billingAddress3 .dijitContentPane{
 	display: none !important;
 }
 
@@ -4709,15 +4709,14 @@ Alejandro Paredes
 #billingAddress2,
 #billingAddress3,
 #billingAddress4{
-	display: inline-block !important;
+	//display: inline-block !important;
 	min-width: 230px;
 }
 
 .billing_method,
 #paymentSection1,
 #paymentSection2,
-#paymentSection3,
-#paymentSection4{
+#paymentSection3{
 	display: inline-block !important;
 	max-width: 213px;
 }
@@ -4761,8 +4760,36 @@ input#piAmount_4_display,
 }
 
 
+/* Margen azul */
+.billing.billing_border .payment_heading,
+.billing.billing_border .payment_heading{
+ display: none !important;
+}
 
+.billing #paymentHeading1.payment_heading {
+ display: none !important;
+}
 
+#WC_CheckoutPaymentsAndBillingAddressf_div_1_4 {
+ border: 1px solid rgb(235, 235, 235);
+ border-radius: 5px;
+    font-size: 11px;
+    padding: 15px 15px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#WC_CheckoutPaymentsAndBillingAddressf_div_1_4:hover {
+ border: 1px solid #64afff;
+}
+
+#paymentSection4{
+ padding-top: 15px;
+ border-top: 1px solid rgb(235, 235, 235);
+ box-sizing: border-box;
+}
 
 
 @media (max-width: 857px){
@@ -4788,6 +4815,21 @@ input#piAmount_4_display,
     font-family: Arial;
 }
 
+
 .fichaProducto_page{
 	max-width: 1000px;
 }
+
+.mini_imagen_carrito{
+    max-width: 114px !important;
+    max-height: 114px !important;
+    height: auto !important;
+    width: auto !important;
+}
+
+.mini_texto_name{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+

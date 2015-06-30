@@ -712,5 +712,5 @@ wc.render.declareRefreshController({
 						});
 					</script>
 
-<!-- END CheckoutPaymentsAndBillingAddress.jspf -->
+<!-- END CheckoutPaymentsAndBillingAddress.jspf  -->
 
