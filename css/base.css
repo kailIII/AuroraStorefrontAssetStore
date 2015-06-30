@@ -889,7 +889,7 @@ position: absolute;
 	padding: 15px;
 }
 #cartDropdown > .footer {
-	padding: 10px 15px;
+	padding: 15px;
 	border-top: 1px solid #edeff0;
 	text-align: right;
 }
@@ -4583,10 +4583,10 @@ Alejandro Paredes
 
 /** estilos metodos de pago tarjeta */
 
+
 #billingAddress1 .dijitContentPane,
 #billingAddress2 .dijitContentPane,
-#billingAddress3 .dijitContentPane,
-#billingAddress4 .dijitContentPane{
+#billingAddress3 .dijitContentPane{
 	display: none !important;
 }
 
@@ -4618,15 +4618,14 @@ Alejandro Paredes
 #billingAddress2,
 #billingAddress3,
 #billingAddress4{
-	display: inline-block !important;
+	//display: inline-block !important;
 	min-width: 230px;
 }
 
 .billing_method,
 #paymentSection1,
 #paymentSection2,
-#paymentSection3,
-#paymentSection4{
+#paymentSection3{
 	display: inline-block !important;
 	max-width: 213px;
 }
@@ -4673,7 +4672,6 @@ input#piAmount_4_display,
 
 
 
-
 @media (max-width: 857px){
 	ul.footer-list.floatleft{
 		float: none;
@@ -4696,3 +4694,16 @@ input#piAmount_4_display,
     font-style: normal;
     font-family: Arial;
 }
+
+.mini_imagen_carrito{
+    max-width: 114px !important;
+    max-height: 114px !important;
+    height: auto !important;
+    width: auto !important;
+}
+
+.mini_texto_name{
+    font-size: 12px;
+    font-weight: bold;
+}
+

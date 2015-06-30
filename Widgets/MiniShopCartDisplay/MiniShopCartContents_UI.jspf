@@ -38,11 +38,11 @@
 														</c:set>
 
 														<a id="MiniShopCartProdImg_${itemDetails['orderItemId']}" href="${itemDetails['productURL']}">
-															<img src="${itemDetails['productImage']}" alt="${altImgText}">
+                                                            <img class="mini_imagen_carrito" src="${itemDetails['productImage']}" alt="${altImgText}">
 														</a>
 													</div>
 													<div class="product_name">
-														<a id="MiniShopCartProdName_${itemDetails['orderItemId']}" href="${itemDetails['productURL']}">${itemDetails['productName']}</a>
+														<a id="MiniShopCartProdName_${itemDetails['orderItemId']}" class="mini_texto_name" href="${itemDetails['productURL']}">${itemDetails['productName']}</a>
 													</div>
 													<c:if test="${itemDetails['productName'] ne itemDetails['partNumber']}">
 														<span class="product_part_number">${itemDetails['partNumber']}</span>
@@ -87,7 +87,7 @@
 							</div>
 							
 							<div class="footer">
-								<a id="GotoCartButton1" href="${fn:escapeXml(ShoppingCartURL)}" class="btnAzul">
+								<a id="GotoCartButton1" href="${fn:escapeXml(ShoppingCartURL)}" class="basicButton">
 									<span><fmt:message bundle="${storeText}" key="MSC_GO_TO_CART"/></span>
 								</a>
 							</div>

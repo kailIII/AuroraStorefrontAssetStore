@@ -52,10 +52,10 @@
 										</c:set>
 										<c:choose>
 											<c:when test="${empty orderItemRecentlyAddedMap['productImage']}">
-												<img id="MiniShopCartAddedProdImgSrc_${orderItemRecentlyAddedMap['catEntryId']}" src="<c:out value='${jspStoreImgDir}'/>images/NoImageIcon_sm.jpg" alt="${altImgText}">
+												<img class="mini_imagen_carrito " id="MiniShopCartAddedProdImgSrc_${orderItemRecentlyAddedMap['catEntryId']}" src="<c:out value='${jspStoreImgDir}'/>images/NoImageIcon_sm.jpg" alt="${altImgText}">
 											</c:when>
 											<c:otherwise>
-												<img id="MiniShopCartAddedProdImgSrc_${orderItemRecentlyAddedMap['catEntryId']}" src="${orderItemRecentlyAddedMap['productImage']}" alt="${altImgText}">
+                                                <img class="mini_imagen_carrito" id="MiniShopCartAddedProdImgSrc_${orderItemRecentlyAddedMap['catEntryId']}" src="${orderItemRecentlyAddedMap['productImage']}" alt="${altImgText}">
 											</c:otherwise>
 										</c:choose>
 									</a>
@@ -83,7 +83,7 @@
 					</div>
 				</div>
 				<div class="footer">
-					<a id="GotoCartButton2" href="${fn:escapeXml(ShoppingCartURL)}" class="btnAzul">
+					<a id="GotoCartButton2" href="${fn:escapeXml(ShoppingCartURL)}" class="basicButton">
 						<span><fmt:message bundle="${storeText}" key="MSC_GO_TO_CART"/></span>
 					</a>
 				</div>
