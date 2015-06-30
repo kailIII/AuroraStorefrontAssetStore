@@ -1016,7 +1016,7 @@ li.menuCategorias :hover  <  .departmentButton.selected{
     width: 100%;
 }
 
-.namePartPriceContainer, .definingAttributes, .shopperActions, .facebookLikeWidget{
+.namePartPriceContainer, .definingAttributes, .shopperActions, .facebookLikeWidget, .contentRecommendationWidget > .left_espot > .promo-container {
 	 margin-left: 50px;
 }
 
@@ -4234,7 +4234,7 @@ div#WC_CheckoutLogonf_div_0{
 		margin-right: 10px;
 	}
 	
-	.namePartPriceContainer, .definingAttributes, .shopperActions, .facebookLikeWidget {
+	.namePartPriceContainer, .definingAttributes, .shopperActions, .facebookLikeWidget, .contentRecommendationWidget > .left_espot > .promo-container {
 		margin-left: 10px;
 	}
 	
@@ -4359,7 +4359,7 @@ select#billing_address_id_1{
 }
 
 .promo-container{
-	padding: 10px;
+	margin-right: 10px;
 }
 
 .promo {
