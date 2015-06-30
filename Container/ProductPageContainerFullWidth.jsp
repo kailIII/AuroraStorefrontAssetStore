@@ -46,7 +46,7 @@
 			</div>
 		</div>
 		
-		<div class="col12 acol12 ccol12 slot7" data-slot-id="7"><wcpgl:widgetImport slotId="7"/></div>
+		
 
 		<wcf:useBean var="tabSlotIds" classname="java.util.ArrayList"/>
 		<%-- Double loop to get the slots into the array list in proper order. The service does not return the child widgets in any predictable order. --%>
@@ -113,7 +113,10 @@
 			</div>
 		</c:if>
 		<div class="clear_float"></div>
-		</div>				
+		</div>	
+		
+		<div class="col12 acol12 ccol12 slot7" data-slot-id="7"><wcpgl:widgetImport slotId="7"/></div>
+					
 	</div>
 </div>
 
