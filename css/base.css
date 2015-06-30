@@ -492,8 +492,8 @@ dl, ol, ul {
 /*.rowContainer,*/
 .rowContainer > .row { /*padding: 5px 0;*/ max-width:1000px; margin:0 auto; }
 .rowContainer > .row.full { max-width:100%!important;}
-.rowContainer > .row.margin-true { padding: 0 5px; }
-.row.margin-true > div > div { margin: 10px 5px; }
+.rowContainer > .row.margin-true { padding:0px; /*0 5px; cambioCarrusel*/ }
+.row.margin-true > div > div { margin:0px; /*10px 5px; cambioCarrusel*/ }
 .row.margin-true > div > div:first-of-type { margin-top: 0px; }
 .row.margin-true > div > div:last-of-type { margin-bottom: 5px; }
 .row.margin-true > div > .row { margin: 0 !important; }
@@ -577,8 +577,8 @@ dl, ol, ul {
 	.ccol12 { width: 100%; }
 	.rowContainer,
 	.rowContainer > .row { /*padding: 10px 0;*/ }
-	.rowContainer > .row.margin-true { padding: 0 10px; }
-	.row.margin-true > div > div { /*margin: 10px 10px;*/ margin: 10px 10px; }
+	.rowContainer > .row.margin-true { padding:0px; /* 0 10px; cambioCarrusel */ }
+	.row.margin-true > div > div { /*margin: 10px 10px; cambioCarrusel*/ margin: 0px; }
 	.row.margin-true > div > div:first-of-type { /*margin-top: 10px;*/ }
 	.row.margin-true > div > div:last-of-type { margin-bottom: 10px; }    
 }
@@ -1337,7 +1337,7 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 #searchBox > .submitButton {
   display: inline-block;
   position: relative;
-  width: 24px;
+  width: 22px;
   height: 18px;
   border: 6px solid #374452;
   vertical-align: middle;
@@ -1349,7 +1349,7 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 	content: url("../images/responsive/rwdUI.png");
 	display: block;
 	position: absolute;
-	left: -115px;
+	left: -117px;
 	top: -19px;
 }
 
@@ -1882,8 +1882,8 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 }
 
 .contentCarouselWidget > .content {
-	width: 125%; overflow:hidden;
-	margin: 0 -12.5%;
+	width: 100%; overflow:hidden;
+	margin: 0 auto;
 }
 /*.contentCarouselWidget .left_espot,
 .contentCarouselWidget .left_espot.centered {

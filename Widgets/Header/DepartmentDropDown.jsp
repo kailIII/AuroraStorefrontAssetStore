@@ -155,15 +155,16 @@
 		
 		</li>	
 						
+					
 				
 				<li class="active">
 					<a id="departmentButton_" href="#" class="departmentButton" role="menuitem" aria-haspopup="true" data-toggle="departmentMenu_001">
 						<span>  <fmt:message bundle="${storeText}" key="MENU_PRINCIPAL_ESTILOS_VIDA" /> </span>
 					</a>
-					
-					<div id="departmentMenu_001" class="departmentMenu" role="menu" data-parent="departmentsMenu" data-id="0001" aria-label="telmex">
+
+			<div id="departmentMenu_001" class="departmentMenu spotVida" role="menu" data-parent="departmentsMenu" data-id="0001" aria-label="telmex">
 						<div class="header">
-					<a id="departmentLink_001" href="#" class="link menuLink" role="menuitem" tabindex="-1"><fmt:message bundle="${storeText}" key="MENU_PRINCIPAL_ESTILOS_VIDA" /></a>
+					<a id="departmentLink_001" href="#" class="link menuLink" role="menuitem" tabindex="-1"><fmt:message bundle="${storeText}" key="MENU_PRINCIPAL_ESTILOS_VIDA" /> </a>
 					<a id="departmentToggle_001" href="#" class="toggle" role="button" data-toggle="departmentMenu_001" aria-labelledby="departmentLink_002">
 					<span role="presentation"></span></a>
 						</div>
@@ -174,8 +175,9 @@
 							</c:import>
 						<%out.flush();%>
 					</div>
-					
+
 				</li>
+				
 				
 				<li class="active">
 				
