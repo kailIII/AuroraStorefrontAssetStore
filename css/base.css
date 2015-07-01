@@ -578,7 +578,7 @@ dl, ol, ul {
 	.rowContainer,
 	.rowContainer > .row { /*padding: 10px 0;*/ }
 	.rowContainer > .row.margin-true { padding:0px; /* 0 10px; cambioCarrusel */ }
-	.row.margin-true > div > div { /*margin: 10px 10px; cambioCarrusel*/ margin: 0px; }
+	.row.margin-true > div > div { /*margin: 10px 10px; cambioCarrusel*/ margin:10px 0px; }
 	.row.margin-true > div > div:first-of-type { /*margin-top: 10px;*/ }
 	.row.margin-true > div > div:last-of-type { margin-bottom: 10px; }    
 }
@@ -1559,7 +1559,7 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 	margin: 20px auto 5px auto;
 	max-width: 1000px;
 	padding: 0;	
-	text-align: center;
+	text-align: left;
 }
   
 .carousel > .content {
