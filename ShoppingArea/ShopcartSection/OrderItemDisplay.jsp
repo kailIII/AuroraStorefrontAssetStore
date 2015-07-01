@@ -283,7 +283,20 @@
 									<c:param name="searchPage" value="${requestScope.searchPage}"/>
 								</c:import>
 								<%out.flush();%>
-								<div class="row margin-true">
+								
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    <div class="row margin-true">
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
                                     <div class="col12 acol12 ccol8">
 										<div class="container_content_rightsidebar shop_cart">
 											<div>
@@ -335,35 +348,44 @@
 										</flow:ifEnabled>
 										</div>
 											
-										</div>
+                                                   
+                                                    
+                                                    <!-- Vertical Recommendations Widget -->
+                                                    <div class="widget_recommended_position">
+                                                        <% out.flush(); %>
+                                                            <c:import url="${env_siteWidgetsDir}com.ibm.commerce.store.widgets.CatalogEntryRecommendation/CatalogEntryRecommendation.jsp">
+                                                                <c:param name="emsName" value="ShoppingCartRight_CatEntries"/>
+                                                                <c:param name="widgetOrientation" value="vertical"/>
+                                                                <c:param name="pageSize" value="2"/>
+                                                            </c:import>
+                                                            <% out.flush(); %>
+                                                                </div>
                                                     
                                                     
-                                       <div class="">
-                                       <!-- Vertical Recommendations Widget -->
-                                          <div class="widget_recommended_position">
-                                               <% out.flush(); %>
-                                               <c:import url="${env_siteWidgetsDir}com.ibm.commerce.store.widgets.CatalogEntryRecommendation/CatalogEntryRecommendation.jsp">
-                                                    <c:param name="emsName" value="ShoppingCartRight_CatEntries"/>
-                                                    <c:param name="widgetOrientation" value="vertical"/>
-                                                    <c:param name="pageSize" value="2"/>
-                                               </c:import>
-                                               <% out.flush(); %>
-                                           </div>
-                                       </div>            
-									</div>
+                                                    
+                                                    </div> <!--termina la columna izquierda -->
+                                                        
+                                                        
+                                                        
+                                                        <div class="col12 acol12 ccol4">
+                                                            <div class="necesitas-ayuda">                                           
+                                                                <c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
+                                                                    <c:param name="emsName" value="telmex__necesitas_ayuda" />
+                                                                </c:import>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                   
+                                       
+                                               
+									</div><!-- termina el row de las columnas -->
 									
 
                                     
 
                                    
                                             
-                                    <div class="col12 acol12 ccol4">
-										<div class="necesitas-ayuda">                                           
-											<c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
-												<c:param name="emsName" value="telmex__necesitas_ayuda" />
-											</c:import>
-										</div>
-									</div>
+                                    
 
 								</div>
 								

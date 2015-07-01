@@ -27,7 +27,7 @@
 			<c:set var="foundCurrentSlot7" value="true"/>
 		</c:if>
 	</c:forEach>
-	<div class="product_page_content rowContainer" id="container_${pageDesign.layoutId}" role="main">		
+	<div class="product_page_content rowContainer fichaProducto_page" id="container_${pageDesign.layoutId}" role="main">		
 		<div class="row margin-true">
 			<div class="col12 slot1" data-slot-id="1"><wcpgl:widgetImport slotId="1"/></div>
 		</div>
@@ -36,9 +36,9 @@
 			<div class="col6 acol12 slot3" data-slot-id="3"><wcpgl:widgetImport slotId="3"/></div>
 		</div>
 		<div class="row margin-true ${fn:toLowerCase(pageDesign.pageGroup)}_pageDesign_pageGroup">
-			<div class="col3 acol3 ccol3 slot4" data-slot-id="4"><wcpgl:widgetImport slotId="4"/></div>
-			<div id="productFullWidthSlot56" class="acol12 col9 ccol9 right">
-				<div class="col12 acol9 ccol12 left slot5" data-slot-id="5"><wcpgl:widgetImport slotId="5"/></div>
+			<div class="col6 acol12 ccol6 slot4 fichaProducto_contentIzq" data-slot-id="4"><wcpgl:widgetImport slotId="4"/></div>
+			<div id="productFullWidthSlot56" class="acol12 col6 ccol6 right fichaProducto_contentDer">
+				<div class="col12 acol12 ccol12 left slot5" data-slot-id="5"><wcpgl:widgetImport slotId="5"/></div>
 				<div class="col12 acol12 ccol12 left slot6" data-slot-id="6">
                     
                     <wcpgl:widgetImport slotId="6"/>
@@ -46,7 +46,7 @@
 			</div>
 		</div>
 		
-		<div class="col12 acol12 ccol12 slot7" data-slot-id="7"><wcpgl:widgetImport slotId="7"/></div>
+		
 
 		<wcf:useBean var="tabSlotIds" classname="java.util.ArrayList"/>
 		<%-- Double loop to get the slots into the array list in proper order. The service does not return the child widgets in any predictable order. --%>
@@ -62,7 +62,7 @@
 			</c:forEach>
 		</c:forEach>
 		<c:if test="${!empty tabSlotIds}">
-			<div class="col12 acol12 ccol12 tabbedSlots9_10_11">
+			<div class="col6 acol12 ccol6 tabbedSlots9_10_11">
 			<div class="tabButtonContainer" role="tablist">
 				<div class="tab_header tab_header_double">
 					<c:forEach var="tabSlotId" items="${tabSlotIds}" varStatus="status">
@@ -113,7 +113,10 @@
 			</div>
 		</c:if>
 		<div class="clear_float"></div>
-		</div>				
+		</div>	
+		
+		<div class="col12 acol12 ccol12 slot7" data-slot-id="7"><wcpgl:widgetImport slotId="7"/></div>
+					
 	</div>
 </div>
 

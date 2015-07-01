@@ -556,8 +556,8 @@ dojo.addOnLoad(function(){CommonControllersDeclarationJS.setControllerURL('Order
 			</td>
 			
                         
-        <!--   aca ocultamos lo de precio unitario
-        <td class="each ${fn:escapeXml(nobottom)}" id="WC_OrderItemDetailsSummaryf_td_3_${fn:escapeXml(status.count)}" headers="SingleShipment_tableCell_unitPrice SingleShipment_rowHeader_product${fn:escapeXml(status.count)}">
+        
+        <td class="elementosocultos each ${fn:escapeXml(nobottom)}" id="WC_OrderItemDetailsSummaryf_td_3_${fn:escapeXml(status.count)}" headers="SingleShipment_tableCell_unitPrice SingleShipment_rowHeader_product${fn:escapeXml(status.count)}">
 				<%-- unit price column of order item details table --%>
 				<%-- shows unit price of the order item --%>
 				<span class="price">
@@ -575,7 +575,7 @@ dojo.addOnLoad(function(){CommonControllersDeclarationJS.setControllerURL('Order
 
 				</span>
 			</td>
-              -->      
+            
                     
                     
                     

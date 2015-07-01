@@ -52,6 +52,10 @@ function menuF(){
 				var categoryMenu =$('.categoryList').find('>li');
 				categoryMenu.each(function(){
 					 var scope = $(this);
+					 if(scope.find('img').length > 0){
+						  	scope.find('ul.subcategoryList').width('550px');
+						  	scope.find('.telmexMenuImage').css('display','inline-block');
+						}
 					 if(scope.find('.subMenuPage').outerHeight()< $('.categoryList').outerHeight()){
 						 scope.find('.subMenuPage').outerHeight($('.categoryList').outerHeight()+ 5);
 					 }else{
@@ -84,12 +88,6 @@ function menuF(){
 						topItem = topItem + thisSize;
 					}
 					$(this).find('.subMenuPage').css('top', -topItem-45);	
-					
-					console.log(scope.find('img').length);
-					if(scope.find('img').length > 0){
-					  	scope.find('ul.subcategoryList').width('550px');
-					  	scope.find('.telmexMenuImage').css('display','inline-block');
-					}
 				}else{
 				    $('.departmentMenu.active').css('borderBottomRightRadius', '5px ');
 				    $(this).find('.subMenuPage').css('display','none');

@@ -59,7 +59,7 @@
                     	</c:import>
 						--%>
 						
-                    	<div class="promo">
+                    	<%-- <div class="promo">
                             <div class="contPromo">
                                 <span>
                                     Promoci&oacute;n
@@ -73,7 +73,7 @@
                             <div class="fotoPromo">
                                 <img src="<c:out value="${jspStoreImgDir}images/bocinas.jpg"/>">
                             </div>
-                        </div>
+                        </div> --%>
                     </div>
                 <wcpgl:widgetImport slotId="6"/>
             </div>

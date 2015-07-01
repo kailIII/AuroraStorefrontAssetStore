@@ -155,7 +155,7 @@ dojo.addOnLoad(
  <div class="row margin-true"><!-- comenzamos con el contenedor responsivo -->     
     
 <!-- aca colocamos los column para organizar -->
-<div id="mainContents" style="display:block" class="col8 acol12">
+     <div id="mainContents" style="display:block" class="col12 acol12 ccol12">
     
     
     
@@ -294,16 +294,7 @@ dojo.addOnLoad(
                     </div><!-- aca termina el box -->
                     
                     </div><!-- termina con 8 columna grande -->
-                        
-                        
-                        <div class="col4 acol12"> <!-- columna de necesitas ayuda -->
-                            <div class="necesitas-ayuda">
-                                <c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
-                                    <c:param name="emsName" value="telmex__necesitas_ayuda" />
-                                </c:import>
-                            </div>
-                        </div>                  
-                        
+                                              
                         </div><!-- termina el row y contenedor de las columnas -->         
                     
 

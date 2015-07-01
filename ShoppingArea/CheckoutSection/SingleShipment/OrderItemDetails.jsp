@@ -236,24 +236,16 @@
           
           <th class="QTY short align_center" id="SingleShipment_tableCell_quantity" abbr="<fmt:message bundle="${storeText}" key="QUANTITY1"  />"><fmt:message bundle="${storeText}" key="QTY"  /></th>
           
-		   <!-- aca comentamos lo de precio unitario
-          <th class="each short" id="SingleShipment_tableCell_unitPrice" abbr="<fmt:message bundle="${storeText}" key="UNIT_PRICE"  />"><fmt:message bundle="${storeText}" key="EACH"  /></th>
-          -->
-          <!-- ocultamos este total 
-		   <th class="total short" id="SingleShipment_tableCell_totalPrice" abbr="<fmt:message bundle="${storeText}" key="TOTAL_PRICE"  />"><fmt:message bundle="${storeText}" key="TOTAL"  /></th>
-            -->
-		   <!-- aca comentamos el total restante
-          <th id="totalRReciboTMX">Total Restante</th>
-            -->
-          <!-- aca comentamos el factor restante 
-		   <th id ="factorReciboTMX">Factor</th>
-            -->
-          <!-- aca comentamos el financiamiento
-		   <th id ="financiamientoReciboTMX">Financiamiento</th>
-            -->
-          <!-- aca comentamos el valor del producto
-		   <th id="valorProductoTMX">Valor de Producto</th>
-            -->
+		   <th class="each short elementosocultos" id="SingleShipment_tableCell_unitPrice" abbr="<fmt:message bundle="${storeText}" key="UNIT_PRICE"  />"><fmt:message bundle="${storeText}" key="EACH"  /></th>
+          <th class="total short elementosocultos" id="SingleShipment_tableCell_totalPrice" abbr="<fmt:message bundle="${storeText}" key="TOTAL_PRICE"  />"><fmt:message bundle="${storeText}" key="TOTAL"  /></th>
+           
+          <th class="elementosocultos" id="totalRReciboTMX">Total Restante</th>
+          
+          <th class="elementosocultos" id ="factorReciboTMX">Factor</th>
+          
+          <th class="elementosocultos" id ="financiamientoReciboTMX">Financiamiento</th>
+          
+          <th class="elementosocultos" id="valorProductoTMX">Valor de Producto</th>
           
           <th class="total short align_center" id ="totalFinalPagarTMX">Total Final</th>
           <!-- agregamos un th para que caiga el eliminar-->
@@ -671,8 +663,8 @@
                         
                         
                         
-            <!-- aca comentamos lo de precio unitario            
-			<td class="each short <c:out value="${nobottom}"/>" id="WC_OrderItemDetails_td_3_<c:out value='${status.count}'/>" headers="SingleShipment_tableCell_unitPrice SingleShipment_rowHeader_product<c:out value='${status.count}'/>">
+                        
+            <td class="elementosocultos each short <c:out value="${nobottom}"/>" id="WC_OrderItemDetails_td_3_<c:out value='${status.count}'/>" headers="SingleShipment_tableCell_unitPrice SingleShipment_rowHeader_product<c:out value='${status.count}'/>">
 				<%-- unit price column of order item details table --%>
 				<%-- shows unit price of the order item --%>
 				<span class="price">
@@ -681,11 +673,11 @@
 					<input type="hidden" id="unitPrice_<c:out value='${status.count}'/>" name="unitPrice" value="${orderItem.unitPrice}"/>
 				</span>
 			</td>
-                 -->   
+            
                     
                     
-            <!--  aca ocultamos este total
-			<td class="total short <c:out value="${nobottom}"/>" id="WC_OrderItemDetails_td_4_<c:out value='${status.count}'/>" headers="SingleShipment_tableCell_totalPrice SingleShipment_rowHeader_product<c:out value='${status.count}'/>">
+            
+                    <td class="elementosocultos total short <c:out value="${nobottom}"/>" id="WC_OrderItemDetails_td_4_<c:out value='${status.count}'/>" headers="SingleShipment_tableCell_totalPrice SingleShipment_rowHeader_product<c:out value='${status.count}'/>">
 				<c:choose>
 					<c:when test="${orderItem.freeGift}">
 						<%-- the OrderItem is a freebie --%>
@@ -703,21 +695,21 @@
 					</c:otherwise>
 				</c:choose>
 			</td>
-			-->
+			
                         
-           <!-- aca ocultamos el total restante        
-        <td headers="totalRReciboTMX"> 
+           
+             <td class="elementosocultos" headers="totalRReciboTMX"> 
 				<span class="price">
 					<input type="text" id="totalRFinal_<c:out value='${status.count}'/>" name="totalRFinal" size="10" disabled="disabled" value="<fmt:formatNumber value="${orderItem.unitPrice}" type="currency" maxFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}"/>"/>
 					<p class="nested">Porcentaje de enganche</p>
 					<input type="text" id="valorEnganchePorcentaje_<c:out value='${status.count}'/>" name="valorEnganchePorcentaje" size="10" onchange="updateDetailsProduct(<c:out value='${status.count}'/>);sumaTotalFinanciamiento();asignarMonederoandPayback();"/>	
 				</span>
 			</td>
-               -->         
+            
                         
                         
-            <!-- aca comentamos el factor restante             
-			<td headers="factorReciboTMX"> 
+            
+            <td class="elementosocultos" headers="factorReciboTMX"> 
 				<input type="text" id="factorPriceItem_<c:out value='${status.count}'/>" name="factorPriceItem" value="0" size="10" onchange="updateDetailsProduct(<c:out value='${status.count}'/>);sumaTotalFinanciamiento();" />
 				<p class="nested">Aplica Monedero
 				
@@ -726,9 +718,9 @@
 							</span>
 				</p> 
 			</td>
-            -->
-                <!-- aca comentamos financiamiento
-			<td headers="financiamientoReciboTMX">
+            
+            
+            <td class="elementosocultos" headers="financiamientoReciboTMX">
 				<span class="price">
 					<input type="text" id="finaProducto_<c:out value='${status.count}'/>" name="finaProducto" disabled="disabled" size="10" value="<fmt:formatNumber value="" type="currency" maxFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}"/>"/>
 					<c:out value="${CurrencySymbol}"/>
@@ -741,9 +733,8 @@
 						</p>
 				</span>
 			</td>
-            -->
-            <!-- aca comentamos valor del producto
-			<td headers="valorProductoTMX"> 
+           
+           <td class="elementosocultos" headers="valorProductoTMX"> 
 			<c:set  var="valProducto" value="0"></c:set>
 				<input type="text" id="valorProductoTMX_<c:out value='${status.count}'/>" name="valorProductoTMX" size="10" disabled="disabled" value="<fmt:formatNumber value="${valProducto}" type="currency" maxFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}"/>"/>
 				<p class="nested">Aplica Monto Monedero Payback</p>
@@ -754,9 +745,7 @@
 						</p>
 				
 			</td>
-            -->
-                
-            
+           
 			<td headers="totalFinalPagarTMX"> 
 				<input type="text" id="totalFinalReciboTMX_<c:out value='${status.count}'/>" name="totalFinalReciboTMX" size="10" disabled="disabled" value="${orderItem.unitPrice}"/>
 			</td>
@@ -802,8 +791,8 @@
 
                         </td>            
         </tr>
-        <!--ocultamos la segunda linea de la tabla
-		<tr> 
+        
+        <tr class="elementosocultos"> 
 		<td></td>
 			<td colspan="2" id="tdEnganche_<c:out value='${status.count}'/>">
 				<table>
@@ -889,7 +878,7 @@
 					</tr>                        
 				</table>
 			</td>
-		</tr>-->
+		</tr>
 		<c:remove var="nobottom"/>
 
 		<%-- row to display product level discount --%>
