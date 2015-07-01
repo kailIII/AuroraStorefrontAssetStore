@@ -1551,7 +1551,7 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 	/*padding: 0px 50px 10px 10px;*/
 	color: #010f1c;
 	font-weight: inherit;
-    min-height: 15px;
+    min-height: 20px;
 }
 .titleItems{
 	color: #1b83ff;
