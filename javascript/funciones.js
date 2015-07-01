@@ -51,18 +51,27 @@ function menuF(){
 				var categoryMenu =$('.categoryList').find('>li');
 				categoryMenu.each(function(){
 					 var scope = $(this);
-					 if(scope.find('.subMenuPage').outerHeight()< $('.categoryList').outerHeight()){
-						 scope.find('.subMenuPage').outerHeight($('.categoryList').outerHeight()+ 5);
-						 if(scope.find('img').length > 0){
-							  	scope.find('ul.subcategoryList').width('550px');
-							  	scope.find('.telmexMenuImage').css('display','inline-block');
-							}
-					 }else{
-						 if(scope.find('img').length > 0){
-							  	scope.find('ul.subcategoryList').width('550px');
-							  	scope.find('.telmexMenuImage').css('display','inline-block');
+					 var totalHeight;
+					
+					 if(scope.find('img').length > 0){
+						 if($('.telmexMenuImage').height()> scope.find('.subMenuPage').outerHeight()){
+							 totalHeight = $('.telmexMenuImage').height();
+						 }else{
+							 totalHeight = scope.find('.subMenuPage').outerHeight();
 						 }
+					 }else{
+						 totalHeight = scope.find('.subMenuPage').outerHeight()
+					 }
+					 
+					 if(totalHeight < $('.categoryList').outerHeight()){
+						 scope.find('.subMenuPage').outerHeight($('.categoryList').outerHeight()+ 5);
+					 }else{
 						 scope.find('.subMenuPage').height('auto');
+					 }
+					 
+					 if(scope.find('img').length > 0){
+						  	scope.find('ul.subcategoryList').width('550px');
+						  	scope.find('.telmexMenuImage').css('display','inline-block');
 					 }
 				})
 				hasSize = true;
