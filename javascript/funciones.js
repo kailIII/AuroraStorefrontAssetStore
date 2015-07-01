@@ -23,7 +23,6 @@ $(window).resize(function(){
 
 $( document ).ready(function() {
 
-	
 	$(".asistenciaTienda").hover(function(){
 	    $(".asistenciaLista").toggle();
 	});
@@ -52,13 +51,17 @@ function menuF(){
 				var categoryMenu =$('.categoryList').find('>li');
 				categoryMenu.each(function(){
 					 var scope = $(this);
-					 if(scope.find('img').length > 0){
-						  	scope.find('ul.subcategoryList').width('550px');
-						  	scope.find('.telmexMenuImage').css('display','inline-block');
-						}
 					 if(scope.find('.subMenuPage').outerHeight()< $('.categoryList').outerHeight()){
 						 scope.find('.subMenuPage').outerHeight($('.categoryList').outerHeight()+ 5);
+						 if(scope.find('img').length > 0){
+							  	scope.find('ul.subcategoryList').width('550px');
+							  	scope.find('.telmexMenuImage').css('display','inline-block');
+							}
 					 }else{
+						 if(scope.find('img').length > 0){
+							  	scope.find('ul.subcategoryList').width('550px');
+							  	scope.find('.telmexMenuImage').css('display','inline-block');
+						 }
 						 scope.find('.subMenuPage').height('auto');
 					 }
 				})

@@ -438,6 +438,7 @@ require([
 			activate(document.getElementById(this.renderContext.properties.targetId)); // We have all the data.. Activate the menu...
 			cursor_clear();
 			menuF();
+			responsiveMenu();
 		}
 	});
 
