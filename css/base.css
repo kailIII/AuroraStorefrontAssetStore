@@ -4842,3 +4842,14 @@ input#piAmount_4_display,
 .elementosocultos{
     display: none !important;
 }
+
+.divIconosFicha{
+	float: right;
+}
+
+.iconosFicha {
+    margin-left: 5px;
+    margin-top: 10px;
+	cursor: pointer;
+}
+
