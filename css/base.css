@@ -1589,11 +1589,12 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 
 /* Prev/next page buttons */
 
+
 .carousel > .prevPageButton,
 .carousel > .nextPageButton {
 	display: block;
 	position: absolute;
-	top: 50%;
+	top: 5%;
 	z-index: 1;
 	width: 21px;
 	height: 42px;
@@ -1601,11 +1602,13 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 	overflow: hidden;
 }
 .carousel > .prevPageButton {
-	left: 10px;
+    right: 30px;
 }
 .carousel > .nextPageButton {
 	right: 10px;
 }
+
+
 .carousel > .prevPageButton.hidden,
 .carousel > .nextPageButton.hidden {
 	display: none;
@@ -1615,7 +1618,7 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 	content: url("../images/responsive/rwdUI.png");
 	display: block;
 	position: absolute;
-	top: -60px;
+	top: -65px;
 }
 .carousel > .prevPageButton:before {
 	left: -1px;
@@ -3344,6 +3347,7 @@ div.compare_target {
 	box-sizing: border-box;
 }
 
+/*
 .carousel > .prevPageButton, .carousel > .nextPageButton {
   top: 75px;
   margin-top: 0px;
@@ -3352,7 +3356,7 @@ div.compare_target {
 
 .carousel > .prevPageButton{
 	margin-left: -10px;
-}
+}*/
 
 .product_info > .product_name > a {
 	font-size: 15px !important;
