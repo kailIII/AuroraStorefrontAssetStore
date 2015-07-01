@@ -4651,7 +4651,8 @@ Alejandro Paredes
 	} */
 	
 	.row .col12 .contentRecommendationWidget {
-		width: 85%;
+		width: 100%;
+        padding-top: 15px;
 	}
 }
 
