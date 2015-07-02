@@ -48,7 +48,7 @@
 			}
 		});
 	}
-</script>_
+</script>
 
 <%@taglib uri="http://commerce.ibm.com/coremetrics" prefix="cm"%>
 <%@page import="com.ibm.commerce.bi.BIConfigRegistry"%>

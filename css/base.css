@@ -808,7 +808,7 @@ position: absolute;
   top: -21px;
   width: 28px;
   height: 28px;
-  clip: rect(28px, 29px, 61px, 3px);
+  clip: rect(29px, 29px, 61px, 3px);
  }
 #widget_minishopcart:hover {
 	/*background-image: -webkit-gradient(linear, left top, left bottom, from(#f7f9f9), to(#ced2d3));
