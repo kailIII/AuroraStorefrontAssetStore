@@ -64,17 +64,41 @@
 				<c:import url="${env_siteWidgetsDir}com.ibm.commerce.store.widgets.MyAccountNavigation/MyAccountNavigation.jsp"/>
 			<%out.flush();%>		
 		</div>
-		<div class="col8 acol12 ccol9 right">
-			<h2 class="myaccount_header bottom_line">Resumen de Monedero Payback</h2>
-			<div id="WC_MyAccountCenterLinkDisplay_div_6" class="info">
-					<div id="WC_MyAccountCenterLinkDisplay_div_3">
-						</br>
-						<fmt:message bundle="${storeText}" key="PAYBACK_SECTION_BODY"/>
-					</div>
-					</br>
+		<div class="col8 acol12 ccol9 right puntos_payback_contenedorsote">			
+            <div id="WC_MyAccountCenterLinkDisplay_div_6" class="info">					
+                
+                <div id="WC_MyAccountCenterLinkDisplay_div_3" class="texto_izquierdo_payback">
+                    <h2><fmt:message bundle="${storeText}" key="PAYBACK_SECTION_TITLE"/></h2>
+                    <fmt:message bundle="${storeText}" key="PAYBACK_SECTION_TEXTO1"/>
+				</div>
+                
+                <div id="WC_MyAccountCenterLinkDisplay_div_3" class="texto_derecho_payback">					
+                    <span><fmt:message bundle="${storeText}" key="PAYBACK_SECTION_TEXTO2"/></span>
+                    <span>20,000</span>
+                    <span><fmt:message bundle="${storeText}" key="PAYBACK_SECTION_PUNTOS_TITULO"/></span>
+                    <span><fmt:message bundle="${storeText}" key="PAYBACK_SECTION_TEXTO3"/></span>
+                    <span><fmt:message bundle="${storeText}" key="PAYBACK_SECTION_TEXTO4"/></span>
+                    <span>$200</span>
+                    <span><fmt:message bundle="${storeText}" key="PAYBACK_SECTION_TEXTO6"/></span>
+                    <p><fmt:message bundle="${storeText}" key="PAYBACK_SECTION_CONSULTA_OTROS"/></p>
+                </div>
 					
 			</div>
-				
+            
+            
+            
+            <!-- Vertical Recommendations Widget -->
+            <div class="widget_recommended_position" id="widget_recomendaciones_payback">
+                <%out.flush();%>
+                    <c:import url="${env_siteWidgetsDir}com.ibm.commerce.store.widgets.CatalogEntryRecommendation/CatalogEntryRecommendation.jsp">
+                        <c:param name="emsName" value="ShoppingCartRight_CatEntries"/>
+                        <c:param name="widgetOrientation" value="vertical"/>
+                        <c:param name="pageSize" value="2"/>
+                    </c:import>
+                <%out.flush();%>
+             </div>
+            
+            
 		</div>
 		
 		

@@ -72,16 +72,21 @@
 		</c:if>
 		
 		<c:if test="${!(messageFail!= null && messageFail != '')}">
-			<div class="col8 acol12 ccol9 right">
+			
+            
+            
+            
+            
+            <div class="col8 acol12 ccol9 right puntos_payback_contenedorsote">
 				<h2 class="myaccount_header bottom_line">Resumen de Monedero</h2>
-				<div id="WC_MyAccountDisplay_div_13" class="body">
+				<div id="WC_MyAccountDisplay_div_13" class="body primer_bloque_puntos">
 					<div id="WC_MyAccountCenterLinkDisplay_div_6" class="info">
 					<div id="WC_MyAccountCenterLinkDisplay_div_3">
 						</br>
-						<span class="header">Numero Telmex: <label id="numeroTelefono">${address.phone1}</label></span>
+                        <span class="header">Numero Telmex: <strong><label id="numeroTelefono">${address.phone1}</label></strong></span>
 					</div>
 					</br>
-					<div class="info_table">
+					<div class="info_table2">
 						<div class="row">
 							<div class="label">Monto obtenido</div>
 							<div class="info_content"> $ <label id="bonosObtenidos">${monedero.totalBonosObtenidos}.00</label> </div>
@@ -97,17 +102,19 @@
 								<div class="info_content"> $ <label id="bonosCancelados">${monedero.totalBonosCancelados}.00</label> </div>
 								<div class="clear_float"></div>
 							</div>
-						</div>
-						<div id="WC_MyAccountCenterLinkDisplay_div_3">
+						</div>                        
+						<div class="saldo_disponible_puntos" id="WC_MyAccountCenterLinkDisplay_div_3">
 							<span class="header">Saldo disponible:</span>
 						</div>
 					</div>
 				</div>
-				<h2 class="myaccount_header bottom_line">Detalle de movimientos</h2>
-				<div class="">
-					
-					 <table style="width:75%">
-					 <thead>
+				
+                <div class="separador_puntos"></div>
+                
+                <div class="segundo_bloque_puntos">
+                    <h2 class="myaccount_header bottom_line">Detalle de movimientos</h2>
+					 <table style="width:100%">
+					 <thead class="titulos_table_puntos">
 	  					<tr>
 	  						<th><fmt:message bundle="${storeText}" key="WALLET_DATE_INFO"/></th>
 	  						<th><fmt:message bundle="${storeText}" key="WALLET_CONCEPT"/></th>
@@ -128,9 +135,27 @@
 	  				</tbody>
 					</table> 
 				</div>
+                
+                
+                <div class="separador_puntos"></div>
+                
+                <!-- Vertical Recommendations Widget -->
+                <div class="widget_recommended_position" id="widget_recomendaciones_payback">
+                    <%out.flush();%>
+                        <c:import url="${env_siteWidgetsDir}com.ibm.commerce.store.widgets.CatalogEntryRecommendation/CatalogEntryRecommendation.jsp">
+                            <c:param name="emsName" value="ShoppingCartRight_CatEntries"/>
+                            <c:param name="widgetOrientation" value="vertical"/>
+                            <c:param name="pageSize" value="2"/>
+                        </c:import>
+                        <%out.flush();%>
+                </div>            
+                
+                
 			</div>
-		</c:if>
-	</div>	
+		</c:if>        
+	</div>
+    
+    
 </div>
 </body>
 </html>

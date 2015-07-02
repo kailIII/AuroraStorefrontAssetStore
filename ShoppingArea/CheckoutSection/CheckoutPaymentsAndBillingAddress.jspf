@@ -422,17 +422,17 @@ wc.render.declareRefreshController({
 	
 		<c:if test="${i eq 4}">
 			<div class="tarjtas-check">
-			<h2 class="">¿Qué tarjeta deseas utilizar?</h2>
+			<h2 class="">Â¿QuÃ© tarjeta deseas utilizar?</h2>
 			</div>
 		</c:if>	
 		<div id="WC_CheckoutPaymentsAndBillingAddressf_div_1_<c:out value='${status2.count}'/>">
 			<div id="billing_<c:out value='${i}'/>" class="billing<c:if test="${i >= 2}"> billing_border</c:if>">
 				<c:if test="${numberOfPaymentMethods > 1}">
 					<!-- Payment method number (payment1, payment2...) will be shown only if there are more than 1 payments..-->
-					<div id="paymentHeading<c:out value="${i}"/>" class="payment_heading"> 
+					<%-- <!--<div id="paymentHeading<c:out value="${i}"/>" class="payment_heading"> 
 						<fmt:message bundle="${storeText}" key="PAYMENT_CAPS"/>
 						<span id="numOfPaymentsIndicator<c:out value="${i}"/>"> <c:out value="${i}:"/></span>
-					</div>
+					</div>--> --%>
 				</c:if>
 				<form name="PaymentForm<c:out value="${i}"/>" id="PaymentForm<c:out value="${i}"/>" method="post" action="" onsubmit="javascript: return false;">
 					<c:set var="paymentAreaNumber" value="${i}"/>
