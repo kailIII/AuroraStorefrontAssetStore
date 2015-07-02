@@ -4858,3 +4858,68 @@ input#piAmount_4_display,
 	font-family: Arial,Helvetica,sans-serif;
 	font-style: normal !important;
 }
+.texto_izquierdo_payback{
+    float: left;
+    width: 40%;
+    font-size: 13px;
+}
+
+.texto_derecho_payback{
+    padding: 20px;
+    font-size: 13px;
+    float: right;
+    width: 50%;
+    border: solid #f2eff0 1px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    /*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+}
+.texto_izquierdo_payback h2{
+    color: rgb(62, 126, 199);
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+.texto_derecho_payback span + span{
+    color: rgb(40, 138, 255);
+    font-size: 22px;
+}
+.texto_derecho_payback span + span + span{
+    font-size: 14px;
+}
+.texto_derecho_payback span + span + span + span{
+    color: #4d4d4d;
+    font-size: 14px;
+}
+.texto_derecho_payback span + span + span + span + span{
+    font-size: 13px;
+}
+.texto_derecho_payback span + span + span + span + span + span{
+    font-size: 13px;
+    font-weight: bold;
+}
+.texto_derecho_payback span + span + span + span + span + span + span{
+    font-size: 13px;
+    font-weight: normal;
+}
+.texto_derecho_payback span + span + span + span + span + span + span + p{
+    color: rgb(40, 138, 255);
+    font-size: 13px;
+    font-weight: normal;
+    text-decoration: underline;
+    line-height: 40px;
+}
+
+.puntos_payback_contenedorsote #widget_recomendaciones_payback .controlBar{
+    display: none;
+}
+.puntos_payback_contenedorsote #widget_recomendaciones_payback .header{
+    margin-top: 100px;
+}
+.puntos_payback_contenedorsote #widget_recomendaciones_payback{
+    margin: 0px;
+    padding: 0px;
+    float: left;
+}
+
+

@@ -788,7 +788,7 @@
                                               <div class="col12 acol12 ccol4">
                                                     
                                                     <!-- aca colocamos el necesitas ayuda -->
-                                                    <div class="necesitas-ayuda">                                                       
+                                                  <div class="necesitas-ayuda">
                                                         <c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
                                                             <c:param name="emsName" value="telmex__necesitas_ayuda" />
                                                         </c:import>

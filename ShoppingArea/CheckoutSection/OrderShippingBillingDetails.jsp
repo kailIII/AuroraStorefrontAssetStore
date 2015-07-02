@@ -881,7 +881,7 @@ need to first assign a valid address id to these order items before proceeding w
                                                     <c:set var="showPayInStore" value="false"/>
                                                     <div class="body shipping_billing_height" id="WC_ShipmentDisplay_div_30">
                                                         <div class="tarjtas-check">
-                                                            <h2 class="">Utiliza tu dinero electrónico</h2>
+                                                            <h2 class="">Utiliza tu correo electrÃ³nico</h2>
                                                             <p>Ingresa el monto que deseas aplicar al total de tu compra.</p>
                                                         </div>
                                                         <%@ include file="CheckoutPaymentsAndBillingAddress.jspf"%>
@@ -1117,7 +1117,6 @@ need to first assign a valid address id to these order items before proceeding w
                                                         
                                                         <!-- aca colocamos el necesitas ayuda -->
                                                         <div class="necesitas-ayuda">
-                                                            
                                                             <c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
                                                                 <c:param name="emsName" value="telmex__necesitas_ayuda" />
                                                             </c:import>
