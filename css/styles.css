@@ -983,6 +983,11 @@ div.widget_product_image_viewer {
 	margin-bottom: 10px;
 }
 
+.heading{
+	margin-top: 10px !important;
+	font-weight: lighter !important;
+}
+
 .definingAttributes .options_dropdown_column .selectWrapper {
 	padding-top: 4px;
 	padding-left: 2px;
@@ -1006,13 +1011,25 @@ div.widget_product_image_viewer {
 	padding-top: 10px;
 }
 
+.definingAttributes > .heading .color_swatch_label{
+	  margin-top: 20px !important;
+}
+
 .definingAttributes > div.color_swatch_label:first-child {
 	padding-top: 0px;
 	border-top: none;
 }
 
+.definingAttributes > div.color_swatch_label:first-child {
+    margin-top: 10px !important;
+}
+
 .definingAttributes div[id^="swatch_selection_"] {
-	display: inline-block;
+    display: inline-block;
+    float: left;
+	margin-right: 15px;
+    margin-top: 10px;
+    padding-top: 0;
 }
 
 .definingAttributes .currentUsedFilters {
@@ -1059,6 +1076,7 @@ div.widget_product_image_viewer {
 
 .color_swatch_list {
 	line-height: 35px;
+	margin-top: 0px !important;
 }
 
 .color_swatch_list > ul,
