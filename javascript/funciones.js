@@ -142,7 +142,7 @@ var hoverMainMenu = function(){
 			var time;
 			
 			if (checkWidth() > 952) {
-				
+			images.hide();
 			scope.mouseenter(function(){
 				clearTimeout(time);
 				if(images.length > 0){
@@ -150,7 +150,7 @@ var hoverMainMenu = function(){
 						scope.unbind('click');
 						images.show();
 						$('.departmentMenu').removeClass('active');
-						$('.departmentButton').removeClass('selected');
+						$('.departmentButton').removeClass('selected');						
 						
 				}
 			}).mouseleave(function(){

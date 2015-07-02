@@ -439,6 +439,7 @@ require([
 			cursor_clear();
 			menuF();
 			responsiveMenu();
+			hoverMainMenu();
 		}
 	});
 

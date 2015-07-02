@@ -158,7 +158,7 @@
 					
 				
 				<li class="active">
-					<a id="departmentButton_" href="#" class="departmentButton" role="menuitem" aria-haspopup="true" data-toggle="departmentMenu_001">
+					<a id="departmentButton_" href="#" class="departmentButton" role="menuitem" aria-haspopup="true">
 						<span>  <fmt:message bundle="${storeText}" key="MENU_PRINCIPAL_ESTILOS_VIDA" /> </span>
 					</a>
 
