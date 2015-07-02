@@ -4514,15 +4514,25 @@ Alejandro Paredes
 
 .loginMenuDropdown .button_primary   .button_text {
   font-size: 12px;
-  background-color: #fa8039!important;
+  background-color: #fa8039 !important;
   font-weight: bold;
   border-radius: 5px;
   padding: 5px!important;
   text-decoration: none;
 }
 
+.loginMenuDropdown .button_primary   .button_text {
+  font-size: 13px !important;
+  background-color: #288aff !important;
+}
+
+
 .loginMenuDropdown .button_primary   .button_text:hover {
   background-color: #fa6b19!important;
+}
+
+.loginMenuDropdown .button_primary   .button_text:hover {
+  background-color: #288aff !important;
 }
 
 #WC_EmptyShopCartDisplayf_div_1 {
@@ -4857,4 +4867,8 @@ input#piAmount_4_display,
 	color: rgb(62, 126, 199) !important;
 	font-family: Arial,Helvetica,sans-serif;
 	font-style: normal !important;
+}
+
+.field.btnLogin {
+    text-align: center;
 }
