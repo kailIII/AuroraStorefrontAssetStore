@@ -18,6 +18,7 @@ checkWidth();
 $(window).resize(function(){
 		responsiveMenu();
 		menuF();
+		hoverMainMenu();
 })
 
 
@@ -28,12 +29,13 @@ $( document ).ready(function() {
 	});
 
 	responsiveMenu();
-	menuF();
+	menuF()
+	hoverMainMenu();
 });
 
 
 
-/*Función hover menú escritorio*/
+/*Función hover lista categorias escritorio*/
 function menuF(){
 	
 	var menuCont =$('#departmentsMenu');
@@ -79,7 +81,7 @@ function menuF(){
 		});
 	}
 	
-	/*Menu Hover*/
+	/*Categorias Hover*/ 
 		$("li.menuLink").hover(
 			function () {
 				var scope = $(this);
@@ -126,6 +128,49 @@ function menuF(){
 		$('.menuCategorias').unbind('mousedown');
 
 	}
+}
+
+
+var hoverMainMenu = function(){
+	var menuCont =$('#departmentsMenu');
+	var elemFirst = menuCont.find('>li');
+	
+	
+		elemFirst.each(function(){
+			var scope = $(this);
+			var images = scope.find('.spotVida');
+			var time;
+			
+			if (checkWidth() > 952) {
+				
+			scope.mouseenter(function(){
+				clearTimeout(time);
+				if(images.length > 0){
+						scope.css('box-shadow', 'inset 0px -4px 0px 0px #1b83ff');
+						scope.unbind('click');
+						images.show();
+						$('.departmentMenu').removeClass('active');
+						$('.departmentButton').removeClass('selected');
+						
+				}
+			}).mouseleave(function(){
+				time= setTimeout(function(){
+					if(images.length > 0){
+						images.hide();
+						scope.css('box-shadow', 'none');
+					}
+				},300);
+			});
+			
+			}else{
+				images.show();			
+			}
+		});
+		
+		if(checkWidth() < 953){
+			elemFirst.unbind('mouseenter mouseleave');
+			elemFirst.bind('click');
+		} 
 }
 
 var responsiveMenu = function(){
