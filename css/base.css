@@ -4943,3 +4943,13 @@ input#piAmount_4_display,
 .price {
     font-family: "ubunturegular",arial !important;
 }
+
+.prodNoDisponible{
+	color: #eb5757;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.not_available{
+	display: none;
+}
