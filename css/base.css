@@ -4953,3 +4953,27 @@ input#piAmount_4_display,
 .not_available{
 	display: none;
 }
+
+.inputLogin{
+	border-radius: 0px !important;
+}
+
+.radioNewUser{
+	margin-right: 20px;
+}
+
+.txtRadioNewUser{
+	margin-right: 5px;
+}
+
+
+#inputTelmexPhone{
+    margin: 10px;
+	width: 191px !important; 
+	font-size: 11px !important;
+    outline: medium none;
+    border: 1px solid #bfbfbf;
+    border-radius: 0px;
+    font-size: 12px;
+	height: 16px !important;
+}

@@ -1,5 +1,11 @@
 /*Script telmexianos /Pixseles*/
-
+	
+	function registroUsuario(){
+		
+			$('#newUserDiv').show();
+			$('#oldUserDiv').hide();
+	
+	}
 
 /*Función para checar el ancho de la pantalla.  Incorrecto poner $(window).width ya que difiere del usado por media queries*/
 function checkWidth(){
@@ -31,6 +37,7 @@ $( document ).ready(function() {
 	responsiveMenu();
 	menuF()
 	hoverMainMenu();
+	
 });
 
 
