@@ -577,6 +577,14 @@
     vertical-align: top;
 }
 
+#order_details .th_align_left_detalles2 {
+    min-width: 220px;
+    font-weight: normal;
+    padding: 6px 0px;
+    text-align: left;
+    vertical-align: top;
+}
+
 #order_details .th_align_left_normal .itemspecs {
 	/*padding-right:10px;*/
 }

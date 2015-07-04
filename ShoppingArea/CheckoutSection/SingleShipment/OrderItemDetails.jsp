@@ -222,7 +222,7 @@
     
     
     
-    
+    <!-- aca estan los titulos de las tablas ================================================================================================================== -->
 	  <tr class="nested">
           <th class="align_center" id="SingleShipment_tableCell_productName"><fmt:message bundle="${storeText}" key="PRODUCT"  /></th>
 		   
@@ -230,24 +230,29 @@
                <th class="expedite" id="SingleShipment_tableCell_expedite"><fmt:message bundle="${storeText}" key="SHIP_EXPEDITE_SHIPPING" /></th>
           </flow:ifEnabled>
           
-		   <th id ="mesesReciboTMX">Meses</th>
+          <th id ="mesesReciboTMX"><fmt:message bundle="${storeText}" key="MESES"/></th>
           
-		   <th class="avail" id="SingleShipment_tableCell_availability"><fmt:message bundle="${storeText}" key="AVAILABILITY"  /></th>
+          <th class="elementosocultos" class="avail" id="SingleShipment_tableCell_availability"><fmt:message bundle="${storeText}" key="AVAILABILITY"  /></th>
           
-          <th class="QTY short align_center" id="SingleShipment_tableCell_quantity" abbr="<fmt:message bundle="${storeText}" key="QUANTITY1"  />"><fmt:message bundle="${storeText}" key="QTY"  /></th>
+          <th class="elementosocultos QTY short align_center" id="SingleShipment_tableCell_quantity" abbr="<fmt:message bundle="${storeText}" key="QUANTITY1"  />"><fmt:message bundle="${storeText}" key="QTY"  /></th>
           
 		   <th class="each short elementosocultos" id="SingleShipment_tableCell_unitPrice" abbr="<fmt:message bundle="${storeText}" key="UNIT_PRICE"  />"><fmt:message bundle="${storeText}" key="EACH"  /></th>
           <th class="total short elementosocultos" id="SingleShipment_tableCell_totalPrice" abbr="<fmt:message bundle="${storeText}" key="TOTAL_PRICE"  />"><fmt:message bundle="${storeText}" key="TOTAL"  /></th>
            
-          <th class="elementosocultos" id="totalRReciboTMX">Total Restante</th>
+          <th class="elementosocultos" id="totalRReciboTMX"><fmt:message bundle="${storeText}" key="TOTAL_RESTANTE"/></th>
           
-          <th class="elementosocultos" id ="factorReciboTMX">Factor</th>
+          <th class="elementosocultos" id ="factorReciboTMX"><fmt:message bundle="${storeText}" key="FACTOR"/></th>
           
-          <th class="elementosocultos" id ="financiamientoReciboTMX">Financiamiento</th>
+          <th class="elementosocultos" id ="financiamientoReciboTMX"><fmt:message bundle="${storeText}" key="FINANCIAMIENTO"/></th>
           
-          <th class="elementosocultos" id="valorProductoTMX">Valor de Producto</th>
+          <th class="elementosocultos" id="valorProductoTMX"><fmt:message bundle="${storeText}" key="VALOR_PRODUCTO"/></th>
           
-          <th class="total short align_center" id ="totalFinalPagarTMX">Total Final</th>
+          <th class="align_center" id="pagoEnganche"><fmt:message bundle="${storeText}" key="PAGO_ENGANCHE"/></th>
+          
+          <th class="align_center" id ="engancheReciboTMX"><fmt:message bundle="${storeText}" key="ENGANCHE"/></th>
+          
+          <th class="align_center" id ="totalFinalPagarTMX"><fmt:message bundle="${storeText}" key="TOTAL_FINAL"/></th>
+          
           <!-- agregamos un th para que caiga el eliminar-->
           <th class="align_center"></th>
            
@@ -434,8 +439,10 @@
 		</c:forEach>
 
 		<tr>
-			<th class="th_align_left_detalles <c:out value="${nobottom}"/>" id="SingleShipment_rowHeader_product<c:out value='${status.count}'/>" abbr="<fmt:message bundle="${storeText}" key="Checkout_ACCE_for"  /> ${catEntry.name}">
-				<div class="img imagen_resumen_pedido" id="WC_OrderItemDetails_div_1_<c:out value='${status.count}'/>">
+			<th class="th_align_left_detalles2 <c:out value="${nobottom}"/>" id="SingleShipment_rowHeader_product<c:out value='${status.count}'/>" abbr="<fmt:message bundle="${storeText}" key="Checkout_ACCE_for"  /> ${catEntry.name}">
+				
+                
+                <div class="img imagen_resumen_pedido" id="WC_OrderItemDetails_div_1_<c:out value='${status.count}'/>">
 					<c:set var="catEntryIdentifier" value="${catEntry.uniqueID}"/>
 					<c:choose>
 						<c:when test="${!empty thumbNail}">
@@ -445,17 +452,23 @@
 							<c:set var="imgSource" value="${jspStoreImgDir}images/NoImageIcon_sm.jpg" />
 						</c:otherwise>
 					</c:choose>
-					<a href="${catEntryDisplayUrl}" id="catalogEntry_img_${orderItem.orderItemId}" title="${catEntry.name}">
+					<!-- <%--
+                    <a href="${catEntryDisplayUrl}" id="catalogEntry_img_${orderItem.orderItemId}" title="${catEntry.name}">
 						<img alt="${catEntry.name}" src="${imgSource}"/>
-					</a>
+					</a>--%> -->
 					<c:remove var="thumbNail"/>
 				</div>
+                
+                
+                
 				<div class="itemspecs especificaciones_resumen_pedido" id="WC_OrderItemDetails_div_2_<c:out value='${status.count}'/>">
 					<p><a class="hover_underline" id="catalogEntry_name_${orderItem.orderItemId}" href="<c:out value="${catEntryDisplayUrl}"/>"><c:out value="${catEntry.name}" escapeXml="false"/></a></p>
-					<span><fmt:message bundle="${storeText}" key="CurrentOrder_SKU"  /> <c:out value="${catEntry.partNumber}" escapeXml="false"/></span>
+					<!-- <%-- <span><fmt:message bundle="${storeText}" key="CurrentOrder_SKU"  /> <c:out value="${catEntry.partNumber}" escapeXml="false"/></span>--%> -->
 					<br />
-					<%@ include file="../../../Snippets/ReusableObjects/OrderGiftItemDisplayExt.jspf" %>
+					
+                    <%@ include file="../../../Snippets/ReusableObjects/OrderGiftItemDisplayExt.jspf" %>
 					<%@ include file="../../../Snippets/ReusableObjects/GiftRegistryOrderGiftItemDisplayExt.jspf" %>
+                   
 					<%--
 					 ***
 					 * Start: Display Defining attributes
@@ -637,7 +650,9 @@
 					</select>
 				</span>
 			</td>
-			<td class="avail <c:out value="${nobottom}"/>" id="WC_OrderItemDetails_td_1_<c:out value='${status.count}'/>" headers="SingleShipment_tableCell_availability SingleShipment_rowHeader_product<c:out value='${status.count}'/>">
+			
+                        
+            <td class="avail elementosocultos <c:out value="${nobottom}"/>" id="WC_OrderItemDetails_td_1_<c:out value='${status.count}'/>" headers="SingleShipment_tableCell_availability SingleShipment_rowHeader_product<c:out value='${status.count}'/>">
 
 				<%@ include file="../../../Snippets/ReusableObjects/CatalogEntryAvailabilityDisplay.jspf" %>
 				<c:if test="${fn:contains(availabilityFlag,'outofStock')}">
@@ -647,7 +662,7 @@
 			
                         
                         
-                        <td class="QTY <c:out value="${nobottom}"/>" id="WC_OrderItemDetails_td_2_<c:out value='${status.count}'/>" headers="SingleShipment_tableCell_quantity SingleShipment_rowHeader_product<c:out value='${status.count}'/>">
+            <td class="QTY elementosocultos <c:out value="${nobottom}"/>" id="WC_OrderItemDetails_td_2_<c:out value='${status.count}'/>" headers="SingleShipment_tableCell_quantity SingleShipment_rowHeader_product<c:out value='${status.count}'/>">
 				<p class="item-quantity">
 					<c:choose>
 						<c:when test="${isFreeGift}">
@@ -701,7 +716,7 @@
              <td class="elementosocultos" headers="totalRReciboTMX"> 
 				<span class="price">
 					<input type="text" id="totalRFinal_<c:out value='${status.count}'/>" name="totalRFinal" size="10" disabled="disabled" value="<fmt:formatNumber value="${orderItem.unitPrice}" type="currency" maxFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}"/>"/>
-					<p class="nested">Porcentaje de enganche</p>
+                    <p class="nested"><fmt:message bundle="${storeText}" key="PORCENTAJE_ENGANCHE"/></p>
 					<input type="text" id="valorEnganchePorcentaje_<c:out value='${status.count}'/>" name="valorEnganchePorcentaje" size="10" onchange="updateDetailsProduct(<c:out value='${status.count}'/>);sumaTotalFinanciamiento();asignarMonederoandPayback();"/>	
 				</span>
 			</td>
@@ -711,7 +726,7 @@
             
             <td class="elementosocultos" headers="factorReciboTMX"> 
 				<input type="text" id="factorPriceItem_<c:out value='${status.count}'/>" name="factorPriceItem" value="0" size="10" onchange="updateDetailsProduct(<c:out value='${status.count}'/>);sumaTotalFinanciamiento();" />
-				<p class="nested">Aplica Monedero
+                <p class="nested"><fmt:message bundle="${storeText}" key="APLICA_MONEDERO"/>
 				
 							<span class="price">
 								<input type="text" id="valorAplicaMonedero_<c:out value='${status.count}'/>" name="valorAplicaMonedero" size="10" disabled="disabled" value="0"/>	
@@ -725,7 +740,7 @@
 					<input type="text" id="finaProducto_<c:out value='${status.count}'/>" name="finaProducto" disabled="disabled" size="10" value="<fmt:formatNumber value="" type="currency" maxFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}"/>"/>
 					<c:out value="${CurrencySymbol}"/>
 					
-					<p class="nested">Aplica Payback</p>
+                    <p class="nested"><fmt:message bundle="${storeText}" key="APLICA_PAYBACK"/></p>
 					<p>
 							<span class="price">
 								<input type="text" id="valorAplicaPayback_<c:out value='${status.count}'/>" name="valorAplicaPayback_" size="10" disabled="disabled" value="0"/>	
@@ -737,7 +752,7 @@
            <td class="elementosocultos" headers="valorProductoTMX"> 
 			<c:set  var="valProducto" value="0"></c:set>
 				<input type="text" id="valorProductoTMX_<c:out value='${status.count}'/>" name="valorProductoTMX" size="10" disabled="disabled" value="<fmt:formatNumber value="${valProducto}" type="currency" maxFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}"/>"/>
-				<p class="nested">Aplica Monto Monedero Payback</p>
+               <p class="nested"><fmt:message bundle="${storeText}" key="APLICA_MONEDERO_PAYBACK"/></p>
 					<p>
 							<span class="price">
 								<input type="text" id="valorAplicaPaybackMonedero_<c:out value='${status.count}'/>" name="valorAplicaPaybackMonedero" size="10" disabled="disabled" value="0"/>	
@@ -745,6 +760,118 @@
 						</p>
 				
 			</td>
+                    
+                    
+                    
+                    <td headers="pagoEnganche">
+                        <select id="mesesRTMXEnganche_<c:out value='${status.count}'/>" name="mesesRTMXEnganche"  onchange="cambioInstamell();sumaRestateCardAndRecibo();">
+
+                            <c:forEach var="payment" varStatus="paymentCounter" items="${usablePaymentInfo.usablePaymentInformation}">
+                                <c:set var="currentPaymentMethodName" value="${payment.paymentMethodName}"/>
+                                <c:if test="${currentPaymentMethodName eq 'TelmexRecibo'}">
+                                    <c:if test="${paymentMethodSelected == payment.paymentMethodName}">
+                                        <c:set var="selectStr" value='selected="selected"' />
+                                    </c:if>
+                                    <option <c:out value="${selectStr}" escapeXml="false"/> value="${currentPaymentMethodName}<c:if test='${!empty payment.paymentTermConditionId}'><c:out value='_${payment.paymentTermConditionId}'/></c:if>">${payment.description} /1 pago</option>
+                                <c:set var="selectStr" value="" />
+                                </c:if>
+                            </c:forEach>
+                        <option value="0"><fmt:message bundle="${storeText}" key="PAGO_TARJETA"/></option>
+                    </select>
+                        </td>      
+                    
+                    
+                    
+                        <td headers="engancheReciboTMX" > 
+                            <span class="price">
+                                <input type="text" id="valorEnganche_<c:out value='${status.count}'/>" name="valorEnganche" size="10" disabled="disabled" value="0"/>	
+                            </span>
+                        </td>
+                        
+                        
+                        
+                        
+                    
+                    
+                    
+                    <!--aca dejamos enganche ======================================================================================================================== -->
+<td class="elementosocultos" headers="pagoEnganche">
+                        <table id="tableEnganche_<c:out value='${status.count}'/>" name="tableEnganche" cellpadding="0" cellspacing="3" border="0">
+                            <tr class="nested">
+                                <th id="pagoEnganche" align="center"><fmt:message bundle="${storeText}" key="PAGO_ENGANCHE"/></th>
+                                <th class="QTY" id="SingleShipment_tableCell_quantity" abbr="<fmt:message bundle="${storeText}" key="QUANTITY1"  />"><fmt:message bundle="${storeText}" key="QTY"  /></th>
+                                <th id ="engancheReciboTMX"><fmt:message bundle="${storeText}" key="ENGANCHE"/></th>
+                                <th id ="engancheMonederoTMX"><fmt:message bundle="${storeText}" key="MONEDERO"/></th>
+                                <th id ="enganchePaybackTMX"><fmt:message bundle="${storeText}" key="PAYBACK"/></th>
+                                <th id ="engancheSumaTMX"><fmt:message bundle="${storeText}" key="SUMA"/></th>
+                                <th id ="engancheRestantePagarTMX"><fmt:message bundle="${storeText}" key="ENGANCHE_RESTANTE"/></th>
+                            </tr>
+
+                            <tr>
+
+
+                                <td headers="pagoEnganche">
+                                    <select id="mesesRTMXEnganche_<c:out value='${status.count}'/>" name="mesesRTMXEnganche"  onchange="cambioInstamell();sumaRestateCardAndRecibo();">
+
+                                        <c:forEach var="payment" varStatus="paymentCounter" items="${usablePaymentInfo.usablePaymentInformation}">
+                                            <c:set var="currentPaymentMethodName" value="${payment.paymentMethodName}"/>
+                                            <c:if test="${currentPaymentMethodName eq 'TelmexRecibo'}">
+                                                <c:if test="${paymentMethodSelected == payment.paymentMethodName}">
+                                                    <c:set var="selectStr" value='selected="selected"' />
+                                                </c:if>
+                                                <option <c:out value="${selectStr}" escapeXml="false"/> value="${currentPaymentMethodName}<c:if test='${!empty payment.paymentTermConditionId}'><c:out value='_${payment.paymentTermConditionId}'/></c:if>">${payment.description} /1 pago</option>
+                                            <c:set var="selectStr" value="" />
+                                            </c:if>
+                                        </c:forEach>
+                                    <option value="0"><fmt:message bundle="${storeText}" key="PAGO_TARJETA"/></option>
+                            </select>
+                            </td>
+
+
+                    <td class="QTY <c:out value="${nobottom}"/>" id="WC_OrderItemDetails_td_2_<c:out value='${status.count}'/>" headers="SingleShipment_tableCell_quantity SingleShipment_rowHeader_product<c:out value='${status.count}'/>">
+                        <p class="item-quantity">
+                            <c:choose>
+                                <c:when test="${isFreeGift}">
+                                    <%-- This is a free item..can't change the qty --%>
+                                                                  <input type="hidden" value="-1" id='freeGift_qty_<c:out value="${status.count}"/>' name='qty_<c:out value="${status.count}"/>'><span><c:out value="${quickCartOrderItemQuantity}"/></span>
+                                </c:when>
+                                <c:otherwise>
+                                    <input type="hidden" value="<c:out value="${quickCartOrderItemQuantity}"/>" id='qty_<c:out value="${status.count}"/>' name='qty_<c:out value="${status.count}"/>' /><span><c:out value="${quickCartOrderItemQuantity}"/></span>
+                                </c:otherwise>
+                            </c:choose>
+                        </p>
+                    </td>
+                    <td headers="engancheReciboTMX" > 
+                        <span class="price">
+                            <input type="text" id="valorEnganche_<c:out value='${status.count}'/>" name="valorEnganche" size="10" disabled="disabled" value="0"/>	
+                        </span>
+                    </td>
+                    <td headers="engancheMonederoTMX">
+                        <span class="price">
+                            <input type="text" id="valorAplicaEngancheMT_<c:out value='${status.count}'/>" name="valorAplicaEngancheMT" size="10" value="0"/>	
+                        </span>
+                    </td>
+                    <td headers="enganchePaybackTMX">
+                        <span class="price">
+                            <input type="text" id="valorAplicaEnganchePB_<c:out value='${status.count}'/>" name="valorAplicaEnganchePB" size="10"  value="0"/>	
+                        </span>
+                    </td>
+                    <td headers="enganchePaybackTMX">
+                        <span class="price">
+                            <input type="text" id="valorAplicaEnganchePBM_<c:out value='${status.count}'/>" name="valorAplicaEnganchePBM" size="10"  value="0"/>	
+                        </span>
+                    </td>
+                    <td headers="engancheRestantePagarTMX">
+                        <span class="price">
+                            <input type="text" id="totalRestanteEnganchePg_<c:out value='${status.count}'/>" name="totalRestanteEnganchePg" size="10"  value="0"/>	
+                        </span>
+                    </td>						
+                    </tr>                        
+                        </table>                       
+                        
+                   </td> 
+                    
+                    
            
 			<td headers="totalFinalPagarTMX"> 
 				<input type="text" id="totalFinalReciboTMX_<c:out value='${status.count}'/>" name="totalFinalReciboTMX" size="10" disabled="disabled" value="${orderItem.unitPrice}"/>
@@ -789,15 +916,99 @@
                             </flow:ifDisabled>
 
 
-                        </td>            
+                        </td>
+                    
+                    
+                 <td>
+                     <!-- aca ocultamos combobox de pago enganche -->
+<table class="elementosocultos" id="tableEnganche_<c:out value='${status.count}'/>" name="tableEnganche" cellpadding="0" cellspacing="3" border="0">
+                         <tr class="nested">
+                             <th id="pagoEnganche" align="center"><fmt:message bundle="${storeText}" key="PAGO_ENGANCHE"/></th>
+                             <th class="QTY" id="SingleShipment_tableCell_quantity" abbr="<fmt:message bundle="${storeText}" key="QUANTITY1"  />"><fmt:message bundle="${storeText}" key="QTY"  /></th>
+                             <th id ="engancheReciboTMX"><fmt:message bundle="${storeText}" key="ENGANCHE"/></th>
+                             <th id ="engancheMonederoTMX"><fmt:message bundle="${storeText}" key="MONEDERO"/></th>
+                             <th id ="enganchePaybackTMX"><fmt:message bundle="${storeText}" key="PAYBACK"/></th>
+                             <th id ="engancheSumaTMX"><fmt:message bundle="${storeText}" key="SUMA"/></th>
+                             <th id ="engancheRestantePagarTMX"><fmt:message bundle="${storeText}" key="ENGANCHE_RESTANTE"/></th>
+                         </tr>
+
+                         <tr>
+                             
+                             
+                             <td headers="pagoEnganche">
+                                 <select id="mesesRTMXEnganche_<c:out value='${status.count}'/>" name="mesesRTMXEnganche"  onchange="cambioInstamell();sumaRestateCardAndRecibo();">
+
+                                     <c:forEach var="payment" varStatus="paymentCounter" items="${usablePaymentInfo.usablePaymentInformation}">
+                                         <c:set var="currentPaymentMethodName" value="${payment.paymentMethodName}"/>
+                                         <c:if test="${currentPaymentMethodName eq 'TelmexRecibo'}">
+                                             <c:if test="${paymentMethodSelected == payment.paymentMethodName}">
+                                                 <c:set var="selectStr" value='selected="selected"' />
+                                             </c:if>
+                                             <option <c:out value="${selectStr}" escapeXml="false"/> value="${currentPaymentMethodName}<c:if test='${!empty payment.paymentTermConditionId}'><c:out value='_${payment.paymentTermConditionId}'/></c:if>">${payment.description} /1 pago</option>
+                                         <c:set var="selectStr" value="" />
+                                         </c:if>
+                                     </c:forEach>
+                                 <option value="0"><fmt:message bundle="${storeText}" key="PAGO_TARJETA"/></option>
+                         </select>
+                         </td>
+                     
+                     
+                    <td class="QTY <c:out value="${nobottom}"/>" id="WC_OrderItemDetails_td_2_<c:out value='${status.count}'/>" headers="SingleShipment_tableCell_quantity SingleShipment_rowHeader_product<c:out value='${status.count}'/>">
+                        <p class="item-quantity">
+                            <c:choose>
+                                <c:when test="${isFreeGift}">
+                                    <%-- This is a free item..can't change the qty --%>
+                                                                  <input type="hidden" value="-1" id='freeGift_qty_<c:out value="${status.count}"/>' name='qty_<c:out value="${status.count}"/>'><span><c:out value="${quickCartOrderItemQuantity}"/></span>
+                                </c:when>
+                                <c:otherwise>
+                                    <input type="hidden" value="<c:out value="${quickCartOrderItemQuantity}"/>" id='qty_<c:out value="${status.count}"/>' name='qty_<c:out value="${status.count}"/>' /><span><c:out value="${quickCartOrderItemQuantity}"/></span>
+                                </c:otherwise>
+                            </c:choose>
+                        </p>
+                    </td>
+                    <td headers="engancheReciboTMX" > 
+                        <span class="price">
+                            <input type="text" id="valorEnganche_<c:out value='${status.count}'/>" name="valorEnganche" size="10" disabled="disabled" value="0"/>	
+                        </span>
+                    </td>
+                    <td headers="engancheMonederoTMX">
+                        <span class="price">
+                            <input type="text" id="valorAplicaEngancheMT_<c:out value='${status.count}'/>" name="valorAplicaEngancheMT" size="10" value="0"/>	
+                        </span>
+                    </td>
+                    <td headers="enganchePaybackTMX">
+                        <span class="price">
+                            <input type="text" id="valorAplicaEnganchePB_<c:out value='${status.count}'/>" name="valorAplicaEnganchePB" size="10"  value="0"/>	
+                        </span>
+                    </td>
+                    <td headers="enganchePaybackTMX">
+                        <span class="price">
+                            <input type="text" id="valorAplicaEnganchePBM_<c:out value='${status.count}'/>" name="valorAplicaEnganchePBM" size="10"  value="0"/>	
+                        </span>
+                    </td>
+                    <td headers="engancheRestantePagarTMX">
+                        <span class="price">
+                            <input type="text" id="totalRestanteEnganchePg_<c:out value='${status.count}'/>" name="totalRestanteEnganchePg" size="10"  value="0"/>	
+                        </span>
+                    </td>						
+                    </tr>                        
+                        </table>
+                       
+                    
+                    </td>   
+                    
+                    
+                    
+                    
+                    
         </tr>
         
-        <tr class="elementosocultos"> 
+        <tr> 
 		<td></td>
-			<td colspan="2" id="tdEnganche_<c:out value='${status.count}'/>">
+            <td class="elementosocultos" colspan="2" id="tdEnganche_<c:out value='${status.count}'/>">
 				<table>
 					<tr class="nested">
-						<th id="conEnganche" align="center">Con Enganche</th>
+                        <th id="conEnganche" align="center"><fmt:message bundle="${storeText}" key="CON_ENGANCHE"/></th>
 					</tr>
 					<tr>
 						<td>
@@ -807,16 +1018,17 @@
 				</table>
 			</td>
 			
-			<td colspan="7">
-				<table id="tableEnganche_<c:out value='${status.count}'/>" name="tableEnganche" cellpadding="0" cellspacing="3" border="0">
+            <td colspan="7" class="elementosocultos">
+				<!-- aca acultamos la tabla que subimos
+                <table id="tableEnganche_<c:out value='${status.count}'/>" name="tableEnganche" cellpadding="0" cellspacing="3" border="0">
 					<tr class="nested">
-						<th id="pagoEnganche" align="center">Pago para Enganche</th>
+                        <th id="pagoEnganche" align="center"><fmt:message bundle="${storeText}" key="PAGO_ENGANCHE"/></th>
 			  			<th class="QTY" id="SingleShipment_tableCell_quantity" abbr="<fmt:message bundle="${storeText}" key="QUANTITY1"  />"><fmt:message bundle="${storeText}" key="QTY"  /></th>
-			  			<th id ="engancheReciboTMX">Enganche</th>
-			  			<th id ="engancheMonederoTMX">Monedero</th>
-			  			<th id ="enganchePaybackTMX">Payback</th>
-			  			<th id ="engancheSumaTMX">Suma</th>
-			  			<th id ="engancheRestantePagarTMX">Enganche Restante</th>
+                        <th id ="engancheReciboTMX"><fmt:message bundle="${storeText}" key="ENGANCHE"/></th>
+                        <th id ="engancheMonederoTMX"><fmt:message bundle="${storeText}" key="MONEDERO"/></th>
+                        <th id ="enganchePaybackTMX"><fmt:message bundle="${storeText}" key="PAYBACK"/></th>
+                        <th id ="engancheSumaTMX"><fmt:message bundle="${storeText}" key="SUMA"/></th>
+                        <th id ="engancheRestantePagarTMX"><fmt:message bundle="${storeText}" key="ENGANCHE_RESTANTE"/></th>
 					</tr>
                                 
 					<tr>
@@ -833,7 +1045,7 @@
 										<c:set var="selectStr" value="" />
 									</c:if>
 								</c:forEach>
-								<option value="0">Pago con Tarjeta </option>
+                            <option value="0"><fmt:message bundle="${storeText}" key="PAGO_TARJETA"/></option>
 							</select>
 						</td>
 						<td class="QTY <c:out value="${nobottom}"/>" id="WC_OrderItemDetails_td_2_<c:out value='${status.count}'/>" headers="SingleShipment_tableCell_quantity SingleShipment_rowHeader_product<c:out value='${status.count}'/>">
@@ -873,11 +1085,15 @@
 							<span class="price">
 								<input type="text" id="totalRestanteEnganchePg_<c:out value='${status.count}'/>" name="totalRestanteEnganchePg" size="10"  value="0"/>	
 							</span>
-						</td>
-						</td>
+						</td>						
 					</tr>                        
-				</table>
+				</table>-->
 			</td>
+                    
+                    
+                    
+                    
+                    
 		</tr>
 		<c:remove var="nobottom"/>
 

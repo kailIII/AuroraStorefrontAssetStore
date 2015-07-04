@@ -422,7 +422,7 @@ wc.render.declareRefreshController({
 	
 		<c:if test="${i eq 4}">
 			<div class="tarjtas-check">
-			<h2 class="">¿Qué tarjeta deseas utilizar?</h2>
+                <h2 class=""><fmt:message bundle="${storeText}" key="QUE_TARJETA_DESEA_UTILIZAR"/></h2>
 			</div>
 		</c:if>	
 		<div id="WC_CheckoutPaymentsAndBillingAddressf_div_1_<c:out value='${status2.count}'/>">

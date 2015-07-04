@@ -881,8 +881,8 @@ need to first assign a valid address id to these order items before proceeding w
                                                     <c:set var="showPayInStore" value="false"/>
                                                     <div class="body shipping_billing_height" id="WC_ShipmentDisplay_div_30">
                                                         <div class="tarjtas-check">
-                                                            <h2 class="">Utiliza tu correo electrónico</h2>
-                                                            <p>Ingresa el monto que deseas aplicar al total de tu compra.</p>
+                                                            <h2 class=""><fmt:message bundle="${storeText}" key="UTILIZA_TU_DINERO_ELECTRONICO"/></h2>
+                                                            <p><fmt:message bundle="${storeText}" key="INGRESA_MONTO_APLICAR"/></p>
                                                         </div>
                                                         <%@ include file="CheckoutPaymentsAndBillingAddress.jspf"%>
                                                         <%@ include file="OrderAdditionalDetailExt.jspf"%>

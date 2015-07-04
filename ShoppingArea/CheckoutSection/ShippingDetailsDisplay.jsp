@@ -49,8 +49,6 @@
 		<wcf:param name="pageNumber" value="1"/>
 	</wcf:rest>
 </c:if>
-
-    
 <c:set var="hideSingleShipment" value="false"/>
 <fmt:parseNumber var="maxOrderItemsToInspect" value="${maxOrderItemsToInspect}"/>
 <fmt:parseNumber var="numEntries" value="${param.recordSetTotal}" integerOnly="true" />
@@ -122,7 +120,7 @@
 	<wcf:param name="forceShipmentType" value="2" />
 </wcf:url>
 
-<%@ include file="../../Snippets/Marketing/Promotions/PromotionChoiceOfFreeGiftsPopup.jspf" %> 
+<%@ include file="../../Snippets/Marketing/Promotions/PromotionChoiceOfFreeGiftsPopup.jspf" %>
 
 
 <!-- aca agregamos la otra pleca gris -->    
@@ -140,10 +138,7 @@
         
 <c:choose>
 	<c:when test = "${shipmentTypeId == 1}">
-		
-        
-        
-        <flow:ifEnabled  feature="MultipleShipments">	
+		<flow:ifEnabled  feature="MultipleShipments">	
 		   <div class="checkout_subheader" id="WC_ShipmentDisplay_div_9">		
 				<div class="checkout_subheader_content" id="WC_ShipmentDisplay_div_11"><span class="content_text"><fmt:message bundle="${storeText}" key="SHIP_MULTIPLE_SHIPMENT_MESSAGE"/></span></div>
 				<a role="button" class="button_primary header_element_align" id="WC_ShipmentDisplay_links_3" tabindex="0" href="javascript:setPageLocation('<c:out value="${MultipleShipmentPageURL}"/>')">
@@ -162,9 +157,6 @@
 				</div>
 		   </div>
 	   </flow:ifEnabled>
-      
-               
-               
 	   <c:if test="${!isAjaxCheckOut}">
 			<script type="text/javascript">
 				///////////////////////////////////////////////////////////////////////
@@ -265,7 +257,28 @@
 							<c:set var="AddToRequisitionListsJSIncluded" value="true" scope="request"/>
 						</c:if>	
 				</flow:ifEnabled>			
-						<span id="singleShipmentOrderDetails_ACCE_Label" class="spanacce"><fmt:message bundle="${storeText}" key="ACCE_Region_Order_Item_List"/></span>
+						
+                    
+                    
+                    
+                    <span id="singleShipmentOrderDetails_ACCE_Label" class="spanacce"><fmt:message bundle="${storeText}" key="ACCE_Region_Order_Item_List"/></span>
+                    
+                    
+                    
+                    
+                    
+                    <!-- aca agregamos la otra pleca gris -->        
+                    <div class="main_header gris">
+                        <p class="numero_head">2</p>
+                        <div class="separador_blanco"></div>
+                        <div class="left_corner_straight" ></div>
+                        <div class="headingtext"><span aria-level="1" class="main_header_text" role="heading"><fmt:message bundle="${storeText}" key="DETALLE_COMPRA"/></span></div>
+                        <div class="right_corner_straight"></div>
+                    </div>
+                    
+                    
+                    
+                    
 						<div dojoType="wc.widget.RefreshArea" widgetId="singleShipmentOrderDetails" controllerId="traditionalShipmentDetailsController" ariaMessage="<fmt:message bundle="${storeText}" key="ACCE_Status_Order_Item_List_Updated"/>" ariaLiveId="${ariaMessageNode}" role="region" aria-labelledby="singleShipmentOrderDetails_ACCE_Label" id="WC_ShipmentDisplay_div_17" style="display:none;">
 							<flow:ifEnabled feature="ShowHideOrderItems">
 								<%-- Retrieve the current page of order & order item information from this request --%>
