@@ -536,7 +536,9 @@ Optional display parameters:
 		<div class="price" id="WC_CatalogEntryDBThumbnailDisplayJSPF_<c:out value='${catEntryIdentifier}'/>_div_10">
 			<%@ include file="../Search/CatalogEntryPriceDisplay.jspf" %>
 		</div>
-		<div class="button" id="WC_CatalogEntryDBThumbnailDisplayJSPF_<c:out value='${catEntryIdentifier}'/>_div_11">
+		
+		<!-- se oculta div de agregar en wihlist -->
+		<div class="button elementosocultos" id="WC_CatalogEntryDBThumbnailDisplayJSPF_<c:out value='${catEntryIdentifier}'/>_div_11">
 			<c:choose>
 				<c:when test="${wishListPage  || sharedWishList}">
 					<wcf:url var="interestItemDeleteURL" value="InterestItemDelete" type="Ajax">

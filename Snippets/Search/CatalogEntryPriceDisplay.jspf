@@ -56,14 +56,14 @@ The rules for price display are as follows:
 		</c:if>
 		
 		<c:if test="${!empty minimumPriceString && !empty maximumPriceString}">
-			<div <c:if test="${!empty priceHighlightable}">id="offerPrice"</c:if> class="offerprice bold">
+			<div <c:if test="${!empty priceHighlightable}">id="offerPrice"</c:if> class="offerprice ">
 				<fmt:formatNumber value="${minimumPriceString}" type="currency" currencySymbol="${env_CurrencySymbolToFormat}" maxFractionDigits="${env_currencyDecimal}"/> - 
 				<fmt:formatNumber value="${maximumPriceString}" type="currency" currencySymbol="${env_CurrencySymbolToFormat}" maxFractionDigits="${env_currencyDecimal}"/>
 			</div>			
 		</c:if>
 
 		<c:if test="${!empty priceString && empty minimumPriceString && empty maximumPriceString}">
-			<div <c:if test="${!empty priceHighlightable}">id="offerPrice"</c:if> class="offerprice bold">
+			<div <c:if test="${!empty priceHighlightable}">id="offerPrice"</c:if> class="offerprice ">
 				<fmt:formatNumber value="${priceString}" type="currency" currencySymbol="${env_CurrencySymbolToFormat}" maxFractionDigits="${env_currencyDecimal}"/>
 			</div>			
 		</c:if>

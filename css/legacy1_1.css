@@ -2110,12 +2110,12 @@ tr.dijitCalendarMonthContainer {
 	font-family:arial,helvetica,sans-serif !important;    
     font-size: 13px !important;
     color: #fa8846 !important;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
-.offerprice {
+/* .offerprice {
 	color: #CA4200;
-}
+} */
 
 .order_print_signup {
 	line-height: 32px;
@@ -3050,7 +3050,7 @@ div#Scheduled {
 }
 
 .my_account_wishlist {
-	width:66.666666%;
+	/* width:66.666666%; */
 	float:left;
 	font-size:14px;
 }
@@ -3269,9 +3269,10 @@ div#top_pagination, div .top_pagination {
 #four-grid-wishlist .item .price {
 	padding-left: 3px;
 	padding-bottom:10px;
-	font-size: 12px;
+	font-size: 16px !important;
 	min-height: 32px;
 	font-family: arial, helvetica, sans-serif;
+	color: #fa8846 !important;
 }
 
 #four-grid .item .button .multiple_buttons,#four-grid-wishlist .item .button .multiple_buttons,#four-grid-espot .item .button .multiple_buttons {
@@ -4520,4 +4521,9 @@ td.item .listPrice {
     right: 20px;
     top: 100px;
     z-index: 998;
+}
+
+#four-grid-wishlist .item .price {
+	color: #fa8846 !important;
+	font-weight: lighter !important;
 }

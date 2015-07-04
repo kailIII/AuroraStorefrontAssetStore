@@ -983,6 +983,17 @@ div.widget_product_image_viewer {
 	margin-bottom: 10px;
 }
 
+.definingAttributes>div {
+  text-transform: lowercase;
+}
+
+.definingAttributes>div:first-letter {
+  text-transform: uppercase;
+}
+
+.definingAttributes>div span:first-letter {
+  text-transform: uppercase;
+}
 .heading{
 	margin-top: 10px !important;
 	font-weight: lighter !important;
@@ -2439,7 +2450,7 @@ div.widget_sidebar_container > .left_border > .right_border > .content div.produ
 .product_info > .product_price {
 	color: #ca4200;
 	font-size: 14px;
-	font-weight: bold;
+	/* font-weight: bold; */
 }
 .product_info > .product_price > .old_price {
 	color: #767676;
