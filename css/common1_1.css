@@ -8070,8 +8070,8 @@ font-size: 24px;
 .boton_cantidad{
     color: rgb(235, 235, 235);
     border-style: solid;
-    width: 10px;
-    height: 10px;
+    width: 5px;
+    height: 5px;
     -webkit-transform-origin: 10px 10px 0px;
     float: left;
     background-color: rgb(235, 235, 235);

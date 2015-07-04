@@ -224,13 +224,9 @@
 
             <div class="promotion_input" id="WC_PromotionCodeDisplay_div_2">
                 <input type="text" class="input" size="6" name="promoCode" id="promoCode" onchange="javaScript:TealeafWCJS.processDOMEvent(event);" onkeypress="if(event.keyCode==13) JavaScript:CheckoutHelperJS.applyPromotionCode('PromotionCodeForm','<c:out value='${returnView}'/>')"/>
-                
-                
                 <a href="#" role="button" class="button_primary promotion_btn2" id="WC_PromotionCodeDisplay_links_1" aria-labelledby="WC_PromotionCodeDisplay_links_1_ACCE_Label" tabindex="0" onclick="JavaScript:setCurrentId('WC_PromotionCodeDisplay_links_1'); CheckoutHelperJS.applyPromotionCode('PromotionCodeForm','<c:out value='${returnView}'/>');return false;">
-                    <div class="button_text"><fmt:message bundle="${storeText}" key="APPLY"/><span id="WC_PromotionCodeDisplay_links_1_ACCE_Label" class="spanacce"><fmt:message bundle="${storeText}" key="Checkout_ACCE_promo_code_apply" /></span></div>                    
+                    <div class="button_text btnGris"><fmt:message bundle="${storeText}" key="APPLY"/><span id="WC_PromotionCodeDisplay_links_1_ACCE_Label" class="spanacce"><fmt:message bundle="${storeText}" key="Checkout_ACCE_promo_code_apply" /></span></div>                    
                 </a>
-                
-                
                 <c:set var="promoCodeString" value=""/>
             </div>
             
@@ -360,7 +356,7 @@
     </div>
     
     <div id="total_breakdown">
-        <table width="100%" id="order_total2" cellpadding="0" cellspacing="0" border="0" role="presentation">
+        <table id="order_total2" cellpadding="0" cellspacing="0" border="0" role="presentation">
 
             <%-- ORDER SUBTOTAL--%>
                 <tr>
@@ -439,10 +435,18 @@
                                 
                                 <tr>
                                     <td>
-                                        <div class="linea_total"></div>
+                                        <div class="linea_total">
+                                        <svg version="1.2" width="100%">
+                                            <line x1="0" y1="5.5" x2="244" y2="5.5" stroke="#f2eff0" stroke-width="1" stroke-dasharray="" stroke-linecap="square"></line>
+                                        </svg>
+                                        </div>
                                     </td>
                                     <td>
-                                        <div class="linea_total"></div>
+                                        <div class="linea_total">
+                                        <svg version="1.2" width="100%">
+                                            <line x1="0" y1="5.5" x2="244" y2="5.5" stroke="#f2eff0" stroke-width="1" stroke-dasharray="" stroke-linecap="square"></line>
+                                        </svg>
+                                        </div>
                                     </td>
                                 </tr>
 
@@ -468,7 +472,22 @@
                                         </td>
                                     </tr>
                                     
-                                    
+                                    <tr>
+                                        <td>
+                                            <div class="linea_total">
+                                                <svg version="1.2" width="100%">
+                                                    <line x1="0" y1="5.5" x2="244" y2="5.5" stroke="#f2eff0" stroke-width="1" stroke-dasharray="" stroke-linecap="square"></line>
+                                                </svg>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="linea_total">
+                                                <svg version="1.2" width="100%">
+                                                    <line x1="0" y1="5.5" x2="244" y2="5.5" stroke="#f2eff0" stroke-width="1" stroke-dasharray="" stroke-linecap="square"></line>
+                                                </svg>
+                                            </div>
+                                        </td>
+                                    </tr>
                                     </table>
                                 
                                 </div>
@@ -488,7 +507,7 @@
     
     
 	<c:if test="${userType != 'G'}">
-		<div class="left" id="shopcartCheckoutButton">
+        <div class="right" id="shopcartCheckoutButton">
 			<c:choose>
 				<c:when test="${requestScope.allContractsValid}">
 					<div class="button_align left" id="WC_CheckoutLogonf_div_10">
@@ -517,8 +536,8 @@
 				</div>
 			</c:if>
 		</div>
-        </c:if>
-    </c:if><!-- aca terminamos el codigo de Daniel -->
+        </c:if><!-- aca terminamos el codigo de Daniel -->
+	</c:if>
 
 	<flow:ifDisabled feature="AjaxCheckout">
 		<div class="left" id="updateShopCart"> 

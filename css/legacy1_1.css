@@ -210,7 +210,6 @@
 }
 
 #box .body .title {
-	font-weight:bold;
 	padding-bottom: 2px;
 }
 
@@ -398,14 +397,15 @@
     width: 50%;
     font-size: 18px;
     color: #1b83ff;
+    font-family: ubunturegular,Arial, Helvetica;
 }
 
 #order_total2 .align_left_total {
     text-align: left;
     width: 50%;
-    font-size: 17px;
-    font-weight: bold;
+    font-size: 18px;
     color: #1b83ff;
+    font-family: ubunturegular,Arial, Helvetica;
 }
 .linea_total{
     margin: 10px 0px;
@@ -1041,7 +1041,7 @@ div#store_selection div.number_info span.blue_text {
 	font-size:12px;
 }
 #shipping .title {
-  font-weight: bold;
+  /*font-weight: bold;*/
 }
 
 #shipping .shipping_address {
@@ -2310,6 +2310,7 @@ div.gift_item_container div.price {
 
 .my_account .info {
 	padding: 8px;
+    display: inline-block;
 }
 
 .my_account .content {
@@ -2354,17 +2355,68 @@ div.gift_item_container div.price {
 
 /* General info table   */
 div.info_table {
-	border-left: 1px solid #e5e5e5;
+	/*border-left: 1px solid #e5e5e5;
 	border-right: 1px solid #e5e5e5;
-	border-top: 1px solid #e5e5e5;
+	border-top: 1px solid #e5e5e5;*/
 	margin-bottom: 10px;
 	display:-moz-inline-block;
 	display:inline-block;
 	zoom:1;
-	*display:inline;
+	*display:inline;  
+    width: 100%;
 }
+div.info_table .row{
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 10px;
+    width: 100%;
+}
+div.info_table2 {    
+    margin-bottom: 10px;
+    display:-moz-inline-block;
+    display:inline-block;
+    zoom:1;
+    *display:inline;
+    float: left;
+    width: 50%;
+}
+
+.saldo_disponible_puntos{
+    float: left;
+    width: 50%;
+    color: rgb(100, 175, 255);
+    font-size: 20px;
+    text-align: center;
+    line-height: normal;
+    font-weight: normal;
+    font-style: normal;
+    font-family: Arial;
+}
+.primer_bloque_puntos{
+    width: 100%;
+    float: left;
+}
+.segundo_bloque_puntos{
+    width: 100%;
+    float: left;
+}
+.separador_puntos{
+    float: left;
+    width: 100%;
+    height: 30px;
+}
+.titulos_table_puntos{
+    color: rgb(94, 94, 94);
+    font-size: 13px;
+    text-align: center;
+    line-height: normal;
+    font-weight: normal !important;
+    font-style: normal;
+    font-family: Arial;
+}
+
+
 div.info_table div.row {
-	border-bottom: 1px solid #e5e5e5;
+	/*border-bottom: 1px solid #e5e5e5;*/
 }
 div.info_table div.row div.label,
 div.info_table div.row div.info_content,
@@ -2377,8 +2429,8 @@ div.info_table div.row div.info_content1{
 	vertical-align: middle;
 }
 div.info_table div.row div.label {
-	border-right: 1px solid #e5e5e5;
-	background-color: #fbfbfb;
+	/*border-right: 1px solid #e5e5e5;
+	background-color: #fbfbfb;*/
 	width: 130px;
 	padding-left: 8px;
 	padding-right: 8px;
@@ -3130,7 +3182,7 @@ div#top_pagination, div .top_pagination {
 	min-height:25px;
 	margin:0 auto;
 	padding:0px;
-	margin-bottom:2px;
+	margin-bottom:0px;
 }
 #breadcrumb .title {
 	padding:0px 0px 7px 15px;
