@@ -710,7 +710,7 @@
 
 							<div id="continue_results" class="item_wrapper_button"> 
 								<div class="single_button_container">
-                                    <input type="submit" id="continue_checkout" name="continue_checkout" class="button_primary button_full" value="<fmt:message bundle="${storeText}" key='MSTLOCRES_CONT_CHECKOUT'/>" />
+									<input type="submit" id="continue_checkout" name="continue_checkout" class="primary_button button_full" value="<fmt:message bundle="${storeText}" key='MSTLOCRES_CONT_CHECKOUT'/>" />
 								</div>
 								<div class="clear_float"></div> 
 							</div>

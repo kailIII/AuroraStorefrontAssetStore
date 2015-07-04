@@ -62,51 +62,47 @@ span.required {
 
 /* Orange Button */
 .primary_button {
-    background-color: #48baf6;	
-	color: #fff;
-	cursor: pointer;
+	background: -webkit-gradient(linear, left bottom, left top, color-stop(0.25, #EF9905), color-stop(0.56, #FBBB0A));
+	background: linear-gradient(#EF9905 12%, #FBBB0A 56%);
+	border: 1px solid #b6bebd;
+	color: #3B4453;
+	-webkit-box-shadow:inset 0 1px 1px #fcdeb7;
+	box-shadow:inset 0 1px 1px #fcdeb7;
 }
 
 	.primary_button:hover{
-        background-color: #1badfa;
-        text-decoration: none;
+		background: -webkit-gradient(linear, left bottom, left top, color-stop(0.25, #FFAB2E), color-stop(0.61, #FFC229));
+		background: linear-gradient(#FFAB2E 25%, #FFC229 61%);
 	}
 
 	.primary_button:active {
-        background-color: #1badfa;
-        text-decoration: none;
-        cursor: pointer;
+		background: -webkit-gradient(linear, left bottom, left top, color-stop(0.25, #FFAB2E), color-stop(0.61, #FFC229));
+		background: linear-gradient(#FFAB2E 25%, #FFC229 61%);
 	}
 
-.secondary_button{
-	background: #48BAF5;
-	color:#ffffff;
-	text-align:center;
-	cursor:pointer;
+.secondary_button, select.secondary_input {
+	background: -webkit-gradient(linear, left bottom, left top, color-stop(0.12, #CFCFCF), color-stop(0.56, #ECECEC));
+	background: linear-gradient(#CFCFCF 12%, #ECECEC 56%);
+	border: 1px solid #B6BEBD;
+	color: #3b4453;
+	box-shadow: inset 0 1px 1px #FCFCFC;
 }
 
-.select.secondary_input {
-    background-color: #fa8039;
-    border: 1px solid #B6BEBD;
-    color: #000;
-    box-shadow: inset 0 1px 1px #FCFCFC;
-    cursor: pointer;
-    text-align: center;
-}
-
-
-	/*.secondary_button:hover {
-        background-color:#fa6b19;
-		color: #fff;
+	.secondary_button:hover {
+		background: -webkit-gradient(linear, left bottom, left top, color-stop(0.12, #EEE), color-stop(0.56, #EEE));
+		background: linear-gradient(#EEE 12%, #EEE 56%);
+		border: 1px solid #B6BEBD;
+		color: #3B4453;
+		box-shadow: inset 0 1px 1px #FCFCFC
 	}
 
 	.secondary_button:active {
-        background-color:#fa6b19;
+		background: -webkit-gradient(linear, left bottom, left top, color-stop(0.19, #DBDBDB), color-stop(0.58, #EBEBEB));
+		background: linear-gradient(#DBDBDB 19%, #EBEBEB 58%);
 		border: 1px solid #cccccc;
 		-webkit-box-shadow:inset 0 1px 1px #b0c6cb;
 		box-shadow:inset 0 1px 1px #b0c6cb;
-        cursor: pointer;
-	}*/
+	}
 
 /* Grey Button */
 .tertiary_button, #user_panel .secondary_button, .promo_button {
@@ -133,27 +129,9 @@ span.required {
 }
 
 select.inputfield {
-	background: #48BAF5;
-	border:1px solid #48BAF5;
-	color:#ffffff;
-	text-align:center;
-	height:35px !important;
-	/*background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #FFFFFF), color-stop(1, #C6CBCE));
-	background: linear-gradient(top, #ffffff 0%, #C6CBCE 100%);*/
+	background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #FFFFFF), color-stop(1, #C6CBCE));
+	background: linear-gradient(top, #ffffff 0%, #C6CBCE 100%);
 }
-
-select.inputfield:hover{
-	background: #48BAF5;
-	border:1px solid #48BAF5;
-	color:#ffffff;
-}
-.removeBtn{
-	background: -webkit-gradient(linear, left bottom, left top, color-stop(0.12, #EEE), color-stop(0.56, #EEE));
-	background: linear-gradient(#EEE 12%, #EEE 56%);
-	color:#3B4453;
-	border: 1px solid #B6BEBD;
-}
-
 
 .back_arrow_icon {
 	background: url('../images/colors/color1/back_arrow.gif') no-repeat;
@@ -196,17 +174,12 @@ div#breadcrumb{
 	position: relative;
 }
 	div#breadcrumb .page_title {
-		/*border-left: 1px solid #d5d5d5;*/
+		border-left: 1px solid #d5d5d5;
 		font-size: 13px;
 		font-weight: bold;
 		padding: 6px 5px 5px 10px;
 		margin: 1px 0 0 28px;
 	}
-    div#breadcrumb .page_title2 {
-        font-size: 13px;
-        padding: 6px 5px 5px 10px;
-        margin: 1px 0 0 28px;
-    }
 	div#breadcrumb .page_title_only {
 		font-size: 13px;
 		font-weight: bold;
@@ -244,7 +217,7 @@ div#breadcrumb{
 */
 
 div.item_wrapper, div.item_wrapper_button, div.item_wrapper div.sub_wrapper {
-	/*border-top: 1px solid #c6d0dc;*/
+	border-top: 1px solid #c6d0dc;
 }
 
 	div.item_wrapper div.sub_wrapper:hover {
@@ -313,104 +286,4 @@ div#paging_control img{
 
 .productLargeImage {
 	width: 320px
-}
-
-
-/**************
-Daniel Torres
-**************/
-
-#shoppingCart_emptyShopCart{
-	width: 100%;
-	box-sizing: border-box;
-}
-
-#shoppingCart_emptyShopCart > .carro-vacio{
-	width: 66% !important;
-	display: inline-block;
-	vertical-align: middle;
-	text-align: center;
-}
-
-#shoppingCart_emptyShopCart > p {
-	color: #8c97a1
-}
-
-#shoppingCart_emptyShopCart > .carro-vacio > div {
-	text-align: center;
-}
-
-#shoppingCart_emptyShopCart > .carro-vacio > div > .btnGris{
-	margin: 25px 0;
-}
-
-#shoppingCart_emptyShopCart > .carro-vacio-imagen{
-	width: 32% !important;
-	display: inline-block;
-	vertical-align: middle;
-
-}
-
-#shoppingCart_emptyShopCart > .carro-vacio-imagen > img{
-	width: 100%;
-	max-width: 154px;
-}
-
-/* Arturo agregamos los estilos para el ayuda */
-.genericESpot table{
-    margin-top: 7px;
-    text-align: center;
-}
-
-.genericESpot table tbody tr td p + p{
-    text-align: center !important;
-    line-height: 13px;
-}
-
-.genericESpot table tbody tr td p + p + p{
-    text-align: center !important;    
-}
-
-.genericESpot table tbody tr td p + p + p + p{
-    text-align: left !important;
-    line-height: 13px;
-}
-
-.genericESpot table tbody tr td p strong span span{
-    text-align: center !important;
-}
-
-
-.contornos2{
-    border: 1px solid #64afff;
-    border-radius: 5px;
-    color: #000000;
-    font-size: 14px;
-    font-family: Arial;
-    width: 95%;
-    padding: 12px;
-    box-sizing: border-box;
-    margin: 10px auto;
-    display: inline-block;
-}
-
-.contornos2:hover{
-    border: 1px solid #64afff;
-}
-
-.contornos2 .shipping-icon{
-    display: inline-block;
-    vertical-align: middle;
-    float: left;
-    height: 100%;
-    margin: 10% 20px;
-}
-
-.contornos2 .entry{
-    float:left;
-}
-
-#overview_select_billing_address{
-    color: rgb(62, 126, 199);
-    font-size: 14px;
 }

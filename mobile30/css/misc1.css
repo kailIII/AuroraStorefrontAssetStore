@@ -83,13 +83,24 @@ div.item_wrapper {
 .price_details_wrapper {
 	width: 100%;
 }
-.myProductInfo{display:inline-block; vertical-align:top; font-size:2em; margin-left:2%;}
-.priceTag{color:#1b83ff; font-family:'ubunturegular',arial, sans-serif; }
-.skuTag{color:#8c97a1;}
-.product_link{color:#55667a;}
+.price_details_wrapper > div{
+	font-size:1.5em;
+}
+.itemPrice{
+	color:#1b83ff;
+}
 
-.quantityMobil{margin-top:20px;}
+.itemTitle{
+	color:#55667a;
+}
 
+.itemSku{
+	color:#8c97a1;
+}
+
+.dropdown_container.wishBtn{
+	height:auto;
+}
 	.price_details_wrapper .left_label {
 		min-width: 60px;
 	}
@@ -101,7 +112,7 @@ div.item_wrapper {
 	}
 
 	.price_details_wrapper .right_column{
-		text-align: left;
+		text-align: right;
 		padding: 3px 0 0 15px;
 		font-size: 13px;
 	}
@@ -109,12 +120,7 @@ div.item_wrapper {
 	.price_details_wrapper .inputfield {
 		height: 30px;
 		margin: 0;
-		border-radius:0px;
-		padding:10px;
-		width:20px;
 	}
-	
-	
 
 .credit_card_date {
 	width: 105px;
@@ -139,34 +145,27 @@ div.item_wrapper ul li.distance {
 	right: 5px;
 }
 
-
-
 /* Category View, Shopping  */
 div.item_wrapper .product_image_container {
-	position: relative;
+	position: absolute;
 	top: 10px;
 	left: 5px;
-	width: 40%;
+	width: 80px;
 	text-align: center;
-	display:inline-block;
-	vertical-align:top;
 }
 
 div.item_wrapper .product_image_container > img {
-	width: 100%;
+	max-height: 80px;
 }
 
 div.item_wrapper .product_info_container {
+	padding: 0 15px 0 90px;
 	min-height: 80px;
 }
 
 div.item_wrapper .feature_product_info_container {
 	padding: 0 15px 0 90px;
 	min-height: 50px;
-}
-
-.multi_button_container{
-	
 }
 
 div.item_wrapper .item_avail_image_container {

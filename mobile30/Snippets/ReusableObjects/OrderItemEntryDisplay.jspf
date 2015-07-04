@@ -46,29 +46,26 @@ OrderItemEntryPrice:	This parameter is the price of the product
 	</c:choose>
 </div>
 
-<div class="myProductInfo">
-	<div>
-		<a id="product_link_${status.count}" href="${ProductDisplayURL}"><div class="left_label left"><!--<c:out value="${beginIndex+status.count}"/>.&nbsp;--><c:out value="${OrderItemEntryProductDescription}"/></div></a>
-		<div class="clear_float"></div>
-	</div>	
-	<div class="skuTag">
-		<div class="left_label left small_text">SKU: <c:out value="${OrderItemEntryProductPartNumber}"/></div>
-		<div class="clear_float"></div>
-	</div>	
-	<div class="priceTag">
-		<c:choose>
-			<c:when test="${OrderItemEntryFreeGift}"> <%-- Free gift --%>
-				<div class="left_label left"><fmt:message bundle="${storeText}" key="SHOPCART_FREE"/></div>
-			</c:when>
-			<c:otherwise>
-				<%-- Not a free gift --%>
-				<div class="left_label left"><fmt:formatNumber type="currency" maxFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}" value="${OrderItemEntryPrice}" /></div>
-			</c:otherwise>
-		</c:choose>
-		<div class="clear_float"></div>
-	</div>
-	<!--<div class="item_spacer_5px"></div> -->
-	
-<!-- El div de myProductInfo se cierra en OrderItemDisplay -->
+<div class="itemTitle">
+	<a id="product_link_${status.count}" href="${ProductDisplayURL}"><div class="left_label left"><!--<c:out value="${beginIndex+status.count}"/>.&nbsp;--><c:out value="${OrderItemEntryProductDescription}"/></div></a>
+	<div class="clear_float"></div>
+</div>	
+<div class="itemSku">
+	<div class="left_label left small_text"><c:out value="${OrderItemEntryProductPartNumber}"/></div>
+	<div class="clear_float"></div>
+</div>	
+<div class="itemPrice">
+	<c:choose>
+		<c:when test="${OrderItemEntryFreeGift}"> <%-- Free gift --%>
+			<div class="left_label left"><fmt:message bundle="${storeText}" key="SHOPCART_FREE"/></div>
+		</c:when>
+		<c:otherwise>
+			<%-- Not a free gift --%>
+			<div class="left_label left "><fmt:formatNumber type="currency" maxFractionDigits="${env_currencyDecimal}" currencySymbol="${env_CurrencySymbolToFormat}" value="${OrderItemEntryPrice}" /></div>
+		</c:otherwise>
+	</c:choose>
+	<div class="clear_float"></div>
+</div>
+<div class="item_spacer_5px"></div>
 
 <!-- END OrderItemEntryDisplay.jspf -->
