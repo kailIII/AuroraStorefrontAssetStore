@@ -205,8 +205,8 @@
 /* box_1 used in address entry form in OrderShippingDetails page */
 #box .body, #box_1 .body {
 	float:none;
-	margin:0px 0px 0px 0px;
-	padding:0px 8px 0px 8px;
+	margin:0px;
+	padding:0px;
 }
 
 #box .body .title {
@@ -487,17 +487,15 @@
 	height:18px;
 	vertical-align:top;
 	padding:0px;
-	font-weight:bold;
 
 }
+
 #order_details tr.nested th {
-	border-bottom:1px solid #e5e5e5;
-	height:19px;
+	border-bottom:1px solid #e5e5e5;	
 	vertical-align:top;
-	padding-top: 1px;
-	padding-bottom: 4px;
 	color: #777777;
-	line-height:18px;
+	line-height:30px;
+    font-weight: normal !important;
 }
 
 #order_details td {
@@ -508,6 +506,7 @@
     font-size: .8em;
     color: #96040a;
 }
+
 #order_details .img {
 	float:left;
 	/*padding-right: 7px;*/
@@ -579,6 +578,14 @@
 
 #order_details .th_align_left_detalles2 {
     min-width: 220px;
+    font-weight: normal;
+    padding: 6px 0px;
+    text-align: left;
+    vertical-align: top;
+}
+
+#order_details .th_align_left_detalles3 {
+    min-width: 170px;
     font-weight: normal;
     padding: 6px 0px;
     text-align: left;
@@ -4443,7 +4450,7 @@ td.item .listPrice {
 
 .nested{
     background-color: rgb(245, 245, 245);
-    font-size: .82em;
+    font-size: 12px;
     color: #55667a;
     line-height: 1.4;
     text-align: center;
@@ -4463,7 +4470,7 @@ td.item .listPrice {
 }
 
 .tache{
-    margin: 0 25px;
+    margin: 0 10px;
 }
 
 .crecido{
@@ -4489,6 +4496,7 @@ td.item .listPrice {
     text-align: left;
     width: 100%;
     padding: 5px 0px 5px 10px;
+    box-sizing: border-box;
 }
 
 .gris .palomita{
@@ -4529,9 +4537,4 @@ td.item .listPrice {
     right: 20px;
     top: 100px;
     z-index: 998;
-}
-
-#four-grid-wishlist .item .price {
-	color: #fa8846 !important;
-	font-weight: lighter !important;
 }

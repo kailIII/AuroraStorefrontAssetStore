@@ -153,12 +153,13 @@ h1, h2 {
 }
 
 button, input, textarea, select {
-	margin: 0;
-	color: inherit;
-	font-family: inherit;
-	font-size: inherit;
-	font-weight: inherit;
-    border: 1px solid #cecece;	
+	margin: 0px 5px;
+    color: #666;
+    font-size: 12px;
+    font-family: Arial;
+    text-align: left;
+    border: 1px solid #cecece;
+    padding: 5px 0px;
 }
 fieldset, iframe, img {
 	margin: 0;
@@ -3778,8 +3779,8 @@ div#WC_PromotionCodeDisplay_div_2{
 }
 
 div#WC_PromotionCodeDisplay_div_2 > input#promoCode{
-	width: 50%;
-    margin: 0px;
+	width: 65%;
+    margin: 0px 10px 0px 0px;
 }
 
 #total_breakdown #promotions .promotion_input,
@@ -3864,7 +3865,7 @@ table#order_total tbody tr:last-child{
 	padding-left: 5px !important;
 	height: 27px !important;	
 	box-sizing: border-box;
-	width: 100%;
+	width: 65%;
 }
 
 #customers_new_or_returning #WC_CheckoutLogonf_div_4.returning{
@@ -4041,7 +4042,7 @@ div#WC_CheckoutLogonf_div_0{
 @media (min-width: 601px) and (max-width: 952px){
 
 	#promoCode{
-		width: 100% !important;
+		width: 65% !important;
 	}
 
 	a#WC_PromotionCodeDisplay_links_1.button_primary{
@@ -4152,7 +4153,7 @@ div#WC_CheckoutLogonf_div_0{
 }
 @media (max-width: 600px){
 	#promoCode{
-		width: 100% !important;
+		width: 40% !important;
 	}
 
 	a#WC_PromotionCodeDisplay_links_1.button_primary{
@@ -4304,7 +4305,7 @@ div#orderByDropdown_4_-2011_3416{
 }
 
 #order_details input{
-	margin-top: 4px;
+	margin-top: 0px 5px;
 }
 
 #facet_nav_collapsible_my_account.facetWidget{
@@ -4531,6 +4532,15 @@ Alejandro Paredes
 
 .loginMenuDropdown .button_primary   .button_text:hover {
   background-color: #288aff !important;
+}
+
+.loginCliente{
+	font-size:14px;
+	margin:20px 0;
+}
+
+.loginCreaCuenta{
+	text-align:center;
 }
 
 #WC_EmptyShopCartDisplayf_div_1 {
@@ -5007,6 +5017,10 @@ background-image:
     width: 100%;
 }
 
-.th_align_left_detalles2 .especificaciones_resumen_pedido .dropdown_primary{
+.th_align_left_detalles3 .especificaciones_resumen_pedido .dropdown_primary{
+    display: none;
+}
+
+.procede_con_compra{
     display: none;
 }

@@ -265,7 +265,7 @@
     
     <tr class="nested">
           <th class="align_center" id="shoppingCart_tableCell_productName"><fmt:message bundle="${storeText}" key="SHOPCART_PRODUCT" /></th>
-          <th class="align_center" id="shoppingCart_tableCell_availability"><fmt:message bundle="${storeText}" key="SHOPCART_AVAILABILITY" /></th>
+          <!-- <%-- <th class="align_center" id="shoppingCart_tableCell_availability"><fmt:message bundle="${storeText}" key="SHOPCART_AVAILABILITY" /></th> --%> -->
           
 		   <th class="align_center" id="shoppingCart_tableCell_quantity" abbr="<fmt:message bundle="${storeText}" key="QUANTITY1" />"><fmt:message bundle="${storeText}" key="SHOPCART_QTY" /></th>
           
@@ -680,14 +680,16 @@
 					</c:if>
 				</div>
 			</th>
+                                    
+            <!-- <%-- aca ocultamos el instock                        
 			<td id="WC_OrderItemDetailsf_td_1_<c:out value='${status.count}'/>" class="<c:out value="${nobottom}"/> avail" headers="shoppingCart_tableCell_availability shoppingCart_rowHeader_product<c:out value='${status.count}'/>">
 				<%@ include file="../../ReusableObjects/CatalogEntryAvailabilityDisplay.jspf" %>
 			</td>
-			
+            --%> -->
                                     
                                     
                                     
-                                    <td id="WC_OrderItemDetailsf_td_2_<c:out value='${status.count}'/>" class="<c:out value="${nobottom}"/> QTY" headers="shoppingCart_tableCell_quantity shoppingCart_rowHeader_product<c:out value='${status.count}'/>">
+           <td id="WC_OrderItemDetailsf_td_2_<c:out value='${status.count}'/>" class="<c:out value="${nobottom}"/> QTY" headers="shoppingCart_tableCell_quantity shoppingCart_rowHeader_product<c:out value='${status.count}'/>">
 				<p class="item-quantity">
 					<c:choose>
 						<c:when test="${orderItem.freeGift}">
@@ -698,23 +700,7 @@
 							<span class="spanacce" id="Quantity_ACCE_Message"><fmt:message bundle="${storeText}" key='ACCE_Quantity_Update_Message' /></span>
 							<flow:ifEnabled feature="AjaxCheckout">
 								<label for='qty_<c:out value="${status.count}"/>' style='display:none'><fmt:message bundle="${storeText}" key="QUANTITY1" /></label>
-								
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
+								                            
                                 
                                 <!-- aca agregamos los botones para aumentar y disminuir cantidades -->
                                 <a class="boton_cantidad" href="#" name='qty_<c:out value="${status.count}"/>' 
@@ -730,28 +716,11 @@
                                 
                                 
                                 
-                                <a class="boton_cantidad" href="#" name='qty_<c:out value="${status.count}"/>' type="tel" aria-labelledby="Quantity_ACCE_Message" 
+                                <a class="boton_cantidad2" href="#" name='qty_<c:out value="${status.count}"/>' type="tel" aria-labelledby="Quantity_ACCE_Message" 
                                 onclick="document.getElementById('qty_<c:out value="${status.count}"/>').value = parseInt(document.getElementById('qty_<c:out value="${status.count}"/>').value) + 1;JavaScript:setCurrentId('qty_<c:out value='${status.count}'/>');CheckoutHelperJS.updateCartWait(document.getElementById('qty_<c:out value="${status.count}"/>'), '<c:out value='${orderItem.orderItemId}'/>',event)" 
                                 onkeydown="JavaScript:setCurrentId('qty_<c:out value='${status.count}'/>'); CheckoutHelperJS.updateCartWait(document.getElementById('qty_<c:out value="${status.count}"/>'), '<c:out value='${orderItem.orderItemId}'/>',event)" >
                                                                        
-                                </a>
-                                
-							
-                            
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                            
-                            
+                                </a>                                
                             
                             </flow:ifEnabled>
 							<flow:ifDisabled feature="AjaxCheckout">
@@ -764,6 +733,12 @@
 						</c:otherwise>
 					</c:choose>
 				</p>
+               <br clear="all"/>
+               <!-- aca dejamos el instock-->
+               <p id="WC_OrderItemDetailsf_td_1_<c:out value='${status.count}'/>" class="<c:out value="${nobottom}"/> avail" headers="shoppingCart_tableCell_availability shoppingCart_rowHeader_product<c:out value='${status.count}'/>"> <%@ include file="../../ReusableObjects/CatalogEntryAvailabilityDisplay.jspf" %>
+               </p>
+               
+               
 			</td>
                                     
                                     

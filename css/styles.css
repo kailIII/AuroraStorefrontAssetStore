@@ -4574,7 +4574,7 @@ div#widget_breadcrumb {
     position: absolute;
     right: 80px;
     top: 70px;
-    width: 290px;
+    width: 340px;
     z-index: 100;
 }
 
@@ -6332,9 +6332,9 @@ div[dijitpopupparent^='WC_UserMemberGroupManagement_'] > .dijitSelectMenu table 
 		position: absolute;
 		right: 80px;
 		top: 40px;
-		width: 290px;
+		width: 340px;
 	    left: 50%;
-	    margin-left: -145px;
+	    margin-left: -170px;
         z-index: 100;
 	}
 	

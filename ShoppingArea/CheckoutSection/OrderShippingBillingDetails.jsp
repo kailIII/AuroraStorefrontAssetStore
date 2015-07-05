@@ -1018,18 +1018,10 @@ need to first assign a valid address id to these order items before proceeding w
 
                                                                                 <tr>
                                                                                     <td>
-                                                                                        <div class="linea_total">
-                                                                                            <svg version="1.2" width="100%">
-                                                                                                <line x1="0" y1="5.5" x2="244" y2="5.5" stroke="#f2eff0" stroke-width="1" stroke-dasharray="" stroke-linecap="square"></line>
-                                                                                            </svg>
-                                                                                        </div>
+                                                                                        <div class="linea_total"></div>
                                                                                     </td>
                                                                                     <td>
-                                                                                        <div class="linea_total">
-                                                                                            <svg version="1.2" width="100%">
-                                                                                                <line x1="0" y1="5.5" x2="244" y2="5.5" stroke="#f2eff0" stroke-width="1" stroke-dasharray="" stroke-linecap="square"></line>
-                                                                                            </svg>
-                                                                                        </div>
+                                                                                        <div class="linea_total"></div>
                                                                                     </td>
                                                                                 </tr>
 
@@ -1057,18 +1049,10 @@ need to first assign a valid address id to these order items before proceeding w
 
                                                                                     <tr>
                                                                                         <td>
-                                                                                            <div class="linea_total">
-                                                                                                <svg version="1.2" width="100%">
-                                                                                                    <line x1="0" y1="5.5" x2="244" y2="5.5" stroke="#f2eff0" stroke-width="1" stroke-dasharray="" stroke-linecap="square"></line>
-                                                                                                </svg>
-                                                                                            </div>
+                                                                                            <div class="linea_total"></div>
                                                                                         </td>
                                                                                         <td>
-                                                                                            <div class="linea_total">
-                                                                                                <svg version="1.2" width="100%">
-                                                                                                    <line x1="0" y1="5.5" x2="244" y2="5.5" stroke="#f2eff0" stroke-width="1" stroke-dasharray="" stroke-linecap="square"></line>
-                                                                                                </svg>
-                                                                                            </div>
+                                                                                            <div class="linea_total"></div>
                                                                                         </td>
                                                                                     </tr>
                                                                                     </table>
@@ -1080,7 +1064,18 @@ need to first assign a valid address id to these order items before proceeding w
                                                     
                                                     
                                                                             <%-- aca comenzamos con los botones de siguiente y atras--%>
-                                                                                <div class="button_footer_line" id="WC_ShipmentDisplay_div_32_1"> 
+                                                                                <div class="button_footer_line right" id="WC_ShipmentDisplay_div_32_1"> 
+                                                                                    
+                                                                                    <span class="procede_con_compra button_right_side_message" id="WC_ShipmentDisplay_div_32_3">
+                                                                                        <flow:ifEnabled feature="SharedShippingBillingPage">
+                                                                                            <fmt:message bundle="${storeText}" key="ORD_MESSAGE"/>
+                                                                                        </flow:ifEnabled>
+                                                                                        <flow:ifDisabled feature="SharedShippingBillingPage">
+                                                                                            <fmt:message bundle="${storeText}" key="ORD_MESSAGE_BILLING"/>
+                                                                                        </flow:ifDisabled>
+                                                                                    </span>
+                                                                                    
+                                                                                    
                                                                                     <a role="button" class="button_secondary tlignore" id="WC_ShipmentDisplay_links_5" tabindex="0" href="javascript:setPageLocation('<c:out value='${ShoppingCartURL}'/>')">
                                                                                         <div class="left_border"></div>
                                                                                         <div class="button_text btnGris"><fmt:message bundle="${storeText}" key="BACK"/><span class="spanacce"><fmt:message bundle="${storeText}" key="Checkout_ACCE_back_shopping_cart"/></span></div>
@@ -1096,14 +1091,7 @@ need to first assign a valid address id to these order items before proceeding w
                                                                                         </flow:ifDisabled>
                                                                                     <div class="right_border"></div>
                                                                                     </a>
-                                                                                <span class="button_right_side_message" id="WC_ShipmentDisplay_div_32_3">
-                                                                                    <flow:ifEnabled feature="SharedShippingBillingPage">
-                                                                                        <fmt:message bundle="${storeText}" key="ORD_MESSAGE"/>
-                                                                                    </flow:ifEnabled>
-                                                                                    <flow:ifDisabled feature="SharedShippingBillingPage">
-                                                                                        <fmt:message bundle="${storeText}" key="ORD_MESSAGE_BILLING"/>
-                                                                                    </flow:ifDisabled>
-                                                                                </span>
+                                                                                
                                                                                 </div><%-- terminanan los botones de siguietne y atras --%>
                                                     
                                           

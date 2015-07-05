@@ -8070,14 +8070,40 @@ font-size: 24px;
 .boton_cantidad{
     color: rgb(235, 235, 235);
     border-style: solid;
-    width: 5px;
-    height: 5px;
+    width: 12px;
+    height: 12px;
     -webkit-transform-origin: 10px 10px 0px;
     float: left;
     background-color: rgb(235, 235, 235);
     -moz-border-radius: 50px;
     -webkit-border-radius: 50px;
     border-radius: 50px;
-    padding: 5px;
-    margin: 0px 5px;
+    margin: 5px;
+    background-image: url("../images/menos.png");
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.boton_cantidad2{
+    color: rgb(235, 235, 235);
+    border-style: solid;
+    width: 12px;
+    height: 12px;
+    -webkit-transform-origin: 10px 10px 0px;
+    float: left;
+    background-color: rgb(235, 235, 235);
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    margin: 5px;
+    background-image: url("../images/mas.png");
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.item-quantity{
+    margin: 0 auto;
+    display: inline-block;
 }

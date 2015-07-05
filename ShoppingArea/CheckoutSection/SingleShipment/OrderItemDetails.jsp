@@ -174,7 +174,7 @@
 	<fmt:parseNumber var="currentPage" value="${currentPage}" integerOnly="true" parseLocale="en_US"/>
 
 	<div class="shopcart_pagination" id="OrderItemDetailsPaginationText1">
-		<br/>
+		
 		<span class="text">
 			<fmt:message bundle="${storeText}" key="CATEGORY_RESULTS_DISPLAYING">
 				<%-- Indicate the range of order items currently displayed --%>
@@ -385,7 +385,7 @@
 				<input type="hidden" id="valfac_<c:out value='${status.count}'/>_<%=iCount%>"  name="valfac_<c:out value='${status.count}'/>"  value="${installmentOption.interestRate}">
 				<input type="hidden" id="aplEng_<c:out value='${status.count}'/>_<%=iCount%>"  name="aplEng_<c:out value='${status.count}'/>"  value="0">
 				<input type="hidden" id="valEng_<c:out value='${status.count}'/>_<%=iCount%>"  name="valEng_<c:out value='${status.count}'/>"  value="0">
-	        <br>
+	        
 	        </c:forEach>
 	        <input type="hidden" id="valTotInsOpt_<c:out value='${status.count}'/>"  name="valTotInsOpt_<c:out value='${status.count}'/>"  value="<%=iCount%>">
 		<%-- end installment for product --%>
@@ -439,7 +439,7 @@
 		</c:forEach>
 
 		<tr>
-			<th class="th_align_left_detalles2 <c:out value="${nobottom}"/>" id="SingleShipment_rowHeader_product<c:out value='${status.count}'/>" abbr="<fmt:message bundle="${storeText}" key="Checkout_ACCE_for"  /> ${catEntry.name}">
+			<th class="th_align_left_detalles3 <c:out value="${nobottom}"/>" id="SingleShipment_rowHeader_product<c:out value='${status.count}'/>" abbr="<fmt:message bundle="${storeText}" key="Checkout_ACCE_for"  /> ${catEntry.name}">
 				
                 
                 <div class="img imagen_resumen_pedido" id="WC_OrderItemDetails_div_1_<c:out value='${status.count}'/>">
@@ -783,9 +783,7 @@
                     
                     
                         <td headers="engancheReciboTMX" > 
-                            <span class="price">
-                                <input type="text" id="valorEnganche_<c:out value='${status.count}'/>" name="valorEnganche" size="10" disabled="disabled" value="0"/>	
-                            </span>
+                          <input type="text" id="valorEnganche_<c:out value='${status.count}'/>" name="valorEnganche" size="10" disabled="disabled" value="0"/>
                         </td>
                         
                         

@@ -639,18 +639,10 @@
 
                                                                             <tr>
                                                                                 <td>
-                                                                                    <div class="linea_total">
-                                                                                        <svg version="1.2" width="100%">
-                                                                                            <line x1="0" y1="5.5" x2="244" y2="5.5" stroke="#f2eff0" stroke-width="1" stroke-dasharray="" stroke-linecap="square"></line>
-                                                                                        </svg>
-                                                                                    </div>
+                                                                                    <div class="linea_total"></div>
                                                                                 </td>
                                                                                 <td>
-                                                                                    <div class="linea_total">
-                                                                                        <svg version="1.2" width="100%">
-                                                                                            <line x1="0" y1="5.5" x2="244" y2="5.5" stroke="#f2eff0" stroke-width="1" stroke-dasharray="" stroke-linecap="square"></line>
-                                                                                        </svg>
-                                                                                    </div>
+                                                                                    <div class="linea_total"></div>
                                                                                 </td>
                                                                             </tr>
 
@@ -678,18 +670,10 @@
 
                                                                                 <tr>
                                                                                     <td>
-                                                                                        <div class="linea_total">
-                                                                                            <svg version="1.2" width="100%">
-                                                                                                <line x1="0" y1="5.5" x2="244" y2="5.5" stroke="#f2eff0" stroke-width="1" stroke-dasharray="" stroke-linecap="square"></line>
-                                                                                            </svg>
-                                                                                        </div>
+                                                                                        <div class="linea_total"></div>
                                                                                     </td>
                                                                                     <td>
-                                                                                        <div class="linea_total">
-                                                                                            <svg version="1.2" width="100%">
-                                                                                                <line x1="0" y1="5.5" x2="244" y2="5.5" stroke="#f2eff0" stroke-width="1" stroke-dasharray="" stroke-linecap="square"></line>
-                                                                                            </svg>
-                                                                                        </div>
+                                                                                        <div class="linea_total"></div>
                                                                                     </td>
                                                                                 </tr>
                                                                                 </table>
@@ -702,7 +686,7 @@
                                                                             
                                                     
                                                                             <%-- comentamos los botones de order y atras --%>
-                                                                                <div class="button_footer_line" id="WC_SingleShipmentSummary_div_31_1">
+                                                                                <div class="button_footer_line right" id="WC_SingleShipmentSummary_div_31_1">
                                                                                     <flow:ifEnabled feature="SharedShippingBillingPage">
                                                                                         <a role="button" class="button_secondary tlignore" id="WC_SingleShipmentSummary_links_4" tabindex="0" href="javascript:setPageLocation('<c:out value="${ShippingAndBillingURL}"/>')">
                                                                                             <div class="left_border"></div>

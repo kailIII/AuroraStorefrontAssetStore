@@ -184,7 +184,7 @@ dojo.addOnLoad(function(){CommonControllersDeclarationJS.setControllerURL('Order
 
 
 		<div class="shopcart_pagination" id="OrderItemDetailSummaryPagination1">
-			<br/><br/>
+			
 			<span class="text">
 				<fmt:message bundle="${storeText}" key="CATEGORY_RESULTS_DISPLAYING">
 					<fmt:param><fmt:formatNumber value="${beginIndex + 1}"/></fmt:param>
@@ -248,7 +248,9 @@ dojo.addOnLoad(function(){CommonControllersDeclarationJS.setControllerURL('Order
 		</flow:ifEnabled>
 
 		<c:remove var="isSBSEnabled"/>
-		<flow:ifEnabled feature="SideBySideIntegration">
+		
+         <!-- <%--   
+         <flow:ifEnabled feature="SideBySideIntegration">
 			<c:set var="isSBSEnabled">Y</c:set>
 			<c:choose>
 				<c:when test="${orderPage == 'confirmation' && isFromOrderDetailsPage=='true'}">
@@ -265,6 +267,9 @@ dojo.addOnLoad(function(){CommonControllersDeclarationJS.setControllerURL('Order
 			<th class="avail" id="SingleShipment_tableCell_availability"><fmt:message bundle="${storeText}" key="AVAILABILITY"/></th>
 			<c:set var="th_count" value="${th_count + 1}"/>
 		</flow:ifDisabled>
+        --%> -->
+            
+            
 		<th class="QTY" id="SingleShipment_tableCell_quantity" abbr="<fmt:message bundle="${storeText}" key="QUANTITY1"/>"><fmt:message bundle="${storeText}" key="QTY"/></th>
 		<c:set var="th_count" value="${th_count + 1}"/>
 		
@@ -515,7 +520,9 @@ dojo.addOnLoad(function(){CommonControllersDeclarationJS.setControllerURL('Order
 				</c:if>
 			</flow:ifEnabled>
 
-			<c:choose>
+			
+            <!-- <%--
+            <c:choose>
 				<c:when test="${isSBSEnabled == 'Y' && orderPage == 'confirmation' && isFromOrderDetailsPage=='true'}">
 					<td class="avail ${fn:escapeXml(nobottom)}" id="WC_OrderItemDetailsSummaryf_td_1_${fn:escapeXml(status.count)}" headers="SingleShipment_tableCell_availability SingleShipment_rowHeader_product${fn:escapeXml(status.count)}">
 						<c:choose>
@@ -541,6 +548,10 @@ dojo.addOnLoad(function(){CommonControllersDeclarationJS.setControllerURL('Order
 					</td>
 				</c:otherwise>
 			</c:choose>
+                   --%> -->     
+                        
+                        
+                        
 			<td class="QTY ${fn:escapeXml(nobottom)}" id="WC_OrderItemDetailsSummaryf_td_2_${fn:escapeXml(status.count)}" headers="SingleShipment_tableCell_quantity SingleShipment_rowHeader_product${fn:escapeXml(status.count)}">
 				<p class="item-quantity">
 				<c:choose>

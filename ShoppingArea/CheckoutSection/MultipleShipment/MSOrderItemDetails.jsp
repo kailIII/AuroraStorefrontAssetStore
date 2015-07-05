@@ -182,7 +182,7 @@
 	<fmt:parseNumber var="currentPage" value="${currentPage}" integerOnly="true" parseLocale="en_US"/>
 
 	<div class="shopcart_pagination" id="MSOrderItemDetailsPaginationText1">
-		<br/>
+	
 		<span class="text">
 			<fmt:message bundle="${storeText}" key="CATEGORY_RESULTS_DISPLAYING"  >
 				<%-- Indicate the range of order items currently displayed --%>

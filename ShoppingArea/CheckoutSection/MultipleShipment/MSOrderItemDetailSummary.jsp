@@ -162,7 +162,7 @@ dojo.addOnLoad(function(){CommonControllersDeclarationJS.setControllerURL('MSOrd
 		<fmt:parseNumber var="currentPage" value="${currentPage}" integerOnly="true"/>
 
 		<div class="shopcart_pagination" id="MSOrderItemDetailSummaryPagination1">
-			<br/><br/>
+			
 			<span class="text">
 				<fmt:message bundle="${storeText}" key="CATEGORY_RESULTS_DISPLAYING"> 
 					<%-- Indicate the range of order items currently displayed --%>
