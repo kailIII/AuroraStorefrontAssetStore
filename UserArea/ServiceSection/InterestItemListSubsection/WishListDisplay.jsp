@@ -141,12 +141,12 @@ xmlns:waistate="http://www.w3.org/2005/07/aaa" lang="${shortLocale}" xml:lang="$
 			</div>
 			<div class="rowContainer" id="container_MyAccountDisplayB2B">
 				<div class="row margin-true">					
-					<div class="col4 acol12 ccol3">
+					<div class="col3 acol12 ccol3">
 						<%out.flush();%>
 							<c:import url="${env_siteWidgetsDir}com.ibm.commerce.store.widgets.MyAccountNavigation/MyAccountNavigation.jsp"/>
 						<%out.flush();%>		
 					</div>
-					<div class="col8 acol12 ccol9 right">	
+					<div class="col9 acol12 ccol9 right">	
 
 						<%-- Daniel Torres --%>
 						<%out.flush();%>
@@ -193,16 +193,16 @@ xmlns:waistate="http://www.w3.org/2005/07/aaa" lang="${shortLocale}" xml:lang="$
 									 });
 								</script>					
 								<p class="space"></p>
-				
-								<fmt:message bundle="${storeText}" var="titleString" key="WISHLIST_ESPOT_TITLE" scope="request"/>	
-									<% out.flush(); %>
-									<c:import url="${env_siteWidgetsDir}com.ibm.commerce.store.widgets.CatalogEntryRecommendation/CatalogEntryRecommendation.jsp">
-										<c:param name="emsName" value="WishListCenter_CatEntries" />
-										<c:param name="errorViewName" value="AjaxOrderItemDisplayView" />
-										<c:param name="widgetOrientation" value="horizontal"/>
-										<c:param name="espotTitle" value="${titleString}"/>
-									</c:import>
-									<% out.flush(); %>
+								<!-- Se comenta widget de recomendados -->
+<%-- 								<fmt:message bundle="${storeText}" var="titleString" key="WISHLIST_ESPOT_TITLE" scope="request"/>	 --%>
+<%-- 									<% out.flush(); %> --%>
+<%-- 									<c:import url="${env_siteWidgetsDir}com.ibm.commerce.store.widgets.CatalogEntryRecommendation/CatalogEntryRecommendation.jsp"> --%>
+<%-- 										<c:param name="emsName" value="WishListCenter_CatEntries" /> --%>
+<%-- 										<c:param name="errorViewName" value="AjaxOrderItemDisplayView" /> --%>
+<%-- 										<c:param name="widgetOrientation" value="horizontal"/> --%>
+<%-- 										<c:param name="espotTitle" value="${titleString}"/> --%>
+<%-- 									</c:import> --%>
+<%-- 									<% out.flush(); %> --%>
 							
 								</div>
 								<!-- Content End -->

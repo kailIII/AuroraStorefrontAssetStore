@@ -4997,6 +4997,8 @@ background-image:
 
 #four-grid-wishlist > .item_container > .item{
 	width: 30% !important;
+	max-height: 250px;
+    min-height: 250px;
 }
 
 #four-grid-wishlist .img {

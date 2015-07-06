@@ -217,7 +217,8 @@
 	</c:if>
 </wcf:url>
 
-<div class="left body588" id="WC_WishListResultDisplay_div_3l">
+<!-- Se elimina la clase 588 para quitar bordes -->
+<div class="left" id="WC_WishListResultDisplay_div_3l">
 	<c:if test="${isBiDiLocale == 'true' and !sharedWishList}">
 		<flow:ifEnabled feature="RemoteWidget">
 			<c:if test="${!empty defaultWishList}">		
@@ -237,13 +238,13 @@
 	</c:if>
 	<c:choose>
 		<c:when test="${wishListViaEmail == 'true'}">
-			<h2 class="myaccount_header no_side_lines"><c:out value="${selectedWishList.descriptionName}"/></h2>				
+			<h2 class="myaccount_header no_side_lines titleItems"><c:out value="${selectedWishList.descriptionName}"/></h2>				
 		</c:when>
 		<c:when test="${empty defaultWishList || WCParam.giftListId == -1}">
-			<h2 class="myaccount_header no_side_lines"><fmt:message bundle="${storeText}" key="MA_PERSONAL_WL" /></h2>
+			<h2 class="myaccount_header no_side_lines titleItems"><fmt:message bundle="${storeText}" key="MA_PERSONAL_WL" /></h2>
 		</c:when>
 		<c:otherwise>
-			<h2 class="myaccount_header no_side_lines"><c:out value="${defaultWishList.descriptionName}"/></h2>
+			<h2 class="myaccount_header no_side_lines titleItems" ><c:out value="${defaultWishList.descriptionName}"/></h2>
 		</c:otherwise>
 	</c:choose>
 	
@@ -271,7 +272,8 @@
 
 </div>
 
-<div class="body588" id="WC_WishListResultDisplay_div_5">
+<!--  Se quita la clase body588 para eliminar bordes -->
+<div class="" id="WC_WishListResultDisplay_div_5">
 	<c:choose> 
 		<c:when test="${emailError}">
 			<%-- 
@@ -311,7 +313,8 @@
 						
 			<%-- calculate total number of pages --%>
 			<div class="left_wishlist" id="WC_WishListResultDisplay_div_8">
-				<span class="subheader_text">
+				<!--  Se oculta el texto de uno de tantos mostrados -->
+				<span class="subheader_text elementosocultos">
 					<fmt:message bundle="${storeText}" key="CATEGORY_RESULTS_DISPLAYING" > 
 						<fmt:param><fmt:formatNumber value="${startIndex + 1}"/></fmt:param>
 						<fmt:param><fmt:formatNumber value="${endIndex}"/></fmt:param>
@@ -356,7 +359,8 @@
 					</c:if>
 				</span>
 			</div>
-			<div class="right" id="WC_WishListResultDisplay_div_9">              
+			<!-- Se oculta icono de vista en lista de deseos -->
+			<div class="right elementosocultos" id="WC_WishListResultDisplay_div_9">              
 				<span class="views_icon">  
 					<c:if test="${pageView !='image'}">
 						<c:set var="gridView" value="horizontal_grid"/>
@@ -476,9 +480,11 @@
 							</c:if>
 							<c:set var="wishListIdentifier" value="${selectedWishList.uniqueID}"/>
 							<c:if test="${rowItemCount == 0}">
-								<div class="item_container_divider">
-									<div class="divider_line" colspan="4" id="WC_WishListResultDisplay_td_1_<c:out value='${status.count}'/>"></div>
-								</div>
+							
+							<!-- Se comenta para quitar lineas divisoras con borde -->
+<!-- 								<div class="item_container_divider"> -->
+<%-- 									<div class="divider_line" colspan="4" id="WC_WishListResultDisplay_td_1_<c:out value='${status.count}'/>"></div> --%>
+<!-- 								</div> -->
 								<div class="item_container">	
 							</c:if>
 							<c:if test="${pageView == 'image'}">
@@ -510,9 +516,10 @@
 							  ***
 							--%>
 							<c:if test="${rowItemCount == 0}">
-								<div class="item_container_divider">
-									<div class="divider_line" colspan="4" id="WishListResultDisplay_noCatentry_td_1_<c:out value='${status.count}'/>"></div>
-								</div>
+							<!-- Se comenta para quitar lineas divisoras con borde -->
+<!-- 								<div class="item_container_divider"> -->
+<%-- 									<div class="divider_line" colspan="4" id="WishListResultDisplay_noCatentry_td_1_<c:out value='${status.count}'/>"></div> --%>
+<!-- 								</div> -->
 								<div class="item_container">	
 							</c:if>
 							
@@ -576,9 +583,10 @@
 				<c:if test="${rowItemCount != 0 && pageView !='detailed'}">
 					</div>
 				</c:if>
-				<div class="item_container_divider">
-					<div class="divider_line" colspan="4" id="WC_WishListResultDisplay_td_1a"></div>
-				</div>
+				<!-- Se comenta para quitar lineas divisoras con borde -->
+<!-- 				<div class="item_container_divider"> -->
+<!-- 					<div class="divider_line" colspan="4" id="WC_WishListResultDisplay_td_1a"></div> -->
+<!-- 				</div> -->
 			</div>
 					
 			<div class="clear_both"></div>
@@ -588,7 +596,8 @@
 
 <%-- display total number of pages if wish list is not empty and when externalID specified is correct, or guestAccessKey is correct--%>
 <c:if test="${!emailError && bHasWishList}">
-			<div class="top_pagination">
+			<!-- Se oculta div de paginacion -->
+			<div class="top_pagination elementosocultos">
 				<span class="subheader_text">
 					<%-- for classic wish list, startIndex begins with 1, but for SOA wish list, startIndex begins with 0 --%>
 					
