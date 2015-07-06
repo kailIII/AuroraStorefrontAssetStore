@@ -248,6 +248,9 @@
 		</c:otherwise>
 	</c:choose>
 	
+
+	
+	
 	<c:if test="${isChinaStore }">	
 		<span class="main_header_text wishlist_sharing"><a href="javascript:;" onclick="dojo.byId('wishlist').style.display='block';return false;"><fmt:message bundle="${storeText}" key="WISHLIST_SHARE_WISHLIST" /></a></span>			
 	</c:if>
@@ -402,6 +405,16 @@
 			</div>
 			<br/>
 			<br clear="all" />
+			
+				<!-- aca metemos en el banner -->
+	        <div class="banner_deseos">
+	            <c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
+	                <c:param name="emsName" value="banner_deseos" />
+	            </c:import>
+	        </div>
+	
+			
+			
 			<div id="${gridView}" cellpadding="0" cellspacing="0" border="0" role="presentation">
 			<c:set var="rowItemCount" value="0"/>
 			<c:set var="rowBeginIndex" value="0"/>

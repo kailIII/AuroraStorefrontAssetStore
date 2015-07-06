@@ -4529,6 +4529,7 @@ td.item .listPrice {
     border-collapse: separate;
     border-spacing: 0px;
     border-color: grey;
+	width: 100%;
 }
 
 
