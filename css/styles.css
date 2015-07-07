@@ -4598,6 +4598,7 @@ div#widget_breadcrumb {
     /* width: 210px!important; */
     width: 235px!important;
 	padding: 6px;
+	margin: 0px;
 }
 
 .menuDropdown .errorLabel,
@@ -4615,8 +4616,9 @@ div#widget_breadcrumb {
 }
 
 .signInForm .button_primary, .signInForm .button_secondary {
-    margin-right: 4px;
-    width: 117px;
+    /*margin-right: 4px;
+    width: 117px;*/
+	display: inline-block;
 }
 
 .signInForm .button_primary .button_text, .signInForm .button_secondary .button_text {
@@ -8107,9 +8109,10 @@ top:8px;
 
 #Header_GlobalLogin_GlobalLogon .button_text.btnAzul{
 	margin: 0 auto!important;
-	display: table!important;
-	max-width: 130px !important;
-	min-width: 130px !important;
+	/*display: table!important;*/
+	max-width: 180px !important;
+	min-width: 180px !important;
+	padding: 10px!important;
 }
 
 .txtRegistro{display: inline;}
