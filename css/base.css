@@ -5030,3 +5030,12 @@ background-image:
 .banner_deseos{
 	margin-bottom: 20px;
 }
+
+
+.drop_down_billing[name="payMethodId"] {
+	background: none;
+}
+
+.billing_method{
+	vertical-align: top;
+}
