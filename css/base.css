@@ -1286,8 +1286,8 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 #searchTermWrapper > input {
 	position: relative;
 	width: 100%;
-	/*margin: 2px;*/
-	/*padding: 0px;*/
+	margin: 1px;
+	padding: 0px;
 	background-color: transparent;
 	border: 0 none;
 	font-size: inherit;
@@ -4961,7 +4961,7 @@ input#piAmount_4_display,
 }
 
 .RibbonAdDefault.TMX_RIBBON_PROMO{
-background-image: 
+/*background-image: */
 }
 .inputLogin{
 	border-radius: 0px !important;
@@ -4997,8 +4997,6 @@ background-image:
 
 #four-grid-wishlist > .item_container > .item{
 	width: 30% !important;
-	max-height: 250px;
-    min-height: 250px;
 }
 
 #four-grid-wishlist .img {
@@ -5025,24 +5023,4 @@ background-image:
 
 .procede_con_compra{
     display: none;
-}
-
-.banner_deseos{
-	margin-bottom: 20px;
-}
-
-
-.drop_down_billing[name="payMethodId"] {
-	background: none;
-}
-
-.billing_method{
-	vertical-align: top;
-}
-
-@media (min-width: 616px) and (max-width: 737px){
-	#container_10053 #contentRecommendationWidget_2_-2012_1112 > .left_espot > div,
-	#container_10053 #contentRecommendationWidget_3_-2012_1113 > .left_espot > div{
-		height: 86px;
-	}
 }

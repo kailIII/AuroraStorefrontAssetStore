@@ -4601,6 +4601,10 @@ div#widget_breadcrumb {
 	margin: 0px;
 }
 
+#oldUserDiv, #newUserDiv{
+	padding: 0px 20px;
+}
+  
 .menuDropdown .errorLabel,
 .loginMenuDropdown .errorLabel {
     color: #CC4400;
