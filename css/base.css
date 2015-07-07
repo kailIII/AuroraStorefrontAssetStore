@@ -5046,3 +5046,9 @@ background-image:
 		height: 86px;
 	}
 }
+
+
+.card_info input{
+	box-sizing: border-box;
+	padding-left: 10px;
+}
