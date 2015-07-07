@@ -51,6 +51,10 @@ xmlns:wairole="http://www.w3.org/2005/01/wai-rdf/GUIRoleTaxonomy#"
 xmlns:waistate="http://www.w3.org/2005/07/aaa" lang="${shortLocale}" xml:lang="${shortLocale}">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<input type="hidden" id="arrBackInstallment" name="arrBackInstallment" value=""/>
+	<input type="hidden" id="myModify"  name="myModify" value="0">
+
 <title>
 	<flow:ifEnabled feature="SharedShippingBillingPage">
 		<c:out value="${storeName}"/> - <fmt:message bundle="${storeText}" key="TITLE_SHIPMENT_DISPLAY"/>
@@ -853,8 +857,8 @@ need to first assign a valid address id to these order items before proceeding w
 													</c:otherwise>
 												</c:choose>
 												<div class="left_corner" id="WC_ShipmentDisplay_div_27"></div>
-												<div class="left_drop_down_shipment" id="WC_ShipmentDisplay_div_28">
-													<span class="content_text"><label for="numberOfPaymentMethods"><fmt:message bundle="${storeText}" key="BILL_MULTIPLE_BILLING_MESSAGE"/></label>
+												<div class="" id="WC_ShipmentDisplay_div_28">
+													<span class="elementosocultos"><label for="numberOfPaymentMethods"><fmt:message bundle="${storeText}" key="BILL_MULTIPLE_BILLING_MESSAGE"/></label>
 														<select class="drop_down_billing" name="numberOfPaymentMethods" id="numberOfPaymentMethods" onchange="JavaScript:CheckoutPayments.setNumberOfPaymentMethods(<c:out value="${numberOfPaymentMethods}"/>,this,'paymentSection');CheckoutPayments.reinitializePaymentObjects(this);">
 															<c:set var="selectStr" value="" />
 															<c:forEach var="i" begin="3" end="${numberOfPaymentMethods}">
@@ -1018,10 +1022,18 @@ need to first assign a valid address id to these order items before proceeding w
 
                                                                                 <tr>
                                                                                     <td>
-                                                                                        <div class="linea_total"></div>
+                                                                                        <div class="linea_total">
+                                                                                            <svg version="1.2" width="100%">
+                                                                                                <line x1="0" y1="5.5" x2="244" y2="5.5" stroke="#f2eff0" stroke-width="1" stroke-dasharray="" stroke-linecap="square"></line>
+                                                                                            </svg>
+                                                                                        </div>
                                                                                     </td>
                                                                                     <td>
-                                                                                        <div class="linea_total"></div>
+                                                                                        <div class="linea_total">
+                                                                                            <svg version="1.2" width="100%">
+                                                                                                <line x1="0" y1="5.5" x2="244" y2="5.5" stroke="#f2eff0" stroke-width="1" stroke-dasharray="" stroke-linecap="square"></line>
+                                                                                            </svg>
+                                                                                        </div>
                                                                                     </td>
                                                                                 </tr>
 
@@ -1049,10 +1061,18 @@ need to first assign a valid address id to these order items before proceeding w
 
                                                                                     <tr>
                                                                                         <td>
-                                                                                            <div class="linea_total"></div>
+                                                                                            <div class="linea_total">
+                                                                                                <svg version="1.2" width="100%">
+                                                                                                    <line x1="0" y1="5.5" x2="244" y2="5.5" stroke="#f2eff0" stroke-width="1" stroke-dasharray="" stroke-linecap="square"></line>
+                                                                                                </svg>
+                                                                                            </div>
                                                                                         </td>
                                                                                         <td>
-                                                                                            <div class="linea_total"></div>
+                                                                                            <div class="linea_total">
+                                                                                                <svg version="1.2" width="100%">
+                                                                                                    <line x1="0" y1="5.5" x2="244" y2="5.5" stroke="#f2eff0" stroke-width="1" stroke-dasharray="" stroke-linecap="square"></line>
+                                                                                                </svg>
+                                                                                            </div>
                                                                                         </td>
                                                                                     </tr>
                                                                                     </table>
@@ -1064,18 +1084,7 @@ need to first assign a valid address id to these order items before proceeding w
                                                     
                                                     
                                                                             <%-- aca comenzamos con los botones de siguiente y atras--%>
-                                                                                <div class="button_footer_line right" id="WC_ShipmentDisplay_div_32_1"> 
-                                                                                    
-                                                                                    <span class="procede_con_compra button_right_side_message" id="WC_ShipmentDisplay_div_32_3">
-                                                                                        <flow:ifEnabled feature="SharedShippingBillingPage">
-                                                                                            <fmt:message bundle="${storeText}" key="ORD_MESSAGE"/>
-                                                                                        </flow:ifEnabled>
-                                                                                        <flow:ifDisabled feature="SharedShippingBillingPage">
-                                                                                            <fmt:message bundle="${storeText}" key="ORD_MESSAGE_BILLING"/>
-                                                                                        </flow:ifDisabled>
-                                                                                    </span>
-                                                                                    
-                                                                                    
+                                                                                <div class="button_footer_line" id="WC_ShipmentDisplay_div_32_1"> 
                                                                                     <a role="button" class="button_secondary tlignore" id="WC_ShipmentDisplay_links_5" tabindex="0" href="javascript:setPageLocation('<c:out value='${ShoppingCartURL}'/>')">
                                                                                         <div class="left_border"></div>
                                                                                         <div class="button_text btnGris"><fmt:message bundle="${storeText}" key="BACK"/><span class="spanacce"><fmt:message bundle="${storeText}" key="Checkout_ACCE_back_shopping_cart"/></span></div>
@@ -1091,7 +1100,14 @@ need to first assign a valid address id to these order items before proceeding w
                                                                                         </flow:ifDisabled>
                                                                                     <div class="right_border"></div>
                                                                                     </a>
-                                                                                
+                                                                                <span class="button_right_side_message" id="WC_ShipmentDisplay_div_32_3">
+                                                                                    <flow:ifEnabled feature="SharedShippingBillingPage">
+                                                                                        <fmt:message bundle="${storeText}" key="ORD_MESSAGE"/>
+                                                                                    </flow:ifEnabled>
+                                                                                    <flow:ifDisabled feature="SharedShippingBillingPage">
+                                                                                        <fmt:message bundle="${storeText}" key="ORD_MESSAGE_BILLING"/>
+                                                                                    </flow:ifDisabled>
+                                                                                </span>
                                                                                 </div><%-- terminanan los botones de siguietne y atras --%>
                                                     
                                           
@@ -1105,6 +1121,7 @@ need to first assign a valid address id to these order items before proceeding w
                                                         
                                                         <!-- aca colocamos el necesitas ayuda -->
                                                         <div class="necesitas-ayuda">
+                                                            
                                                             <c:import url="${env_jspStoreDir}/include/eMarketingSpotDisplay.jsp">
                                                                 <c:param name="emsName" value="telmex__necesitas_ayuda" />
                                                             </c:import>

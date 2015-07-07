@@ -152,7 +152,7 @@
 
 
 	<!-- Area where selected shipping Address details is showed in short.. Needed only in case of Ajax Checkout -->
-	<div class="shippingAddress">
+	<div class="elementosocultos">
 		<!-- Daniel Torres -->
 		<p>
 		   <select class="drop_down_shipping" name="singleShipmentAddress" id="singleShipmentAddress" onChange="JavaScript:setCurrentId('singleShipmentAddress'); CheckoutHelperJS.displayAddressDetails(this.value,'Shipping');CheckoutHelperJS.updateAddressForAllItems(this);CheckoutHelperJS.showHideEditAddressLink(this,'<c:out value='${param.orderId}'/>')">
@@ -185,6 +185,7 @@
 				<c:import url="/${sdb.jspStoreDir}/Snippets/Member/Address/AddressDisplay.jsp">
 					<c:param name="addressId" value= "${selectedAddressId}"/>
 				</c:import>
+				
 	
 			</div>
 			<script type="text/javascript">
@@ -193,6 +194,10 @@
 				});
 			</script>
 		</flow:ifEnabled>
+		
+		
+		
+		
 
 		<c:if test="${selectedAddressId != -1}" >		
 			<div class="editAddressLink hover_underline" id="editAddressLink_<c:out value='${param.orderId}'/>" style="display:block;">
@@ -207,6 +212,9 @@
 				<wcf:param name="catalogId" value="${WCParam.catalogId}" />
 			</wcf:url>
 		</c:if>
+		
+		
+		
 	</div>
 
 	<!-- If its a non-ajax checkout page, then we should get all the address details during page load and use div show/hide logic -->
@@ -228,6 +236,57 @@
 			<div id="addressDetails_-1" style="display:block">
 			</div>
 	</flow:ifDisabled>
+	
+	
+	
+	<script type="text/javascript">
+	function addClass(element,id,count){
+	// alert(id);
+     // alert(document.getElementById('singleShipmentAddress').options[count].value);
+      //alert(document.getElementById('singleShipmentAddress').options[document.getElementById('singleShipmentAddress').selectedIndex].value);
+     // document.getElementById('singleShipmentAddress').options[document.getElementById('singleShipmentAddress').selectedIndex].selected = "false";
+      
+      
+      
+       document.getElementById("singleShipmentAddress").selectedIndex = count;
+       document.getElementById('singleShipmentAddress').value=document.getElementById('singleShipmentAddress').options[document.getElementById('singleShipmentAddress').selectedIndex];       
+       document.getElementById('singleShipmentAddress').options[count].selected = "true";
+       $(element).addClass("active");
+     
+     
+	}
+		</script>
+		
+		<c:forEach var="contactInfoIdentifier" items="${orderShipInfo.usableShippingAddress}" varStatus="count">
+		
+	    
+		<div class="shippingAddress"   id="adresss_${contactInfoIdentifier.addressId}"    onclick="JavaScript:setCurrentId('singleShipmentAddress'); CheckoutHelperJS.displayAddressDetails(<c:out value='${contactInfoIdentifier.addressId}'/>,'Shipping');CheckoutHelperJS.updateAddressForAllItems(this);CheckoutHelperJS.showHideEditAddressLink(this,'<c:out value='${param.orderId}'/>');addClass(this,<c:out value='${contactInfoIdentifier.addressId}'/>,<c:out value='${count.count}'/>);">
+		<c:import url="/${sdb.jspStoreDir}/Snippets/Member/Address/AddressDisplay.jsp">
+					<c:param name="addressId" value= "${contactInfoIdentifier.addressId}"/>
+					
+	    </c:import>
+		<%@ include file="SingleShippingAddressSelectExt.jspf" %>   
+		<%@ include file="GiftRegistrySingleShippingAddressSelectExt.jspf" %>
+		<c:if test="${contactInfoIdentifier.addressId != -1}" >		
+			<div class="editAddressLink hover_underline" id="editAddressLink_<c:out value='${param.orderId}'/>" style="display:block;">
+				<a class="tlignore" href="JavaScript:CheckoutHelperJS.editAddress('singleShipmentAddress','-1','<c:out value='${fn:replace(profileshipping,search01,replaceStr01)}'/>','<c:out value='${fn:replace(profilebilling,search01,replaceStr01)}'/>');CheckoutHelperJS.setLastAddressLinkIdToFocus('WC_ShippingAddressSelectSingle_link_<c:out value='${contactInfoIdentifier.addressId}'/>');" id="WC_ShippingAddressSelectSingle_link_<c:out value='${contactInfoIdentifier.addressId}'/>">
+					<!--<img src="<c:out value='${jspStoreImgDir}'/>images/edit_icon.png" alt="" />-->
+					<fmt:message bundle="${storeText}" key="ADDR_EDIT_ADDRESS"/>
+				</a>
+			</div>
+			<wcf:url var="AddressEditView" value="AddressEditView" type="Ajax">
+				<wcf:param name="langId" value="${WCParam.langId}" />
+				<wcf:param name="storeId" value="${WCParam.storeId}" />
+				<wcf:param name="catalogId" value="${WCParam.catalogId}" />
+			</wcf:url>
+		</c:if>
+		</div>
+		 
+		</c:forEach>
+		
+		
+		
+	
 <%-- Use the value of personalAddressAllowed to hide/show the create/edit address link. --%>
 <c:if test="${order.x_isPersonalAddressesAllowedForShipping}">
 	<!-- Show Edit button only if there are any valid address.. -->
