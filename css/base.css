@@ -5024,3 +5024,30 @@ input#piAmount_4_display,
 .procede_con_compra{
     display: none;
 }
+
+
+.banner_deseos{
+	margin-bottom: 20px;
+}
+
+
+.drop_down_billing[name="payMethodId"] {
+	background: none;
+}
+
+.billing_method{
+	vertical-align: top;
+}
+
+@media (min-width: 616px) and (max-width: 737px){
+	#container_10053 #contentRecommendationWidget_2_-2012_1112 > .left_espot > div,
+	#container_10053 #contentRecommendationWidget_3_-2012_1113 > .left_espot > div{
+		height: 86px;
+	}
+}
+
+
+.card_info input{
+	box-sizing: border-box;
+	padding-left: 10px;
+}
