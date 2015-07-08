@@ -4539,3 +4539,9 @@ td.item .listPrice {
     top: 100px;
     z-index: 998;
 }
+
+div#WC_WishListResultDisplay_div_6 {
+  width: 100%;
+  display: inline-block;
+  margin-top: 20px;
+}

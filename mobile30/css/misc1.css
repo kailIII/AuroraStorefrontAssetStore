@@ -147,10 +147,10 @@ div.item_wrapper ul li.distance {
 
 /* Category View, Shopping  */
 div.item_wrapper .product_image_container {
-	position: absolute;
-	top: 10px;
-	left: 5px;
-	width: 80px;
+	/* position: absolute; */
+	/* top: 10px; */
+	/* left: 5px; */
+	width: 100%;
 	text-align: center;
 }
 
@@ -265,4 +265,9 @@ div#paging_control {
 
 div#store_map iframe {
 	display: inherit;
+}
+
+.bolsaDeseosMob30{
+/*   float: left !important;
+  width: 30% !important; */
 }

@@ -29,7 +29,7 @@
 			<wcf:param name="catalogId" value="${WCParam.catalogId}"/>
 </wcf:rest>
 
-<div id="wishlist_item_wrapper" class="item_wrapper item_wrapper_gradient">
+<div id="wishlist_item_wrapper" class="item_wrapper item_wrapper_gradient bolsaDeseosMob30">
 	<div class="product_image_container">
 		<c:choose>
 			<c:when test="${!empty catentry.catalogEntryView[0].thumbnail}">
@@ -57,42 +57,43 @@
 		<div class="bold item_info"><%@ include file="../ReusableObjects/CatalogEntryPriceDisplay.jspf"%></div>
 	</div>
 
-	<div class="multi_button_container">
-		<wcf:url var="addToCartURL" value="RESTOrderItemAdd">
-			<wcf:param name="URL" value="m30InterestListDisplay" />
-			<wcf:param name="errorViewName" value="m30InterestListDisplay" />
-			<wcf:param name="langId" value="${langId}" />
-			<wcf:param name="storeId" value="${WCParam.storeId}" />
-			<wcf:param name="catalogId" value="${WCParam.catalogId}" />
-			<wcf:param name="productId" value="${param.catEntryId}" />
-			<wcf:param name="catEntryId" value="${param.catEntryId}" />
-			<wcf:param name="quantity" value="1" />
-			<wcf:param name="giftListId" value="${WCParam.giftListId}" />					
-			<wcf:param name="externalId" value="${WCParam.externalId}" />
-		</wcf:url>
-		<a id="<c:out value='add_${param.catEntryId}_to_cart'/>" href="${addToCartURL}" title="<fmt:message bundle="${storeText}" key="ADD_TO_CART"/>">
-			<div class="primary_button button_half left">
-				<fmt:message bundle="${storeText}" key="ADD_TO_CART"/>
-			</div>
-		</a>
-		<div class="button_spacing left"></div>
+<!--  Se quitan botones -->
+<!-- 	<div class="multi_button_container"> -->
+<%-- 		<wcf:url var="addToCartURL" value="RESTOrderItemAdd"> --%>
+<%-- 			<wcf:param name="URL" value="m30InterestListDisplay" /> --%>
+<%-- 			<wcf:param name="errorViewName" value="m30InterestListDisplay" /> --%>
+<%-- 			<wcf:param name="langId" value="${langId}" /> --%>
+<%-- 			<wcf:param name="storeId" value="${WCParam.storeId}" /> --%>
+<%-- 			<wcf:param name="catalogId" value="${WCParam.catalogId}" /> --%>
+<%-- 			<wcf:param name="productId" value="${param.catEntryId}" /> --%>
+<%-- 			<wcf:param name="catEntryId" value="${param.catEntryId}" /> --%>
+<%-- 			<wcf:param name="quantity" value="1" /> --%>
+<%-- 			<wcf:param name="giftListId" value="${WCParam.giftListId}" />					 --%>
+<%-- 			<wcf:param name="externalId" value="${WCParam.externalId}" /> --%>
+<%-- 		</wcf:url> --%>
+<%-- 		<a id="<c:out value='add_${param.catEntryId}_to_cart'/>" href="${addToCartURL}" title="<fmt:message bundle="${storeText}" key="ADD_TO_CART"/>"> --%>
+<!-- 			<div class="primary_button button_half left"> -->
+<%-- 				<fmt:message bundle="${storeText}" key="ADD_TO_CART"/> --%>
+<!-- 			</div> -->
+<!-- 		</a> -->
+<!-- 		<div class="button_spacing left"></div> -->
 	
-		<wcf:url var="wishListItemDeleteURL" value="RestWishListRemoveItem">
-			<wcf:param name="URL" value="m30InterestListDisplay" />
-			<wcf:param name="errorViewName" value="m30InterestListDisplay" />
-			<wcf:param name="langId" value="${langId}" />
-			<wcf:param name="storeId" value="${WCParam.storeId}" />
-			<wcf:param name="catalogId" value="${WCParam.catalogId}" />
-			<wcf:param name="giftListId" value="${WCParam.giftListId}" />
-			<wcf:param name="externalId" value="${WCParam.externalId}" />
-			<wcf:param name="catEntryId" value="${param.catEntryId}" />
-		</wcf:url>	
-		<a id="<c:out value='item_${param.catEntryId}_delete'/>" href="${wishListItemDeleteURL}" title="<fmt:message bundle="${storeText}" key="WISHLIST_REMOVE"/>">
-			<div class="secondary_button button_half left">
-				<fmt:message bundle="${storeText}" key="WISHLIST_REMOVE"/>
-			</div>
-		</a>								
-	</div>
+<%-- 		<wcf:url var="wishListItemDeleteURL" value="RestWishListRemoveItem"> --%>
+<%-- 			<wcf:param name="URL" value="m30InterestListDisplay" /> --%>
+<%-- 			<wcf:param name="errorViewName" value="m30InterestListDisplay" /> --%>
+<%-- 			<wcf:param name="langId" value="${langId}" /> --%>
+<%-- 			<wcf:param name="storeId" value="${WCParam.storeId}" /> --%>
+<%-- 			<wcf:param name="catalogId" value="${WCParam.catalogId}" /> --%>
+<%-- 			<wcf:param name="giftListId" value="${WCParam.giftListId}" /> --%>
+<%-- 			<wcf:param name="externalId" value="${WCParam.externalId}" /> --%>
+<%-- 			<wcf:param name="catEntryId" value="${param.catEntryId}" /> --%>
+<%-- 		</wcf:url>	 --%>
+<%-- 		<a id="<c:out value='item_${param.catEntryId}_delete'/>" href="${wishListItemDeleteURL}" title="<fmt:message bundle="${storeText}" key="WISHLIST_REMOVE"/>"> --%>
+<!-- 			<div class="secondary_button button_half left"> -->
+<%-- 				<fmt:message bundle="${storeText}" key="WISHLIST_REMOVE"/> --%>
+<!-- 			</div> -->
+<!-- 		</a>								 -->
+<!-- 	</div> -->
 	<div class="clear_float"></div>	
 </div>
 

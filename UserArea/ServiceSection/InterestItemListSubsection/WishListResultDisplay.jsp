@@ -285,6 +285,7 @@
 			  ***
 			--%>
 			<div class="my_account_wishlist_container" id="WC_WishListResultDisplay_div_6">
+			<br />
 				<fmt:message bundle="${storeText}" key="GENERICERR_MAINTEXT" >
 					<fmt:param><fmt:message bundle="${storeText}" key="GENERICERR_CONTACT_US" /></fmt:param>
 				</fmt:message>
