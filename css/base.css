@@ -4995,8 +4995,10 @@ input#piAmount_4_display,
 	display: none;
 }
 
+
 #four-grid-wishlist > .item_container > .item{
 	width: 30% !important;
+	min-height: 250px;
 }
 
 #four-grid-wishlist .img {

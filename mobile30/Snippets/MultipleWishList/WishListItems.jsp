@@ -33,28 +33,32 @@
 	<div class="product_image_container">
 		<c:choose>
 			<c:when test="${!empty catentry.catalogEntryView[0].thumbnail}">
-				<img src="<c:out value="${catentry.catalogEntryView[0].thumbnail}"/>" alt="<c:out value="${catentry.catalogEntryView[0].name}" />"/>
+				<img class="imagenBolsa30" src="<c:out value="${catentry.catalogEntryView[0].thumbnail}"/>" alt="<c:out value="${catentry.catalogEntryView[0].name}" />"/>
 			</c:when>
 			<c:otherwise>
-				<img src="<c:out value="${hostPath}${jspStoreImgDir}" />images/NoImageIcon.jpg" alt="<fmt:message bundle="${storeText}" key="No_Image"/>"/>
+				<img class="imagenBolsa30" src="<c:out value="${hostPath}${jspStoreImgDir}" />images/NoImageIcon.jpg" alt="<fmt:message bundle="${storeText}" key="No_Image"/>"/>
 			</c:otherwise>
 		</c:choose>
 	</div>
-	<div class="product_info_container">
-		<wcf:url var="catEntryDisplayUrl" patternName="ProductURL" value="Product1">
-			<wcf:param name="storeId" value="${WCParam.storeId}"/>
-			<wcf:param name="langId" value="${langId}"/>
-			<wcf:param name="catalogId" value="${WCParam.catalogId}"/>
-			<wcf:param name="productId" value="${param.catEntryId}"/>
-		</wcf:url>
-		<div><a id="item_display_link_${param.catEntryId}" href="${fn:escapeXml(catEntryDisplayUrl)}">${catentry.catalogEntryView[0].name}</a></div>
-		<div class="small_text item_info"><c:out value="${catentry.catalogEntryView[0].partNumber}" /></div>
-
-		<c:set var="type" value="${fn:toLowerCase(catentry.catalogEntryView[0].catalogEntryTypeCode)}" />
-		<c:set var="type" value="${fn:replace(type,'bean','')}" />
-		<c:set var="catalogEntry" value="${catentry.catalogEntryView[0]}" />
-		<c:set var="displayPriceRange" value="false"/>
-		<div class="bold item_info"><%@ include file="../ReusableObjects/CatalogEntryPriceDisplay.jspf"%></div>
+	<div class="product_info_container productInfoBolsa30">
+	
+		<div id="productCentradoBolsa30">
+	
+			<wcf:url var="catEntryDisplayUrl" patternName="ProductURL" value="Product1">
+				<wcf:param name="storeId" value="${WCParam.storeId}"/>
+				<wcf:param name="langId" value="${langId}"/>
+				<wcf:param name="catalogId" value="${WCParam.catalogId}"/>
+				<wcf:param name="productId" value="${param.catEntryId}"/>
+			</wcf:url>
+			<div><a id="item_display_link_${param.catEntryId}" href="${fn:escapeXml(catEntryDisplayUrl)}">${catentry.catalogEntryView[0].name}</a></div>
+			<div class="small_text item_info"><c:out value="${catentry.catalogEntryView[0].partNumber}" /></div>
+	
+			<c:set var="type" value="${fn:toLowerCase(catentry.catalogEntryView[0].catalogEntryTypeCode)}" />
+			<c:set var="type" value="${fn:replace(type,'bean','')}" />
+			<c:set var="catalogEntry" value="${catentry.catalogEntryView[0]}" />
+			<c:set var="displayPriceRange" value="false"/>
+			<div class="bold item_info"><%@ include file="../ReusableObjects/CatalogEntryPriceDisplay.jspf"%></div>
+		</div>
 	</div>
 
 <!--  Se quitan botones -->

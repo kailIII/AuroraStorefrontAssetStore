@@ -267,7 +267,17 @@ div#store_map iframe {
 	display: inherit;
 }
 
-.bolsaDeseosMob30{
-/*   float: left !important;
-  width: 30% !important; */
+.productInfoBolsa30{
+	text-align: center !important;
+	padding: 0px !important;
+}
+
+#productCentradoBolsa30{
+  text-align: left !important;
+  margin: 0 auto;
+  width: 243px;
+}
+
+.imagenBolsa30{
+	max-height: none !important;
 }
