@@ -2399,19 +2399,21 @@ div.widget_sidebar_container > .left_border > .right_border > .content div.produ
 
 /* Default background for all ribbon ad's */
 .product_image .RibbonAdDefault {
+	/*
 	position:absolute;
 	bottom:10px;
 	right:0;
 	width:120px;
 	height:20px;
-	/*
+
 	background-color:#2C2C2C;
 	background: -webkit-gradient(linear, left top, right top, color-stop(0.76, rgba(68, 68, 68, 1)), color-stop(1, rgba(255, 255, 255, 0)));
 	background: linear-gradient(to right, rgba(68, 68, 68, 1) 76%, rgba(255, 255, 255, 0) 100%);
 	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(gradientType=1, startColorStr='#FF444444', endColorStr='#00FFFFFF')";
 	*/
 	zoom: 1;
-	font-size: 14px;
+	font-size: 13px;
+	font-weight:bold;
 	line-height:20px;
 	font-family: arial, Helvetica, sans-serif;
 	color:#FFF;
