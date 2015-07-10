@@ -202,47 +202,47 @@
                                     
                                     
                                     
+                                        <!-- aca comenzamos el boton agregar a carrito-->
+                                        <div class="row">
+                                            <div class="heading"></div>
+                                            <c:forEach var="catEntryType" items="${catEntryTypeMap}" varStatus="status">
+                                                <c:set var="buyableKey">${status.count}</c:set>
+                                                <div class="item comparador">
+                                                    <c:choose>
+                                                        <c:when test="${catEntryBuyable[buyableKey]}">
+                                                            <a id="add2CartBtn_${status.count}" href="javascript:setCurrentId('add2CartBtn_${status.count}');
+                                                                                                      <c:choose>
+                                                                                                      <c:when test="${(catEntryType.value eq 'ItemBean') or (catEntryType.value eq 'PackageBean')}">
+																	<c:forEach var="catEntryId" items="${catEntryIds}" varStatus="status2">
+                                                                                                                                          <c:if test="${status.count == status2.count}">
+																			CompareProductJS.add2ShopCart('${catEntryType.key}',1,'${catEntryId}');"
+                                                               </c:if>
+                                                            </c:forEach>
+                                                        </c:when>
+                                                    <c:otherwise>
+                                                        QuickInfoJS.showDetails('${catEntryType.key}', null, null, null, 'widget_quick_info_popup');"
+                                                    </c:otherwise>
+                                                    </c:choose>
+                                                class="button_primary" wairole="button" role="button" title="<fmt:message bundle="${storeText}" key="ADD_TO_CART" />">
+                                                <div class="left_border"></div>
+                                                <div id="comparePageAdd2Cart_${status.count}" class="button_text btnAzul">
+                                                    <fmt:message bundle="${storeText}" key="ADD_TO_CART" />
+                                                </div>
+                                                <div class="right_border"></div>
+                                                </a>
+                                            </c:when>
+                                        <c:otherwise>
+                                            <p class="producto_agotado"><fmt:message bundle="${storeText}" key="SKU_NOT_BUYABLE"/></p>
+                                        </c:otherwise>
+                                        </c:choose>
+                                        </div>
+                                        </c:forEach>
+                            </div>
                                     
-                                    <div class="row">
-                                    <div class="heading"></div>
-                                    <c:forEach var="catEntryType" items="${catEntryTypeMap}" varStatus="status">
-                                    <c:set var="buyableKey">${status.count}</c:set>
-                                    <div class="item">
-                                    <c:choose>
-                                    <c:when test="${catEntryBuyable[buyableKey]}">
-                                    <a id="add2CartBtn_${status.count}" href="javascript:setCurrentId('add2CartBtn_${status.count}');
-                                    <c:choose>
-                                    <c:when test="${(catEntryType.value eq 'ItemBean') or (catEntryType.value eq 'PackageBean')}">
-                                    <c:forEach var="catEntryId" items="${catEntryIds}" varStatus="status2">
-                                    <c:if test="${status.count == status2.count}">
-                                    CompareProductJS.add2ShopCart('${catEntryType.key}',1,'${catEntryId}');"
-                                    </c:if>
-                                    </c:forEach>
-                                    </c:when>
-                                    <c:otherwise>
-                                    QuickInfoJS.showDetails('${catEntryType.key}', null, null, null, 'widget_quick_info_popup');"
-                                    </c:otherwise>
-                                    </c:choose>
-                                    <%--
-                                    cambie la clase del boton para esta seccion
-                                    --%>
-                                    wairole="button" role="button" title="<fmt:message bundle="${storeText}" key="ADD_TO_CART" />">
-                                    <div class="left_border"></div>
-                                    <div id="comparePageAdd2Cart_${status.count}" class="button_text btnAzul">
-                                    <fmt:message bundle="${storeText}" key="ADD_TO_CART" />
-                                    </div>
-                                    <div class="right_border"></div>
-                                    </a>
-                                    </c:when>
-                                    <c:otherwise>
-                                        <p class="producto_agotado"><fmt:message bundle="${storeText}" key="SKU_NOT_BUYABLE"/></p>
-                                    </c:otherwise>
-                                    </c:choose>
-                                    </div>
-                                    </c:forEach>
-                                    </div>
-                                    
-                                    
+                                                              
+                                
+                                
+                                
                                     
                                     
                                     <%--
@@ -295,45 +295,42 @@
                                     
                                     
                                     
-                                    
-                                    <div class="row">
-                                    <div class="heading"></div>
-                                    <c:forEach var="catEntryType" items="${catEntryTypeMap}" varStatus="status">
-                                    <c:set var="buyableKey">${status.count}</c:set>
-                                    <div class="item">
-                                    <c:choose>
-                                    <c:when test="${catEntryBuyable[buyableKey]}">
-                                    <a id="add2CartBtn_${status.count}" href="javascript:setCurrentId('add2CartBtn_${status.count}');
-                                    <c:choose>
-                                    <c:when test="${(catEntryType.value eq 'ItemBean') or (catEntryType.value eq 'PackageBean')}">
-                                    <c:forEach var="catEntryId" items="${catEntryIds}" varStatus="status2">
-                                    <c:if test="${status.count == status2.count}">
-                                    CompareProductJS.add2ShopCart('${catEntryType.key}',1,'${catEntryId}');"
-                                    </c:if>
-                                    </c:forEach>
-                                    </c:when>
-                                    <c:otherwise>
-                                    QuickInfoJS.showDetails('${catEntryType.key}', null, null, null, 'widget_quick_info_popup');"
-                                    </c:otherwise>
-                                    </c:choose>
-                                    <%--
-                                    cambie la clase del boton para esta seccion
-                                    --%>
-                                    wairole="button" role="button" title="<fmt:message bundle="${storeText}" key="ADD_TO_CART" />">
-                                    <div class="left_border"></div>
-                                    <div id="comparePageAdd2Cart_${status.count}" class="button_text btnAzul">
-                                    <fmt:message bundle="${storeText}" key="ADD_TO_CART" />
-                                    </div>
-                                    <div class="right_border"></div>
-                                    </a>
-                                    </c:when>
-                                    <c:otherwise>
-                                        <p class="producto_agotado"><fmt:message bundle="${storeText}" key="SKU_NOT_BUYABLE"/></p>
-                                    </c:otherwise>
-                                    </c:choose>
-                                    </div>
-                                    </c:forEach>
-                                    </div>
+                                        <!-- aca comenzamos el boton agregar a carrito-->
+                                        <div class="row">
+                                            <div class="heading"></div>
+                                            <c:forEach var="catEntryType" items="${catEntryTypeMap}" varStatus="status">
+                                                <c:set var="buyableKey">${status.count}</c:set>
+                                                <div class="item comparador">
+                                                    <c:choose>
+                                                        <c:when test="${catEntryBuyable[buyableKey]}">
+                                                            <a id="add2CartBtn_${status.count}" href="javascript:setCurrentId('add2CartBtn_${status.count}');
+                                                                                                      <c:choose>
+                                                                                                      <c:when test="${(catEntryType.value eq 'ItemBean') or (catEntryType.value eq 'PackageBean')}">
+																	<c:forEach var="catEntryId" items="${catEntryIds}" varStatus="status2">
+                                                                                                                                          <c:if test="${status.count == status2.count}">
+																			CompareProductJS.add2ShopCart('${catEntryType.key}',1,'${catEntryId}');"
+                                                               </c:if>
+                                                            </c:forEach>
+                                                        </c:when>
+                                                    <c:otherwise>
+                                                        QuickInfoJS.showDetails('${catEntryType.key}', null, null, null, 'widget_quick_info_popup');"
+                                                    </c:otherwise>
+                                                    </c:choose>
+                                                class="button_primary" wairole="button" role="button" title="<fmt:message bundle="${storeText}" key="ADD_TO_CART" />">
+                                                <div class="left_border"></div>
+                                                <div id="comparePageAdd2Cart_${status.count}" class="button_text btnAzul">
+                                                    <fmt:message bundle="${storeText}" key="ADD_TO_CART" />
+                                                </div>
+                                                <div class="right_border"></div>
+                                                </a>
+                                            </c:when>
+                                        <c:otherwise>
+                                            <p class="producto_agotado"><fmt:message bundle="${storeText}" key="SKU_NOT_BUYABLE"/></p>
+                                        </c:otherwise>
+                                        </c:choose>
+                            </div>
+                        </c:forEach>
+            </div>
                                     
                                     
                                     
@@ -481,43 +478,51 @@
                                     
                                     
                                     
-                                    <div class="row">
-                                    <div class="heading"></div>
-                                    <c:forEach var="catEntryType" items="${catEntryTypeMap}" varStatus="status">
-                                    <c:if test="${status.count > 2}">
-                                    <c:set var="buyableKey">${status.count}</c:set>
-                                    <div class="item">
-                                    <c:choose>
-                                    <c:when test="${catEntryBuyable[buyableKey]}">
-                                    <a id="add2CartBtn_2_${status.count}" href="javascript:setCurrentId('add2CartBtn_2_${status.count}');
-                                    <c:choose>
-                                    <c:when test="${(catEntryType.value eq 'ItemBean') or (catEntryType.value eq 'PackageBean')}">
-                                    <c:forEach var="catEntryId" items="${catEntryIds}" varStatus="status2">
-                                    <c:if test="${status.count == status2.count}">
-                                    CompareProductJS.add2ShopCart('${catEntryType.key}',1,'${catEntryId}');"
-                                    </c:if>
-                                    </c:forEach>
-                                    </c:when>
-                                    <c:otherwise>
-                                    QuickInfoJS.showDetails('${catEntryType.key}', null, null, null, 'widget_quick_info_popup');"
-                                    </c:otherwise>
-                                    </c:choose>
-                                    class="button_primary22 btnAzul" wairole="button" role="button" title="<fmt:message bundle="${storeText}" key="ADD_TO_CART" />">
-                                    <div class="left_border"></div>
-                                    <div class="button_text">
-                                    <fmt:message bundle="${storeText}" key="ADD_TO_CART" />
-                                    </div>
-                                    <div class="right_border"></div>
-                                    </a>
-                                    </c:when>
-                                    <c:otherwise>
-                                        <p class="producto_agotado"><fmt:message bundle="${storeText}" key="SKU_NOT_BUYABLE"/></p>
-                                    </c:otherwise>
-                                    </c:choose>
-                                    </div>
-                                    </c:if>
-                                    </c:forEach>
-                                    </div>
+                                        <!-- aca comenzamos el boton agregar a carrito-->
+                                        <div class="row">
+                                            <div class="heading"></div>
+                                            <c:forEach var="catEntryType" items="${catEntryTypeMap}" varStatus="status">
+                                                <c:if test="${status.count > 2}">
+                                                    <c:set var="buyableKey">${status.count}</c:set>
+                                                    <div class="item comparador">
+                                                        <c:choose>
+                                                            <c:when test="${catEntryBuyable[buyableKey]}">
+                                                                <a id="add2CartBtn_2_${status.count}" href="javascript:setCurrentId('add2CartBtn_2_${status.count}');
+                                                                                                            <c:choose>
+                                                                                                            <c:when test="${(catEntryType.value eq 'ItemBean') or (catEntryType.value eq 'PackageBean')}">
+																		<c:forEach var="catEntryId" items="${catEntryIds}" varStatus="status2">
+                                                                                                                                              <c:if test="${status.count == status2.count}">
+																				CompareProductJS.add2ShopCart('${catEntryType.key}',1,'${catEntryId}');"
+                                                                   </c:if>
+                                                                </c:forEach>
+                                                            </c:when>
+                                                        <c:otherwise>
+                                                            QuickInfoJS.showDetails('${catEntryType.key}', null, null, null, 'widget_quick_info_popup');"
+                                                        </c:otherwise>
+                                                        </c:choose>
+                                                    class="button_primary" wairole="button" role="button" title="<fmt:message bundle="${storeText}" key="ADD_TO_CART" />">
+                                                    <div class="left_border"></div>
+                                                    <div class="button_text btnAzul">
+                                                        <fmt:message bundle="${storeText}" key="ADD_TO_CART" />
+                                                    </div>
+                                                    <div class="right_border"></div>
+                                                    </a>
+                                                </c:when>
+                                            <c:otherwise>
+                                                <p class="producto_agotado"><fmt:message bundle="${storeText}" key="SKU_NOT_BUYABLE"/></p>
+                                            </c:otherwise>
+                                            </c:choose>
+                                        </div>
+                                        </c:if>
+               </c:forEach>
+        </div>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                                     
                                     
                                     
@@ -590,43 +595,44 @@
                                     
                                     
                                     
-                                    <div class="row">
-                                    <div class="heading"></div>
-                                    <c:forEach var="catEntryType" items="${catEntryTypeMap}" varStatus="status">
-                                    <c:if test="${status.count > 2}">
-                                    <c:set var="buyableKey">${status.count}</c:set>
-                                    <div class="item">
-                                    <c:choose>
-                                    <c:when test="${catEntryBuyable[buyableKey]}">
-                                    <a id="add2CartBtn_2_${status.count}" href="javascript:setCurrentId('add2CartBtn_2_${status.count}');
-                                    <c:choose>
-                                    <c:when test="${(catEntryType.value eq 'ItemBean') or (catEntryType.value eq 'PackageBean')}">
-                                    <c:forEach var="catEntryId" items="${catEntryIds}" varStatus="status2">
-                                    <c:if test="${status.count == status2.count}">
-                                    CompareProductJS.add2ShopCart('${catEntryType.key}',1,'${catEntryId}');"
-                                    </c:if>
-                                    </c:forEach>
-                                    </c:when>
-                                    <c:otherwise>
-                                    QuickInfoJS.showDetails('${catEntryType.key}', null, null, null, 'widget_quick_info_popup');"
-                                    </c:otherwise>
-                                    </c:choose>
-                                    class="button_primary22 btnAzul" wairole="button" role="button" title="<fmt:message bundle="${storeText}" key="ADD_TO_CART" />">
-                                    <div class="left_border"></div>
-                                    <div class="button_text">
-                                    <fmt:message bundle="${storeText}" key="ADD_TO_CART" />
-                                    </div>
-                                    <div class="right_border"></div>
-                                    </a>
-                                    </c:when>
-                                    <c:otherwise>
-                                        <p class="producto_agotado"><fmt:message bundle="${storeText}" key="SKU_NOT_BUYABLE"/></p>
-                                    </c:otherwise>
-                                    </c:choose>
-                                    </div>
-                                    </c:if>
-                                    </c:forEach>
-                                    </div>
+                                        <!-- aca comenzamos el boton agregar a carrito-->
+                                        <div class="row">
+                                            <div class="heading"></div>
+                                            <c:forEach var="catEntryType" items="${catEntryTypeMap}" varStatus="status">
+                                                <c:if test="${status.count > 2}">
+                                                    <c:set var="buyableKey">${status.count}</c:set>
+                                                    <div class="item comparador">
+                                                        <c:choose>
+                                                            <c:when test="${catEntryBuyable[buyableKey]}">
+                                                                <a id="add2CartBtn_2_${status.count}" href="javascript:setCurrentId('add2CartBtn_2_${status.count}');
+                                                                                                            <c:choose>
+                                                                                                            <c:when test="${(catEntryType.value eq 'ItemBean') or (catEntryType.value eq 'PackageBean')}">
+																		<c:forEach var="catEntryId" items="${catEntryIds}" varStatus="status2">
+                                                                                                                                              <c:if test="${status.count == status2.count}">
+																				CompareProductJS.add2ShopCart('${catEntryType.key}',1,'${catEntryId}');"
+                                                                   </c:if>
+                                                                </c:forEach>
+                                                            </c:when>
+                                                        <c:otherwise>
+                                                            QuickInfoJS.showDetails('${catEntryType.key}', null, null, null, 'widget_quick_info_popup');"
+                                                        </c:otherwise>
+                                                        </c:choose>
+                                                    class="button_primary" wairole="button" role="button" title="<fmt:message bundle="${storeText}" key="ADD_TO_CART" />">
+                                                    <div class="left_border"></div>
+                                                    <div class="button_text btnAzul">
+                                                        <fmt:message bundle="${storeText}" key="ADD_TO_CART" />
+                                                    </div>
+                                                    <div class="right_border"></div>
+                                                    </a>
+                                                </c:when>
+                                            <c:otherwise>
+                                                <p class="producto_agotado"><fmt:message bundle="${storeText}" key="SKU_NOT_BUYABLE"/></p>
+                                            </c:otherwise>
+                                            </c:choose>
+                                        </div>
+        </c:if>
+    </c:forEach>
+    </div>
                                     
                                     
                                     

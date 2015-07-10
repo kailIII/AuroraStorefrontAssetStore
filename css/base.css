@@ -184,8 +184,7 @@ dl, ol, ul {
     font-size: 0.95em !important;
     text-decoration: none !important;
     background-image: none !important;
-	min-width: 230px;
-	max-width: 230px;
+    min-width: 230px;
     color: #FFF !important;
     padding: 10px !important;
     border: 0 !important;
@@ -194,6 +193,27 @@ dl, ol, ul {
 }
 
 .btnAzul:hover {
+    background-color: #1badfa !important;
+}
+
+
+.comparador .btnAzul {
+    background-color: #48baf6 !important;
+    border-radius: 5px !important;
+    color: #fff !important;
+    cursor: pointer !important;
+    font-size: 0.95em !important;
+    text-decoration: none !important;
+    background-image: none !important;
+    min-width: 175px;
+    color: #FFF !important;
+    padding: 10px !important;
+    border: 0 !important;
+    cursor: pointer !important;
+    box-sizing: border-box;
+}
+
+.comparador .btnAzul:hover {
     background-color: #1badfa !important;
 }
 
@@ -211,7 +231,7 @@ dl, ol, ul {
     text-decoration: none;
 	text-align: center;
     padding: 10px !important;
-	width: 200px;
+    min-width: 230px;
     box-sizing: border-box;
 }
 
@@ -222,8 +242,7 @@ dl, ol, ul {
 .btnNaranja{ 
 	color:#FFF;
 	padding:10px;
-	min-width: 230px;
-	max-width: 230px;
+    min-width: 230px;
 	font-size:.95em;
 	clear:both;
 	border:0;
@@ -557,8 +576,7 @@ dl, ol, ul {
 	.row.margin-true > div > div {
 		margin-left: 0;
 		margin-right: 0;
-	}
-    
+	}   
     
 }
 
@@ -1335,6 +1353,11 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 	#searchFilterMenu.active {
 		display: none;
 	}
+    
+    .comparador .btnAzul {
+        font-size: 0.95em !important;
+        min-width: 120px;
+    }
 }
 #searchBox > .submitButton {
   display: inline-block;
@@ -1486,6 +1509,10 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 		width: 220px;
 		text-align: center;
 	}
+    .comparador .btnAzul {
+        font-size: 0.95em !important;
+        min-width: 150px;
+    }
 }
 @media (min-width: 953px) {
 	#footerRow1 {
@@ -2569,9 +2596,12 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 @media (max-width: 600px){
 
 
-	.btnAzul {        
+	.comparador .btnAzul {        
 	   padding: 10px 20px !important;
-	}    
+        font-size: 0.95em !important;
+        min-width: 120px;
+	}
+    
 	    
 	.texto_carrusel_banner {
 		top:20px;
