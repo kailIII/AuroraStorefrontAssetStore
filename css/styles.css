@@ -535,7 +535,8 @@ div.widget_articles_videos > .content > .item > .description > .header:hover{
 .tab_container {
 	text-transform: uppercase;
 	font-weight: bold;
-	color: #ca4000;
+	/* color: #ca4000; */
+	color: #3E7EC7;
 	font-size: 12px;
 	width: 40%;
 	float:left;
@@ -558,7 +559,7 @@ div.widget_articles_videos > .content > .item > .description > .header:hover{
 }
 
 .inactive_tab {
-	color: #686868;
+	color: rgb(100, 175, 255);
 	border-top: 2px solid #bbbbbb;
 	border-bottom: 1px solid #e9e9e9;
 	background-image: linear-gradient(bottom, rgb(221,221,221), rgb(255,255,255) 75%);
@@ -1274,7 +1275,7 @@ div.namePartPriceContainer > div > span.price{
 	font-size:16px;
 	color: #CA4200;
 	line-height: 18px;
-	font-weight: bold;
+	/* font-weight: bold; */
 	display:block;
 }
 
