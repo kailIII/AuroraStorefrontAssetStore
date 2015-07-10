@@ -191,6 +191,7 @@ div.widget_quick_info_popup > .middle > .content_left_border > .content_right_bo
 	color: #010f1c;
 	font-size: 12px;
 	float:none;
+	font-family:ubunturegular;
 }
 
 .catEntryList_border {
@@ -2448,7 +2449,7 @@ div.widget_sidebar_container > .left_border > .right_border > .content div.produ
 	font-size: 17px;
 	line-height: 18px;
 	height: inherit;
-	color: #646464;
+	color: #384452;
 }
 .product_info > .product_name > a {
 	display: block;

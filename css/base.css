@@ -24,6 +24,7 @@
 		 url('../fonts/ubuntu-regular-webfont.svg#ubunturegular') format('svg');
 	font-weight: normal;
 	font-style: normal;
+	-webkit-font-smoothing:antialiased;
 }
 
 @font-face {
@@ -36,7 +37,7 @@
 		 url('../fonts/ubuntu-light-webfont.svg#ubuntulight') format('svg');
 	font-weight: normal;
 	font-style: normal;
-
+	-webkit-font-smoothing:antialiased;
 }
 
 @font-face {
@@ -49,7 +50,7 @@
 		 url('../fonts/ubuntu-medium-webfont.svg#ubuntumedium') format('svg');
 	font-weight: normal;
 	font-style: normal;
-
+	-webkit-font-smoothing:antialiased;
 }
 
 @font-face {
@@ -62,7 +63,7 @@
 		 url('../fonts/ubuntu-bold-webfont.svg#ubuntubold') format('svg');
 	font-weight: normal;
 	font-style: normal;
-
+	-webkit-font-smoothing:antialiased;
 }
 
 
@@ -77,7 +78,7 @@
 		 url('../fonts/ubuntu-italic-webfont.svg#ubuntuitalic') format('svg');
 	font-weight: normal;
 	font-style: normal;
-
+	-webkit-font-smoothing:antialiased;
 }
 
 
@@ -93,7 +94,7 @@
 		 url('../fonts/ubuntu-lightitalic-webfont.svg#ubuntulight_italic') format('svg');
 	font-weight: normal;
 	font-style: normal;
-
+	-webkit-font-smoothing:antialiased;
 }
 
 
@@ -109,7 +110,7 @@
 		 url('../fonts/ubuntu-mediumitalic-webfont.svg#ubuntumedium_italic') format('svg');
 	font-weight: normal;
 	font-style: normal;
-
+	-webkit-font-smoothing:antialiased;
 }
 
 
@@ -123,7 +124,7 @@
 		 url('../fonts/ubuntu-bolditalic-webfont.svg#ubuntubold_italic') format('svg');
 	font-weight: normal;
 	font-style: normal;
-
+	-webkit-font-smoothing:antialiased;
 }
 
 body {
@@ -133,7 +134,7 @@ body {
 	font-family: Arial,Helvetica,sans-serif;
 	line-height: 1.4;
 	margin: 0 auto;
-	width: 100%;
+	width: 100%;	
 }
 a {
 	color: inherit;
@@ -880,8 +881,8 @@ position: absolute;
 }
 #cartDropdown > h3 {
 	margin: 0;
-	padding: 15px 80px 15px 15px;
-	background-color: #f5f6f7;
+	padding: 10px 80px 10px 15px;
+	background-color: #eff7ed;
 	border-bottom: 1px solid #edeff0;
 	font-size: inherit;
 	font-weight: inherit;
@@ -1213,7 +1214,7 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 	border-top: 1px solid #c9cece;
 	border-bottom: 1px solid #c9cece;
 	border-right: 1px solid #c9cece;
-	font-size: 12px;
+	font-size: 13px;
 	left: 185px;
 	opacity: 0.95;
 	position: relative;
@@ -3392,7 +3393,7 @@ div.compare_target {
 
 .product_info > .product_name > a {
 	font-size: 14px !important;
-	/* font-family: ubunturegular; */
+	font-family: ubunturegular;
 }
 
 .product_info > .product_price > .price{
