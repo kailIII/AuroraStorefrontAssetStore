@@ -5145,3 +5145,10 @@ input#piAmount_4_display,
 	box-sizing: border-box;
 	padding-left: 10px;
 }
+
+.tituloCategoriaWidget{
+	background: none !important; 
+	color: #1b83ff !important;
+	font-size: 18px !important;
+	font-family: ubunturegular !important;
+}

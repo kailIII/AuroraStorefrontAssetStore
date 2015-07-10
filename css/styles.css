@@ -1483,6 +1483,13 @@ div.widget_bundle_package_list .quantity_discount > p > span.price{
 .quantity_section{
 	padding-top: 16px;
 	padding-bottom: 6px;
+	width: 40%;
+	float: left;
+}
+
+.botonesFichaDerecha{
+	float: right;
+	width: 60%;
 }
 
 .quantity_section > .quantity_input{
