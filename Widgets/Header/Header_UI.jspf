@@ -116,7 +116,7 @@
 				<a> <fmt:message bundle="${storeText}" key="HEADER_ASISTENCIA" /> </a>				
 				<ul class="asistenciaLista"> 
 					<li><a target="_blank"  href="http://www.telmex.com/web/asistencia/hogar-preguntas-frecuentes-tienda-en-linea"><fmt:message bundle="${storeText}" key="HEADER_ASISTENCIA_FAQ" /> </a></li>
-					<li><a><fmt:message bundle="${storeText}" key="HEADER_ASISTENCIA_CHAT" /> </a></li> 
+					<!-- <%--  <li><a><fmt:message bundle="${storeText}" key="HEADER_ASISTENCIA_CHAT" /> </a></li>   --%> --> 
 				</ul>
 			</div>
 
