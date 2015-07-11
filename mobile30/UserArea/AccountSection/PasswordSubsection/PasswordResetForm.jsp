@@ -95,7 +95,7 @@
                     
                     <fieldset> 
                         <label for="logon_id"><div><fmt:message bundle="${storeText}" key="FYP_LOGON_ID"/></div></label>
-                        <input type="text" id="logon_id" name="logonId" class="inputfield input_width_standard" placeholder="<fmt:message bundle="${storeText}" key="LOGON_ID"/>"/> 
+                        <input style="text-transform:uppercase;" type="text" id="logon_id" name="logonId" class="inputfield input_width_standard" placeholder="<fmt:message bundle="${storeText}" key="LOGON_ID"/>"/> 
                         <div class="item_spacer"></div>
 
                         <div class="single_button_container">

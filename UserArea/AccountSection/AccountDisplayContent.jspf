@@ -202,7 +202,7 @@
 
 					<p><label for="WC_AccountDisplay_FormInput_logonId_In_Logon_1"><fmt:message bundle="${storeText}" key="LOGON_ID" /></label></p>
 					<p>
-						<input <c:out value="${aria_invalid}"/> aria-required="true"
+						<input style="text-transform:uppercase;" <c:out value="${aria_invalid}"/> aria-required="true"
 						<c:if test="${((!empty WCParam.page) && (WCParam.page == 'account') && (empty reLogonURL)) || (!empty errorMessage)}">aria-describedby="<c:if test="${!empty errorMessage}">logonErrorMessage </c:if><c:if test="${(!empty WCParam.page) && (WCParam.page == 'account') && (empty reLogonURL)}">logonWaitingActivationMessage</c:if>"</c:if>
 						size="35" type="text" name="logonId" id="WC_AccountDisplay_FormInput_logonId_In_Logon_1" value="<c:out value="${WCParam.logonId}"/>" onkeypress='if(event.keyCode==13){ javascript:setDeleteCartCookie();submitSpecifiedForm(document.Logon);}'/>
 					</p>

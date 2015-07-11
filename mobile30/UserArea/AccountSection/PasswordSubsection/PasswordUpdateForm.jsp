@@ -77,7 +77,7 @@
                     <input type="hidden" name="storeId" value='<c:out value="${WCParam.storeId}" />' id="WC_MPasswordUpdateForm_FormInput_storeId"/>
                     <input type="hidden" name="catalogId" value='<c:out value="${WCParam.catalogId}" />' id="WC_MPasswordUpdateForm_FormInput_catalogId"/>
                     <input type="hidden" name="langId" value='<c:out value="${langId}" />' id="WC_MPasswordUpdateForm_FormInput_langId"/>
-                    <input type="hidden" name="logonId" value='<c:out value="${WCParam.logonId}" />' id="WC_MPasswordUpdateForm_FormInput_logonId"/>
+                    <input style="text-transform:uppercase;" type="hidden" name="logonId" value='<c:out value="${WCParam.logonId}" />' id="WC_MPasswordUpdateForm_FormInput_logonId"/>
                     <input type="hidden" name="reLogonURL" value="ChangePassword" id="WC_MPasswordUpdateForm_FormInput_reLogonURL"/>
                     <input type="hidden" name="Relogon" value="Update" id="WC_MPasswordUpdateForm_FormInput_Relogon"/>
                     <input type="hidden" name="errorViewName" value="ChangePassword" />

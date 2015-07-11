@@ -116,7 +116,7 @@
 															<span class="required-field" id="WC_ResendActivationForm_Required_Field_2"> *</span> <fmt:message bundle="${storeText}" key="LOGON_ID2"/>
 														</label>
 													</span>
-													<input <c:out value="${aria_invalid}"/> aria-required="true" aria-describedby="error_msg" size="35" maxlength="254" name="logonId" id="WC_ResendActivationForm_FormInput_logonId_In_ResendActivationForm_1" class="resend_activation_form"/>
+													<input style="text-transform:uppercase;" <c:out value="${aria_invalid}"/> aria-required="true" aria-describedby="error_msg" size="35" maxlength="254" name="logonId" id="WC_ResendActivationForm_FormInput_logonId_In_ResendActivationForm_1" class="resend_activation_form"/>
 
 													<span class="strongtext">
 														<label for="WC_ResendActivationForm_FormInput_password_In_ResendActivationForm_1">

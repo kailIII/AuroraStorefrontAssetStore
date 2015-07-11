@@ -117,7 +117,7 @@
 						<input type="hidden" name="URL" value="${orderItemCount == 0 ? nextURL : orderMove}"/>
 
 						<div><label for="login_id"><fmt:message bundle="${storeText}" key="MLOGON_ID"/></label></div>
-						<input type="text" id="login_id" name="logonId" class="inputfield input_width_standard" placeholder="<fmt:message bundle="${storeText}" key="MLOGON_ID"/>" />	
+						<input style="text-transform:uppercase;" type="text" id="login_id" name="logonId" class="inputfield input_width_standard" placeholder="<fmt:message bundle="${storeText}" key="MLOGON_ID"/>" />	
 						<div class="item_spacer"></div>
 						
 						<div><label for="password"><fmt:message bundle="${storeText}" key="MPASSWORD"/></label></div>

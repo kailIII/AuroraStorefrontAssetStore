@@ -122,7 +122,7 @@
 					<input type="hidden" name="receiveEmail" value="" id="WC_UserRegistrationUpdateForm_FormInput_receiveEmail_In_Register_1"/>
 					<input type="hidden" name="receiveSMSNotification" value="" id="WC_UserRegistrationUpdateForm_FormInput_receiveSMSNotification_In_Register_1"/>
 					<input type="hidden" name="receiveSMS" value="" id="WC_UserRegistrationUpdateForm_FormInput_receiveSMS_In_Register_1"/>
-					<input type="hidden" name="logonId" value="<c:out value="${person.logonId}"/>" id="WC_UserRegistrationUpdateForm_FormInput_logonId_In_Register_1_1"/>
+					<input style="text-transform:uppercase;" type="hidden" name="logonId" value="<c:out value="${person.logonId}"/>" id="WC_UserRegistrationUpdateForm_FormInput_logonId_In_Register_1_1"/>
 					<input type="hidden" name="authToken" value="${authToken}" id="WC_UserRegistrationUpdateForm_FormInput_authToken_In_Register_1"/>
 					<span class="required-field" id="WC_UserRegistrationUpdateForm_div_12"> *</span>
 					<fmt:message bundle="${storeText}" key="REQUIRED_FIELDS" />

@@ -125,7 +125,7 @@
 													</span>
 													<br/>
 													
-													<input <c:out value="${aria_invalid}"/> aria-required="true" aria-describedby="error_msg" size="25" name="logonId" id="WC_PasswordResetForm_FormInput_logonId_In_ResetPasswordForm_1"/>
+													<input style="text-transform:uppercase;" <c:out value="${aria_invalid}"/> aria-required="true" aria-describedby="error_msg" size="25" name="logonId" id="WC_PasswordResetForm_FormInput_logonId_In_ResetPasswordForm_1"/>
 
 													<div class="button_footer_line no_float">
 														<a href="#" role="button" class="button_primary" id="WC_PasswordResetForm_Link_2" onclick="javascript:submitSpecifiedForm(document.ResetPasswordForm);return false;">
