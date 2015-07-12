@@ -1305,12 +1305,13 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 #searchTermWrapper > input {
 	position: relative;
 	width: 100%;
-	margin: 1px;
+	margin:-2px; /*1px;*/
 	padding: 0px;
 	background-color: transparent;
 	border: 0 none;
 	font-size: inherit;
-	line-height: 16px;
+	line-height: 20px; /*16px;*/
+	height: 20px; /*16px;*/
 }
 #searchFormLabel {
 	display: none;
@@ -1413,7 +1414,7 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 	height: 100%;
 	text-align: left;
 }
-.autoSuggestDivNestedList{-webkit-padding-start: 0;}
+.autoSuggestDivNestedList{-webkit-padding-start: 0;   padding: 0;}
 
 #AutoSuggestDiv .heading {
 	background-color: #f5f6f7;
@@ -5055,15 +5056,7 @@ input#piAmount_4_display,
   height: 42px;
   line-height: 42px!important;
 }
-.RibbonAdDefault.TMX_TEST{
-	/* background-image: url("../../ExtendedSitesCatalogAssetStore/mktRibbonAdds/estrena.png"); */
-	background-image: url("../../TMXCAS/mktRibbonAdds/estrena.png");	
-	position: absolute;
-    bottom: 10px;
-	right: 0;
-	width: 120px;
-	height: 20px;
-}
+
 .inputLogin{
 	border-radius: 0px !important;
 }
