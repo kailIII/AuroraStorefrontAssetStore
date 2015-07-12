@@ -685,6 +685,7 @@ dl, ol, ul {
 #logo .contentRecommendationWidget > .left_espot > a > img,
 #logo .genericESpot {
 	height: 100%;
+	max-width:none;
 }
 
 .spotVida {
