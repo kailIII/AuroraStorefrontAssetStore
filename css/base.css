@@ -871,22 +871,22 @@ position: absolute;
 
 
 #cartDropdown {
-	width: 330px;
-	background-color: #ffffff;
-	border: 1px solid #c9cece;
-	border-top: 3px solid #189ad6;
-	border-radius: 0 0 4px 4px;
-	font-size: 12px;
-	position:absolute;
-	right:0px;
+    background-color: #ffffff;
+    border: 1px solid #c9cece;
+    border-radius: 0 0 4px 4px;
+    font-size: 12px;
+    position: absolute;
+    right: 0;
+    width: 330px;
 }
 #cartDropdown > h3 {
-	margin: 0;
-	padding: 10px 80px 10px 15px;
-	background-color: #eff7ed;
-	border-bottom: 1px solid #edeff0;
-	font-size: inherit;
-	font-weight: inherit;
+    background-color: #eff7ed;
+    border-bottom: 1px solid #edeff0;
+    color: #4ca868;
+    font-size: 13px;
+    font-weight: inherit;
+    margin: 0;
+    padding: 10px 80px 10px 15px;
 }
 #cartDropdown > .closeButton {
 	display: block;
@@ -2948,7 +2948,7 @@ li.menuCategorias :hover  <  .departmentButton.selected{
 	color:#384651; 
 	margin: 0 !important;
 	right: 10%;
-	top: 5%;
+	top: 15%;
 	text-align: center;
 }
 .homeBannerTitulo{ font-size:30px;}
@@ -3087,7 +3087,7 @@ div.namePartPriceContainer {
 	margin-bottom: 40px !important;
 }
 
-.tab_container {
+/* .tab_container {
 	border-left: 0px solid #e9e9e9 !important;
 	border-radius: 3px 3px 0 0;
 	border-right: 0px solid #e9e9e9 !important;
@@ -3104,7 +3104,7 @@ div.namePartPriceContainer {
 	text-transform: uppercase;
 	vertical-align: middle;
 	width: 40%;
-}
+} */
 
 .tab {
 	border: 0px solid #e9e9e9 !important;
@@ -3813,8 +3813,13 @@ div#WC_PromotionCodeDisplay_div_2{
     margin: 0px;
 }
 
-div#WC_PromotionCodeDisplay_div_2 > input#promoCode{
+/* div#WC_PromotionCodeDisplay_div_2 > input#promoCode{
 	width: 65%;
+    margin: 0px 10px 0px 0px;
+} */
+
+div#WC_PromotionCodeDisplay_div_2 > input#promoCode{
+ width: 62%;
     margin: 0px 10px 0px 0px;
 }
 
@@ -4077,8 +4082,9 @@ div#WC_CheckoutLogonf_div_0{
 @media (min-width: 601px) and (max-width: 952px){
 
 	#promoCode{
-		width: 65% !important;
-	}
+	  width: 62% !important;
+	 }
+
 
 	a#WC_PromotionCodeDisplay_links_1.button_primary{
 		background: none !important;
@@ -4161,6 +4167,12 @@ div#WC_CheckoutLogonf_div_0{
 	.widget_product_image_viewer > .content > .other_views > ul > li {
 		margin-right: 10px !important;
 	}
+	
+	.btnGris {
+        min-width: 180px;
+        box-sizing: border-box;
+        font-size: 1em;
+    }
 
 }
 
@@ -4279,6 +4291,11 @@ div#WC_CheckoutLogonf_div_0{
 		margin-left: 10px;
 	}
 	
+	.btnGris {
+        min-width: 160px;
+        box-sizing: border-box;
+        font-size: 1em;
+    }
 }
 
 
@@ -4715,6 +4732,11 @@ Alejandro Paredes
     //width: 385px !important;
 
 }
+
+.imagen_resumen_pedido{float: left; width:30%;}
+.imagen_resumen_pedido a img{max-width: 75px;width: 75px !important;}
+.especificaciones_resumen_pedido{float: left; width: 60%; margin-left: 15px;}
+.especificaciones_resumen_pedido p + span{display: none;}
 
 /* .product_page_content .widget_product_image_viewer > .content {
 	padding-right: 10px !important;

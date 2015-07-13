@@ -4641,7 +4641,7 @@ div#widget_minishopcart_popup, div#widget_minishopcart_popup_1 {
 	cursor:pointer;
 }
 	div#widget_minishopcart_popup > #cartDropdown > .content > .products > .product, div#widget_minishopcart_popup_1 > #cartDropdown > .content > .products > .product {
-		min-height: 94px;
+		min-height: 70px;
 		border-bottom: 1px solid #edeff0;
 		position: relative;
 		padding: 5px 11px 5px 92px;
