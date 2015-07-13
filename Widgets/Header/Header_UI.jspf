@@ -48,6 +48,8 @@
 			}
 		});
 	}
+
+	
 </script>
 
 <%@taglib uri="http://commerce.ibm.com/coremetrics" prefix="cm"%>
@@ -298,7 +300,14 @@
 	</ul>
 </div>
 
-<div id="headerRow2">
+<wcf:url var="homePageURL" patternName="HomePageURLWithLang">
+	<wcf:param name="langId" value="${langId}" />
+	<wcf:param name="storeId" value="${storeId}" />
+	<wcf:param name="catalogId" value="${catalogId}" />
+	<wcf:param name="urlLangId" value="${urlLangId}"/>
+</wcf:url>
+
+<div id="headerRow2" url=${homePageURL}>
 	<a id="departmentsButton" href="#" class="basicButton" role="button"
 		aria-haspopup="true" data-toggle="departmentsMenu"> <span><fmt:message
 				bundle="${storeText}" key="DEPARTMENTS" />
@@ -306,7 +315,7 @@
 		<div class="arrow_button_icon"></div> </a>
 
 	<%-- Start Refresh Area --%>
-	<div dojoType="wc.widget.RefreshArea"
+	<div dojoType="wc.widget.RefreshArea" 
 		widgetId="drop_down_${department.uniqueID}"
 		controllerId="departmentSubMenu_Controller"
 		aria-labelledby="departmentsButton">

@@ -54,8 +54,9 @@ function menuF(){
 	
 	
 	/*Grow the menu respect at list of categories*/
-	if(hasSize == false){
+	
 		menuCategorias.mousedown(function(){
+			if(hasSize == false){
 			setTimeout(function(){
 				var categoryMenu =$('.categoryList').find('>li');
 				categoryMenu.each(function(){
@@ -79,13 +80,21 @@ function menuF(){
 					 }
 					 
 					 if(scope.find('img').length > 0){
-						  	scope.find('ul.subcategoryList').width('550px');
+						  	scope.find('ul.subcategoryList').width('517px');
 						  	scope.find('.telmexMenuImage').css('display','inline-block');
 					 }
 				})
 				hasSize = true;
 			}, 500);
+			}
 		});
+	
+	/*Show Menu in Home*/
+	var home = $('#headerRow2').attr('url');
+	if(home == window.location.href || home + '#' == window.location.href + '#'){
+		menuCategorias.trigger('mousedown')
+		menuCategorias.find('.departmentButton').addClass('selected');
+		menuCategorias.find('.departmentMenu').addClass('active');
 	}
 	
 	/*Categorias Hover*/ 
@@ -121,7 +130,6 @@ function menuF(){
 			   
 			}
 		);
-		
 
 	}
 	else {
